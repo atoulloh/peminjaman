@@ -168,13 +168,13 @@
             this.timerhome = new System.Windows.Forms.Timer(this.components);
             this.Nama_alat1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.alat = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IDPinjaman = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.K_Nama_Alat = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.id_kembali = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.id_anggotaKembali = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nama_kembali = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Tanggal_Pinjam = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Jmlh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.IDPinjaman = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.K_Nama_Alat = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Tanggal_Pinjam = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKembali)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -317,8 +317,8 @@
             this.id_kembali,
             this.id_anggotaKembali,
             this.nama_kembali,
-            this.Tanggal_Pinjam,
-            this.Jmlh});
+            this.Jmlh,
+            this.Tanggal_Pinjam});
             this.dgvKembali.GridColor = System.Drawing.Color.White;
             this.dgvKembali.Location = new System.Drawing.Point(4, 133);
             this.dgvKembali.Name = "dgvKembali";
@@ -2053,6 +2053,20 @@
             this.alat.Name = "alat";
             this.alat.ReadOnly = true;
             // 
+            // IDPinjaman
+            // 
+            this.IDPinjaman.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.IDPinjaman.DataPropertyName = "id_pinjaman";
+            this.IDPinjaman.HeaderText = "ID Pinjaman";
+            this.IDPinjaman.Name = "IDPinjaman";
+            // 
+            // K_Nama_Alat
+            // 
+            this.K_Nama_Alat.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.K_Nama_Alat.DataPropertyName = "nama_alat";
+            this.K_Nama_Alat.HeaderText = "Nama Alat";
+            this.K_Nama_Alat.Name = "K_Nama_Alat";
+            // 
             // id_kembali
             // 
             this.id_kembali.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
@@ -2077,14 +2091,6 @@
             this.nama_kembali.Name = "nama_kembali";
             this.nama_kembali.ReadOnly = true;
             // 
-            // Tanggal_Pinjam
-            // 
-            this.Tanggal_Pinjam.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Tanggal_Pinjam.DataPropertyName = "tanggal_pinjam";
-            this.Tanggal_Pinjam.HeaderText = "Tanggal Pinjam";
-            this.Tanggal_Pinjam.Name = "Tanggal_Pinjam";
-            this.Tanggal_Pinjam.ReadOnly = true;
-            // 
             // Jmlh
             // 
             this.Jmlh.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
@@ -2093,19 +2099,13 @@
             this.Jmlh.Name = "Jmlh";
             this.Jmlh.ReadOnly = true;
             // 
-            // IDPinjaman
+            // Tanggal_Pinjam
             // 
-            this.IDPinjaman.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.IDPinjaman.DataPropertyName = "id_pinjaman";
-            this.IDPinjaman.HeaderText = "ID Pinjaman";
-            this.IDPinjaman.Name = "IDPinjaman";
-            // 
-            // K_Nama_Alat
-            // 
-            this.K_Nama_Alat.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.K_Nama_Alat.DataPropertyName = "nama_alat";
-            this.K_Nama_Alat.HeaderText = "Nama Alat";
-            this.K_Nama_Alat.Name = "K_Nama_Alat";
+            this.Tanggal_Pinjam.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Tanggal_Pinjam.DataPropertyName = "tanggal_pinjam";
+            this.Tanggal_Pinjam.HeaderText = "Tanggal Pinjam";
+            this.Tanggal_Pinjam.Name = "Tanggal_Pinjam";
+            this.Tanggal_Pinjam.ReadOnly = true;
             // 
             // Menu
             // 
@@ -2294,13 +2294,13 @@
         private System.Windows.Forms.DataGridView DgvKNamaAlat;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nama_alat1;
         private System.Windows.Forms.DataGridViewTextBoxColumn alat;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IDPinjaman;
+        private System.Windows.Forms.DataGridViewTextBoxColumn K_Nama_Alat;
         private System.Windows.Forms.DataGridViewTextBoxColumn id_kembali;
         private System.Windows.Forms.DataGridViewTextBoxColumn id_anggotaKembali;
         private System.Windows.Forms.DataGridViewTextBoxColumn nama_kembali;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Tanggal_Pinjam;
         private System.Windows.Forms.DataGridViewTextBoxColumn Jmlh;
-        private System.Windows.Forms.DataGridViewTextBoxColumn IDPinjaman;
-        private System.Windows.Forms.DataGridViewTextBoxColumn K_Nama_Alat;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Tanggal_Pinjam;
 
 
     }

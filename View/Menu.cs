@@ -504,8 +504,8 @@ namespace peminjaman.View
                 TxtIdP.Text = row.Cells[0].Value.ToString();
                 TxtIDA.Text = row.Cells[1].Value.ToString();
                 TxtNamaKembali.Text = row.Cells[2].Value.ToString();
-                DTPPJalat.Text = row.Cells[3].Value.ToString();
-
+                TxtJumlahKembali.Text = row.Cells[3].Value.ToString();
+                DTPPJalat.Text = row.Cells[4].Value.ToString();
                 //grpAnggota.Visible = false;
             }
         }
