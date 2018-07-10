@@ -201,6 +201,8 @@ namespace peminjaman.View
         {
             PinjamServ pbs = new PinjamServ();
             dgvPeminjam.DataSource = pbs.TampilSemuaPeminjam();
+            int numRows = dgvPeminjam.Rows.Count;
+            labeljumlah.Text = " Jumlah Peminjam : " + numRows.ToString();
         }
 
         private void dgvPeminjam_CellDoubleClick_1(object sender, DataGridViewCellEventArgs e)

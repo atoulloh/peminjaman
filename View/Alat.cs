@@ -56,6 +56,8 @@ namespace peminjaman.View
         {
             AlatServ asv = new AlatServ();
             dgvAlat.DataSource = asv.TampilSemua();
+            int numRows = dgvAlat.Rows.Count;
+            labeljumlaha.Text = " Jumlah Alat : "+numRows.ToString();
         }
 
         private void Alat_Load(object sender, EventArgs e)
@@ -71,7 +73,7 @@ namespace peminjaman.View
             int x = Convert.ToInt32(asv.HitungAlat().Rows[0][0].ToString());
 
             //hitung jumlah data di tampilkan di label
-            labeljumlaha.Text = "Jumlah Alat : " + x.ToString();
+           // labeljumlaha.Text = "Jumlah Alat : " + x.ToString();
             TxtCariAlat.Focus();
 
         }

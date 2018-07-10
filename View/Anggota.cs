@@ -35,8 +35,8 @@ namespace peminjaman.View
             int X = Convert.ToInt32(agt1.HitungAnggota().Rows[0][0].ToString());
 
             //hitung jumlah anggota di tampilkan di label
-            labeljumlahag.Text = "Jumlah Anggota : " + X.ToString();
-            TxtCariAg.Focus();
+           labeljumlahag.Text = "Jumlah Anggota : " + X.ToString();
+           TxtCariAg.Focus();
                
         }
         //Menampilkan isi data
@@ -173,6 +173,8 @@ namespace peminjaman.View
         private void Anggota_Load_1(object sender, EventArgs e)
         {
             LoadData();
+            int numRows = DgvAnggota.Rows.Count;
+            labeljumlahag.Text = " Jumlah Anggota : " + numRows.ToString();
         }
 
 

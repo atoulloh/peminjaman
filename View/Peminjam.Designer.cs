@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Peminjam));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label2 = new System.Windows.Forms.Label();
             this.labeljumlah = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -42,14 +42,14 @@
             this.BtnHapusPeminjam = new System.Windows.Forms.Button();
             this.BtnDetailPinjam = new System.Windows.Forms.Button();
             this.grpdetail = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtdetail = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.dgvdetail = new System.Windows.Forms.DataGridView();
             this.ID_Pinjaman = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nama_Alat = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Jumlah = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button1 = new System.Windows.Forms.Button();
+            this.txtdetail = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.dgvPeminjam = new System.Windows.Forms.DataGridView();
             this.id_peminjaman = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Id_anggota = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -243,28 +243,21 @@
             this.grpdetail.Controls.Add(this.dgvdetail);
             this.grpdetail.Controls.Add(this.txtdetail);
             this.grpdetail.Controls.Add(this.label1);
-            this.grpdetail.Location = new System.Drawing.Point(121, 24);
+            this.grpdetail.Location = new System.Drawing.Point(169, 24);
             this.grpdetail.Name = "grpdetail";
             this.grpdetail.Size = new System.Drawing.Size(435, 205);
             this.grpdetail.TabIndex = 79;
             this.grpdetail.TabStop = false;
             // 
-            // label1
+            // button1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(140, 16);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(87, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "DETAIL PINJAM";
-            // 
-            // txtdetail
-            // 
-            this.txtdetail.Location = new System.Drawing.Point(314, 29);
-            this.txtdetail.Name = "txtdetail";
-            this.txtdetail.Size = new System.Drawing.Size(100, 20);
-            this.txtdetail.TabIndex = 1;
-            this.txtdetail.TextChanged += new System.EventHandler(this.txtdetail_TextChanged);
+            this.button1.Location = new System.Drawing.Point(6, 6);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(30, 23);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "X";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // dgvdetail
             // 
@@ -314,15 +307,22 @@
             this.Status.Name = "Status";
             this.Status.ReadOnly = true;
             // 
-            // button1
+            // txtdetail
             // 
-            this.button1.Location = new System.Drawing.Point(6, 6);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(30, 23);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "X";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.txtdetail.Location = new System.Drawing.Point(314, 29);
+            this.txtdetail.Name = "txtdetail";
+            this.txtdetail.Size = new System.Drawing.Size(100, 20);
+            this.txtdetail.TabIndex = 1;
+            this.txtdetail.TextChanged += new System.EventHandler(this.txtdetail_TextChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(140, 16);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(87, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "DETAIL PINJAM";
             // 
             // dgvPeminjam
             // 
@@ -336,14 +336,14 @@
             this.dgvPeminjam.BackgroundColor = System.Drawing.Color.White;
             this.dgvPeminjam.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvPeminjam.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPeminjam.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPeminjam.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvPeminjam.ColumnHeadersHeight = 33;
             this.dgvPeminjam.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvPeminjam.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
