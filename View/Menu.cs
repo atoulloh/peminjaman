@@ -515,11 +515,78 @@ namespace peminjaman.View
             PinjamServ pjm = new PinjamServ();
             DgvKNamaAlat.DataSource = pjm.TampilPinjaman(TxtIdP.Text);
         }
+
+        //ikut pengembalian
+        void BersihKembali()
+        {
+            KembaliServ km = new KembaliServ();
+            TxtIdP.Text = "";
+            TxtIDA.Text = "";
+            TxtNamaKembali.Text = "";
+            TxtJumlahKembali.Text = "";
+            DTPPJalat.Text = "";
+            DgvKNamaAlat.Rows.Clear();
+            DgvKNamaAlat.Refresh();
+            DTPKBbuku.ResetText();
+        }
+
         //ikut pengembalian
         private void BtnSimpanKembali_Click(object sender, EventArgs e)
         {
+            KembaliServ km = new KembaliServ();
+
+            try
+            {
+                if (string.IsNullOrEmpty(TxtIdP.Text) ||
+                    string.IsNullOrEmpty(TxtIDA.Text) ||
+                    string.IsNullOrEmpty(TxtNamaKembali.Text) ||
+                    string.IsNullOrEmpty(TxtJumlahKembali.Text))
+                {
+                    MessageBox.Show("Mohon Data di isi semua \nTidak boleh ada yang kosong ",
+                         "Informasi", MessageBoxButtons.OK,
+                      MessageBoxIcon.Information);
+                }
+
+                else
+                {
+                    km.IdPeminjaman = TxtIdP.Text.Trim();
+                    km.IdAnggota = TxtIDA.Text.Trim();
+                    km.Nama = TxtNamaKembali.Text.Trim();
+                    km.Jumlah = int.Parse(TxtJumlahKembali.Text.Trim());
 
 
+                    if (DgvKNamaAlat.Rows.Count > 0)
+                    {
+                        km.Simpan_Kembali();
+                        foreach (DataGridViewRow row in DgvKNamaAlat.Rows)
+                        {
+                            string id_pinjam = row.Cells[0].Value.ToString();
+                            string nama_alat = row.Cells[1].Value.ToString();
+                            km.IdPinjaman = id_pinjam;
+                            km.NamaAlat = nama_alat;
+                            km.Simpan_Detail_kembali();
+
+                        }
+
+                        MessageBox.Show("Data Berhasil di Simpan. ",
+                            " Informasi", MessageBoxButtons.OK,
+                            MessageBoxIcon.Information);
+                        BersihKembali();
+                    }
+
+                    else
+                    {
+                        MessageBox.Show("belum menambahkan kembalian");
+                    }
+                }
+            }
+
+            catch
+            {
+                MessageBox.Show("Data gagal di simpan. ",
+                    "informasi", MessageBoxButtons.OK,
+                    MessageBoxIcon.Information);
+            }
         }
 
         private void dgvanggota_CellContentClick(object sender, DataGridViewCellEventArgs e)

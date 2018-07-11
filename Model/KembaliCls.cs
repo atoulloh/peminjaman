@@ -8,6 +8,7 @@ namespace peminjaman.Model
     class KembaliCls
     {
         private String _id_peminjaman;
+        private String _id_pinjaman;
         private String _id_anggota;
         private String _nama;
         private String _kode_alat;
@@ -19,6 +20,7 @@ namespace peminjaman.Model
         public KembaliCls()
         {
             _id_peminjaman = "";
+            _id_pinjaman = "";
             _id_anggota = "";
             _nama = "";
             _kode_alat = "";
@@ -32,6 +34,12 @@ namespace peminjaman.Model
         {
             set { _id_peminjaman = value; }
             get { return _id_peminjaman; }
+        }
+
+        public String IdPinjaman
+        {
+            set { _id_pinjaman = value; }
+            get { return _id_pinjaman; }
         }
 
         public String IdAnggota

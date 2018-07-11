@@ -22,8 +22,17 @@ namespace peminjaman.Service
 
         public void Simpan_Kembali()
         {
-            Query = "INSERT INTO kembali VALUES ('" + IdPeminjaman + "','" + IdAnggota + "','" + Nama + "','" + NamaAlat + "','" + KodeAlat + "','" + NamaAlat + "','" + Jumlah + "','" + TanggalPinjam + "','" + TanggalKembali + "')";
+            Query = "INSERT INTO kembali (id_peminjaman,id_anggota,nama,jumlah,tanggal_pinjam,tanggal_kembali) VALUES ('" + IdPeminjaman + "','" + IdAnggota + "','" + Nama + "','" + Jumlah + "','" + TanggalPinjam + "','" + TanggalKembali + "')";
             if (!(dbConn.ExecNonQuery(Query) > 0))
+            {
+                throw new Exception("Gagal Menyimpan");
+            }
+        }
+
+        public void Simpan_Detail_kembali()
+        {
+            Query = " INSERT INTO detail_kembali(id_peminjaman,id_pinjaman,nama_alat) VALUES ('" + IdPeminjaman + "','" + IdPinjaman + "','"  + NamaAlat + "')";
+            if(!(dbConn.ExecNonQuery(Query) > 0))
             {
                 throw new Exception("Gagal Menyimpan");
             }
