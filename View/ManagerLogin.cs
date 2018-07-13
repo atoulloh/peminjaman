@@ -105,8 +105,8 @@ namespace peminjaman
             Is.Level = CmbLevel.Text.Trim();
             Is.UbahData(this.dgvmanagerLogin.CurrentRow.Cells[0].Value.ToString());
             MessageBox.Show("data berhasil di ubah", "Ubah Data", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            BtnSimpan.Visible = true;
-            BtnUbah.Visible = true;
+            //BtnSimpan.Visible = true;
+            //BtnUbah.Visible = true;
             Bersihkan();
             manager();
         }
@@ -133,7 +133,7 @@ namespace peminjaman
         private void ManagerLogin_Load(object sender, EventArgs e)
         {
             manager();
-            BtnUbah.Visible = false;
+            //BtnUbah.Visible = false;
         }
 
         private void BtnSimpan_Click(object sender, EventArgs e)
@@ -157,6 +157,18 @@ namespace peminjaman
         private void btnHapus_Click(object sender, EventArgs e)
         {
             Hapus();
+        }
+
+        private void dgvmanagerLogin_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = this.dgvmanagerLogin.Rows[e.RowIndex];
+
+                TxtUser.Text = row.Cells[0].Value.ToString();
+                TxtPass.Text = row.Cells[1].Value.ToString();
+                CmbLevel.Text = row.Cells[3].Value.ToString();
+            }
         }
     }
 }

@@ -49,40 +49,38 @@
             // 
             // BtnUbah
             // 
-            this.BtnUbah.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnUbah.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(134)))), ((int)(((byte)(213)))));
+            this.BtnUbah.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.BtnUbah.BackColor = System.Drawing.Color.SkyBlue;
             this.BtnUbah.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnUbah.FlatAppearance.BorderSize = 0;
             this.BtnUbah.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnUbah.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnUbah.ForeColor = System.Drawing.Color.White;
+            this.BtnUbah.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnUbah.ForeColor = System.Drawing.Color.Black;
             this.BtnUbah.Image = ((System.Drawing.Image)(resources.GetObject("BtnUbah.Image")));
             this.BtnUbah.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnUbah.Location = new System.Drawing.Point(243, 323);
+            this.BtnUbah.Location = new System.Drawing.Point(243, 341);
             this.BtnUbah.Name = "BtnUbah";
-            this.BtnUbah.Size = new System.Drawing.Size(184, 59);
+            this.BtnUbah.Size = new System.Drawing.Size(139, 41);
             this.BtnUbah.TabIndex = 5;
             this.BtnUbah.Text = "Ubah Data";
             this.BtnUbah.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BtnUbah.UseVisualStyleBackColor = true;
+            this.BtnUbah.UseVisualStyleBackColor = false;
             this.BtnUbah.Click += new System.EventHandler(this.BtnUbah_Click);
             // 
             // BtnSimpan
             // 
-            this.BtnSimpan.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)));
-            this.BtnSimpan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(134)))), ((int)(((byte)(213)))));
+            this.BtnSimpan.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.BtnSimpan.BackColor = System.Drawing.Color.SkyBlue;
             this.BtnSimpan.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnSimpan.FlatAppearance.BorderSize = 0;
             this.BtnSimpan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnSimpan.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnSimpan.ForeColor = System.Drawing.Color.White;
+            this.BtnSimpan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnSimpan.ForeColor = System.Drawing.Color.Black;
             this.BtnSimpan.Image = ((System.Drawing.Image)(resources.GetObject("BtnSimpan.Image")));
             this.BtnSimpan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnSimpan.Location = new System.Drawing.Point(12, 323);
+            this.BtnSimpan.Location = new System.Drawing.Point(12, 341);
             this.BtnSimpan.Name = "BtnSimpan";
-            this.BtnSimpan.Size = new System.Drawing.Size(184, 59);
+            this.BtnSimpan.Size = new System.Drawing.Size(158, 41);
             this.BtnSimpan.TabIndex = 4;
             this.BtnSimpan.Text = "Simpan Data";
             this.BtnSimpan.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -93,7 +91,7 @@
             // 
             this.CmbLevel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
                         | System.Windows.Forms.AnchorStyles.Left)));
-            this.CmbLevel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(134)))), ((int)(((byte)(213)))));
+            this.CmbLevel.BackColor = System.Drawing.Color.DimGray;
             this.CmbLevel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CmbLevel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CmbLevel.ForeColor = System.Drawing.Color.White;
@@ -112,7 +110,7 @@
             // 
             this.TxtUser.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
                         | System.Windows.Forms.AnchorStyles.Left)));
-            this.TxtUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(134)))), ((int)(((byte)(213)))));
+            this.TxtUser.BackColor = System.Drawing.Color.DimGray;
             this.TxtUser.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TxtUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtUser.ForeColor = System.Drawing.Color.White;
@@ -138,7 +136,7 @@
             // 
             this.TxtPass.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
                         | System.Windows.Forms.AnchorStyles.Left)));
-            this.TxtPass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(134)))), ((int)(((byte)(213)))));
+            this.TxtPass.BackColor = System.Drawing.Color.DimGray;
             this.TxtPass.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TxtPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtPass.ForeColor = System.Drawing.Color.White;
@@ -192,8 +190,7 @@
             this.dgvmanagerLogin.AllowUserToDeleteRows = false;
             this.dgvmanagerLogin.AllowUserToResizeColumns = false;
             this.dgvmanagerLogin.AllowUserToResizeRows = false;
-            this.dgvmanagerLogin.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
+            this.dgvmanagerLogin.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvmanagerLogin.BackgroundColor = System.Drawing.Color.White;
             this.dgvmanagerLogin.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -211,6 +208,7 @@
             this.dgvmanagerLogin.ReadOnly = true;
             this.dgvmanagerLogin.Size = new System.Drawing.Size(566, 293);
             this.dgvmanagerLogin.TabIndex = 81;
+            this.dgvmanagerLogin.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvmanagerLogin_CellDoubleClick);
             // 
             // nama
             // 
@@ -247,20 +245,20 @@
             // btn_Hapus
             // 
             this.btn_Hapus.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Hapus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(134)))), ((int)(((byte)(213)))));
+            this.btn_Hapus.BackColor = System.Drawing.Color.SkyBlue;
             this.btn_Hapus.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Hapus.FlatAppearance.BorderSize = 0;
             this.btn_Hapus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Hapus.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Hapus.ForeColor = System.Drawing.Color.White;
+            this.btn_Hapus.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Hapus.ForeColor = System.Drawing.Color.Black;
             this.btn_Hapus.Image = ((System.Drawing.Image)(resources.GetObject("btn_Hapus.Image")));
-            this.btn_Hapus.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn_Hapus.Location = new System.Drawing.Point(457, 323);
+            this.btn_Hapus.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Hapus.Location = new System.Drawing.Point(457, 341);
             this.btn_Hapus.Name = "btn_Hapus";
-            this.btn_Hapus.Size = new System.Drawing.Size(145, 59);
+            this.btn_Hapus.Size = new System.Drawing.Size(129, 41);
             this.btn_Hapus.TabIndex = 89;
             this.btn_Hapus.Text = "Hapus [F8]";
-            this.btn_Hapus.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_Hapus.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_Hapus.UseVisualStyleBackColor = false;
             this.btn_Hapus.Click += new System.EventHandler(this.btnHapus_Click);
             // 
@@ -268,6 +266,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.SkyBlue;
             this.ClientSize = new System.Drawing.Size(883, 403);
             this.Controls.Add(this.btn_Hapus);
             this.Controls.Add(this.BtnUbah);

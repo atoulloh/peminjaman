@@ -62,6 +62,19 @@ namespace peminjaman.Service
             return dtTbl;
         }
 
+        public DataTable TampilKembali(String id_peminjaman)
+        {
+            Query = " select * from kembali where id_peminjaman = '" + id_peminjaman + "'";
+            dtTbl = dbConn.ExecQuery(Query);
+
+          //  if (dtTbl.Rows.Count > 0)
+           // {
+           //     CekKembali = true;
+          //  }
+
+            return dtTbl;
+        }
+
         public bool isExist(String IdPeminjaman)
         {
             bool cek = false;
@@ -101,5 +114,10 @@ namespace peminjaman.Service
             return dtTbl;
         }
 
+
+        internal object TampilKembali()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

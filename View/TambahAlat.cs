@@ -42,6 +42,7 @@ namespace peminjaman.View
 
         private void BtnSimpan_Click(object sender, EventArgs e)
         {
+           
             AlatServ asv = new AlatServ();
 
             if (string.IsNullOrEmpty(TxtKode.Text) || string.IsNullOrEmpty
@@ -76,7 +77,9 @@ namespace peminjaman.View
                 Bersihkan();
                 Close();
                 Alat al = new Alat();
+                al.LoadData();
                 al.Close();
+                
             }
 
         }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UbahAlat));
             this.label10 = new System.Windows.Forms.Label();
             this.TxtKode = new System.Windows.Forms.TextBox();
             this.TxtNama_alat = new System.Windows.Forms.TextBox();
@@ -62,7 +63,7 @@
             // 
             // TxtKode
             // 
-            this.TxtKode.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(134)))), ((int)(((byte)(213)))));
+            this.TxtKode.BackColor = System.Drawing.Color.DimGray;
             this.TxtKode.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TxtKode.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtKode.ForeColor = System.Drawing.Color.White;
@@ -74,7 +75,7 @@
             // 
             // TxtNama_alat
             // 
-            this.TxtNama_alat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(134)))), ((int)(((byte)(213)))));
+            this.TxtNama_alat.BackColor = System.Drawing.Color.DimGray;
             this.TxtNama_alat.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TxtNama_alat.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtNama_alat.ForeColor = System.Drawing.Color.White;
@@ -85,7 +86,7 @@
             // 
             // TxtJenis_Alat
             // 
-            this.TxtJenis_Alat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(134)))), ((int)(((byte)(213)))));
+            this.TxtJenis_Alat.BackColor = System.Drawing.Color.DimGray;
             this.TxtJenis_Alat.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TxtJenis_Alat.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtJenis_Alat.ForeColor = System.Drawing.Color.White;
@@ -96,7 +97,7 @@
             // 
             // TxtLetak
             // 
-            this.TxtLetak.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(134)))), ((int)(((byte)(213)))));
+            this.TxtLetak.BackColor = System.Drawing.Color.DimGray;
             this.TxtLetak.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TxtLetak.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtLetak.ForeColor = System.Drawing.Color.White;
@@ -107,7 +108,7 @@
             // 
             // TxtHarga
             // 
-            this.TxtHarga.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(134)))), ((int)(((byte)(213)))));
+            this.TxtHarga.BackColor = System.Drawing.Color.DimGray;
             this.TxtHarga.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TxtHarga.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtHarga.ForeColor = System.Drawing.Color.White;
@@ -118,7 +119,7 @@
             // 
             // TxtTahunPembelian
             // 
-            this.TxtTahunPembelian.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(134)))), ((int)(((byte)(213)))));
+            this.TxtTahunPembelian.BackColor = System.Drawing.Color.DimGray;
             this.TxtTahunPembelian.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TxtTahunPembelian.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtTahunPembelian.ForeColor = System.Drawing.Color.White;
@@ -129,7 +130,7 @@
             // 
             // TxtKondisi
             // 
-            this.TxtKondisi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(134)))), ((int)(((byte)(213)))));
+            this.TxtKondisi.BackColor = System.Drawing.Color.DimGray;
             this.TxtKondisi.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TxtKondisi.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtKondisi.ForeColor = System.Drawing.Color.White;
@@ -217,39 +218,42 @@
             // 
             // BtnSimpan
             // 
-            this.BtnSimpan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(134)))), ((int)(((byte)(213)))));
+            this.BtnSimpan.BackColor = System.Drawing.Color.SkyBlue;
             this.BtnSimpan.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnSimpan.FlatAppearance.BorderSize = 0;
             this.BtnSimpan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnSimpan.Font = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnSimpan.ForeColor = System.Drawing.Color.White;
-            this.BtnSimpan.Location = new System.Drawing.Point(96, 452);
+            this.BtnSimpan.ForeColor = System.Drawing.Color.Black;
+            this.BtnSimpan.Image = ((System.Drawing.Image)(resources.GetObject("BtnSimpan.Image")));
+            this.BtnSimpan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnSimpan.Location = new System.Drawing.Point(205, 433);
             this.BtnSimpan.Name = "BtnSimpan";
-            this.BtnSimpan.Size = new System.Drawing.Size(254, 52);
+            this.BtnSimpan.Size = new System.Drawing.Size(109, 43);
             this.BtnSimpan.TabIndex = 131;
             this.BtnSimpan.Text = "Simpan";
+            this.BtnSimpan.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BtnSimpan.UseVisualStyleBackColor = false;
             this.BtnSimpan.Click += new System.EventHandler(this.BtnSimpan_Click);
             // 
             // BtnBack
             // 
-            this.BtnBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(134)))), ((int)(((byte)(213)))));
+            this.BtnBack.BackColor = System.Drawing.Color.SkyBlue;
             this.BtnBack.FlatAppearance.BorderSize = 0;
             this.BtnBack.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
             this.BtnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnBack.ForeColor = System.Drawing.Color.White;
+            this.BtnBack.Image = ((System.Drawing.Image)(resources.GetObject("BtnBack.Image")));
             this.BtnBack.Location = new System.Drawing.Point(441, 19);
             this.BtnBack.Name = "BtnBack";
-            this.BtnBack.Size = new System.Drawing.Size(44, 32);
+            this.BtnBack.Size = new System.Drawing.Size(44, 40);
             this.BtnBack.TabIndex = 132;
-            this.BtnBack.Text = "X";
             this.BtnBack.UseVisualStyleBackColor = false;
             this.BtnBack.Click += new System.EventHandler(this.BtnBack_Click);
             // 
             // TxtJumlah
             // 
-            this.TxtJumlah.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(134)))), ((int)(((byte)(213)))));
+            this.TxtJumlah.BackColor = System.Drawing.Color.DimGray;
             this.TxtJumlah.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TxtJumlah.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtJumlah.ForeColor = System.Drawing.Color.White;
@@ -273,6 +277,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.SkyBlue;
             this.ClientSize = new System.Drawing.Size(497, 516);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.TxtJumlah);

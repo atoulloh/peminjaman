@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditAnggota));
             this.TxtJenisKelamin = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.BtnClose = new System.Windows.Forms.Button();
@@ -51,7 +52,7 @@
             // 
             // TxtJenisKelamin
             // 
-            this.TxtJenisKelamin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(134)))), ((int)(((byte)(213)))));
+            this.TxtJenisKelamin.BackColor = System.Drawing.Color.DimGray;
             this.TxtJenisKelamin.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TxtJenisKelamin.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtJenisKelamin.ForeColor = System.Drawing.Color.White;
@@ -73,30 +74,32 @@
             // 
             // BtnClose
             // 
-            this.BtnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(134)))), ((int)(((byte)(213)))));
+            this.BtnClose.BackColor = System.Drawing.Color.SkyBlue;
             this.BtnClose.FlatAppearance.BorderSize = 0;
             this.BtnClose.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
             this.BtnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnClose.ForeColor = System.Drawing.Color.White;
+            this.BtnClose.Image = ((System.Drawing.Image)(resources.GetObject("BtnClose.Image")));
             this.BtnClose.Location = new System.Drawing.Point(401, 4);
             this.BtnClose.Name = "BtnClose";
             this.BtnClose.Size = new System.Drawing.Size(44, 32);
             this.BtnClose.TabIndex = 76;
-            this.BtnClose.Text = "X";
             this.BtnClose.UseVisualStyleBackColor = false;
             // 
             // BtnSimpan
             // 
-            this.BtnSimpan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(134)))), ((int)(((byte)(213)))));
+            this.BtnSimpan.BackColor = System.Drawing.Color.SkyBlue;
             this.BtnSimpan.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnSimpan.FlatAppearance.BorderSize = 0;
             this.BtnSimpan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnSimpan.Font = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnSimpan.ForeColor = System.Drawing.Color.White;
-            this.BtnSimpan.Location = new System.Drawing.Point(85, 465);
+            this.BtnSimpan.ForeColor = System.Drawing.Color.Black;
+            this.BtnSimpan.Image = ((System.Drawing.Image)(resources.GetObject("BtnSimpan.Image")));
+            this.BtnSimpan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnSimpan.Location = new System.Drawing.Point(166, 465);
             this.BtnSimpan.Name = "BtnSimpan";
-            this.BtnSimpan.Size = new System.Drawing.Size(254, 52);
+            this.BtnSimpan.Size = new System.Drawing.Size(173, 38);
             this.BtnSimpan.TabIndex = 75;
             this.BtnSimpan.Text = "Simpan";
             this.BtnSimpan.UseVisualStyleBackColor = false;
@@ -104,7 +107,7 @@
             // 
             // TxtIdAnggota
             // 
-            this.TxtIdAnggota.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(134)))), ((int)(((byte)(213)))));
+            this.TxtIdAnggota.BackColor = System.Drawing.Color.DimGray;
             this.TxtIdAnggota.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TxtIdAnggota.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtIdAnggota.ForeColor = System.Drawing.Color.White;
@@ -127,7 +130,7 @@
             // 
             // TxtNIM
             // 
-            this.TxtNIM.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(134)))), ((int)(((byte)(213)))));
+            this.TxtNIM.BackColor = System.Drawing.Color.DimGray;
             this.TxtNIM.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TxtNIM.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtNIM.ForeColor = System.Drawing.Color.White;
@@ -141,7 +144,7 @@
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.Black;
-            this.label12.Location = new System.Drawing.Point(58, 145);
+            this.label12.Location = new System.Drawing.Point(37, 145);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(55, 21);
             this.label12.TabIndex = 77;
@@ -152,7 +155,7 @@
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.Color.Black;
-            this.label16.Location = new System.Drawing.Point(59, 329);
+            this.label16.Location = new System.Drawing.Point(25, 329);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(67, 21);
             this.label16.TabIndex = 82;
@@ -174,7 +177,7 @@
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.ForeColor = System.Drawing.Color.Black;
-            this.label18.Location = new System.Drawing.Point(66, 108);
+            this.label18.Location = new System.Drawing.Point(44, 108);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(47, 21);
             this.label18.TabIndex = 79;
@@ -185,7 +188,7 @@
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.ForeColor = System.Drawing.Color.Black;
-            this.label19.Location = new System.Drawing.Point(54, 246);
+            this.label19.Location = new System.Drawing.Point(26, 246);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(72, 21);
             this.label19.TabIndex = 81;
@@ -196,7 +199,7 @@
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.ForeColor = System.Drawing.Color.Black;
-            this.label20.Location = new System.Drawing.Point(60, 209);
+            this.label20.Location = new System.Drawing.Point(37, 209);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(54, 21);
             this.label20.TabIndex = 80;
@@ -204,7 +207,7 @@
             // 
             // TxtAlamat
             // 
-            this.TxtAlamat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(134)))), ((int)(((byte)(213)))));
+            this.TxtAlamat.BackColor = System.Drawing.Color.DimGray;
             this.TxtAlamat.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TxtAlamat.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtAlamat.ForeColor = System.Drawing.Color.White;
@@ -218,7 +221,7 @@
             // 
             // TxtJurusan
             // 
-            this.TxtJurusan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(134)))), ((int)(((byte)(213)))));
+            this.TxtJurusan.BackColor = System.Drawing.Color.DimGray;
             this.TxtJurusan.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TxtJurusan.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtJurusan.ForeColor = System.Drawing.Color.White;
@@ -229,7 +232,7 @@
             // 
             // TxtKelas
             // 
-            this.TxtKelas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(134)))), ((int)(((byte)(213)))));
+            this.TxtKelas.BackColor = System.Drawing.Color.DimGray;
             this.TxtKelas.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TxtKelas.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtKelas.ForeColor = System.Drawing.Color.White;
@@ -240,7 +243,7 @@
             // 
             // TxtNama
             // 
-            this.TxtNama.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(134)))), ((int)(((byte)(213)))));
+            this.TxtNama.BackColor = System.Drawing.Color.DimGray;
             this.TxtNama.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TxtNama.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtNama.ForeColor = System.Drawing.Color.White;
@@ -251,7 +254,7 @@
             // 
             // txtNoHp
             // 
-            this.txtNoHp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(134)))), ((int)(((byte)(213)))));
+            this.txtNoHp.BackColor = System.Drawing.Color.DimGray;
             this.txtNoHp.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNoHp.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNoHp.ForeColor = System.Drawing.Color.White;
@@ -275,6 +278,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.SkyBlue;
             this.ClientSize = new System.Drawing.Size(466, 529);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtNoHp);

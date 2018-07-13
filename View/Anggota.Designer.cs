@@ -159,7 +159,7 @@
             // TxtCariAg
             // 
             this.TxtCariAg.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.TxtCariAg.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(134)))), ((int)(((byte)(213)))));
+            this.TxtCariAg.BackColor = System.Drawing.Color.SlateGray;
             this.TxtCariAg.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TxtCariAg.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtCariAg.ForeColor = System.Drawing.Color.White;
@@ -172,7 +172,7 @@
             // CmbCariAnggota
             // 
             this.CmbCariAnggota.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.CmbCariAnggota.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(134)))), ((int)(((byte)(213)))));
+            this.CmbCariAnggota.BackColor = System.Drawing.Color.DimGray;
             this.CmbCariAnggota.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CmbCariAnggota.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CmbCariAnggota.ForeColor = System.Drawing.Color.White;
@@ -207,17 +207,17 @@
             // BtnRefAg
             // 
             this.BtnRefAg.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.BtnRefAg.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(134)))), ((int)(((byte)(213)))));
+            this.BtnRefAg.BackColor = System.Drawing.Color.SkyBlue;
             this.BtnRefAg.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnRefAg.FlatAppearance.BorderSize = 0;
             this.BtnRefAg.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnRefAg.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnRefAg.ForeColor = System.Drawing.Color.White;
+            this.BtnRefAg.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnRefAg.ForeColor = System.Drawing.Color.Black;
             this.BtnRefAg.Image = ((System.Drawing.Image)(resources.GetObject("BtnRefAg.Image")));
             this.BtnRefAg.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.BtnRefAg.Location = new System.Drawing.Point(12, 377);
+            this.BtnRefAg.Location = new System.Drawing.Point(12, 390);
             this.BtnRefAg.Name = "BtnRefAg";
-            this.BtnRefAg.Size = new System.Drawing.Size(116, 72);
+            this.BtnRefAg.Size = new System.Drawing.Size(105, 58);
             this.BtnRefAg.TabIndex = 69;
             this.BtnRefAg.Text = "Refresh [F5]";
             this.BtnRefAg.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -227,17 +227,17 @@
             // BtnEditAg
             // 
             this.BtnEditAg.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.BtnEditAg.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(134)))), ((int)(((byte)(213)))));
+            this.BtnEditAg.BackColor = System.Drawing.Color.SkyBlue;
             this.BtnEditAg.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnEditAg.FlatAppearance.BorderSize = 0;
             this.BtnEditAg.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnEditAg.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnEditAg.ForeColor = System.Drawing.Color.White;
+            this.BtnEditAg.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnEditAg.ForeColor = System.Drawing.Color.Black;
             this.BtnEditAg.Image = ((System.Drawing.Image)(resources.GetObject("BtnEditAg.Image")));
             this.BtnEditAg.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.BtnEditAg.Location = new System.Drawing.Point(134, 377);
+            this.BtnEditAg.Location = new System.Drawing.Point(123, 390);
             this.BtnEditAg.Name = "BtnEditAg";
-            this.BtnEditAg.Size = new System.Drawing.Size(116, 72);
+            this.BtnEditAg.Size = new System.Drawing.Size(74, 59);
             this.BtnEditAg.TabIndex = 70;
             this.BtnEditAg.Text = "Edit [F6]";
             this.BtnEditAg.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -247,17 +247,17 @@
             // BtnCetakAg
             // 
             this.BtnCetakAg.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.BtnCetakAg.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(134)))), ((int)(((byte)(213)))));
+            this.BtnCetakAg.BackColor = System.Drawing.Color.SkyBlue;
             this.BtnCetakAg.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnCetakAg.FlatAppearance.BorderSize = 0;
             this.BtnCetakAg.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnCetakAg.Font = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnCetakAg.ForeColor = System.Drawing.Color.White;
+            this.BtnCetakAg.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnCetakAg.ForeColor = System.Drawing.Color.Black;
             this.BtnCetakAg.Image = ((System.Drawing.Image)(resources.GetObject("BtnCetakAg.Image")));
             this.BtnCetakAg.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.BtnCetakAg.Location = new System.Drawing.Point(384, 377);
+            this.BtnCetakAg.Location = new System.Drawing.Point(301, 391);
             this.BtnCetakAg.Name = "BtnCetakAg";
-            this.BtnCetakAg.Size = new System.Drawing.Size(116, 72);
+            this.BtnCetakAg.Size = new System.Drawing.Size(82, 59);
             this.BtnCetakAg.TabIndex = 71;
             this.BtnCetakAg.Text = "Cetak [F7]";
             this.BtnCetakAg.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -266,7 +266,7 @@
             // BtnBackAnggota
             // 
             this.BtnBackAnggota.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnBackAnggota.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(134)))), ((int)(((byte)(213)))));
+            this.BtnBackAnggota.BackColor = System.Drawing.Color.LightSteelBlue;
             this.BtnBackAnggota.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnBackAnggota.FlatAppearance.BorderSize = 0;
             this.BtnBackAnggota.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
@@ -274,9 +274,9 @@
             this.BtnBackAnggota.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnBackAnggota.ForeColor = System.Drawing.Color.White;
             this.BtnBackAnggota.Image = ((System.Drawing.Image)(resources.GetObject("BtnBackAnggota.Image")));
-            this.BtnBackAnggota.Location = new System.Drawing.Point(766, 374);
+            this.BtnBackAnggota.Location = new System.Drawing.Point(800, 413);
             this.BtnBackAnggota.Name = "BtnBackAnggota";
-            this.BtnBackAnggota.Size = new System.Drawing.Size(73, 65);
+            this.BtnBackAnggota.Size = new System.Drawing.Size(37, 37);
             this.BtnBackAnggota.TabIndex = 72;
             this.BtnBackAnggota.UseVisualStyleBackColor = false;
             this.BtnBackAnggota.Click += new System.EventHandler(this.BtnBackAnggota_Click);
@@ -284,17 +284,17 @@
             // BtnHapusAg
             // 
             this.BtnHapusAg.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.BtnHapusAg.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(134)))), ((int)(((byte)(213)))));
+            this.BtnHapusAg.BackColor = System.Drawing.Color.SkyBlue;
             this.BtnHapusAg.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnHapusAg.FlatAppearance.BorderSize = 0;
             this.BtnHapusAg.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnHapusAg.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnHapusAg.ForeColor = System.Drawing.Color.White;
+            this.BtnHapusAg.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnHapusAg.ForeColor = System.Drawing.Color.Black;
             this.BtnHapusAg.Image = ((System.Drawing.Image)(resources.GetObject("BtnHapusAg.Image")));
             this.BtnHapusAg.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.BtnHapusAg.Location = new System.Drawing.Point(256, 377);
+            this.BtnHapusAg.Location = new System.Drawing.Point(206, 391);
             this.BtnHapusAg.Name = "BtnHapusAg";
-            this.BtnHapusAg.Size = new System.Drawing.Size(116, 72);
+            this.BtnHapusAg.Size = new System.Drawing.Size(89, 58);
             this.BtnHapusAg.TabIndex = 73;
             this.BtnHapusAg.Text = "Hapus [F8]";
             this.BtnHapusAg.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -315,7 +315,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.BackColor = System.Drawing.Color.SkyBlue;
             this.ClientSize = new System.Drawing.Size(864, 461);
             this.Controls.Add(this.BtnRefAg);
             this.Controls.Add(this.BtnHapusAg);

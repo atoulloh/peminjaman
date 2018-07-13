@@ -135,10 +135,11 @@ namespace peminjaman.View
 
         //Detail Pinjam
 
-       /* void Detail()
+        void Detail()
         {
+            PinjamServ dpm = new PinjamServ();
            // DetailPinjam dpm = new DetailPinjam();
-            if (DgvPeminjam.Rows.Count == 0)
+            if (dgvPeminjam.Rows.Count == 0)
             {
                 MessageBox.Show("Data belum ada yang dipilih.  ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
@@ -146,14 +147,15 @@ namespace peminjaman.View
             }
             else
             {
-               dpm.TxtCariD.Text = this.DgvPeminjam.CurrentRow.Cells[0].Value.ToString();
-                dpm.ShowDialog();
+                txtdetail.Text = this.dgvPeminjam.CurrentRow.Cells[0].Value.ToString();
+                //dpm.ShowDialog();
             }
-        }*/
+        }
 
         private void BtnDetailPinjam_Click(object sender, EventArgs e)
         {
-           // Detail();
+            grpdetail.Visible = true;
+            Detail();
         }
 
         private void DgvPeminjam_CellDoubleClick(object sender, DataGridViewCellEventArgs e)

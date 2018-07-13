@@ -525,7 +525,6 @@ namespace peminjaman.View
             TxtNamaKembali.Text = "";
             TxtJumlahKembali.Text = "";
             DTPPJalat.Text = "";
-            DgvKNamaAlat.Rows.Clear();
             DgvKNamaAlat.Refresh();
             DTPKBbuku.ResetText();
         }
@@ -553,7 +552,8 @@ namespace peminjaman.View
                     km.IdAnggota = TxtIDA.Text.Trim();
                     km.Nama = TxtNamaKembali.Text.Trim();
                     km.Jumlah = int.Parse(TxtJumlahKembali.Text.Trim());
-
+                    km.TanggalPinjam = DTPPJalat.Value.ToString("yyyy/mm/dd");
+                    km.TanggalKembali = DTPKBbuku.Value.ToString("yyyy/mm/dd");
 
                     if (DgvKNamaAlat.Rows.Count > 0)
                     {
@@ -567,11 +567,11 @@ namespace peminjaman.View
                             km.Simpan_Detail_kembali();
 
                         }
-
+                        BersihKembali();
                         MessageBox.Show("Data Berhasil di Simpan. ",
                             " Informasi", MessageBoxButtons.OK,
                             MessageBoxIcon.Information);
-                        BersihKembali();
+                        
                     }
 
                     else
@@ -605,6 +605,11 @@ namespace peminjaman.View
             //}
             //TxtJumlah.Text = sum.ToString();
 
+        }
+
+        private void BtnDaftarKembali_Click(object sender, EventArgs e)
+        {
+            AmbilForm(new Kembali());
         }
     }
 }
