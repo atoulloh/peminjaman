@@ -29,8 +29,9 @@ namespace peminjaman.View
             dgvanggota.AutoGenerateColumns = false;
             DgvKNamaAlat.AutoGenerateColumns = false;
 
-
+            tabMain.Location = new Point(233, -22);
             grpAnggota.Visible = false;
+            WindowState = FormWindowState.Maximized;
         }
 
         private void AmbilForm(Form form)
@@ -191,28 +192,31 @@ namespace peminjaman.View
         //bagian anggota
         private void BtnAnggota_Click(object sender, EventArgs e)
         {
-            tabControl1.SelectedTab = (tabPage2);
+            tabMain.SelectedTab = (tabPage2);
             Bersihkan();
 
         }
         //bagian menu
-        private void BtnLainnya_Click(object sender, EventArgs e)
-        {
-            tabControl1.SelectedTab = (tabPage6);
-        }
+       // private void BtnLainnya_Click(object sender, EventArgs e)
+        //{
+            //tabControl1.SelectedTab = (tabPage6);
+        //}
 
         private void BtnManagerLogin_Click(object sender, EventArgs e)
         {
+            tabMain.SelectedTab = (tabPage6);
             AmbilForm(new ManagerLogin());
         }
 
         private void BtnLihatAlat_Click(object sender, EventArgs e)
         {
+            tabMain.SelectedTab = (tabPage6);
             AmbilForm(new Alat());
         }
 
         private void BtnLihatAnggota_Click(object sender, EventArgs e)
         {
+            tabMain.SelectedTab = (tabPage6);
            AmbilForm(new Anggota());
        
         }
@@ -268,7 +272,7 @@ namespace peminjaman.View
         //menu
         private void BtnAlat_Click(object sender, EventArgs e)
         {
-            tabControl1.SelectedTab = (tabPage3);
+            tabMain.SelectedTab = (tabPage3);
             AlatServ alat = new AlatServ();
             dgvAlat.DataSource = alat.CekAlat(TxtCariAlat.Text);
 
@@ -277,7 +281,7 @@ namespace peminjaman.View
         //button pinjam alat
         private void BtnPinjamAlat_Click(object sender, EventArgs e)
         {
-            tabControl1.SelectedTab = (tabPage4);
+            tabMain.SelectedTab = (tabPage4);
             PinjamServ pb = new PinjamServ();
             TxtIdPeminjaman.Text = pb.KDPinjamOtomatis();
             //PinjamServ pb = new PinjamServ();
@@ -288,7 +292,7 @@ namespace peminjaman.View
         //pengembalian alat
         private void BtnKembaliAlat_Click(object sender, EventArgs e)
         {
-            tabControl1.SelectedTab = (tabPage5);
+            tabMain.SelectedTab = (tabPage5);
             PinjamServ pjm = new PinjamServ();
             dgvKembali.DataSource = pjm.TampilSemuaPeminjam();
 
@@ -481,6 +485,7 @@ namespace peminjaman.View
 
         private void BtnDaftarPeminjam_Click(object sender, EventArgs e)
         {
+            tabMain.SelectedTab = (tabPage6);
             AmbilForm(new Peminjam());
         }
 
@@ -533,7 +538,7 @@ namespace peminjaman.View
         private void BtnSimpanKembali_Click(object sender, EventArgs e)
         {
             KembaliServ km = new KembaliServ();
-
+            bool simpan = false;
             try
             {
                 if (string.IsNullOrEmpty(TxtIdP.Text) ||
@@ -552,25 +557,35 @@ namespace peminjaman.View
                     km.IdAnggota = TxtIDA.Text.Trim();
                     km.Nama = TxtNamaKembali.Text.Trim();
                     km.Jumlah = int.Parse(TxtJumlahKembali.Text.Trim());
-                    km.TanggalPinjam = DTPPJalat.Value.ToString("yyyy/mm/dd");
-                    km.TanggalKembali = DTPKBbuku.Value.ToString("yyyy/mm/dd");
+                    km.TanggalPinjam = DTPPJalat.Value.ToString("yyyy/MM/dd hh:mm:ss");
+                    km.TanggalKembali = DTPKBbuku.Value.ToString("yyyy/MM/dd HH:mm:ss");
+                    km.Simpan_Kembali();
+                    simpan = true;
 
                     if (DgvKNamaAlat.Rows.Count > 0)
-                    {
-                        km.Simpan_Kembali();
+                    {                        
                         foreach (DataGridViewRow row in DgvKNamaAlat.Rows)
                         {
                             string id_pinjam = row.Cells[0].Value.ToString();
                             string nama_alat = row.Cells[1].Value.ToString();
                             km.IdPinjaman = id_pinjam;
                             km.NamaAlat = nama_alat;
-                            km.Simpan_Detail_kembali();
-
+                            km.Status = "Sudah";
+                            simpan = km.UbahStatusPijaman();
                         }
-                        BersihKembali();
-                        MessageBox.Show("Data Berhasil di Simpan. ",
-                            " Informasi", MessageBoxButtons.OK,
-                            MessageBoxIcon.Information);
+                        if (simpan)
+                        {
+                            BersihKembali();
+                            MessageBox.Show("Data Berhasil di Simpan. ",
+                                " Informasi", MessageBoxButtons.OK,
+                                MessageBoxIcon.Information);
+                        }
+                        else
+                        {
+                            MessageBox.Show("Data gagal di simpan. ",
+                           "informasi", MessageBoxButtons.OK,
+                           MessageBoxIcon.Information);
+                        }
                         
                     }
 
@@ -609,7 +624,18 @@ namespace peminjaman.View
 
         private void BtnDaftarKembali_Click(object sender, EventArgs e)
         {
+            tabMain.SelectedTab = (tabPage6);
             AmbilForm(new Kembali());
+        }
+
+        private void BtnAbout_Click(object sender, EventArgs e)
+        {
+            tabMain.SelectedTab = (tabPage6);
+        }
+
+        private void TxtJumlahKembali_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

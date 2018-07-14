@@ -87,7 +87,7 @@ namespace peminjaman.View
 
         private void btncariPinjam_Click(object sender, EventArgs e)
         {
-            btncariPinjam.PerformClick();
+            //btncariPinjam.PerformClick();
             PinjamServ pinjam = new PinjamServ();
             dgvPeminjam.DataSource = pinjam.CariPeminjam(TxtCariDtPinjam.Text,kategori);
         
@@ -101,7 +101,9 @@ namespace peminjaman.View
 
         private void TxtCariDtPinjam_TextChanged(object sender, EventArgs e)
         {
-            btncariPinjam.PerformClick();
+            //btncariPinjam.PerformClick();
+            PinjamServ pinjam = new PinjamServ();
+            dgvPeminjam.DataSource = pinjam.CariPeminjam(TxtCariDtPinjam.Text, "").DefaultView;
         }
 
         private void BtnHapusPeminjam_Click(object sender, EventArgs e)

@@ -84,5 +84,7 @@ namespace peminjaman.Model
             get { return _tanggal_kembali; }
         }
 
+        public string Status { get; set; }
+
     }
 }

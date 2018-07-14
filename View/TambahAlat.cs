@@ -69,11 +69,13 @@ namespace peminjaman.View
                 asv.Tahun_Pembelian = int.Parse(TxtTahunPembelian.Text.Trim());
                 asv.Jumlah = int.Parse(TxtJumlah.Text.Trim());
                 asv.Kondisi = TxtKondisi.Text.Trim();
-                asv.SimpanAlat();
+                if (asv.SimpanAlat())
+                {
 
-                MessageBox.Show("Data berhasil di simpan, ",
-                    "Information", MessageBoxButtons.OK,
-                    MessageBoxIcon.Information);
+                    MessageBox.Show("Data berhasil di simpan, ",
+                        "Information", MessageBoxButtons.OK,
+                        MessageBoxIcon.Information);
+                }
                 Bersihkan();
                 Close();
                 Alat al = new Alat();

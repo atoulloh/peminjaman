@@ -12,7 +12,8 @@ namespace peminjaman.View
 {
     public partial class Kembali : Form
     {
-        KembaliServ km = new KembaliServ();
+        
+
         public Kembali()
         {
             InitializeComponent();
@@ -25,48 +26,32 @@ namespace peminjaman.View
             dgvdetailkembali.AutoGenerateColumns = false;
 
             grpdetailkembali.Visible = false;
+            TampilKembali();
+
         }
 
         private void Kembali_Load(object sender, EventArgs e)
         {
-            KembaliServ km = new KembaliServ();
             TampilKembali();
-            DgvKembali.DataSource = km.TampilKembali();
-
-            
+            KembaliServ km = new KembaliServ();
             int x = Convert.ToInt32(km.HitungKembali().Rows[0][0].ToString());
 
             labeljumlah.Text = "Jumlah Peminjam : " + DgvKembali.RowCount.ToString();
 
-            WindowState = FormWindowState.Maximized;
-
             TxtCariDtKembali.Focus();
-
-
         }
 
-        void TampilKembali()
+        private void TampilKembali()
         {
-            KembaliServ km = new KembaliServ();
-            DgvKembali.DataSource = km.TampilSemua();
-        }
-
-
-        private void BtnCetak_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void BtnBackAnggota_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Kembali_Load_1(object sender, EventArgs e)
-        {
-
-            KembaliServ km = new KembaliServ();
-            DgvKembali.DataSource = km.TampilKembali();
+            try
+            {
+                KembaliServ km = new KembaliServ();
+                DgvKembali.DataSource = km.TampilSemua().DefaultView;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void BtnRefresh_Click(object sender, EventArgs e)

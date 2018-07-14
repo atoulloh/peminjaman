@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Peminjam));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label2 = new System.Windows.Forms.Label();
             this.labeljumlah = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -44,6 +44,9 @@
             this.grpdetail = new System.Windows.Forms.GroupBox();
             this.button1 = new System.Windows.Forms.Button();
             this.dgvdetail = new System.Windows.Forms.DataGridView();
+            this.ID_Pinjaman = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nama_Alat = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtdetail = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvPeminjam = new System.Windows.Forms.DataGridView();
@@ -51,9 +54,6 @@
             this.Id_anggota = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nama = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Tanggal_pinjam = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ID_Pinjaman = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nama_Alat = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.grpdetail.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvdetail)).BeginInit();
@@ -89,7 +89,7 @@
             this.panel1.Controls.Add(this.CmbCariPeminjam);
             this.panel1.Controls.Add(this.TxtCariDtPinjam);
             this.panel1.Controls.Add(this.btncariPinjam);
-            this.panel1.Location = new System.Drawing.Point(446, 72);
+            this.panel1.Location = new System.Drawing.Point(468, 72);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(349, 34);
             this.panel1.TabIndex = 72;
@@ -150,7 +150,7 @@
             this.BtnBackPinjam.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnBackPinjam.ForeColor = System.Drawing.Color.White;
             this.BtnBackPinjam.Image = ((System.Drawing.Image)(resources.GetObject("BtnBackPinjam.Image")));
-            this.BtnBackPinjam.Location = new System.Drawing.Point(722, 447);
+            this.BtnBackPinjam.Location = new System.Drawing.Point(744, 369);
             this.BtnBackPinjam.Name = "BtnBackPinjam";
             this.BtnBackPinjam.Size = new System.Drawing.Size(73, 65);
             this.BtnBackPinjam.TabIndex = 73;
@@ -168,7 +168,7 @@
             this.BtnCetak.ForeColor = System.Drawing.Color.Black;
             this.BtnCetak.Image = ((System.Drawing.Image)(resources.GetObject("BtnCetak.Image")));
             this.BtnCetak.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.BtnCetak.Location = new System.Drawing.Point(203, 448);
+            this.BtnCetak.Location = new System.Drawing.Point(203, 370);
             this.BtnCetak.Name = "BtnCetak";
             this.BtnCetak.Size = new System.Drawing.Size(86, 55);
             this.BtnCetak.TabIndex = 75;
@@ -187,7 +187,7 @@
             this.BtnRefresh.ForeColor = System.Drawing.Color.Black;
             this.BtnRefresh.Image = ((System.Drawing.Image)(resources.GetObject("BtnRefresh.Image")));
             this.BtnRefresh.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.BtnRefresh.Location = new System.Drawing.Point(-1, 448);
+            this.BtnRefresh.Location = new System.Drawing.Point(-1, 370);
             this.BtnRefresh.Name = "BtnRefresh";
             this.BtnRefresh.Size = new System.Drawing.Size(103, 55);
             this.BtnRefresh.TabIndex = 76;
@@ -207,7 +207,7 @@
             this.BtnHapusPeminjam.ForeColor = System.Drawing.Color.Black;
             this.BtnHapusPeminjam.Image = ((System.Drawing.Image)(resources.GetObject("BtnHapusPeminjam.Image")));
             this.BtnHapusPeminjam.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.BtnHapusPeminjam.Location = new System.Drawing.Point(104, 448);
+            this.BtnHapusPeminjam.Location = new System.Drawing.Point(104, 370);
             this.BtnHapusPeminjam.Name = "BtnHapusPeminjam";
             this.BtnHapusPeminjam.Size = new System.Drawing.Size(93, 55);
             this.BtnHapusPeminjam.TabIndex = 77;
@@ -227,7 +227,7 @@
             this.BtnDetailPinjam.ForeColor = System.Drawing.Color.Black;
             this.BtnDetailPinjam.Image = ((System.Drawing.Image)(resources.GetObject("BtnDetailPinjam.Image")));
             this.BtnDetailPinjam.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.BtnDetailPinjam.Location = new System.Drawing.Point(295, 448);
+            this.BtnDetailPinjam.Location = new System.Drawing.Point(295, 370);
             this.BtnDetailPinjam.Name = "BtnDetailPinjam";
             this.BtnDetailPinjam.Size = new System.Drawing.Size(94, 55);
             this.BtnDetailPinjam.TabIndex = 78;
@@ -273,6 +273,30 @@
             this.dgvdetail.Size = new System.Drawing.Size(423, 144);
             this.dgvdetail.TabIndex = 2;
             // 
+            // ID_Pinjaman
+            // 
+            this.ID_Pinjaman.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ID_Pinjaman.DataPropertyName = "id_pinjaman";
+            this.ID_Pinjaman.HeaderText = "ID Pinjaman";
+            this.ID_Pinjaman.Name = "ID_Pinjaman";
+            this.ID_Pinjaman.ReadOnly = true;
+            // 
+            // Nama_Alat
+            // 
+            this.Nama_Alat.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Nama_Alat.DataPropertyName = "nama_alat";
+            this.Nama_Alat.HeaderText = "Nama Alat";
+            this.Nama_Alat.Name = "Nama_Alat";
+            this.Nama_Alat.ReadOnly = true;
+            // 
+            // Status
+            // 
+            this.Status.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Status.DataPropertyName = "status";
+            this.Status.HeaderText = "Status";
+            this.Status.Name = "Status";
+            this.Status.ReadOnly = true;
+            // 
             // txtdetail
             // 
             this.txtdetail.Location = new System.Drawing.Point(314, 29);
@@ -303,14 +327,14 @@
             this.dgvPeminjam.BackgroundColor = System.Drawing.Color.White;
             this.dgvPeminjam.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvPeminjam.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPeminjam.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPeminjam.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvPeminjam.ColumnHeadersHeight = 33;
             this.dgvPeminjam.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvPeminjam.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -322,7 +346,7 @@
             this.dgvPeminjam.Location = new System.Drawing.Point(-1, 112);
             this.dgvPeminjam.Name = "dgvPeminjam";
             this.dgvPeminjam.ReadOnly = true;
-            this.dgvPeminjam.Size = new System.Drawing.Size(809, 320);
+            this.dgvPeminjam.Size = new System.Drawing.Size(831, 242);
             this.dgvPeminjam.TabIndex = 80;
             this.dgvPeminjam.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPeminjam_CellDoubleClick_1);
             // 
@@ -358,36 +382,12 @@
             this.Tanggal_pinjam.Name = "Tanggal_pinjam";
             this.Tanggal_pinjam.ReadOnly = true;
             // 
-            // ID_Pinjaman
-            // 
-            this.ID_Pinjaman.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ID_Pinjaman.DataPropertyName = "id_pinjaman";
-            this.ID_Pinjaman.HeaderText = "ID Pinjaman";
-            this.ID_Pinjaman.Name = "ID_Pinjaman";
-            this.ID_Pinjaman.ReadOnly = true;
-            // 
-            // Nama_Alat
-            // 
-            this.Nama_Alat.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Nama_Alat.DataPropertyName = "nama_alat";
-            this.Nama_Alat.HeaderText = "Nama Alat";
-            this.Nama_Alat.Name = "Nama_Alat";
-            this.Nama_Alat.ReadOnly = true;
-            // 
-            // Status
-            // 
-            this.Status.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Status.DataPropertyName = "status";
-            this.Status.HeaderText = "Status";
-            this.Status.Name = "Status";
-            this.Status.ReadOnly = true;
-            // 
             // Peminjam
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SkyBlue;
-            this.ClientSize = new System.Drawing.Size(807, 515);
+            this.ClientSize = new System.Drawing.Size(829, 437);
             this.Controls.Add(this.grpdetail);
             this.Controls.Add(this.dgvPeminjam);
             this.Controls.Add(this.BtnDetailPinjam);

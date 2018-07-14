@@ -55,6 +55,7 @@
     <Compile Include="Service\AnggotaServ.cs" />
     <Compile Include="Service\KembaliServ.cs" />
     <Compile Include="Service\PinjamServ.cs" />
+    <Compile Include="Service\Query.cs" />
     <Compile Include="View\Alat.cs">
       <SubType>Form</SubType>
     </Compile>

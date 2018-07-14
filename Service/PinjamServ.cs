@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Data;
 using peminjaman.Model;
+using SIPWB.Service;
 
 namespace peminjaman.Service
 {
@@ -11,7 +12,8 @@ namespace peminjaman.Service
     {
         private Koneksi dbConn;
         private DataTable dtTbl;
-        private String Query = "";
+        private String query = "";
+        private string tabel = "peminjam";
 
         public PinjamServ()
         {
@@ -23,8 +25,8 @@ namespace peminjaman.Service
         {
             bool cek = false;
 
-            Query = "SELECT * FROM peminjam WHERE id_peminjaman = '" + id_peminjaman + "'";
-            dtTbl = dbConn.ExecQuery(Query);
+            query = "SELECT * FROM peminjam WHERE id_peminjaman = '" + id_peminjaman + "'";
+            dtTbl = dbConn.ExecQuery(query);
 
             if (dtTbl.Rows.Count > 0)
             {
@@ -36,25 +38,27 @@ namespace peminjaman.Service
 
         public DataTable TampilPinjaman(String id_peminjaman)
         {
-            Query = "select * from pinjaman where id_peminjaman = '" + id_peminjaman + "'";
-            dtTbl = dbConn.ExecQuery(Query);
+            query = "select * from pinjaman where id_peminjaman = '" + id_peminjaman + "'";
+            dtTbl = dbConn.ExecQuery(query);
 
             return dtTbl;
+            
         }
 
 
         public DataTable TampilSemuaPeminjam()
         {
-            Query = "SELECT * FROM peminjam";
-            dtTbl = dbConn.ExecQuery(Query);
+            query = "SELECT * FROM peminjam";
+            dtTbl = dbConn.ExecQuery(query);
 
-            return dtTbl;
+            //return dtTbl;
+            return SIPWB.Service.Query.Select("peminjam", "");
         }
 
         public DataTable CariIDp(String a)
         {
-            Query = "SELECT id_peminjaman FROM peminjam WHERE nama='" + a + "'";
-            dtTbl = dbConn.ExecQuery(Query);
+            query = "SELECT id_peminjaman FROM peminjam WHERE nama='" + a + "'";
+            dtTbl = dbConn.ExecQuery(query);
 
             return dtTbl;
 
@@ -62,18 +66,21 @@ namespace peminjaman.Service
         public DataTable CekP(String a)
         {
 
-            Query = "SELECT * FROM peminjam WHERE nama like '%" + a + "%'";
-            dtTbl = dbConn.ExecQuery(Query);
+            query = "SELECT * FROM peminjam WHERE nama like '%" + a + "%'";
+            dtTbl = dbConn.ExecQuery(query);
 
             return dtTbl;
         }
 
         public DataTable CariPeminjam(String a, String b)
         {
-            Query = "SELECT * FROM peminjam WHERE " + b + " like '" + a + "%'";
-            dtTbl = dbConn.ExecQuery(Query);
+            //Query = "SELECT * FROM peminjam WHERE " + b + " like '" + a + "%'";
+            //dtTbl = dbConn.ExecQuery(Query);
 
-            return dtTbl;
+            //return dtTbl;
+
+            return Query.Select(tabel, a);
+
         }
 
 
@@ -82,8 +89,8 @@ namespace peminjaman.Service
             String kode = "";
             int idx = 0;
 
-            Query = "select ifnull(max(substring(id_peminjaman,5,4)),0) as idp from peminjam";
-            dtTbl = dbConn.ExecQuery(Query);
+            query = "select ifnull(max(substring(id_peminjaman,5,4)),0) as idp from peminjam";
+            dtTbl = dbConn.ExecQuery(query);
 
             if (dtTbl.Rows.Count > 0)
             {
@@ -118,9 +125,9 @@ namespace peminjaman.Service
 
         public void SimpanPeminjam()
         {
-            Query = "insert into peminjam (id_peminjaman,id_anggota,nama,jumlah) values ('" + IdPeminjaman + "','" + IdAnggota + "','" + Nama + "','" + Jumlah + "')";
+            query = "insert into peminjam (id_peminjaman,id_anggota,nama,jumlah) values ('" + IdPeminjaman + "','" + IdAnggota + "','" + Nama + "','" + Jumlah + "')";
 
-            if (!(dbConn.ExecNonQuery(Query) > 0))
+            if (!(dbConn.ExecNonQuery(query) > 0))
             {
                 throw new Exception("Gagal Menyimpan");
             }
@@ -128,8 +135,8 @@ namespace peminjaman.Service
 
         public void SimpanPinjaman()
         {
-            Query = "insert into pinjaman (id_peminjaman,id_pinjaman,nama_alat) values ('" + IdPeminjaman + "','" + IdPinjaman + "','" + Nama_Alat + "')";
-            if (!(dbConn.ExecNonQuery(Query) > 0))
+            query = "insert into pinjaman (id_peminjaman,id_pinjaman,nama_alat) values ('" + IdPeminjaman + "','" + IdPinjaman + "','" + Nama_Alat + "')";
+            if (!(dbConn.ExecNonQuery(query) > 0))
             {
                 throw new Exception("Gagal Menyimpan");
             }
@@ -137,8 +144,8 @@ namespace peminjaman.Service
 
         public void HapusPeminjam(String id_peminjaman)
         {
-            Query = "delete from peminjam where id_peminjaman = '" + id_peminjaman + "'";
-            if (!(dbConn.ExecNonQuery(Query) > 0))
+            query = "delete from peminjam where id_peminjaman = '" + id_peminjaman + "'";
+            if (!(dbConn.ExecNonQuery(query) > 0))
             {
                 throw new Exception("Gagal Menghapus");
             }
@@ -148,18 +155,18 @@ namespace peminjaman.Service
         
         public DataTable HitungPeminjam()
         {
-            Query = "select count(*) from peminjam";
-            dtTbl = dbConn.ExecQuery(Query);
+            query = "select count(*) from peminjam";
+            dtTbl = dbConn.ExecQuery(query);
 
             return dtTbl;
         }
 
         public DataTable TampilDetailPinjam(String id_peminjaman)
         {
-            Query = "select * from pinjaman where id_pinjaman='" + id_peminjaman +"%'";
+            query = "select * from pinjaman where id_pinjaman='" + id_peminjaman +"%'";
             //Query = "select kode_pinjam,kode_buku from detail_pinjam where kode_pinjam = '"+ dp +"'";
 
-            dtTbl = dbConn.ExecQuery(Query);
+            dtTbl = dbConn.ExecQuery(query);
 
             return dtTbl;
 
@@ -170,8 +177,8 @@ namespace peminjaman.Service
             String code = "";
             int idp = 0 ;
 
-            Query = "select ifnull(max(substring(id_pinjaman,6,5)),0) as idx from pinjaman";
-            dtTbl = dbConn.ExecQuery(Query);
+            query = "select ifnull(max(substring(id_pinjaman,6,5)),0) as idx from pinjaman";
+            dtTbl = dbConn.ExecQuery(query);
 
             if (dtTbl.Rows.Count > 0)
             {

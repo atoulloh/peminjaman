@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Data;
 using peminjaman.Model;
+using SIPWB.Service;
 
 namespace peminjaman.Service
 {
@@ -11,7 +12,8 @@ namespace peminjaman.Service
     {
         private Koneksi dbConn;
         private DataTable dtTbl;
-        private String Query = "";
+        private String query = "";
+        private string tabel = "alat";
 
         public AlatServ()
         {
@@ -22,28 +24,40 @@ namespace peminjaman.Service
         public DataTable CekAlat(String a)
         {
 
-            Query = "SELECT * FROM alat WHERE nama_alat like '%" + a + "%'";
-            dtTbl = dbConn.ExecQuery(Query);
+            query = "SELECT * FROM alat WHERE nama_alat like '%" + a + "%'";
+            dtTbl = dbConn.ExecQuery(query);
 
             return dtTbl;
         }
 
-        public void SimpanAlat()
+        public bool SimpanAlat()
         {
-            Query = "INSERT INTO alat VALUES ('" + Kode_Alat + "','" + Nama_Alat + "','" + Jenis_Alat + "','" + Letak + "','"
-                + Harga_Pembelian + "','" + Tahun_Pembelian + "','" + Jumlah + "','" + Kondisi + "')";
+           // query = "INSERT INTO alat VALUES ('" + Kode_Alat + "','" + Nama_Alat + "','" + Jenis_Alat + "','" + Letak + "','"
+                //+ Harga_Pembelian + "','" + Tahun_Pembelian + "','" + Jumlah + "','" + Kondisi + "')";
 
-            if (!(dbConn.ExecNonQuery(Query) > 0))
-            {
-                throw new Exception(" Gagal Menyimpan");
-            }
+            var datas = new Dictionary<string, object>();
+            datas.Add("kode_alat", Kode_Alat);
+            datas.Add("nama_alat", Nama_Alat);
+            datas.Add("jenis_alat", Jenis_Alat);
+            datas.Add("letak", Letak);
+            datas.Add("harga_pembelian", Harga_Pembelian);
+            datas.Add("tahun_pembelian", Tahun_Pembelian);
+            datas.Add("jumlah", Jumlah);
+            datas.Add("kondisi",Kondisi);
+            return Query.Insert(tabel, datas);
+
+
+            //if (!(dbConn.ExecNonQuery(query) > 0))
+            //{
+            //    throw new Exception(" Gagal Menyimpan");
+            //}
         }
 
         public void UbahAlat(String kode_alat)
         {
-            Query = "UPDATE alat SET nama_alat='" + Nama_Alat + "', jenis_alat='" + Jenis_Alat + "', letak='" + Letak + "', harga_pembelian='" + Harga_Pembelian + "', tahun_pembelian='" + Tahun_Pembelian + "', jumlah='" +Jumlah + "', kondisi='" + Kondisi + "' WHERE kode_alat='" + kode_alat + "'";
+            query = "UPDATE alat SET nama_alat='" + Nama_Alat + "', jenis_alat='" + Jenis_Alat + "', letak='" + Letak + "', harga_pembelian='" + Harga_Pembelian + "', tahun_pembelian='" + Tahun_Pembelian + "', jumlah='" +Jumlah + "', kondisi='" + Kondisi + "' WHERE kode_alat='" + kode_alat + "'";
 
-            if (!(dbConn.ExecNonQuery(Query) > 0))
+            if (!(dbConn.ExecNonQuery(query) > 0))
             {
                 throw new Exception("Gagal Merubah");
             }
@@ -51,8 +65,8 @@ namespace peminjaman.Service
 
         public void HapusAlat(String kode_alat)
         {
-            Query = "delete from alat where kode_alat='" + kode_alat + "'";
-            if (!(dbConn.ExecNonQuery(Query) > 0))
+            query = "delete from alat where kode_alat='" + kode_alat + "'";
+            if (!(dbConn.ExecNonQuery(query) > 0))
             {
                 throw new Exception("Gagal Menghapus");
             }
@@ -62,8 +76,8 @@ namespace peminjaman.Service
         {
             bool cek = false;
 
-            Query = "SELECT * FROM alat WHERE kode_alat ='" + kode_alat + "'";
-            dtTbl = dbConn.ExecQuery(Query);
+            query = "SELECT * FROM alat WHERE kode_alat ='" + kode_alat + "'";
+            dtTbl = dbConn.ExecQuery(query);
 
             if (dtTbl.Rows.Count > 0)
             {
@@ -75,22 +89,22 @@ namespace peminjaman.Service
 
         public DataTable TampilSemua()
         {
-            Query = "SELECT * FROM alat";
-            dtTbl = dbConn.ExecQuery(Query);
+            query = "SELECT * FROM alat";
+            dtTbl = dbConn.ExecQuery(query);
             return dtTbl;
         }
 
         public DataTable CariAlat(String a)
         {
 
-            Query = "SELECT * FROM alat WHERE nama_alat like '%" + a + "%'"+
+            query = "SELECT * FROM alat WHERE nama_alat like '%" + a + "%'"+
                                         " OR kode_alat like '%" + a + "%'" +
                                         " OR jenis_alat like '%" + a + "%'" +
                                         " OR letak like '%" + a + "%'" +
                                         " OR harga_pembelian like '%" + a + "%'" +
                                         " OR tahun_pembelian like '%" + a + "%'"+
                                         " OR kondisi like '%" + a + "%'";
-            dtTbl = dbConn.ExecQuery(Query); 
+            dtTbl = dbConn.ExecQuery(query); 
 
 
             return dtTbl;
@@ -99,8 +113,8 @@ namespace peminjaman.Service
         public DataTable CariAl(String p, String q)
         {
 
-            Query = "SELECT * FROM alat WHERE " + q + " like '" + p + "%'";
-            dtTbl = dbConn.ExecQuery(Query);
+            query = "SELECT * FROM alat WHERE " + q + " like '" + p + "%'";
+            dtTbl = dbConn.ExecQuery(query);
 
 
             return dtTbl;
@@ -108,8 +122,8 @@ namespace peminjaman.Service
 
         public DataTable HitungAlat()
         {
-            Query = "select count(*) from alat";
-            dtTbl = dbConn.ExecQuery(Query);
+            query = "select count(*) from alat";
+            dtTbl = dbConn.ExecQuery(query);
 
             return dtTbl;
         }
@@ -119,8 +133,8 @@ namespace peminjaman.Service
             String kode = "";
             int alat = 0;
 
-            Query = "select ifnull(max(substring(kode_alat,5,4)),0) as idp from alat";
-            dtTbl = dbConn.ExecQuery(Query);
+            query = "select ifnull(max(substring(kode_alat,5,4)),0) as idp from alat";
+            dtTbl = dbConn.ExecQuery(query);
 
             if (dtTbl.Rows.Count > 0)
             {

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using peminjaman.Model;
 using System.Data;
-
+using SIPWB.Service;
 
 namespace peminjaman.Service
 {
@@ -12,8 +12,8 @@ namespace peminjaman.Service
     {
         private Koneksi dbConn;
         private DataTable dtTbl;
-        private String Query = "";
-
+        private String query = "";
+        private string tabelPinj = "pinjaman";
         public KembaliServ()
         {
             dbConn = new Koneksi();
@@ -22,8 +22,8 @@ namespace peminjaman.Service
 
         public void Simpan_Kembali()
         {
-            Query = "INSERT INTO kembali (id_peminjaman,id_anggota,nama,jumlah,tanggal_pinjam,tanggal_kembali) VALUES ('" + IdPeminjaman + "','" + IdAnggota + "','" + Nama + "','" + Jumlah + "','" + TanggalPinjam + "','" + TanggalKembali + "')";
-            if (!(dbConn.ExecNonQuery(Query) > 0))
+            query = "INSERT INTO kembali (id_peminjaman,id_anggota,nama,jumlah,tanggal_pinjam,tanggal_kembali) VALUES ('" + IdPeminjaman + "','" + IdAnggota + "','" + Nama + "','" + Jumlah + "','" + TanggalPinjam + "','" + TanggalKembali + "')";
+            if (!(dbConn.ExecNonQuery(query) > 0))
             {
                 throw new Exception("Gagal Menyimpan");
             }
@@ -31,8 +31,8 @@ namespace peminjaman.Service
 
         public void Simpan_Detail_kembali()
         {
-            Query = " INSERT INTO detail_kembali(id_peminjaman,id_pinjaman,nama_alat) VALUES ('" + IdPeminjaman + "','" + IdPinjaman + "','"  + NamaAlat + "')";
-            if(!(dbConn.ExecNonQuery(Query) > 0))
+            query = " INSERT INTO detail_kembali(id_peminjaman,id_pinjaman,nama_alat) VALUES ('" + IdPeminjaman + "','" + IdPinjaman + "','"  + NamaAlat + "')";
+            if(!(dbConn.ExecNonQuery(query) > 0))
             {
                 throw new Exception("Gagal Menyimpan");
             }
@@ -40,8 +40,8 @@ namespace peminjaman.Service
 
         public void Hapus_Kembali(String id_peminjaman)
         {
-            Query = "DELETE from kembali WHERE id_peminjaman = '" + id_peminjaman + "'";
-            if (!(dbConn.ExecNonQuery(Query) > 0))
+            query = "DELETE from kembali WHERE id_peminjaman = '" + id_peminjaman + "'";
+            if (!(dbConn.ExecNonQuery(query) > 0))
             {
                 throw new Exception("Gagal Menyimpan");
             }
@@ -49,23 +49,24 @@ namespace peminjaman.Service
 
         public DataTable auto()
         {
-            Query = "select count (*) from kembali";
-            dtTbl = dbConn.ExecQuery(Query);
+            query = "select count (*) from kembali";
+            dtTbl = dbConn.ExecQuery(query);
 
             return dtTbl;
         }
 
         public DataTable TampilSemua()
         {
-            Query = "SELECT * FROM kembali";
-            dtTbl = dbConn.ExecQuery(Query);
-            return dtTbl;
+            //Query = "SELECT * FROM kembali";
+            //dtTbl = dbConn.ExecQuery(Query);
+            //return dtTbl;
+            return Query.Select("kembali","");
         }
 
         public DataTable TampilKembali(String id_peminjaman)
         {
-            Query = " select * from kembali where id_peminjaman = '" + id_peminjaman + "'";
-            dtTbl = dbConn.ExecQuery(Query);
+            query = " select * from kembali where id_peminjaman = '" + id_peminjaman + "'";
+            dtTbl = dbConn.ExecQuery(query);
 
           //  if (dtTbl.Rows.Count > 0)
            // {
@@ -79,8 +80,8 @@ namespace peminjaman.Service
         {
             bool cek = false;
 
-            Query = "SELECT * FROM kembali WHERE id_peminjaman = '" + IdPeminjaman + "'";
-            dtTbl = dbConn.ExecQuery(Query);
+            query = "SELECT * FROM kembali WHERE id_peminjaman = '" + IdPeminjaman + "'";
+            dtTbl = dbConn.ExecQuery(query);
 
             if (dtTbl.Rows.Count > 0)
             {
@@ -92,24 +93,24 @@ namespace peminjaman.Service
 
         public DataTable CariKembali(String a, String b)
         {
-            Query = " SELECT * FROM kembali WHERE  " + b + " like '" + a + "%'";
-            dtTbl = dbConn.ExecQuery(Query);
+            query = " SELECT * FROM kembali WHERE  " + b + " like '" + a + "%'";
+            dtTbl = dbConn.ExecQuery(query);
 
             return dtTbl;
         }
 
         public DataTable HitungKembali()
         {
-            Query = " Select count(*) from kembali";
-            dtTbl = dbConn.ExecQuery(Query);
+            query = " Select count(*) from kembali";
+            dtTbl = dbConn.ExecQuery(query);
 
             return dtTbl;
         }
 
         public DataTable CekKembali(String a)
         {
-            Query = "SELECT * FROM kembali WHERE id_peminjaman like '%" + a + "%'";
-            dtTbl = dbConn.ExecQuery(Query);
+            query = "SELECT * FROM kembali WHERE id_peminjaman like '%" + a + "%'";
+            dtTbl = dbConn.ExecQuery(query);
 
             return dtTbl;
         }
@@ -118,6 +119,18 @@ namespace peminjaman.Service
         internal object TampilKembali()
         {
             throw new NotImplementedException();
+        }
+
+        public bool UbahStatusPijaman()
+        {
+            var data = new Dictionary<string, object>();
+            data.Add("tanggal_kembali", TanggalKembali);
+            data.Add("status", Status);
+
+            var where = new Dictionary<string, object>();
+            where.Add("id_pinjaman", IdPinjaman);
+
+            return Query.Update(tabelPinj, data, where);
         }
     }
 }
