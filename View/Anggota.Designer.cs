@@ -46,7 +46,6 @@
             this.BtnRefAg = new System.Windows.Forms.Button();
             this.BtnEditAg = new System.Windows.Forms.Button();
             this.BtnCetakAg = new System.Windows.Forms.Button();
-            this.BtnBackAnggota = new System.Windows.Forms.Button();
             this.BtnHapusAg = new System.Windows.Forms.Button();
             this.BtnCari = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DgvAnggota)).BeginInit();
@@ -206,7 +205,7 @@
             // 
             // BtnRefAg
             // 
-            this.BtnRefAg.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.BtnRefAg.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnRefAg.BackColor = System.Drawing.Color.SkyBlue;
             this.BtnRefAg.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnRefAg.FlatAppearance.BorderSize = 0;
@@ -215,7 +214,7 @@
             this.BtnRefAg.ForeColor = System.Drawing.Color.Black;
             this.BtnRefAg.Image = ((System.Drawing.Image)(resources.GetObject("BtnRefAg.Image")));
             this.BtnRefAg.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.BtnRefAg.Location = new System.Drawing.Point(12, 390);
+            this.BtnRefAg.Location = new System.Drawing.Point(479, 390);
             this.BtnRefAg.Name = "BtnRefAg";
             this.BtnRefAg.Size = new System.Drawing.Size(105, 58);
             this.BtnRefAg.TabIndex = 69;
@@ -226,7 +225,7 @@
             // 
             // BtnEditAg
             // 
-            this.BtnEditAg.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.BtnEditAg.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnEditAg.BackColor = System.Drawing.Color.SkyBlue;
             this.BtnEditAg.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnEditAg.FlatAppearance.BorderSize = 0;
@@ -235,7 +234,7 @@
             this.BtnEditAg.ForeColor = System.Drawing.Color.Black;
             this.BtnEditAg.Image = ((System.Drawing.Image)(resources.GetObject("BtnEditAg.Image")));
             this.BtnEditAg.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.BtnEditAg.Location = new System.Drawing.Point(123, 390);
+            this.BtnEditAg.Location = new System.Drawing.Point(590, 390);
             this.BtnEditAg.Name = "BtnEditAg";
             this.BtnEditAg.Size = new System.Drawing.Size(74, 59);
             this.BtnEditAg.TabIndex = 70;
@@ -246,7 +245,7 @@
             // 
             // BtnCetakAg
             // 
-            this.BtnCetakAg.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.BtnCetakAg.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnCetakAg.BackColor = System.Drawing.Color.SkyBlue;
             this.BtnCetakAg.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnCetakAg.FlatAppearance.BorderSize = 0;
@@ -255,7 +254,7 @@
             this.BtnCetakAg.ForeColor = System.Drawing.Color.Black;
             this.BtnCetakAg.Image = ((System.Drawing.Image)(resources.GetObject("BtnCetakAg.Image")));
             this.BtnCetakAg.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.BtnCetakAg.Location = new System.Drawing.Point(301, 391);
+            this.BtnCetakAg.Location = new System.Drawing.Point(768, 391);
             this.BtnCetakAg.Name = "BtnCetakAg";
             this.BtnCetakAg.Size = new System.Drawing.Size(82, 59);
             this.BtnCetakAg.TabIndex = 71;
@@ -263,27 +262,9 @@
             this.BtnCetakAg.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.BtnCetakAg.UseVisualStyleBackColor = false;
             // 
-            // BtnBackAnggota
-            // 
-            this.BtnBackAnggota.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnBackAnggota.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.BtnBackAnggota.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnBackAnggota.FlatAppearance.BorderSize = 0;
-            this.BtnBackAnggota.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
-            this.BtnBackAnggota.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnBackAnggota.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnBackAnggota.ForeColor = System.Drawing.Color.White;
-            this.BtnBackAnggota.Image = ((System.Drawing.Image)(resources.GetObject("BtnBackAnggota.Image")));
-            this.BtnBackAnggota.Location = new System.Drawing.Point(800, 413);
-            this.BtnBackAnggota.Name = "BtnBackAnggota";
-            this.BtnBackAnggota.Size = new System.Drawing.Size(37, 37);
-            this.BtnBackAnggota.TabIndex = 72;
-            this.BtnBackAnggota.UseVisualStyleBackColor = false;
-            this.BtnBackAnggota.Click += new System.EventHandler(this.BtnBackAnggota_Click);
-            // 
             // BtnHapusAg
             // 
-            this.BtnHapusAg.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.BtnHapusAg.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnHapusAg.BackColor = System.Drawing.Color.SkyBlue;
             this.BtnHapusAg.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnHapusAg.FlatAppearance.BorderSize = 0;
@@ -292,7 +273,7 @@
             this.BtnHapusAg.ForeColor = System.Drawing.Color.Black;
             this.BtnHapusAg.Image = ((System.Drawing.Image)(resources.GetObject("BtnHapusAg.Image")));
             this.BtnHapusAg.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.BtnHapusAg.Location = new System.Drawing.Point(206, 391);
+            this.BtnHapusAg.Location = new System.Drawing.Point(673, 391);
             this.BtnHapusAg.Name = "BtnHapusAg";
             this.BtnHapusAg.Size = new System.Drawing.Size(89, 58);
             this.BtnHapusAg.TabIndex = 73;
@@ -320,7 +301,6 @@
             this.Controls.Add(this.BtnRefAg);
             this.Controls.Add(this.BtnHapusAg);
             this.Controls.Add(this.BtnEditAg);
-            this.Controls.Add(this.BtnBackAnggota);
             this.Controls.Add(this.BtnCetakAg);
             this.Controls.Add(this.labeljumlahag);
             this.Controls.Add(this.panel1);
@@ -349,7 +329,6 @@
         public System.Windows.Forms.Button BtnRefAg;
         private System.Windows.Forms.Button BtnEditAg;
         private System.Windows.Forms.Button BtnCetakAg;
-        private System.Windows.Forms.Button BtnBackAnggota;
         private System.Windows.Forms.Button BtnHapusAg;
         private System.Windows.Forms.Button BtnCari;
         private System.Windows.Forms.DataGridViewTextBoxColumn id_anggota;

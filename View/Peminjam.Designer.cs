@@ -36,7 +36,6 @@
             this.CmbCariPeminjam = new System.Windows.Forms.ComboBox();
             this.TxtCariDtPinjam = new System.Windows.Forms.TextBox();
             this.btncariPinjam = new System.Windows.Forms.Button();
-            this.BtnBackPinjam = new System.Windows.Forms.Button();
             this.BtnCetak = new System.Windows.Forms.Button();
             this.BtnRefresh = new System.Windows.Forms.Button();
             this.BtnHapusPeminjam = new System.Windows.Forms.Button();
@@ -138,28 +137,9 @@
             this.btncariPinjam.TextChanged += new System.EventHandler(this.btncariPinjam_TextChanged);
             this.btncariPinjam.Click += new System.EventHandler(this.btncariPinjam_Click);
             // 
-            // BtnBackPinjam
-            // 
-            this.BtnBackPinjam.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnBackPinjam.BackColor = System.Drawing.Color.SkyBlue;
-            this.BtnBackPinjam.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnBackPinjam.FlatAppearance.BorderSize = 0;
-            this.BtnBackPinjam.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(134)))), ((int)(((byte)(213)))));
-            this.BtnBackPinjam.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
-            this.BtnBackPinjam.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnBackPinjam.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnBackPinjam.ForeColor = System.Drawing.Color.White;
-            this.BtnBackPinjam.Image = ((System.Drawing.Image)(resources.GetObject("BtnBackPinjam.Image")));
-            this.BtnBackPinjam.Location = new System.Drawing.Point(744, 369);
-            this.BtnBackPinjam.Name = "BtnBackPinjam";
-            this.BtnBackPinjam.Size = new System.Drawing.Size(73, 65);
-            this.BtnBackPinjam.TabIndex = 73;
-            this.BtnBackPinjam.UseVisualStyleBackColor = false;
-            this.BtnBackPinjam.Click += new System.EventHandler(this.BtnBackPinjam_Click);
-            // 
             // BtnCetak
             // 
-            this.BtnCetak.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.BtnCetak.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnCetak.BackColor = System.Drawing.Color.SkyBlue;
             this.BtnCetak.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnCetak.FlatAppearance.BorderSize = 0;
@@ -168,7 +148,7 @@
             this.BtnCetak.ForeColor = System.Drawing.Color.Black;
             this.BtnCetak.Image = ((System.Drawing.Image)(resources.GetObject("BtnCetak.Image")));
             this.BtnCetak.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.BtnCetak.Location = new System.Drawing.Point(203, 370);
+            this.BtnCetak.Location = new System.Drawing.Point(632, 370);
             this.BtnCetak.Name = "BtnCetak";
             this.BtnCetak.Size = new System.Drawing.Size(86, 55);
             this.BtnCetak.TabIndex = 75;
@@ -178,7 +158,7 @@
             // 
             // BtnRefresh
             // 
-            this.BtnRefresh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.BtnRefresh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnRefresh.BackColor = System.Drawing.Color.SkyBlue;
             this.BtnRefresh.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnRefresh.FlatAppearance.BorderSize = 0;
@@ -187,7 +167,7 @@
             this.BtnRefresh.ForeColor = System.Drawing.Color.Black;
             this.BtnRefresh.Image = ((System.Drawing.Image)(resources.GetObject("BtnRefresh.Image")));
             this.BtnRefresh.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.BtnRefresh.Location = new System.Drawing.Point(-1, 370);
+            this.BtnRefresh.Location = new System.Drawing.Point(428, 370);
             this.BtnRefresh.Name = "BtnRefresh";
             this.BtnRefresh.Size = new System.Drawing.Size(103, 55);
             this.BtnRefresh.TabIndex = 76;
@@ -198,7 +178,7 @@
             // 
             // BtnHapusPeminjam
             // 
-            this.BtnHapusPeminjam.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.BtnHapusPeminjam.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnHapusPeminjam.BackColor = System.Drawing.Color.SkyBlue;
             this.BtnHapusPeminjam.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnHapusPeminjam.FlatAppearance.BorderSize = 0;
@@ -207,7 +187,7 @@
             this.BtnHapusPeminjam.ForeColor = System.Drawing.Color.Black;
             this.BtnHapusPeminjam.Image = ((System.Drawing.Image)(resources.GetObject("BtnHapusPeminjam.Image")));
             this.BtnHapusPeminjam.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.BtnHapusPeminjam.Location = new System.Drawing.Point(104, 370);
+            this.BtnHapusPeminjam.Location = new System.Drawing.Point(533, 370);
             this.BtnHapusPeminjam.Name = "BtnHapusPeminjam";
             this.BtnHapusPeminjam.Size = new System.Drawing.Size(93, 55);
             this.BtnHapusPeminjam.TabIndex = 77;
@@ -218,7 +198,7 @@
             // 
             // BtnDetailPinjam
             // 
-            this.BtnDetailPinjam.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.BtnDetailPinjam.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnDetailPinjam.BackColor = System.Drawing.Color.SkyBlue;
             this.BtnDetailPinjam.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnDetailPinjam.FlatAppearance.BorderSize = 0;
@@ -227,7 +207,7 @@
             this.BtnDetailPinjam.ForeColor = System.Drawing.Color.Black;
             this.BtnDetailPinjam.Image = ((System.Drawing.Image)(resources.GetObject("BtnDetailPinjam.Image")));
             this.BtnDetailPinjam.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.BtnDetailPinjam.Location = new System.Drawing.Point(295, 370);
+            this.BtnDetailPinjam.Location = new System.Drawing.Point(724, 370);
             this.BtnDetailPinjam.Name = "BtnDetailPinjam";
             this.BtnDetailPinjam.Size = new System.Drawing.Size(94, 55);
             this.BtnDetailPinjam.TabIndex = 78;
@@ -262,6 +242,7 @@
             // 
             this.dgvdetail.AllowUserToAddRows = false;
             this.dgvdetail.AllowUserToDeleteRows = false;
+            this.dgvdetail.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dgvdetail.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvdetail.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID_Pinjaman,
@@ -343,10 +324,10 @@
             this.Nama,
             this.Tanggal_pinjam});
             this.dgvPeminjam.GridColor = System.Drawing.Color.White;
-            this.dgvPeminjam.Location = new System.Drawing.Point(-1, 112);
+            this.dgvPeminjam.Location = new System.Drawing.Point(12, 112);
             this.dgvPeminjam.Name = "dgvPeminjam";
             this.dgvPeminjam.ReadOnly = true;
-            this.dgvPeminjam.Size = new System.Drawing.Size(831, 242);
+            this.dgvPeminjam.Size = new System.Drawing.Size(806, 242);
             this.dgvPeminjam.TabIndex = 80;
             this.dgvPeminjam.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPeminjam_CellDoubleClick_1);
             // 
@@ -394,7 +375,6 @@
             this.Controls.Add(this.BtnHapusPeminjam);
             this.Controls.Add(this.BtnRefresh);
             this.Controls.Add(this.BtnCetak);
-            this.Controls.Add(this.BtnBackPinjam);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.labeljumlah);
             this.Controls.Add(this.label2);
@@ -419,7 +399,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ComboBox CmbCariPeminjam;
         private System.Windows.Forms.TextBox TxtCariDtPinjam;
-        private System.Windows.Forms.Button BtnBackPinjam;
         private System.Windows.Forms.Button BtnCetak;
         private System.Windows.Forms.Button BtnRefresh;
         private System.Windows.Forms.Button BtnHapusPeminjam;

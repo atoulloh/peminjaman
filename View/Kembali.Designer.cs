@@ -44,15 +44,15 @@
             this.Jumlah = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tanggalpinjam = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tanggalkembali = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BtnBack = new System.Windows.Forms.Button();
             this.grpdetailkembali = new System.Windows.Forms.GroupBox();
             this.button1 = new System.Windows.Forms.Button();
             this.textkembali = new System.Windows.Forms.TextBox();
             this.dgvdetailkembali = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
             this.id_peminjaman = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.id_peminjam = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nama_alat = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label1 = new System.Windows.Forms.Label();
+            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvKembali)).BeginInit();
             this.grpdetailkembali.SuspendLayout();
@@ -73,7 +73,7 @@
             // 
             // BtnCetak
             // 
-            this.BtnCetak.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.BtnCetak.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnCetak.BackColor = System.Drawing.Color.SkyBlue;
             this.BtnCetak.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnCetak.FlatAppearance.BorderSize = 0;
@@ -82,7 +82,7 @@
             this.BtnCetak.ForeColor = System.Drawing.Color.Black;
             this.BtnCetak.Image = ((System.Drawing.Image)(resources.GetObject("BtnCetak.Image")));
             this.BtnCetak.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.BtnCetak.Location = new System.Drawing.Point(219, 368);
+            this.BtnCetak.Location = new System.Drawing.Point(768, 368);
             this.BtnCetak.Name = "BtnCetak";
             this.BtnCetak.Size = new System.Drawing.Size(86, 65);
             this.BtnCetak.TabIndex = 69;
@@ -92,7 +92,7 @@
             // 
             // BtnRefresh
             // 
-            this.BtnRefresh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.BtnRefresh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnRefresh.BackColor = System.Drawing.Color.SkyBlue;
             this.BtnRefresh.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnRefresh.FlatAppearance.BorderSize = 0;
@@ -101,7 +101,7 @@
             this.BtnRefresh.ForeColor = System.Drawing.Color.Black;
             this.BtnRefresh.Image = ((System.Drawing.Image)(resources.GetObject("BtnRefresh.Image")));
             this.BtnRefresh.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.BtnRefresh.Location = new System.Drawing.Point(12, 368);
+            this.BtnRefresh.Location = new System.Drawing.Point(572, 368);
             this.BtnRefresh.Name = "BtnRefresh";
             this.BtnRefresh.Size = new System.Drawing.Size(97, 65);
             this.BtnRefresh.TabIndex = 70;
@@ -163,7 +163,7 @@
             // 
             // btnhapus
             // 
-            this.btnhapus.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnhapus.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnhapus.BackColor = System.Drawing.Color.SkyBlue;
             this.btnhapus.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnhapus.FlatAppearance.BorderSize = 0;
@@ -172,7 +172,7 @@
             this.btnhapus.ForeColor = System.Drawing.Color.Black;
             this.btnhapus.Image = ((System.Drawing.Image)(resources.GetObject("btnhapus.Image")));
             this.btnhapus.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnhapus.Location = new System.Drawing.Point(119, 368);
+            this.btnhapus.Location = new System.Drawing.Point(670, 368);
             this.btnhapus.Name = "btnhapus";
             this.btnhapus.Size = new System.Drawing.Size(93, 65);
             this.btnhapus.TabIndex = 74;
@@ -195,11 +195,12 @@
             this.Jumlah,
             this.tanggalpinjam,
             this.tanggalkembali});
-            this.DgvKembali.Location = new System.Drawing.Point(-2, 117);
+            this.DgvKembali.Location = new System.Drawing.Point(12, 117);
             this.DgvKembali.Name = "DgvKembali";
             this.DgvKembali.ReadOnly = true;
-            this.DgvKembali.Size = new System.Drawing.Size(865, 238);
+            this.DgvKembali.Size = new System.Drawing.Size(847, 238);
             this.DgvKembali.TabIndex = 75;
+            this.DgvKembali.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvKembali_CellDoubleClick);
             // 
             // idpeminjaman
             // 
@@ -248,31 +249,13 @@
             this.tanggalkembali.Name = "tanggalkembali";
             this.tanggalkembali.ReadOnly = true;
             // 
-            // BtnBack
-            // 
-            this.BtnBack.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnBack.BackColor = System.Drawing.Color.SkyBlue;
-            this.BtnBack.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnBack.FlatAppearance.BorderSize = 0;
-            this.BtnBack.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(134)))), ((int)(((byte)(213)))));
-            this.BtnBack.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
-            this.BtnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnBack.ForeColor = System.Drawing.Color.White;
-            this.BtnBack.Image = ((System.Drawing.Image)(resources.GetObject("BtnBack.Image")));
-            this.BtnBack.Location = new System.Drawing.Point(786, 368);
-            this.BtnBack.Name = "BtnBack";
-            this.BtnBack.Size = new System.Drawing.Size(73, 65);
-            this.BtnBack.TabIndex = 76;
-            this.BtnBack.UseVisualStyleBackColor = false;
-            // 
             // grpdetailkembali
             // 
             this.grpdetailkembali.Controls.Add(this.button1);
             this.grpdetailkembali.Controls.Add(this.textkembali);
             this.grpdetailkembali.Controls.Add(this.dgvdetailkembali);
             this.grpdetailkembali.Controls.Add(this.label1);
-            this.grpdetailkembali.Location = new System.Drawing.Point(311, 165);
+            this.grpdetailkembali.Location = new System.Drawing.Point(119, 99);
             this.grpdetailkembali.Name = "grpdetailkembali";
             this.grpdetailkembali.Size = new System.Drawing.Size(461, 243);
             this.grpdetailkembali.TabIndex = 77;
@@ -282,17 +265,19 @@
             // 
             this.button1.Location = new System.Drawing.Point(6, 11);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(61, 23);
+            this.button1.Size = new System.Drawing.Size(37, 23);
             this.button1.TabIndex = 3;
-            this.button1.Text = "button1";
+            this.button1.Text = "X";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // textkembali
             // 
-            this.textkembali.Location = new System.Drawing.Point(186, 35);
+            this.textkembali.Location = new System.Drawing.Point(338, 35);
             this.textkembali.Name = "textkembali";
             this.textkembali.Size = new System.Drawing.Size(100, 20);
             this.textkembali.TabIndex = 2;
+            this.textkembali.TextChanged += new System.EventHandler(this.textkembali_TextChanged);
             // 
             // dgvdetailkembali
             // 
@@ -305,42 +290,49 @@
             this.dgvdetailkembali.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id_peminjaman,
             this.id_peminjam,
-            this.nama_alat});
-            this.dgvdetailkembali.Location = new System.Drawing.Point(6, 61);
+            this.nama_alat,
+            this.Status});
+            this.dgvdetailkembali.Location = new System.Drawing.Point(15, 61);
             this.dgvdetailkembali.Name = "dgvdetailkembali";
-            this.dgvdetailkembali.ReadOnly = true;
-            this.dgvdetailkembali.Size = new System.Drawing.Size(442, 168);
+            this.dgvdetailkembali.Size = new System.Drawing.Size(433, 168);
             this.dgvdetailkembali.TabIndex = 1;
-            // 
-            // id_peminjaman
-            // 
-            this.id_peminjaman.DataPropertyName = "id_peminjaman";
-            this.id_peminjaman.HeaderText = "Id Peminjaman";
-            this.id_peminjaman.Name = "id_peminjaman";
-            this.id_peminjaman.ReadOnly = true;
-            // 
-            // id_peminjam
-            // 
-            this.id_peminjam.DataPropertyName = "id_peminjam";
-            this.id_peminjam.HeaderText = "Id Peminjam";
-            this.id_peminjam.Name = "id_peminjam";
-            this.id_peminjam.ReadOnly = true;
-            // 
-            // nama_alat
-            // 
-            this.nama_alat.DataPropertyName = "nama_alat";
-            this.nama_alat.HeaderText = "Nama Alat";
-            this.nama_alat.Name = "nama_alat";
-            this.nama_alat.ReadOnly = true;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(87, 16);
+            this.label1.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(173, 16);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(74, 13);
+            this.label1.Size = new System.Drawing.Size(108, 18);
             this.label1.TabIndex = 0;
             this.label1.Text = "Detail Kembali";
+            // 
+            // id_peminjaman
+            // 
+            this.id_peminjaman.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.id_peminjaman.DataPropertyName = "id_peminjaman";
+            this.id_peminjaman.HeaderText = "Id Peminjaman";
+            this.id_peminjaman.Name = "id_peminjaman";
+            // 
+            // id_peminjam
+            // 
+            this.id_peminjam.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.id_peminjam.DataPropertyName = "id_pinjaman";
+            this.id_peminjam.HeaderText = "Id Pinjaman";
+            this.id_peminjam.Name = "id_peminjam";
+            // 
+            // nama_alat
+            // 
+            this.nama_alat.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.nama_alat.DataPropertyName = "nama_alat";
+            this.nama_alat.HeaderText = "Nama Alat";
+            this.nama_alat.Name = "nama_alat";
+            // 
+            // Status
+            // 
+            this.Status.DataPropertyName = "status";
+            this.Status.HeaderText = "Status Alat";
+            this.Status.Name = "Status";
             // 
             // Kembali
             // 
@@ -349,7 +341,6 @@
             this.BackColor = System.Drawing.Color.SkyBlue;
             this.ClientSize = new System.Drawing.Size(866, 436);
             this.Controls.Add(this.grpdetailkembali);
-            this.Controls.Add(this.BtnBack);
             this.Controls.Add(this.DgvKembali);
             this.Controls.Add(this.btnhapus);
             this.Controls.Add(this.panel1);
@@ -382,7 +373,6 @@
         private System.Windows.Forms.TextBox TxtCariDtKembali;
         private System.Windows.Forms.Button btnhapus;
         private System.Windows.Forms.DataGridView DgvKembali;
-        private System.Windows.Forms.Button BtnBack;
         private System.Windows.Forms.GroupBox grpdetailkembali;
         private System.Windows.Forms.DataGridViewTextBoxColumn idpeminjaman;
         private System.Windows.Forms.DataGridViewTextBoxColumn idanggota;
@@ -393,9 +383,10 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox textkembali;
         private System.Windows.Forms.DataGridView dgvdetailkembali;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridViewTextBoxColumn id_peminjaman;
         private System.Windows.Forms.DataGridViewTextBoxColumn id_peminjam;
         private System.Windows.Forms.DataGridViewTextBoxColumn nama_alat;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Status;
     }
 }

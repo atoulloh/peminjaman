@@ -568,10 +568,14 @@ namespace peminjaman.View
                         {
                             string id_pinjam = row.Cells[0].Value.ToString();
                             string nama_alat = row.Cells[1].Value.ToString();
+                            string st = row.Cells[2].Value.ToString();
                             km.IdPinjaman = id_pinjam;
                             km.NamaAlat = nama_alat;
+                            km.Status = st;
+                           // km.Simpan_Detail_kembali();
                             km.Status = "Sudah";
                             simpan = km.UbahStatusPijaman();
+                            
                         }
                         if (simpan)
                         {

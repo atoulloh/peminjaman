@@ -31,7 +31,7 @@ namespace peminjaman.Service
 
         public void Simpan_Detail_kembali()
         {
-            query = " INSERT INTO detail_kembali(id_peminjaman,id_pinjaman,nama_alat) VALUES ('" + IdPeminjaman + "','" + IdPinjaman + "','"  + NamaAlat + "')";
+            query = " INSERT INTO detail_kembali(id_peminjaman,id_pinjaman,nama_alat,status) VALUES ('" + IdPeminjaman + "','" + IdPinjaman + "','"  + NamaAlat + "'," + Status + "')";
             if(!(dbConn.ExecNonQuery(query) > 0))
             {
                 throw new Exception("Gagal Menyimpan");

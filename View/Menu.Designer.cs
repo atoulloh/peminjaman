@@ -40,6 +40,12 @@
             this.DTPKBbuku = new System.Windows.Forms.DateTimePicker();
             this.BtnKembaliBuku = new System.Windows.Forms.Button();
             this.dgvKembali = new System.Windows.Forms.DataGridView();
+            this.id_kembali = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.id_anggotaKembali = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nama_kembali = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Jmlh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Tanggal_Pinjam = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BtnCariKodePinjam = new System.Windows.Forms.Button();
             this.label32 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -129,8 +135,6 @@
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.panel9 = new System.Windows.Forms.Panel();
             this.DgvKNamaAlat = new System.Windows.Forms.DataGridView();
-            this.IDPinjaman = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.K_Nama_Alat = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label28 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -167,12 +171,9 @@
             this.timerjalan = new System.Windows.Forms.Timer(this.components);
             this.panel14 = new System.Windows.Forms.Panel();
             this.timerhome = new System.Windows.Forms.Timer(this.components);
-            this.id_kembali = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.id_anggotaKembali = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nama_kembali = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Jmlh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Tanggal_Pinjam = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IDPinjaman = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.K_Nama_Alat = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.status_detail = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKembali)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -226,7 +227,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.DimGray;
-            this.label2.Location = new System.Drawing.Point(15, 225);
+            this.label2.Location = new System.Drawing.Point(15, 267);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(106, 15);
             this.label2.TabIndex = 65;
@@ -251,7 +252,7 @@
             this.TxtIdP.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TxtIdP.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtIdP.ForeColor = System.Drawing.Color.White;
-            this.TxtIdP.Location = new System.Drawing.Point(138, 219);
+            this.TxtIdP.Location = new System.Drawing.Point(138, 261);
             this.TxtIdP.Name = "TxtIdP";
             this.TxtIdP.ReadOnly = true;
             this.TxtIdP.Size = new System.Drawing.Size(135, 22);
@@ -319,14 +320,61 @@
             this.Tanggal_Pinjam,
             this.Status});
             this.dgvKembali.GridColor = System.Drawing.Color.White;
-            this.dgvKembali.Location = new System.Drawing.Point(4, 80);
+            this.dgvKembali.Location = new System.Drawing.Point(9, 83);
             this.dgvKembali.MultiSelect = false;
             this.dgvKembali.Name = "dgvKembali";
             this.dgvKembali.ReadOnly = true;
             this.dgvKembali.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvKembali.Size = new System.Drawing.Size(911, 129);
+            this.dgvKembali.Size = new System.Drawing.Size(900, 171);
             this.dgvKembali.TabIndex = 60;
             this.dgvKembali.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvKembali_CellClick);
+            // 
+            // id_kembali
+            // 
+            this.id_kembali.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.id_kembali.DataPropertyName = "id_peminjaman";
+            this.id_kembali.HeaderText = "id_peminjaman";
+            this.id_kembali.Name = "id_kembali";
+            this.id_kembali.ReadOnly = true;
+            // 
+            // id_anggotaKembali
+            // 
+            this.id_anggotaKembali.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.id_anggotaKembali.DataPropertyName = "id_anggota";
+            this.id_anggotaKembali.HeaderText = "Id_Anggota";
+            this.id_anggotaKembali.Name = "id_anggotaKembali";
+            this.id_anggotaKembali.ReadOnly = true;
+            // 
+            // nama_kembali
+            // 
+            this.nama_kembali.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.nama_kembali.DataPropertyName = "nama";
+            this.nama_kembali.HeaderText = "Nama";
+            this.nama_kembali.Name = "nama_kembali";
+            this.nama_kembali.ReadOnly = true;
+            // 
+            // Jmlh
+            // 
+            this.Jmlh.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Jmlh.DataPropertyName = "jumlah";
+            this.Jmlh.HeaderText = "Jumlah";
+            this.Jmlh.Name = "Jmlh";
+            this.Jmlh.ReadOnly = true;
+            // 
+            // Tanggal_Pinjam
+            // 
+            this.Tanggal_Pinjam.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Tanggal_Pinjam.DataPropertyName = "tanggal_pinjam";
+            this.Tanggal_Pinjam.HeaderText = "Tanggal Pinjam";
+            this.Tanggal_Pinjam.Name = "Tanggal_Pinjam";
+            this.Tanggal_Pinjam.ReadOnly = true;
+            // 
+            // Status
+            // 
+            this.Status.DataPropertyName = "status";
+            this.Status.HeaderText = "Status";
+            this.Status.Name = "Status";
+            this.Status.ReadOnly = true;
             // 
             // BtnCariKodePinjam
             // 
@@ -367,7 +415,7 @@
             this.panel1.Controls.Add(this.tabMain);
             this.panel1.Location = new System.Drawing.Point(1, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1168, 443);
+            this.panel1.Size = new System.Drawing.Size(1168, 485);
             this.panel1.TabIndex = 5;
             // 
             // panel2
@@ -381,7 +429,7 @@
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(234, 443);
+            this.panel2.Size = new System.Drawing.Size(234, 485);
             this.panel2.TabIndex = 1;
             // 
             // flowLayoutPanel2
@@ -401,7 +449,7 @@
             this.flowLayoutPanel2.Controls.Add(this.BtnAbout);
             this.flowLayoutPanel2.Location = new System.Drawing.Point(3, 74);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(224, 300);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(224, 342);
             this.flowLayoutPanel2.TabIndex = 0;
             // 
             // BtnAnggota
@@ -486,89 +534,85 @@
             this.BtnLihatAlat.Name = "BtnLihatAlat";
             this.BtnLihatAlat.Size = new System.Drawing.Size(199, 51);
             this.BtnLihatAlat.TabIndex = 1;
-            this.BtnLihatAlat.Text = " Alat";
+            this.BtnLihatAlat.Text = " Data Alat";
             this.BtnLihatAlat.UseVisualStyleBackColor = false;
             this.BtnLihatAlat.Click += new System.EventHandler(this.BtnLihatAlat_Click);
             // 
             // BtnLihatAnggota
             // 
-            this.BtnLihatAnggota.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.BtnLihatAnggota.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.BtnLihatAnggota.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnLihatAnggota.FlatAppearance.BorderSize = 0;
             this.BtnLihatAnggota.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnLihatAnggota.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnLihatAnggota.ForeColor = System.Drawing.Color.DimGray;
+            this.BtnLihatAnggota.ForeColor = System.Drawing.Color.White;
             this.BtnLihatAnggota.Image = ((System.Drawing.Image)(resources.GetObject("BtnLihatAnggota.Image")));
             this.BtnLihatAnggota.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnLihatAnggota.Location = new System.Drawing.Point(3, 292);
             this.BtnLihatAnggota.Name = "BtnLihatAnggota";
             this.BtnLihatAnggota.Size = new System.Drawing.Size(199, 51);
             this.BtnLihatAnggota.TabIndex = 0;
-            this.BtnLihatAnggota.Text = " Anggota";
-            this.BtnLihatAnggota.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnLihatAnggota.Text = " Data Anggota";
             this.BtnLihatAnggota.UseVisualStyleBackColor = false;
             this.BtnLihatAnggota.Click += new System.EventHandler(this.BtnLihatAnggota_Click);
             // 
             // BtnDaftarPeminjam
             // 
-            this.BtnDaftarPeminjam.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.BtnDaftarPeminjam.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.BtnDaftarPeminjam.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnDaftarPeminjam.FlatAppearance.BorderSize = 0;
             this.BtnDaftarPeminjam.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnDaftarPeminjam.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnDaftarPeminjam.ForeColor = System.Drawing.Color.DimGray;
+            this.BtnDaftarPeminjam.ForeColor = System.Drawing.Color.White;
             this.BtnDaftarPeminjam.Image = ((System.Drawing.Image)(resources.GetObject("BtnDaftarPeminjam.Image")));
             this.BtnDaftarPeminjam.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnDaftarPeminjam.Location = new System.Drawing.Point(3, 349);
             this.BtnDaftarPeminjam.Name = "BtnDaftarPeminjam";
             this.BtnDaftarPeminjam.Size = new System.Drawing.Size(199, 52);
             this.BtnDaftarPeminjam.TabIndex = 2;
-            this.BtnDaftarPeminjam.Text = "Peminjam";
-            this.BtnDaftarPeminjam.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnDaftarPeminjam.Text = "Data Peminjam";
             this.BtnDaftarPeminjam.UseVisualStyleBackColor = false;
             this.BtnDaftarPeminjam.Click += new System.EventHandler(this.BtnDaftarPeminjam_Click);
             // 
             // BtnDaftarKembali
             // 
-            this.BtnDaftarKembali.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.BtnDaftarKembali.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.BtnDaftarKembali.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnDaftarKembali.FlatAppearance.BorderSize = 0;
             this.BtnDaftarKembali.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnDaftarKembali.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnDaftarKembali.ForeColor = System.Drawing.Color.DimGray;
+            this.BtnDaftarKembali.ForeColor = System.Drawing.Color.White;
             this.BtnDaftarKembali.Image = ((System.Drawing.Image)(resources.GetObject("BtnDaftarKembali.Image")));
             this.BtnDaftarKembali.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnDaftarKembali.Location = new System.Drawing.Point(3, 407);
             this.BtnDaftarKembali.Name = "BtnDaftarKembali";
             this.BtnDaftarKembali.Size = new System.Drawing.Size(199, 50);
             this.BtnDaftarKembali.TabIndex = 3;
-            this.BtnDaftarKembali.Text = "Kembali";
-            this.BtnDaftarKembali.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnDaftarKembali.Text = "Data Kembali";
             this.BtnDaftarKembali.UseVisualStyleBackColor = false;
             this.BtnDaftarKembali.Click += new System.EventHandler(this.BtnDaftarKembali_Click);
             // 
             // BtnManagerLogin
             // 
-            this.BtnManagerLogin.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.BtnManagerLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.BtnManagerLogin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnManagerLogin.FlatAppearance.BorderSize = 0;
             this.BtnManagerLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnManagerLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnManagerLogin.ForeColor = System.Drawing.Color.DimGray;
+            this.BtnManagerLogin.ForeColor = System.Drawing.Color.White;
             this.BtnManagerLogin.Image = ((System.Drawing.Image)(resources.GetObject("BtnManagerLogin.Image")));
             this.BtnManagerLogin.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnManagerLogin.Location = new System.Drawing.Point(3, 463);
             this.BtnManagerLogin.Name = "BtnManagerLogin";
             this.BtnManagerLogin.Size = new System.Drawing.Size(199, 53);
             this.BtnManagerLogin.TabIndex = 4;
-            this.BtnManagerLogin.Text = "User";
-            this.BtnManagerLogin.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnManagerLogin.Text = "Data User";
             this.BtnManagerLogin.UseVisualStyleBackColor = false;
             this.BtnManagerLogin.Click += new System.EventHandler(this.BtnManagerLogin_Click);
             // 
             // BtnAbout
             // 
-            this.BtnAbout.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.BtnAbout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.BtnAbout.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnAbout.FlatAppearance.BorderSize = 0;
             this.BtnAbout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -593,7 +637,7 @@
             this.btnKeluarAplikasi.ForeColor = System.Drawing.Color.White;
             this.btnKeluarAplikasi.Image = ((System.Drawing.Image)(resources.GetObject("btnKeluarAplikasi.Image")));
             this.btnKeluarAplikasi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnKeluarAplikasi.Location = new System.Drawing.Point(10, 380);
+            this.btnKeluarAplikasi.Location = new System.Drawing.Point(10, 422);
             this.btnKeluarAplikasi.Name = "btnKeluarAplikasi";
             this.btnKeluarAplikasi.Size = new System.Drawing.Size(254, 52);
             this.btnKeluarAplikasi.TabIndex = 10;
@@ -638,7 +682,7 @@
             this.tabMain.Location = new System.Drawing.Point(240, 6);
             this.tabMain.Name = "tabMain";
             this.tabMain.SelectedIndex = 0;
-            this.tabMain.Size = new System.Drawing.Size(932, 426);
+            this.tabMain.Size = new System.Drawing.Size(932, 468);
             this.tabMain.TabIndex = 1;
             this.tabMain.TabStop = false;
             // 
@@ -647,7 +691,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(924, 530);
+            this.tabPage1.Size = new System.Drawing.Size(924, 442);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -658,7 +702,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(924, 530);
+            this.tabPage2.Size = new System.Drawing.Size(924, 442);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -689,7 +733,7 @@
             this.panelanggota.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelanggota.Location = new System.Drawing.Point(3, 3);
             this.panelanggota.Name = "panelanggota";
-            this.panelanggota.Size = new System.Drawing.Size(918, 524);
+            this.panelanggota.Size = new System.Drawing.Size(918, 436);
             this.panelanggota.TabIndex = 2;
             this.panelanggota.Paint += new System.Windows.Forms.PaintEventHandler(this.panelanggota_Paint);
             // 
@@ -705,7 +749,7 @@
             this.BtnBersih.ForeColor = System.Drawing.Color.DimGray;
             this.BtnBersih.Image = ((System.Drawing.Image)(resources.GetObject("BtnBersih.Image")));
             this.BtnBersih.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnBersih.Location = new System.Drawing.Point(293, 441);
+            this.BtnBersih.Location = new System.Drawing.Point(293, 353);
             this.BtnBersih.Name = "BtnBersih";
             this.BtnBersih.Size = new System.Drawing.Size(85, 37);
             this.BtnBersih.TabIndex = 507;
@@ -814,7 +858,7 @@
             this.BtnSimpan.ForeColor = System.Drawing.Color.DimGray;
             this.BtnSimpan.Image = ((System.Drawing.Image)(resources.GetObject("BtnSimpan.Image")));
             this.BtnSimpan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnSimpan.Location = new System.Drawing.Point(109, 441);
+            this.BtnSimpan.Location = new System.Drawing.Point(109, 353);
             this.BtnSimpan.Name = "BtnSimpan";
             this.BtnSimpan.Size = new System.Drawing.Size(150, 37);
             this.BtnSimpan.TabIndex = 8;
@@ -1004,7 +1048,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(924, 530);
+            this.tabPage3.Size = new System.Drawing.Size(924, 442);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "tabPage3";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -1018,7 +1062,7 @@
             this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel8.Location = new System.Drawing.Point(3, 3);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(918, 524);
+            this.panel8.Size = new System.Drawing.Size(918, 436);
             this.panel8.TabIndex = 3;
             this.panel8.Paint += new System.Windows.Forms.PaintEventHandler(this.panel8_Paint);
             // 
@@ -1064,10 +1108,10 @@
             this.jumlah,
             this.kondisi});
             this.dgvAlat.GridColor = System.Drawing.Color.White;
-            this.dgvAlat.Location = new System.Drawing.Point(0, 159);
+            this.dgvAlat.Location = new System.Drawing.Point(15, 159);
             this.dgvAlat.Name = "dgvAlat";
             this.dgvAlat.ReadOnly = true;
-            this.dgvAlat.Size = new System.Drawing.Size(920, 362);
+            this.dgvAlat.Size = new System.Drawing.Size(894, 262);
             this.dgvAlat.TabIndex = 59;
             // 
             // kode_alat
@@ -1150,7 +1194,7 @@
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(924, 530);
+            this.tabPage4.Size = new System.Drawing.Size(924, 442);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "tabPage4";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -1180,7 +1224,7 @@
             this.panel10.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel10.Location = new System.Drawing.Point(3, 3);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(918, 524);
+            this.panel10.Size = new System.Drawing.Size(918, 436);
             this.panel10.TabIndex = 3;
             this.panel10.Paint += new System.Windows.Forms.PaintEventHandler(this.panel10_Paint);
             // 
@@ -1272,7 +1316,7 @@
             this.GrpAlat.Controls.Add(this.TxtCariAl);
             this.GrpAlat.Controls.Add(this.label13);
             this.GrpAlat.Controls.Add(this.dgvNamaAlat);
-            this.GrpAlat.Location = new System.Drawing.Point(618, 272);
+            this.GrpAlat.Location = new System.Drawing.Point(618, 184);
             this.GrpAlat.Name = "GrpAlat";
             this.GrpAlat.Size = new System.Drawing.Size(321, 223);
             this.GrpAlat.TabIndex = 68;
@@ -1543,7 +1587,7 @@
             this.tabPage5.Location = new System.Drawing.Point(4, 22);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(924, 400);
+            this.tabPage5.Size = new System.Drawing.Size(924, 442);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "tabPage5";
             this.tabPage5.UseVisualStyleBackColor = true;
@@ -1574,7 +1618,7 @@
             this.panel9.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel9.Location = new System.Drawing.Point(3, 3);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(918, 394);
+            this.panel9.Size = new System.Drawing.Size(918, 436);
             this.panel9.TabIndex = 3;
             // 
             // DgvKNamaAlat
@@ -1584,25 +1628,12 @@
             this.DgvKNamaAlat.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DgvKNamaAlat.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.IDPinjaman,
-            this.K_Nama_Alat});
-            this.DgvKNamaAlat.Location = new System.Drawing.Point(293, 247);
+            this.K_Nama_Alat,
+            this.status_detail});
+            this.DgvKNamaAlat.Location = new System.Drawing.Point(293, 289);
             this.DgvKNamaAlat.Name = "DgvKNamaAlat";
             this.DgvKNamaAlat.Size = new System.Drawing.Size(615, 130);
             this.DgvKNamaAlat.TabIndex = 95;
-            // 
-            // IDPinjaman
-            // 
-            this.IDPinjaman.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.IDPinjaman.DataPropertyName = "id_pinjaman";
-            this.IDPinjaman.HeaderText = "ID Pinjaman";
-            this.IDPinjaman.Name = "IDPinjaman";
-            // 
-            // K_Nama_Alat
-            // 
-            this.K_Nama_Alat.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.K_Nama_Alat.DataPropertyName = "nama_alat";
-            this.K_Nama_Alat.HeaderText = "Nama Alat";
-            this.K_Nama_Alat.Name = "K_Nama_Alat";
             // 
             // label28
             // 
@@ -1610,7 +1641,7 @@
             this.label28.AutoSize = true;
             this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label28.ForeColor = System.Drawing.Color.DimGray;
-            this.label28.Location = new System.Drawing.Point(726, 223);
+            this.label28.Location = new System.Drawing.Point(726, 265);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(54, 15);
             this.label28.TabIndex = 92;
@@ -1622,7 +1653,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.DimGray;
-            this.label9.Location = new System.Drawing.Point(290, 219);
+            this.label9.Location = new System.Drawing.Point(290, 261);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(73, 15);
             this.label9.TabIndex = 90;
@@ -1634,7 +1665,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.DimGray;
-            this.label7.Location = new System.Drawing.Point(22, 291);
+            this.label7.Location = new System.Drawing.Point(22, 333);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(45, 15);
             this.label7.TabIndex = 88;
@@ -1646,7 +1677,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.DimGray;
-            this.label6.Location = new System.Drawing.Point(15, 252);
+            this.label6.Location = new System.Drawing.Point(15, 294);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(77, 15);
             this.label6.TabIndex = 87;
@@ -1659,7 +1690,7 @@
             this.TxtJumlahKembali.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TxtJumlahKembali.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtJumlahKembali.ForeColor = System.Drawing.Color.White;
-            this.TxtJumlahKembali.Location = new System.Drawing.Point(796, 218);
+            this.TxtJumlahKembali.Location = new System.Drawing.Point(796, 260);
             this.TxtJumlahKembali.Name = "TxtJumlahKembali";
             this.TxtJumlahKembali.ReadOnly = true;
             this.TxtJumlahKembali.Size = new System.Drawing.Size(100, 22);
@@ -1674,7 +1705,7 @@
             this.TxtNamaKembali.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TxtNamaKembali.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtNamaKembali.ForeColor = System.Drawing.Color.White;
-            this.TxtNamaKembali.Location = new System.Drawing.Point(138, 288);
+            this.TxtNamaKembali.Location = new System.Drawing.Point(138, 330);
             this.TxtNamaKembali.Name = "TxtNamaKembali";
             this.TxtNamaKembali.ReadOnly = true;
             this.TxtNamaKembali.Size = new System.Drawing.Size(135, 22);
@@ -1688,7 +1719,7 @@
             this.TxtIDA.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TxtIDA.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtIDA.ForeColor = System.Drawing.Color.White;
-            this.TxtIDA.Location = new System.Drawing.Point(137, 255);
+            this.TxtIDA.Location = new System.Drawing.Point(137, 297);
             this.TxtIDA.Name = "TxtIDA";
             this.TxtIDA.ReadOnly = true;
             this.TxtIDA.Size = new System.Drawing.Size(136, 22);
@@ -1700,7 +1731,7 @@
             this.panel18.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.panel18.Controls.Add(this.BtnSimpanKembali);
             this.panel18.Controls.Add(this.BtnKembaliBuku);
-            this.panel18.Location = new System.Drawing.Point(58, 320);
+            this.panel18.Location = new System.Drawing.Point(58, 362);
             this.panel18.Name = "panel18";
             this.panel18.Size = new System.Drawing.Size(149, 57);
             this.panel18.TabIndex = 80;
@@ -1779,7 +1810,7 @@
             this.tabPage6.Location = new System.Drawing.Point(4, 22);
             this.tabPage6.Name = "tabPage6";
             this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage6.Size = new System.Drawing.Size(924, 530);
+            this.tabPage6.Size = new System.Drawing.Size(924, 442);
             this.tabPage6.TabIndex = 5;
             this.tabPage6.Text = "tabPage6";
             this.tabPage6.UseVisualStyleBackColor = true;
@@ -1791,7 +1822,7 @@
             this.panel12.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel12.Location = new System.Drawing.Point(3, 3);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(918, 524);
+            this.panel12.Size = new System.Drawing.Size(918, 436);
             this.panel12.TabIndex = 4;
             // 
             // FormHosts
@@ -1802,7 +1833,7 @@
             this.FormHosts.BackColor = System.Drawing.Color.LightBlue;
             this.FormHosts.Location = new System.Drawing.Point(-3, -3);
             this.FormHosts.Name = "FormHosts";
-            this.FormHosts.Size = new System.Drawing.Size(924, 530);
+            this.FormHosts.Size = new System.Drawing.Size(924, 442);
             this.FormHosts.TabIndex = 12;
             // 
             // BtnSegar
@@ -2049,58 +2080,32 @@
             this.panel14.Size = new System.Drawing.Size(540, 33);
             this.panel14.TabIndex = 7;
             // 
-            // id_kembali
+            // IDPinjaman
             // 
-            this.id_kembali.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.id_kembali.DataPropertyName = "id_peminjaman";
-            this.id_kembali.HeaderText = "id_peminjaman";
-            this.id_kembali.Name = "id_kembali";
-            this.id_kembali.ReadOnly = true;
+            this.IDPinjaman.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.IDPinjaman.DataPropertyName = "id_pinjaman";
+            this.IDPinjaman.HeaderText = "ID Pinjaman";
+            this.IDPinjaman.Name = "IDPinjaman";
             // 
-            // id_anggotaKembali
+            // K_Nama_Alat
             // 
-            this.id_anggotaKembali.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.id_anggotaKembali.DataPropertyName = "id_anggota";
-            this.id_anggotaKembali.HeaderText = "Id_Anggota";
-            this.id_anggotaKembali.Name = "id_anggotaKembali";
-            this.id_anggotaKembali.ReadOnly = true;
+            this.K_Nama_Alat.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.K_Nama_Alat.DataPropertyName = "nama_alat";
+            this.K_Nama_Alat.HeaderText = "Nama Alat";
+            this.K_Nama_Alat.Name = "K_Nama_Alat";
             // 
-            // nama_kembali
+            // status_detail
             // 
-            this.nama_kembali.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.nama_kembali.DataPropertyName = "nama";
-            this.nama_kembali.HeaderText = "Nama";
-            this.nama_kembali.Name = "nama_kembali";
-            this.nama_kembali.ReadOnly = true;
-            // 
-            // Jmlh
-            // 
-            this.Jmlh.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Jmlh.DataPropertyName = "jumlah";
-            this.Jmlh.HeaderText = "Jumlah";
-            this.Jmlh.Name = "Jmlh";
-            this.Jmlh.ReadOnly = true;
-            // 
-            // Tanggal_Pinjam
-            // 
-            this.Tanggal_Pinjam.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Tanggal_Pinjam.DataPropertyName = "tanggal_pinjam";
-            this.Tanggal_Pinjam.HeaderText = "Tanggal Pinjam";
-            this.Tanggal_Pinjam.Name = "Tanggal_Pinjam";
-            this.Tanggal_Pinjam.ReadOnly = true;
-            // 
-            // Status
-            // 
-            this.Status.DataPropertyName = "status";
-            this.Status.HeaderText = "Status";
-            this.Status.Name = "Status";
-            this.Status.ReadOnly = true;
+            this.status_detail.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.status_detail.DataPropertyName = "status";
+            this.status_detail.HeaderText = "Status Alat";
+            this.status_detail.Name = "status_detail";
             // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1169, 435);
+            this.ClientSize = new System.Drawing.Size(1169, 477);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel11);
             this.Controls.Add(this.panel4);
@@ -2279,8 +2284,6 @@
         private System.Windows.Forms.DataGridView DgvKNamaAlat;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nama_alat1;
         private System.Windows.Forms.DataGridViewTextBoxColumn alat;
-        private System.Windows.Forms.DataGridViewTextBoxColumn IDPinjaman;
-        private System.Windows.Forms.DataGridViewTextBoxColumn K_Nama_Alat;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
         private System.Windows.Forms.DataGridViewTextBoxColumn id_kembali;
         private System.Windows.Forms.DataGridViewTextBoxColumn id_anggotaKembali;
@@ -2288,6 +2291,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Jmlh;
         private System.Windows.Forms.DataGridViewTextBoxColumn Tanggal_Pinjam;
         private System.Windows.Forms.DataGridViewTextBoxColumn Status;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IDPinjaman;
+        private System.Windows.Forms.DataGridViewTextBoxColumn K_Nama_Alat;
+        private System.Windows.Forms.DataGridViewTextBoxColumn status_detail;
 
 
     }
