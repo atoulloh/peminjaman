@@ -34,20 +34,19 @@
             this.TxtCariAlat = new System.Windows.Forms.TextBox();
             this.BtnCari = new System.Windows.Forms.Button();
             this.dgvAlat = new System.Windows.Forms.DataGridView();
-            this.kode_alat = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nama_alat = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.jenis_alat = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.letak = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.harga_pembelian = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tahun_pembelian = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.jumlah = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.kondisi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BtnRefresh = new System.Windows.Forms.Button();
             this.BtnUbah = new System.Windows.Forms.Button();
             this.BtnTambah = new System.Windows.Forms.Button();
             this.BtnHapus = new System.Windows.Forms.Button();
             this.BtnCetakAL = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.kode_alat = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nama_alat = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.jenis_alat = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.letak = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.harga_pembelian = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tahun_pembelian = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.kondisi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAlat)).BeginInit();
             this.SuspendLayout();
             // 
@@ -113,68 +112,12 @@
             this.letak,
             this.harga_pembelian,
             this.tahun_pembelian,
-            this.jumlah,
             this.kondisi});
             this.dgvAlat.Location = new System.Drawing.Point(12, 86);
             this.dgvAlat.Name = "dgvAlat";
             this.dgvAlat.Size = new System.Drawing.Size(758, 233);
             this.dgvAlat.TabIndex = 67;
             this.dgvAlat.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAlat_CellContentClick);
-            // 
-            // kode_alat
-            // 
-            this.kode_alat.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.kode_alat.DataPropertyName = "kode_alat";
-            this.kode_alat.HeaderText = "Kode Alat";
-            this.kode_alat.Name = "kode_alat";
-            // 
-            // nama_alat
-            // 
-            this.nama_alat.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.nama_alat.DataPropertyName = "nama_alat";
-            this.nama_alat.HeaderText = "Nama Alat";
-            this.nama_alat.Name = "nama_alat";
-            // 
-            // jenis_alat
-            // 
-            this.jenis_alat.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.jenis_alat.DataPropertyName = "jenis_alat";
-            this.jenis_alat.HeaderText = "Jenis";
-            this.jenis_alat.Name = "jenis_alat";
-            // 
-            // letak
-            // 
-            this.letak.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.letak.DataPropertyName = "letak";
-            this.letak.HeaderText = "Letak";
-            this.letak.Name = "letak";
-            // 
-            // harga_pembelian
-            // 
-            this.harga_pembelian.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.harga_pembelian.DataPropertyName = "harga_pembelian";
-            this.harga_pembelian.HeaderText = "Harga ";
-            this.harga_pembelian.Name = "harga_pembelian";
-            // 
-            // tahun_pembelian
-            // 
-            this.tahun_pembelian.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.tahun_pembelian.DataPropertyName = "tahun_pembelian";
-            this.tahun_pembelian.HeaderText = "Tahun Pembelian";
-            this.tahun_pembelian.Name = "tahun_pembelian";
-            // 
-            // jumlah
-            // 
-            this.jumlah.DataPropertyName = "jumlah";
-            this.jumlah.HeaderText = "Jumlah";
-            this.jumlah.Name = "jumlah";
-            // 
-            // kondisi
-            // 
-            this.kondisi.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.kondisi.DataPropertyName = "kondisi";
-            this.kondisi.HeaderText = "Kondisi";
-            this.kondisi.Name = "kondisi";
             // 
             // BtnRefresh
             // 
@@ -288,6 +231,55 @@
             this.label1.TabIndex = 75;
             this.label1.Text = "CARI ALAT";
             // 
+            // kode_alat
+            // 
+            this.kode_alat.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.kode_alat.DataPropertyName = "kode_alat";
+            this.kode_alat.HeaderText = "Kode Alat";
+            this.kode_alat.Name = "kode_alat";
+            // 
+            // nama_alat
+            // 
+            this.nama_alat.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.nama_alat.DataPropertyName = "nama_alat";
+            this.nama_alat.HeaderText = "Nama Alat";
+            this.nama_alat.Name = "nama_alat";
+            // 
+            // jenis_alat
+            // 
+            this.jenis_alat.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.jenis_alat.DataPropertyName = "jenis_alat";
+            this.jenis_alat.HeaderText = "Jenis";
+            this.jenis_alat.Name = "jenis_alat";
+            // 
+            // letak
+            // 
+            this.letak.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.letak.DataPropertyName = "letak";
+            this.letak.HeaderText = "Letak";
+            this.letak.Name = "letak";
+            // 
+            // harga_pembelian
+            // 
+            this.harga_pembelian.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.harga_pembelian.DataPropertyName = "harga_pembelian";
+            this.harga_pembelian.HeaderText = "Harga ";
+            this.harga_pembelian.Name = "harga_pembelian";
+            // 
+            // tahun_pembelian
+            // 
+            this.tahun_pembelian.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.tahun_pembelian.DataPropertyName = "tahun_pembelian";
+            this.tahun_pembelian.HeaderText = "Tahun Pembelian";
+            this.tahun_pembelian.Name = "tahun_pembelian";
+            // 
+            // kondisi
+            // 
+            this.kondisi.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.kondisi.DataPropertyName = "kondisi";
+            this.kondisi.HeaderText = "Kondisi";
+            this.kondisi.Name = "kondisi";
+            // 
             // Alat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -326,14 +318,13 @@
         private System.Windows.Forms.Button BtnHapus;
         private System.Windows.Forms.Button BtnCetakAL;
         private System.Windows.Forms.Button BtnCari;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridViewTextBoxColumn kode_alat;
         private System.Windows.Forms.DataGridViewTextBoxColumn nama_alat;
         private System.Windows.Forms.DataGridViewTextBoxColumn jenis_alat;
         private System.Windows.Forms.DataGridViewTextBoxColumn letak;
         private System.Windows.Forms.DataGridViewTextBoxColumn harga_pembelian;
         private System.Windows.Forms.DataGridViewTextBoxColumn tahun_pembelian;
-        private System.Windows.Forms.DataGridViewTextBoxColumn jumlah;
         private System.Windows.Forms.DataGridViewTextBoxColumn kondisi;
-        private System.Windows.Forms.Label label1;
     }
 }

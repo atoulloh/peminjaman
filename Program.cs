@@ -17,7 +17,7 @@ namespace peminjaman
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new peminjaman.View.Menu());
+            Application.Run(new Welcome());
         }
     }
 }

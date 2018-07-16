@@ -16,6 +16,7 @@ namespace peminjaman.View
         int hasil = 0;
 
         public string username;
+        public string id_pinjaman;
         public Menu()
         {
             InitializeComponent();
@@ -284,6 +285,7 @@ namespace peminjaman.View
             tabMain.SelectedTab = (tabPage4);
             PinjamServ pb = new PinjamServ();
             TxtIdPeminjaman.Text = pb.KDPinjamOtomatis();
+            BersihPinjam();
             //PinjamServ pb = new PinjamServ();
            //TxtP.Text = pb.PinjamOtomatis();
             //int numRows = DgvAl.Rows.Count;
@@ -295,7 +297,7 @@ namespace peminjaman.View
             tabMain.SelectedTab = (tabPage5);
             PinjamServ pjm = new PinjamServ();
             dgvKembali.DataSource = pjm.TampilSemuaPeminjam();
-
+            BersihKembali();
         }
 
         //cari alat
@@ -304,7 +306,7 @@ namespace peminjaman.View
         {
             AlatServ alat = new AlatServ();
             dgvAlat.DataSource = alat.CariAlat(TxtCariAlat.Text);
-
+            
         }
 
        /* String kategori;
@@ -471,6 +473,8 @@ namespace peminjaman.View
                 if (oneCell.Selected)
                     DgvAl.Rows.RemoveAt(oneCell.RowIndex);
             }
+            int numRows = DgvAl.Rows.Count;
+            txtjumlah.Text = numRows.ToString();
         }
 
         private void DgvAl_CellMouseDown(object sender, DataGridViewCellMouseEventArgs e)
@@ -498,6 +502,18 @@ namespace peminjaman.View
         {
             PinjamServ pjm = new PinjamServ();
             dgvKembali.DataSource =pjm.CekP(TxtCariKodePinjam.Text);
+            
+           // PinjamServ pjm = new PinjamServ();
+            //string sts = pjm.CekStatus(id_pinjaman).Rows[1][1].ToString();
+            //if (sts == "belum")
+            //{
+                
+            //}
+
+            //else
+            //{
+            //    BtnSimpanKembali.Visible = false;
+            //}
         }
         //ikut kembali
         private void dgvKembali_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -509,7 +525,7 @@ namespace peminjaman.View
                 TxtIdP.Text = row.Cells[0].Value.ToString();
                 TxtIDA.Text = row.Cells[1].Value.ToString();
                 TxtNamaKembali.Text = row.Cells[2].Value.ToString();
-                TxtJumlahKembali.Text = row.Cells[3].Value.ToString();
+               // TxtJumlahKembali.Text = row.Cells[3].Value.ToString();
                 DTPPJalat.Text = row.Cells[4].Value.ToString();
                 //grpAnggota.Visible = false;
             }
@@ -518,7 +534,7 @@ namespace peminjaman.View
         private void TxtIdP_TextChanged(object sender, EventArgs e)
         {
             PinjamServ pjm = new PinjamServ();
-            DgvKNamaAlat.DataSource = pjm.TampilPinjaman(TxtIdP.Text);
+            DgvKNamaAlat.DataSource = pjm.CekStatus(TxtIdP.Text);
         }
 
         //ikut pengembalian
@@ -557,13 +573,14 @@ namespace peminjaman.View
                     km.IdAnggota = TxtIDA.Text.Trim();
                     km.Nama = TxtNamaKembali.Text.Trim();
                     km.Jumlah = int.Parse(TxtJumlahKembali.Text.Trim());
-                    km.TanggalPinjam = DTPPJalat.Value.ToString("yyyy/MM/dd hh:mm:ss");
+                    km.TanggalPinjam = DTPPJalat.Value.ToString("yyyy/MM/dd HH:mm:ss");
                     km.TanggalKembali = DTPKBbuku.Value.ToString("yyyy/MM/dd HH:mm:ss");
-                    km.Simpan_Kembali();
+                   
                     simpan = true;
 
                     if (DgvKNamaAlat.Rows.Count > 0)
-                    {                        
+                    {
+                        km.Simpan_Kembali();
                         foreach (DataGridViewRow row in DgvKNamaAlat.Rows)
                         {
                             string id_pinjam = row.Cells[0].Value.ToString();
@@ -641,5 +658,62 @@ namespace peminjaman.View
         {
 
         }
+
+        private void Menu_Load(object sender, EventArgs e)
+        {
+            LoginServ login = new LoginServ();
+            string lvl = login.CekLevel(username).Rows[0][0].ToString();
+
+            if (lvl == "Admin")
+            {
+                BtnManagerLogin.Visible = true;
+            }
+
+            else
+            {
+                BtnManagerLogin.Visible = false;
+            }
+
+            labelname.Text = "Selamat Datang\n" + " " + " " + " " + username;
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            tabMain.SelectedTab = (tabPage1);
+        }
+
+        private void panel9_Paint(object sender, PaintEventArgs e)
+        {
+           int numRows = DgvKNamaAlat.Rows.Count;
+           TxtJumlahKembali.Text = numRows.ToString();
+        }
+
+        private void DgvKNamaAlat_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+           // int numRows = DgvKNamaAlat.Rows.Count;
+            //TxtJumlahKembali.Text = numRows.ToString();
+            foreach (DataGridViewCell oneCell in DgvKNamaAlat.SelectedCells)
+            {
+                if (oneCell.Selected)
+                    DgvKNamaAlat.Rows.RemoveAt(oneCell.RowIndex);
+            }
+
+            int numRows = DgvKNamaAlat.Rows.Count;
+            TxtJumlahKembali.Text = numRows.ToString();
+        }
+
+        private void btnmonitor_Click(object sender, EventArgs e)
+        {
+            tabMain.SelectedTab = (tabPage6);
+            AmbilForm(new MonitorData());
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
     }
 }

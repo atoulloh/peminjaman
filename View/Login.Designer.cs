@@ -82,11 +82,12 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(291, 28);
+            this.label3.Location = new System.Drawing.Point(364, 28);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(208, 37);
+            this.label3.Size = new System.Drawing.Size(111, 37);
             this.label3.TabIndex = 509;
-            this.label3.Text = "Login Admin";
+            this.label3.Text = "Login ";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // label2
             // 

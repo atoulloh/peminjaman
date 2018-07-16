@@ -34,7 +34,7 @@ namespace peminjaman.View
             TxtLetak.Text = "";
             TxtHarga.Text = "";
             TxtTahunPembelian.Text = "";
-            TxtJumlah.Text = "";
+           // TxtJumlah.Text = "";
             TxtKondisi.Text = "";
         }
         //ubah data
@@ -46,7 +46,7 @@ namespace peminjaman.View
                (TxtLetak.Text) || string.IsNullOrEmpty
                (TxtHarga.Text) || string.IsNullOrEmpty
                (TxtTahunPembelian.Text) || string.IsNullOrEmpty
-               (TxtJumlah.Text) || string.IsNullOrEmpty
+              // (TxtJumlah.Text) || string.IsNullOrEmpty
                (TxtKondisi.Text))
             {
                 MessageBox.Show("mohon data di isi semua \nTidak boleh ada yang kosong ",
@@ -61,7 +61,7 @@ namespace peminjaman.View
                 asv.Letak = TxtLetak.Text.Trim();
                 asv.Harga_Pembelian = int.Parse(TxtHarga.Text.Trim());
                 asv.Tahun_Pembelian = int.Parse(TxtTahunPembelian.Text.Trim());
-                asv.Jumlah = int.Parse(TxtJumlah.Text.Trim());
+                //asv.Jumlah = int.Parse(TxtJumlah.Text.Trim());
                 asv.Kondisi = TxtKondisi.Text.Trim();
                 asv.UbahAlat(TxtKode.Text.Trim());
 

@@ -140,6 +140,9 @@
     <EmbeddedResource Include="View\Anggota.resx">
       <DependentUpon>Anggota.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\DataPengembalian.resx">
+      <DependentUpon>DataPengembalian.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\EditAnggota.resx">
       <DependentUpon>EditAnggota.cs</DependentUpon>
     </EmbeddedResource>

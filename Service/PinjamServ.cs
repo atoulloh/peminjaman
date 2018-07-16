@@ -171,6 +171,23 @@ namespace peminjaman.Service
             return dtTbl;
 
         }
+        public DataTable monitor()
+        {
+            query = "select p.id_pinjaman, p.nama_alat,p.tanggal_pinjam,p.tanggal_kembali,p.status,dp.id_anggota,dp.nama from  pinjaman p,peminjam dp where dp.id_peminjaman = p.id_peminjaman ";
+            dtTbl = dbConn.ExecQuery(query);
+
+            return dtTbl;
+        }
+
+        public DataTable CekStatus(String id_peminjaman)
+        {
+            query = "select * from pinjaman where id_peminjaman = '" + id_peminjaman +"' and status ='Belum'" ;
+            dtTbl = dbConn.ExecQuery(query);
+
+            return dtTbl;
+            
+        }
+
 
         public String PinjamOtomatis()
         {
@@ -209,8 +226,6 @@ namespace peminjaman.Service
             return code;
  
         }
-             
 
-        
     }
 }
