@@ -667,12 +667,30 @@ namespace peminjaman.View
             if (lvl == "Admin")
             {
                 BtnManagerLogin.Visible = true;
+                Pdata_user.Visible = true;
             }
 
-            else
+            else if (lvl == " Kepala jurusan")
             {
-                BtnManagerLogin.Visible = false;
+                BtnLihatAlat.Visible = true;
+                BtnLihatAnggota.Visible = true;
+                BtnDaftarKembali.Visible = true;
+                BtnDaftarPeminjam.Visible = true;
+                btnmonitor.Visible = true;
+                
             }
+            else if (lvl == " Petugas" )
+            {
+                BtnKembaliAlat.Visible = true;
+                BtnPinjamAlat.Visible = true;
+                BtnAnggota.Visible = true;
+                BtnAlat.Visible = true;
+                Pdaftar_anggota.Visible = true;
+                Pdata_alat.Visible = true;
+                Pcari_alat.Visible = true;
+
+            }
+
 
             labelname.Text = "Selamat Datang\n" + " " + " " + " " + username;
 
@@ -713,6 +731,60 @@ namespace peminjaman.View
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void pictureBox10_Click(object sender, EventArgs e)
+        {
+            tabMain.SelectedTab = (tabPage6);
+            AmbilForm(new Peminjam());
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            tabMain.SelectedTab = (tabPage2);
+            Bersihkan();
+        }
+
+        private void Pcari_alat_Click(object sender, EventArgs e)
+        {
+            tabMain.SelectedTab = (tabPage3);
+            Bersihkan();
+        }
+
+        private void Ppinjam_alat_Click(object sender, EventArgs e)
+        {
+            tabMain.SelectedTab = (tabPage4);
+            Bersihkan();
+        }
+
+        private void Pkembali_alat_Click(object sender, EventArgs e)
+        {
+            tabMain.SelectedTab = (tabPage5);
+            Bersihkan();
+        }
+
+        private void Pdata_alat_Click(object sender, EventArgs e)
+        {
+            tabMain.SelectedTab = (tabPage6);
+            AmbilForm(new Alat());
+        }
+
+        private void Pdata_kembali_Click(object sender, EventArgs e)
+        {
+            tabMain.SelectedTab = (tabPage6);
+            AmbilForm(new Kembali());
+        }
+
+        private void Pdata_user_Click(object sender, EventArgs e)
+        {
+            tabMain.SelectedTab = (tabPage6);
+            AmbilForm(new ManagerLogin());
+        }
+
+        private void Pdata_anggota_Click(object sender, EventArgs e)
+        {
+            tabMain.SelectedTab = (tabPage6);
+            AmbilForm(new Anggota());
         }
 
     }

@@ -54,7 +54,7 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.panel2.BackColor = System.Drawing.Color.LightSkyBlue;
             this.panel2.Controls.Add(this.labelcek);
             this.panel2.Controls.Add(this.progressBar1);
             this.panel2.Controls.Add(this.label1);
@@ -87,7 +87,7 @@
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(13, 57);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(141, 160);
+            this.pictureBox1.Size = new System.Drawing.Size(141, 167);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
