@@ -624,9 +624,9 @@ namespace peminjaman.View
                             MessageBox.Show("Data Berhasil di Simpan. ",
                                 " Informasi", MessageBoxButtons.OK,
                                 MessageBoxIcon.Information);
-                            dgvKembali.Update();
-                            dgvKembali.Refresh();
-                            BersihKembali();
+                           // dgvKembali.Update();
+                            //dgvKembali.Refresh();
+                            //BersihKembali();
                         }
                         else
                         {
@@ -690,7 +690,13 @@ namespace peminjaman.View
 
         private void TxtJumlahKembali_TextChanged(object sender, EventArgs e)
         {
+             int sum = 0;
+             for (int i = 0; i < DgvKNamaAlat.Rows.Count; ++i)
+            {
+                sum += Convert.ToInt32(DgvKNamaAlat.Rows[i].Cells[1].Value);
+            }
 
+            txtjumlah.Text = sum.ToString();
         }
 
         private void Menu_Load(object sender, EventArgs e)
@@ -744,9 +750,7 @@ namespace peminjaman.View
             }
 
             TxtJumlahKembali.Text = sum.ToString();
-           //int numRows = DgvKNamaAlat.Rows.Count;
-           //TxtJumlahKembali.Text = numRows.ToString();
-          // dgvKembali.Refresh();
+           
         }
 
         private void DgvKNamaAlat_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -759,8 +763,8 @@ namespace peminjaman.View
                     DgvKNamaAlat.Rows.RemoveAt(oneCell.RowIndex);
             }
 
-            int numRows = DgvKNamaAlat.Rows.Count;
-            TxtJumlahKembali.Text = numRows.ToString();
+           // int numRows = DgvKNamaAlat.Rows.Count;
+            //TxtJumlahKembali.Text = numRows.ToString();
         }
 
         private void btnmonitor_Click(object sender, EventArgs e)
