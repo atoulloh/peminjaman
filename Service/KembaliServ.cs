@@ -14,6 +14,7 @@ namespace peminjaman.Service
         private DataTable dtTbl;
         private String query = "";
         private string tabelPinj = "pinjaman";
+        private string tabelPeminjaman = " peminjam";
         public KembaliServ()
         {
             dbConn = new Koneksi();
@@ -141,5 +142,17 @@ namespace peminjaman.Service
 
             return Query.Update(tabelPinj, data, where);
         }
+
+        public bool UbahStatusPeminjaman()
+        {
+            var data = new Dictionary<string, object>();
+            data.Add("status", Status);
+
+            var where = new Dictionary<string, object>();
+            where.Add("id_peminjaman", IdPeminjaman);
+
+            return Query.Update(tabelPeminjaman, data, where);
+        }
+
     }
 }

@@ -556,6 +556,7 @@ namespace peminjaman.View
             TxtJumlahKembali.Text = "";
             DTPPJalat.Text = "";
             DgvKNamaAlat.Refresh();
+            dgvKembali.Refresh();
             DTPKBbuku.ResetText();
         }
 
@@ -589,6 +590,9 @@ namespace peminjaman.View
                     ag.Status = "belum";
                     ag.ID_Anggota = TxtIDA.Text.Trim();
                     ag.UbahStatusAnggota();
+                      km.Status = "Sudah Kembali";
+                      km.IdPeminjaman = TxtIdP.Text.Trim();
+                       km.UbahStatusPeminjaman();
                     simpan = true;
 
                     if (DgvKNamaAlat.Rows.Count > 0)
@@ -608,6 +612,8 @@ namespace peminjaman.View
                             km.Status = "Sudah";
                             simpan = km.UbahStatusPijaman();
                             km.perbaruijumlahkembali();
+                    
+                            
 
 
                             
@@ -618,6 +624,9 @@ namespace peminjaman.View
                             MessageBox.Show("Data Berhasil di Simpan. ",
                                 " Informasi", MessageBoxButtons.OK,
                                 MessageBoxIcon.Information);
+                            dgvKembali.Update();
+                            dgvKembali.Refresh();
+                            BersihKembali();
                         }
                         else
                         {
@@ -728,8 +737,16 @@ namespace peminjaman.View
 
         private void panel9_Paint(object sender, PaintEventArgs e)
         {
-           int numRows = DgvKNamaAlat.Rows.Count;
-           TxtJumlahKembali.Text = numRows.ToString();
+            int sum = 0;
+            for (int i = 0; i < DgvKNamaAlat.Rows.Count; ++i)
+            {
+                sum += Convert.ToInt32(DgvKNamaAlat.Rows[i].Cells[1].Value);
+            }
+
+            TxtJumlahKembali.Text = sum.ToString();
+           //int numRows = DgvKNamaAlat.Rows.Count;
+           //TxtJumlahKembali.Text = numRows.ToString();
+          // dgvKembali.Refresh();
         }
 
         private void DgvKNamaAlat_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
