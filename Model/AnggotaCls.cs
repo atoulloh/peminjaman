@@ -15,6 +15,7 @@ namespace peminjaman.Model
         private String _jurusan;
         private int _no_hp;
         private String _alamat;
+        private String _status;
 
 
         public AnggotaCls()
@@ -27,6 +28,7 @@ namespace peminjaman.Model
             _jurusan = "";
             _no_hp = 0;
             _alamat = "";
+            _status = "";
         }
 
         public String ID_Anggota
@@ -69,6 +71,11 @@ namespace peminjaman.Model
         {
             set { _alamat = value; }
             get { return _alamat; }
+        }
+        public String Status
+        {
+            set { _status = value; }
+            get { return _status; }
         }
 
     }

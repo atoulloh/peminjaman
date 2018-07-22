@@ -15,6 +15,9 @@ namespace peminjaman.Service
         private String query = "";
         private string tabel = "peminjam";
 
+       
+       
+
         public PinjamServ()
         {
             dbConn = new Koneksi();
@@ -133,9 +136,19 @@ namespace peminjaman.Service
             }
         }
 
+        public void perbaruijumlah()
+        {
+            query = "update alat set jumlah_tersedia = jumlah_tersedia - " + Jumlah_Tot + " where nama_alat ='" + Nama_Alat + "'";
+            if (!(dbConn.ExecNonQuery(query) > 0))
+            {
+                throw new Exception("Gagal Memperbarui jumlah");
+            }
+        }
+            
+
         public void SimpanPinjaman()
         {
-            query = "insert into pinjaman (id_peminjaman,id_pinjaman,nama_alat) values ('" + IdPeminjaman + "','" + IdPinjaman + "','" + Nama_Alat + "')";
+            query = "insert into pinjaman (id_peminjaman,id_pinjaman,nama_alat,jumlah_tot) values ('" + IdPeminjaman + "','" + IdPinjaman + "','" + Nama_Alat + "','" + Jumlah_Tot + "')";
             if (!(dbConn.ExecNonQuery(query) > 0))
             {
                 throw new Exception("Gagal Menyimpan");
@@ -187,6 +200,8 @@ namespace peminjaman.Service
             return dtTbl;
             
         }
+
+       
 
 
         public String PinjamOtomatis()

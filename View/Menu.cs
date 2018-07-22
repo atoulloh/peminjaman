@@ -63,6 +63,7 @@ namespace peminjaman.View
         private void BtnPinjam_Click(object sender, EventArgs e)
         {
             PinjamServ pb = new PinjamServ();
+            AnggotaServ ag = new AnggotaServ();
             TxtIdPeminjaman.Text = pb.KDPinjamOtomatis();
             try
             {
@@ -91,6 +92,11 @@ namespace peminjaman.View
                     //MessageBox.Show("Data Berhasil di Simpan. ",
                         //  "Informasi", MessageBoxButtons.OK,
                         //  MessageBoxIcon.Information);
+
+                    ag.Status = "sedang pinjam";
+                    ag.ID_Anggota = TxtIdAnggota.Text.Trim();
+                    ag.UbahStatusAnggota();
+
                     if (DgvAl.Rows.Count > 0)
                     {
                         PinjamServ p = new PinjamServ();
@@ -100,11 +106,14 @@ namespace peminjaman.View
                         {
                            
                             string nama_alat = row.Cells[0].Value.ToString();
-                            //string jumlah = row.Cells[1].Value.ToString();
+                            string jumlah_tot = row.Cells[1].Value.ToString();
                             pb.IdPinjaman = p.PinjamOtomatis();
                             pb.Nama_Alat = nama_alat;
-                            //pb.Jumlah = int.Parse(jumlah);
+                            pb.Jumlah_Tot = int.Parse(jumlah_tot);
                             pb.SimpanPinjaman();
+                            pb.perbaruijumlah();
+
+
                         }
 
                         MessageBox.Show("Data Berhasil di Simpan. ",
@@ -373,11 +382,12 @@ namespace peminjaman.View
             txtjumlah.Text = numRows.ToString();
             
            // TxtP.Text = pb.PinjamOtomatis();
-            if (!string.IsNullOrEmpty(TxtCariAl.Text.Trim()))
+            if (!string.IsNullOrEmpty(TxtCariAl.Text.Trim()) && NumJumlahPinjam.Value > 0)
             {
-                DgvAl.Rows.Add(TxtCariAl.Text);
+                DgvAl.Rows.Add(TxtCariAl.Text, NumJumlahPinjam.Value);
                 GrpAlat.Visible = false;
                 TxtCariAl.Clear();
+                NumJumlahPinjam.Value = 0;
                
             }
             else
@@ -391,11 +401,11 @@ namespace peminjaman.View
             if (dgvNamaAlat.SelectedRows.Count > 0)
             {
                 string nama = dgvNamaAlat.SelectedRows[0].Cells[0].Value.ToString();
-                //string max = dgvNamaAlat.SelectedRows[0].Cells[1].Value.ToString();
+                string max = dgvNamaAlat.SelectedRows[0].Cells[1].Value.ToString();
               //  string id = dgvNamaAlat.SelectedRows[0].Cells[2].Value.ToString();
                 //TxtP.Text = id;
                 TxtCariAl.Text = nama;
-               // NumJumlahPinjam.Maximum = decimal.Parse(max);
+                NumJumlahPinjam.Maximum = decimal.Parse(max);
                 dgvNamaAlat.ClearSelection();
                 //MessageBox.Show(nama);
                 //GrpAlat.Visible = false;
@@ -407,7 +417,7 @@ namespace peminjaman.View
         {
             GrpAlat.Visible = false;
             TxtCariAl.Clear();
-           // NumJumlahPinjam.Value = 0;
+            NumJumlahPinjam.Value = 0;
          
         }
 
@@ -461,8 +471,6 @@ namespace peminjaman.View
         //bagian peminjaman
         private void TxtJumlah_TextChanged(object sender, EventArgs e)
         {
-            //int numRows = DgvAl.Rows.Count;
-            //TxtJumlah.Text = numRows.ToString();
         }
         //bagian peminjaman
         private void DgvAl_DoubleClick(object sender, EventArgs e)
@@ -473,8 +481,9 @@ namespace peminjaman.View
                 if (oneCell.Selected)
                     DgvAl.Rows.RemoveAt(oneCell.RowIndex);
             }
-            int numRows = DgvAl.Rows.Count;
-            txtjumlah.Text = numRows.ToString();
+
+            //int numRows = DgvAl.Rows.Count;
+            //txtjumlah.Text = numRows.ToString();
         }
 
         private void DgvAl_CellMouseDown(object sender, DataGridViewCellMouseEventArgs e)
@@ -554,6 +563,7 @@ namespace peminjaman.View
         private void BtnSimpanKembali_Click(object sender, EventArgs e)
         {
             KembaliServ km = new KembaliServ();
+            AnggotaServ ag = new AnggotaServ();
             bool simpan = false;
             try
             {
@@ -575,7 +585,10 @@ namespace peminjaman.View
                     km.Jumlah = int.Parse(TxtJumlahKembali.Text.Trim());
                     km.TanggalPinjam = DTPPJalat.Value.ToString("yyyy/MM/dd HH:mm:ss");
                     km.TanggalKembali = DTPKBbuku.Value.ToString("yyyy/MM/dd HH:mm:ss");
-                   
+
+                    ag.Status = "belum";
+                    ag.ID_Anggota = TxtIDA.Text.Trim();
+                    ag.UbahStatusAnggota();
                     simpan = true;
 
                     if (DgvKNamaAlat.Rows.Count > 0)
@@ -586,12 +599,17 @@ namespace peminjaman.View
                             string id_pinjam = row.Cells[0].Value.ToString();
                             string nama_alat = row.Cells[1].Value.ToString();
                             string st = row.Cells[2].Value.ToString();
+                            string jumlah_tot = row.Cells[3].Value.ToString(); 
                             km.IdPinjaman = id_pinjam;
                             km.NamaAlat = nama_alat;
                             km.Status = st;
+                            km.Jumlah_Tot = int.Parse(jumlah_tot);
                            // km.Simpan_Detail_kembali();
                             km.Status = "Sudah";
                             simpan = km.UbahStatusPijaman();
+                            km.perbaruijumlahkembali();
+
+
                             
                         }
                         if (simpan)
@@ -632,8 +650,15 @@ namespace peminjaman.View
 
         private void panel10_Paint(object sender, PaintEventArgs e)
         {
-            int numRows = DgvAl.Rows.Count;
-            txtjumlah.Text = numRows.ToString();
+            int sum = 0;
+            for (int i = 0; i < DgvAl.Rows.Count; ++i)
+            {
+                sum += Convert.ToInt32(DgvAl.Rows[i].Cells[1].Value);
+            }
+
+            txtjumlah.Text = sum.ToString();
+            //int numRows = DgvAl.Rows.Count;
+            //txtjumlah.Text = numRows.ToString();
             // int sum = 0;
             //for (int i = 0; i < DgvAl.Rows.Count; ++i)
             //{
@@ -661,7 +686,7 @@ namespace peminjaman.View
 
         private void Menu_Load(object sender, EventArgs e)
         {
-            LoginServ login = new LoginServ();
+           /* LoginServ login = new LoginServ();
             string lvl = login.CekLevel(username).Rows[0][0].ToString();
 
             if (lvl == "Admin")
@@ -689,7 +714,7 @@ namespace peminjaman.View
                 Pdata_alat.Visible = true;
                 Pcari_alat.Visible = true;
 
-            }
+            }*/
 
 
             labelname.Text = "Selamat Datang\n" + " " + " " + " " + username;
@@ -785,6 +810,29 @@ namespace peminjaman.View
         {
             tabMain.SelectedTab = (tabPage6);
             AmbilForm(new Anggota());
+        }
+
+        private void Menu_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void TxtIdAnggota_TextChanged(object sender, EventArgs e)
+        {
+            AnggotaServ ag = new AnggotaServ();
+
+            if (ag.cek_ID(TxtIdAnggota.Text) == "sedang pinjam")
+            {
+                BtnPinjam.Enabled = false;
+                MessageBox.Show("Sedang Pinjam Alat. ",
+                                "Informasi", MessageBoxButtons.OK,
+                                MessageBoxIcon.Information);
+            }
+            else
+            {
+                BtnPinjam.Enabled = true;
+            }
+
         }
 
     }

@@ -36,7 +36,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.CmbCariPeminjam = new System.Windows.Forms.ComboBox();
             this.TxtCariDtKembali = new System.Windows.Forms.TextBox();
-            this.btnhapus = new System.Windows.Forms.Button();
             this.DgvKembali = new System.Windows.Forms.DataGridView();
             this.idpeminjaman = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idanggota = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -48,11 +47,11 @@
             this.button1 = new System.Windows.Forms.Button();
             this.textkembali = new System.Windows.Forms.TextBox();
             this.dgvdetailkembali = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
             this.id_peminjaman = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.id_peminjam = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nama_alat = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvKembali)).BeginInit();
             this.grpdetailkembali.SuspendLayout();
@@ -101,7 +100,7 @@
             this.BtnRefresh.ForeColor = System.Drawing.Color.Black;
             this.BtnRefresh.Image = ((System.Drawing.Image)(resources.GetObject("BtnRefresh.Image")));
             this.BtnRefresh.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.BtnRefresh.Location = new System.Drawing.Point(572, 368);
+            this.BtnRefresh.Location = new System.Drawing.Point(665, 368);
             this.BtnRefresh.Name = "BtnRefresh";
             this.BtnRefresh.Size = new System.Drawing.Size(97, 65);
             this.BtnRefresh.TabIndex = 70;
@@ -160,25 +159,6 @@
             this.TxtCariDtKembali.Name = "TxtCariDtKembali";
             this.TxtCariDtKembali.Size = new System.Drawing.Size(172, 28);
             this.TxtCariDtKembali.TabIndex = 1;
-            // 
-            // btnhapus
-            // 
-            this.btnhapus.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnhapus.BackColor = System.Drawing.Color.SkyBlue;
-            this.btnhapus.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnhapus.FlatAppearance.BorderSize = 0;
-            this.btnhapus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnhapus.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnhapus.ForeColor = System.Drawing.Color.Black;
-            this.btnhapus.Image = ((System.Drawing.Image)(resources.GetObject("btnhapus.Image")));
-            this.btnhapus.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnhapus.Location = new System.Drawing.Point(670, 368);
-            this.btnhapus.Name = "btnhapus";
-            this.btnhapus.Size = new System.Drawing.Size(93, 65);
-            this.btnhapus.TabIndex = 74;
-            this.btnhapus.Text = "Hapus [F8]";
-            this.btnhapus.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnhapus.UseVisualStyleBackColor = false;
             // 
             // DgvKembali
             // 
@@ -297,16 +277,6 @@
             this.dgvdetailkembali.Size = new System.Drawing.Size(433, 168);
             this.dgvdetailkembali.TabIndex = 1;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(173, 16);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(108, 18);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Detail Kembali";
-            // 
             // id_peminjaman
             // 
             this.id_peminjaman.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
@@ -334,6 +304,16 @@
             this.Status.HeaderText = "Status Alat";
             this.Status.Name = "Status";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(173, 16);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(108, 18);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Detail Kembali";
+            // 
             // Kembali
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -342,7 +322,6 @@
             this.ClientSize = new System.Drawing.Size(866, 436);
             this.Controls.Add(this.grpdetailkembali);
             this.Controls.Add(this.DgvKembali);
-            this.Controls.Add(this.btnhapus);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.labeljumlah);
             this.Controls.Add(this.BtnRefresh);
@@ -371,7 +350,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ComboBox CmbCariPeminjam;
         private System.Windows.Forms.TextBox TxtCariDtKembali;
-        private System.Windows.Forms.Button btnhapus;
         private System.Windows.Forms.DataGridView DgvKembali;
         private System.Windows.Forms.GroupBox grpdetailkembali;
         private System.Windows.Forms.DataGridViewTextBoxColumn idpeminjaman;

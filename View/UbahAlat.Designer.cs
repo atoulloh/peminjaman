@@ -144,9 +144,9 @@
             this.label11.ForeColor = System.Drawing.Color.Black;
             this.label11.Location = new System.Drawing.Point(92, 98);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(99, 21);
+            this.label11.Size = new System.Drawing.Size(89, 21);
             this.label11.TabIndex = 124;
-            this.label11.Text = "Kode Buku";
+            this.label11.Text = "Kode Alat";
             // 
             // label1
             // 

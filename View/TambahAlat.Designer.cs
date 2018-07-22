@@ -46,6 +46,8 @@
             this.BtnSimpan = new System.Windows.Forms.Button();
             this.BtnBack = new System.Windows.Forms.Button();
             this.TxtTahunPembelian = new System.Windows.Forms.TextBox();
+            this.TxtJumlah = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -203,12 +205,31 @@
             this.TxtTahunPembelian.Size = new System.Drawing.Size(153, 20);
             this.TxtTahunPembelian.TabIndex = 17;
             // 
+            // TxtJumlah
+            // 
+            this.TxtJumlah.Location = new System.Drawing.Point(164, 253);
+            this.TxtJumlah.Name = "TxtJumlah";
+            this.TxtJumlah.Size = new System.Drawing.Size(153, 20);
+            this.TxtJumlah.TabIndex = 18;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(29, 255);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(56, 18);
+            this.label9.TabIndex = 19;
+            this.label9.Text = "Jumlah";
+            // 
             // TambahAlat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(373, 397);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.TxtJumlah);
             this.Controls.Add(this.TxtTahunPembelian);
             this.Controls.Add(this.BtnBack);
             this.Controls.Add(this.BtnSimpan);
@@ -253,5 +274,7 @@
         private System.Windows.Forms.Button BtnSimpan;
         private System.Windows.Forms.Button BtnBack;
         private System.Windows.Forms.TextBox TxtTahunPembelian;
+        private System.Windows.Forms.TextBox TxtJumlah;
+        private System.Windows.Forms.Label label9;
     }
 }

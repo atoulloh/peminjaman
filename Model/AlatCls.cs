@@ -14,6 +14,7 @@ namespace peminjaman.Model
         private int _harga_pembelian;
         private int _tahun_pembelian;
         private int _jumlah;
+        private int _jumlah_tersedia;
         private String _kondisi;
 
         public AlatCls()
@@ -25,6 +26,7 @@ namespace peminjaman.Model
             _harga_pembelian = 0;
             _tahun_pembelian = 0;
             _jumlah = 0;
+            _jumlah_tersedia = 0;
             _kondisi = "";
         }
 
@@ -66,6 +68,14 @@ namespace peminjaman.Model
             set { _jumlah = value; }
             get { return _jumlah; }
         }
+
+        public int Jumlah_Tersedia
+        {
+            set { _jumlah_tersedia = value; }
+            get { return _jumlah_tersedia; }
+        }
+
+
         public String Kondisi
         {
             set { _kondisi = value; }

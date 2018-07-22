@@ -20,6 +20,15 @@ namespace peminjaman.Service
             dtTbl = new DataTable();
         }
 
+        public void perbaruijumlahkembali()
+        {
+            query = "update alat set jumlah_tersedia = jumlah_tersedia + " + Jumlah_Tot + " where nama_alat ='" + NamaAlat + "'";
+            if (!(dbConn.ExecNonQuery(query) > 0))
+            {
+                throw new Exception("Gagal Memperbarui jumlah");
+            }
+        }
+
         public void Simpan_Kembali()
         {
             query = "INSERT INTO kembali (id_peminjaman,id_anggota,nama,jumlah,tanggal_pinjam,tanggal_kembali) VALUES ('" + IdPeminjaman + "','" + IdAnggota + "','" + Nama + "','" + Jumlah + "','" + TanggalPinjam + "','" + TanggalKembali + "')";

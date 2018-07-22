@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Data;
 using peminjaman.Model;
-
+using SIPWB.Service;
 
 namespace peminjaman.Service
 {
@@ -12,7 +12,8 @@ namespace peminjaman.Service
     {
         private Koneksi dbConn;
         private DataTable dtTbl;
-        private String Query = "";
+        private String query = "";
+        private string tabelanggota = "anggota";
 
         public AnggotaServ()
         {
@@ -23,8 +24,8 @@ namespace peminjaman.Service
 
         public void Simpan_Anggota()
         {
-            Query = "INSERT INTO anggota VALUES ('" + ID_Anggota + "','" + Nis + "','" + Nama + "','" + Jenis_Kelamin + "','" + Kelas + "','" + Jurusan + "','" + No_Hp + "','" + Alamat + "')";
-            if (!(dbConn.ExecNonQuery(Query) > 0))
+            query = "INSERT INTO anggota VALUES ('" + ID_Anggota + "','" + Nis + "','" + Nama + "','" + Jenis_Kelamin + "','" + Kelas + "','" + Jurusan + "','" + No_Hp + "','" + Alamat + "')";
+            if (!(dbConn.ExecNonQuery(query) > 0))
             {
                 throw new Exception("Gagal Menyimpan");
             }
@@ -32,8 +33,8 @@ namespace peminjaman.Service
 
         public void HapusAnggota(String nis)
         {
-            Query = "DELETE from anggota WHERE nis='" + nis + "'";
-            if (!(dbConn.ExecNonQuery(Query) > 0))
+            query = "DELETE from anggota WHERE nis='" + nis + "'";
+            if (!(dbConn.ExecNonQuery(query) > 0))
             {
                 throw new Exception("Gagal Merubah");
             }
@@ -41,8 +42,8 @@ namespace peminjaman.Service
 
         public void Ubah(String id_anggota)
         {
-            Query = "UPDATE anggota SET nis='" + Nis + "', nama='" + Nama + "', jenis_kelamin ='" + Jenis_Kelamin + "', kelas = '" + Kelas + "', jurusan='" + Jurusan + "', no_hp='" + No_Hp + "', alamat='" + Alamat + "' where id_anggota = '" + id_anggota + "'";
-            if (!(dbConn.ExecNonQuery(Query) > 0))
+            query = "UPDATE anggota SET nis='" + Nis + "', nama='" + Nama + "', jenis_kelamin ='" + Jenis_Kelamin + "', kelas = '" + Kelas + "', jurusan='" + Jurusan + "', no_hp='" + No_Hp + "', alamat='" + Alamat + "' where id_anggota = '" + id_anggota + "'";
+            if (!(dbConn.ExecNonQuery(query) > 0))
             {
                 throw new Exception("Gagal Merubah");
             }
@@ -50,15 +51,15 @@ namespace peminjaman.Service
 
         public DataTable auto()
         {
-            Query = "Select count(*) from anggota";
-            dtTbl = dbConn.ExecQuery(Query);
+            query = "Select count(*) from anggota";
+            dtTbl = dbConn.ExecQuery(query);
             return dtTbl;
         }
 
         public DataTable TampilSemua()
         {
-            Query = "SELECT * FROM anggota";
-            dtTbl = dbConn.ExecQuery(Query);
+            query = "SELECT * FROM anggota";
+            dtTbl = dbConn.ExecQuery(query);
             return dtTbl;
         }
 
@@ -66,8 +67,8 @@ namespace peminjaman.Service
         {
             bool cek = false;
 
-            Query = "SELECT * FROM anggota WHERE nis = '" + Nis + "'";
-            dtTbl = dbConn.ExecQuery(Query);
+            query = "SELECT * FROM anggota WHERE nis = '" + Nis + "'";
+            dtTbl = dbConn.ExecQuery(query);
 
             if (dtTbl.Rows.Count > 0)
             {
@@ -79,9 +80,9 @@ namespace peminjaman.Service
 
         public void kode()
         {
-            Query = "select id_anggota from anggota where id)anggota in(select max(id_anggota) from anggota) order by id_anggota desc";
+            query = "select id_anggota from anggota where id)anggota in(select max(id_anggota) from anggota) order by id_anggota desc";
 
-            if (!(dbConn.ExecNonQuery(Query) > 0))
+            if (!(dbConn.ExecNonQuery(query) > 0))
             {
                 throw new Exception("Gagal ");
             }
@@ -89,16 +90,16 @@ namespace peminjaman.Service
 
         public DataTable CariAnggota(String a, String b)
         {
-            Query = " SELECT * FROM anggota WHERE  " + b + " like '" + a + "%'";
-            dtTbl = dbConn.ExecQuery(Query);
+            query = " SELECT * FROM anggota WHERE  " + b + " like '" + a + "%'";
+            dtTbl = dbConn.ExecQuery(query);
 
             return dtTbl;
         }
 
         public DataTable HitungAnggota()
         {
-            Query = " Select count(*) from anggota";
-            dtTbl = dbConn.ExecQuery(Query);
+            query = " Select count(*) from anggota";
+            dtTbl = dbConn.ExecQuery(query);
 
             return dtTbl;
         }
@@ -108,8 +109,8 @@ namespace peminjaman.Service
             String kode = "";
             int ida = 0;
 
-            Query = " select ifnull(max(substring(id_anggota,5,4)),0) as idp from anggota";
-            dtTbl = dbConn.ExecQuery(Query);
+            query = " select ifnull(max(substring(id_anggota,5,4)),0) as idp from anggota";
+            dtTbl = dbConn.ExecQuery(query);
 
             if (dtTbl.Rows.Count > 0)
             {
@@ -141,18 +142,45 @@ namespace peminjaman.Service
 
         public DataTable CariIDAg(String a)
         {
-            Query = "SELECT id_anggota FROM anggota WHERE nama='" + a + "'";
-            dtTbl = dbConn.ExecQuery(Query);
+            query = "SELECT id_anggota FROM anggota WHERE nama='" + a + "'";
+            dtTbl = dbConn.ExecQuery(query);
 
             return dtTbl;
         }
         public DataTable CekAnggota(String a)
         {
-            Query = "SELECT * FROM anggota WHERE nama like '%" + a + "%'";
-            dtTbl = dbConn.ExecQuery(Query);
+            query = "SELECT * FROM anggota WHERE nama like '%" + a + "%'";
+            dtTbl = dbConn.ExecQuery(query);
 
             return dtTbl;
         }
+
+        public bool UbahStatusAnggota()
+        {
+            var data = new Dictionary<string, object>();
+           // data.Add("tanggal_kembali", TanggalKembali);
+            data.Add("status", Status);
+
+            var where = new Dictionary<string, object>();
+            where.Add("id_anggota", ID_Anggota);
+
+            return Query.Update(tabelanggota, data, where);
+        }
+
+        public string cek_ID(String ID_Anggota)
+        {
+            string status = "";
+            query = "SELECT status from anggota WHERE id_anggota = '" + ID_Anggota + "'";
+            dtTbl = dbConn.ExecQuery(query);
+            if (dtTbl.Rows.Count > 0)
+            {
+                DataRow row = dtTbl.Rows[0];
+            status = row["status"].ToString();
+            }
+            return status;
+        }
+
+  
 
        // internal object CariAnggota(string p)
         //{

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Data;
 using peminjaman.Model;
-//using SIPWB.Service;
+using SIPWB.Service;
 
 namespace peminjaman.Service
 {
@@ -13,7 +13,7 @@ namespace peminjaman.Service
         private Koneksi dbConn;
         private DataTable dtTbl;
         private String query = "";
-        //private string tabel = "alat";
+        private string tabel = "alat";
 
         public AlatServ()
         {
@@ -29,6 +29,7 @@ namespace peminjaman.Service
 
             return dtTbl;
         }
+
 
         public DataTable tampilcari()
         {
@@ -49,7 +50,7 @@ namespace peminjaman.Service
 
         public void SimpanAlat()
         {
-           query = "INSERT INTO alat VALUES ('" + Kode_Alat + "','" + Nama_Alat + "','" + Jenis_Alat + "','" + Letak + "','"
+           query = "INSERT INTO alat VALUES ('" + Kode_Alat + "','" + Nama_Alat + "','" + Jenis_Alat + "','" + Letak + "','"+ Jumlah + "','" + Jumlah_Tersedia + "','"
                 + Harga_Pembelian + "','" + Tahun_Pembelian + "','" + Kondisi + "')";
 
             //var datas = new Dictionary<string, object>();
@@ -106,10 +107,12 @@ namespace peminjaman.Service
 
         public DataTable TampilSemua()
         {
-            query = "SELECT * FROM alat";
+            query = "SELECT *, jumlah-jumlah_tersedia as dipinjam FROM alat";
             dtTbl = dbConn.ExecQuery(query);
             return dtTbl;
         }
+
+       
 
         public DataTable CariAlat(String a)
         {

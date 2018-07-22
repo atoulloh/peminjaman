@@ -29,7 +29,7 @@ namespace peminjaman.View
             if (progressBar1.Value == 100)
             {
                 TimerWelcome.Enabled = false;
-                Login login = new Login();
+                Menu login = new Menu();
                 login.Show();
                 Hide();
             }

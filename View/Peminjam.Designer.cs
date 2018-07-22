@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Peminjam));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label2 = new System.Windows.Forms.Label();
             this.labeljumlah = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -38,7 +38,6 @@
             this.btncariPinjam = new System.Windows.Forms.Button();
             this.BtnCetak = new System.Windows.Forms.Button();
             this.BtnRefresh = new System.Windows.Forms.Button();
-            this.BtnHapusPeminjam = new System.Windows.Forms.Button();
             this.BtnDetailPinjam = new System.Windows.Forms.Button();
             this.grpdetail = new System.Windows.Forms.GroupBox();
             this.button1 = new System.Windows.Forms.Button();
@@ -167,7 +166,7 @@
             this.BtnRefresh.ForeColor = System.Drawing.Color.Black;
             this.BtnRefresh.Image = ((System.Drawing.Image)(resources.GetObject("BtnRefresh.Image")));
             this.BtnRefresh.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.BtnRefresh.Location = new System.Drawing.Point(428, 370);
+            this.BtnRefresh.Location = new System.Drawing.Point(523, 370);
             this.BtnRefresh.Name = "BtnRefresh";
             this.BtnRefresh.Size = new System.Drawing.Size(103, 55);
             this.BtnRefresh.TabIndex = 76;
@@ -175,26 +174,6 @@
             this.BtnRefresh.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.BtnRefresh.UseVisualStyleBackColor = false;
             this.BtnRefresh.Click += new System.EventHandler(this.BtnRefresh_Click);
-            // 
-            // BtnHapusPeminjam
-            // 
-            this.BtnHapusPeminjam.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnHapusPeminjam.BackColor = System.Drawing.Color.SkyBlue;
-            this.BtnHapusPeminjam.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnHapusPeminjam.FlatAppearance.BorderSize = 0;
-            this.BtnHapusPeminjam.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnHapusPeminjam.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnHapusPeminjam.ForeColor = System.Drawing.Color.Black;
-            this.BtnHapusPeminjam.Image = ((System.Drawing.Image)(resources.GetObject("BtnHapusPeminjam.Image")));
-            this.BtnHapusPeminjam.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.BtnHapusPeminjam.Location = new System.Drawing.Point(533, 370);
-            this.BtnHapusPeminjam.Name = "BtnHapusPeminjam";
-            this.BtnHapusPeminjam.Size = new System.Drawing.Size(93, 55);
-            this.BtnHapusPeminjam.TabIndex = 77;
-            this.BtnHapusPeminjam.Text = "Hapus [F8]";
-            this.BtnHapusPeminjam.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.BtnHapusPeminjam.UseVisualStyleBackColor = false;
-            this.BtnHapusPeminjam.Click += new System.EventHandler(this.BtnHapusPeminjam_Click);
             // 
             // BtnDetailPinjam
             // 
@@ -308,14 +287,14 @@
             this.dgvPeminjam.BackgroundColor = System.Drawing.Color.White;
             this.dgvPeminjam.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvPeminjam.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPeminjam.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPeminjam.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvPeminjam.ColumnHeadersHeight = 33;
             this.dgvPeminjam.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvPeminjam.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -372,7 +351,6 @@
             this.Controls.Add(this.grpdetail);
             this.Controls.Add(this.dgvPeminjam);
             this.Controls.Add(this.BtnDetailPinjam);
-            this.Controls.Add(this.BtnHapusPeminjam);
             this.Controls.Add(this.BtnRefresh);
             this.Controls.Add(this.BtnCetak);
             this.Controls.Add(this.panel1);
@@ -401,7 +379,6 @@
         private System.Windows.Forms.TextBox TxtCariDtPinjam;
         private System.Windows.Forms.Button BtnCetak;
         private System.Windows.Forms.Button BtnRefresh;
-        private System.Windows.Forms.Button BtnHapusPeminjam;
         private System.Windows.Forms.Button BtnDetailPinjam;
         private System.Windows.Forms.Button btncariPinjam;
         private System.Windows.Forms.GroupBox grpdetail;

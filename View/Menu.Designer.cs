@@ -30,9 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle55 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle56 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle57 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
             this.CariIDAg = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.DTPPJalat = new System.Windows.Forms.DateTimePicker();
@@ -45,7 +45,6 @@
             this.nama_kembali = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Jmlh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Tanggal_Pinjam = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BtnCariKodePinjam = new System.Windows.Forms.Button();
             this.label32 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -67,6 +66,21 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabMain = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
+            this.Pdaftar_anggota = new System.Windows.Forms.PictureBox();
+            this.Pcari_alat = new System.Windows.Forms.PictureBox();
+            this.Pdata_user = new System.Windows.Forms.PictureBox();
+            this.pdata_peminjam = new System.Windows.Forms.PictureBox();
+            this.Pdata_kembali = new System.Windows.Forms.PictureBox();
+            this.Ppinjam_alat = new System.Windows.Forms.PictureBox();
+            this.Pdata_alat = new System.Windows.Forms.PictureBox();
+            this.Pdata_anggota = new System.Windows.Forms.PictureBox();
+            this.Pkembali_alat = new System.Windows.Forms.PictureBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.labelname = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.panelanggota = new System.Windows.Forms.Panel();
@@ -110,14 +124,13 @@
             this.id_anggota = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nama_anggota = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DgvAl = new System.Windows.Forms.DataGridView();
-            this.Nama_alat1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GrpAlat = new System.Windows.Forms.GroupBox();
+            this.NumJumlahPinjam = new System.Windows.Forms.NumericUpDown();
             this.BtnXTbh = new System.Windows.Forms.Button();
             this.btnOk = new System.Windows.Forms.Button();
             this.TxtCariAl = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.dgvNamaAlat = new System.Windows.Forms.DataGridView();
-            this.alat = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label24 = new System.Windows.Forms.Label();
             this.CariAlat = new System.Windows.Forms.Button();
             this.txtjumlah = new System.Windows.Forms.TextBox();
@@ -136,9 +149,6 @@
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.panel9 = new System.Windows.Forms.Panel();
             this.DgvKNamaAlat = new System.Windows.Forms.DataGridView();
-            this.IDPinjaman = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.K_Nama_Alat = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.status_detail = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label28 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -175,21 +185,14 @@
             this.timerjalan = new System.Windows.Forms.Timer(this.components);
             this.panel14 = new System.Windows.Forms.Panel();
             this.timerhome = new System.Windows.Forms.Timer(this.components);
-            this.label5 = new System.Windows.Forms.Label();
-            this.Pdaftar_anggota = new System.Windows.Forms.PictureBox();
-            this.Pcari_alat = new System.Windows.Forms.PictureBox();
-            this.Pdata_kembali = new System.Windows.Forms.PictureBox();
-            this.Pdata_anggota = new System.Windows.Forms.PictureBox();
-            this.Pdata_user = new System.Windows.Forms.PictureBox();
-            this.Pdata_alat = new System.Windows.Forms.PictureBox();
-            this.Pkembali_alat = new System.Windows.Forms.PictureBox();
-            this.Ppinjam_alat = new System.Windows.Forms.PictureBox();
-            this.pdata_peminjam = new System.Windows.Forms.PictureBox();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.label8 = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.panel7 = new System.Windows.Forms.Panel();
+            this.Nama_alat1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Jumlah_tot = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.alat = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.jumlah = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IDPinjaman = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.K_Nama_Alat = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.status_detail = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.jumlah_alat = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKembali)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -197,6 +200,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabMain.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Pdaftar_anggota)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Pcari_alat)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Pdata_user)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pdata_peminjam)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Pdata_kembali)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Ppinjam_alat)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Pdata_alat)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Pdata_anggota)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Pkembali_alat)).BeginInit();
             this.tabPage2.SuspendLayout();
             this.panelanggota.SuspendLayout();
             this.tabPage3.SuspendLayout();
@@ -208,6 +222,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvanggota)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DgvAl)).BeginInit();
             this.GrpAlat.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.NumJumlahPinjam)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNamaAlat)).BeginInit();
             this.tabPage5.SuspendLayout();
             this.panel9.SuspendLayout();
@@ -218,17 +233,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvPengunjung)).BeginInit();
             this.panelhome.SuspendLayout();
             this.panel14.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Pdaftar_anggota)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Pcari_alat)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Pdata_kembali)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Pdata_anggota)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Pdata_user)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Pdata_alat)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Pkembali_alat)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Ppinjam_alat)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pdata_peminjam)).BeginInit();
-            this.panel3.SuspendLayout();
-            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // CariIDAg
@@ -330,14 +334,14 @@
             this.dgvKembali.BackgroundColor = System.Drawing.Color.White;
             this.dgvKembali.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvKembali.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle55.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle55.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle55.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle55.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle55.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle55.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle55.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvKembali.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle55;
+            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle22.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle22.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle22.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle22.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle22.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvKembali.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle22;
             this.dgvKembali.ColumnHeadersHeight = 33;
             this.dgvKembali.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvKembali.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -345,8 +349,7 @@
             this.id_anggotaKembali,
             this.nama_kembali,
             this.Jmlh,
-            this.Tanggal_Pinjam,
-            this.Status});
+            this.Tanggal_Pinjam});
             this.dgvKembali.GridColor = System.Drawing.Color.White;
             this.dgvKembali.Location = new System.Drawing.Point(9, 83);
             this.dgvKembali.MultiSelect = false;
@@ -397,13 +400,6 @@
             this.Tanggal_Pinjam.Name = "Tanggal_Pinjam";
             this.Tanggal_Pinjam.ReadOnly = true;
             // 
-            // Status
-            // 
-            this.Status.DataPropertyName = "status";
-            this.Status.HeaderText = "Status";
-            this.Status.Name = "Status";
-            this.Status.ReadOnly = true;
-            // 
             // BtnCariKodePinjam
             // 
             this.BtnCariKodePinjam.BackColor = System.Drawing.Color.Lavender;
@@ -443,7 +439,7 @@
             this.panel1.Controls.Add(this.tabMain);
             this.panel1.Location = new System.Drawing.Point(1, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1168, 485);
+            this.panel1.Size = new System.Drawing.Size(1168, 610);
             this.panel1.TabIndex = 5;
             // 
             // panel2
@@ -457,7 +453,7 @@
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(234, 485);
+            this.panel2.Size = new System.Drawing.Size(234, 610);
             this.panel2.TabIndex = 1;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
@@ -479,7 +475,7 @@
             this.flowLayoutPanel2.Controls.Add(this.btnmonitor);
             this.flowLayoutPanel2.Location = new System.Drawing.Point(3, 74);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(224, 342);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(224, 467);
             this.flowLayoutPanel2.TabIndex = 0;
             // 
             // BtnAnggota
@@ -683,7 +679,7 @@
             this.btnKeluarAplikasi.ForeColor = System.Drawing.Color.White;
             this.btnKeluarAplikasi.Image = ((System.Drawing.Image)(resources.GetObject("btnKeluarAplikasi.Image")));
             this.btnKeluarAplikasi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnKeluarAplikasi.Location = new System.Drawing.Point(10, 422);
+            this.btnKeluarAplikasi.Location = new System.Drawing.Point(10, 547);
             this.btnKeluarAplikasi.Name = "btnKeluarAplikasi";
             this.btnKeluarAplikasi.Size = new System.Drawing.Size(254, 52);
             this.btnKeluarAplikasi.TabIndex = 10;
@@ -729,7 +725,7 @@
             this.tabMain.Location = new System.Drawing.Point(240, 6);
             this.tabMain.Name = "tabMain";
             this.tabMain.SelectedIndex = 0;
-            this.tabMain.Size = new System.Drawing.Size(932, 468);
+            this.tabMain.Size = new System.Drawing.Size(932, 593);
             this.tabMain.TabIndex = 1;
             this.tabMain.TabStop = false;
             // 
@@ -746,6 +742,169 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // panel7
+            // 
+            this.panel7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel7.BackColor = System.Drawing.Color.DimGray;
+            this.panel7.Location = new System.Drawing.Point(-4, 73);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(928, 8);
+            this.panel7.TabIndex = 13;
+            // 
+            // panel3
+            // 
+            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel3.Controls.Add(this.panel6);
+            this.panel3.Controls.Add(this.panel5);
+            this.panel3.Controls.Add(this.Pdaftar_anggota);
+            this.panel3.Controls.Add(this.Pcari_alat);
+            this.panel3.Controls.Add(this.Pdata_user);
+            this.panel3.Controls.Add(this.pdata_peminjam);
+            this.panel3.Controls.Add(this.Pdata_kembali);
+            this.panel3.Controls.Add(this.Ppinjam_alat);
+            this.panel3.Controls.Add(this.Pdata_alat);
+            this.panel3.Controls.Add(this.Pdata_anggota);
+            this.panel3.Controls.Add(this.Pkembali_alat);
+            this.panel3.Location = new System.Drawing.Point(92, 163);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(817, 249);
+            this.panel3.TabIndex = 12;
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.Gray;
+            this.panel6.Location = new System.Drawing.Point(121, 219);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(667, 19);
+            this.panel6.TabIndex = 13;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.Gray;
+            this.panel5.Controls.Add(this.label8);
+            this.panel5.Location = new System.Drawing.Point(120, 6);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(668, 19);
+            this.panel5.TabIndex = 12;
+            // 
+            // label8
+            // 
+            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.label8.AutoSize = true;
+            this.label8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label8.Location = new System.Drawing.Point(289, 2);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(97, 13);
+            this.label8.TabIndex = 0;
+            this.label8.Text = "CONTROL PANEL";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // Pdaftar_anggota
+            // 
+            this.Pdaftar_anggota.Image = ((System.Drawing.Image)(resources.GetObject("Pdaftar_anggota.Image")));
+            this.Pdaftar_anggota.Location = new System.Drawing.Point(142, 33);
+            this.Pdaftar_anggota.Name = "Pdaftar_anggota";
+            this.Pdaftar_anggota.Size = new System.Drawing.Size(66, 68);
+            this.Pdaftar_anggota.TabIndex = 3;
+            this.Pdaftar_anggota.TabStop = false;
+            this.Pdaftar_anggota.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
+            // Pcari_alat
+            // 
+            this.Pcari_alat.Image = ((System.Drawing.Image)(resources.GetObject("Pcari_alat.Image")));
+            this.Pcari_alat.Location = new System.Drawing.Point(286, 33);
+            this.Pcari_alat.Name = "Pcari_alat";
+            this.Pcari_alat.Size = new System.Drawing.Size(67, 68);
+            this.Pcari_alat.TabIndex = 4;
+            this.Pcari_alat.TabStop = false;
+            this.Pcari_alat.Click += new System.EventHandler(this.Pcari_alat_Click);
+            // 
+            // Pdata_user
+            // 
+            this.Pdata_user.Image = ((System.Drawing.Image)(resources.GetObject("Pdata_user.Image")));
+            this.Pdata_user.Location = new System.Drawing.Point(620, 140);
+            this.Pdata_user.Name = "Pdata_user";
+            this.Pdata_user.Size = new System.Drawing.Size(64, 68);
+            this.Pdata_user.TabIndex = 7;
+            this.Pdata_user.TabStop = false;
+            this.Pdata_user.Click += new System.EventHandler(this.Pdata_user_Click);
+            // 
+            // pdata_peminjam
+            // 
+            this.pdata_peminjam.Image = ((System.Drawing.Image)(resources.GetObject("pdata_peminjam.Image")));
+            this.pdata_peminjam.Location = new System.Drawing.Point(346, 140);
+            this.pdata_peminjam.Name = "pdata_peminjam";
+            this.pdata_peminjam.Size = new System.Drawing.Size(66, 66);
+            this.pdata_peminjam.TabIndex = 11;
+            this.pdata_peminjam.TabStop = false;
+            this.pdata_peminjam.Click += new System.EventHandler(this.pictureBox10_Click);
+            // 
+            // Pdata_kembali
+            // 
+            this.Pdata_kembali.Image = ((System.Drawing.Image)(resources.GetObject("Pdata_kembali.Image")));
+            this.Pdata_kembali.Location = new System.Drawing.Point(481, 140);
+            this.Pdata_kembali.Name = "Pdata_kembali";
+            this.Pdata_kembali.Size = new System.Drawing.Size(67, 68);
+            this.Pdata_kembali.TabIndex = 5;
+            this.Pdata_kembali.TabStop = false;
+            this.Pdata_kembali.Click += new System.EventHandler(this.Pdata_kembali_Click);
+            // 
+            // Ppinjam_alat
+            // 
+            this.Ppinjam_alat.Image = ((System.Drawing.Image)(resources.GetObject("Ppinjam_alat.Image")));
+            this.Ppinjam_alat.Location = new System.Drawing.Point(422, 33);
+            this.Ppinjam_alat.Name = "Ppinjam_alat";
+            this.Ppinjam_alat.Size = new System.Drawing.Size(67, 66);
+            this.Ppinjam_alat.TabIndex = 10;
+            this.Ppinjam_alat.TabStop = false;
+            this.Ppinjam_alat.Click += new System.EventHandler(this.Ppinjam_alat_Click);
+            // 
+            // Pdata_alat
+            // 
+            this.Pdata_alat.Image = ((System.Drawing.Image)(resources.GetObject("Pdata_alat.Image")));
+            this.Pdata_alat.Location = new System.Drawing.Point(685, 33);
+            this.Pdata_alat.Name = "Pdata_alat";
+            this.Pdata_alat.Size = new System.Drawing.Size(68, 66);
+            this.Pdata_alat.TabIndex = 8;
+            this.Pdata_alat.TabStop = false;
+            this.Pdata_alat.Click += new System.EventHandler(this.Pdata_alat_Click);
+            // 
+            // Pdata_anggota
+            // 
+            this.Pdata_anggota.Image = ((System.Drawing.Image)(resources.GetObject("Pdata_anggota.Image")));
+            this.Pdata_anggota.Location = new System.Drawing.Point(201, 138);
+            this.Pdata_anggota.Name = "Pdata_anggota";
+            this.Pdata_anggota.Size = new System.Drawing.Size(66, 68);
+            this.Pdata_anggota.TabIndex = 6;
+            this.Pdata_anggota.TabStop = false;
+            this.Pdata_anggota.Click += new System.EventHandler(this.Pdata_anggota_Click);
+            // 
+            // Pkembali_alat
+            // 
+            this.Pkembali_alat.Image = ((System.Drawing.Image)(resources.GetObject("Pkembali_alat.Image")));
+            this.Pkembali_alat.Location = new System.Drawing.Point(559, 33);
+            this.Pkembali_alat.Name = "Pkembali_alat";
+            this.Pkembali_alat.Size = new System.Drawing.Size(66, 66);
+            this.Pkembali_alat.TabIndex = 9;
+            this.Pkembali_alat.TabStop = false;
+            this.Pkembali_alat.Click += new System.EventHandler(this.Pkembali_alat_Click);
+            // 
+            // label5
+            // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(87, 82);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(793, 58);
+            this.label5.TabIndex = 2;
+            this.label5.Text = "Selamat Datang di Aplikasi Sistem Peminjaman Alat\r\n                              " +
+                "    Teknik Kendaraan Ringan SMK Komputama Jeruklegi";
             // 
             // labelname
             // 
@@ -1148,14 +1307,14 @@
             this.dgvAlat.BackgroundColor = System.Drawing.Color.White;
             this.dgvAlat.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvAlat.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle56.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle56.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle56.Font = new System.Drawing.Font("Modern No. 20", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle56.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle56.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle56.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle56.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvAlat.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle56;
+            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle23.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle23.Font = new System.Drawing.Font("Modern No. 20", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle23.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvAlat.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle23;
             this.dgvAlat.ColumnHeadersHeight = 33;
             this.dgvAlat.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvAlat.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -1237,7 +1396,7 @@
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(924, 442);
+            this.tabPage4.Size = new System.Drawing.Size(924, 567);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "tabPage4";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -1267,7 +1426,7 @@
             this.panel10.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel10.Location = new System.Drawing.Point(3, 3);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(918, 436);
+            this.panel10.Size = new System.Drawing.Size(918, 561);
             this.panel10.TabIndex = 3;
             this.panel10.Paint += new System.Windows.Forms.PaintEventHandler(this.panel10_Paint);
             // 
@@ -1333,7 +1492,8 @@
             this.DgvAl.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.DgvAl.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DgvAl.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Nama_alat1});
+            this.Nama_alat1,
+            this.Jumlah_tot});
             this.DgvAl.Location = new System.Drawing.Point(219, 257);
             this.DgvAl.Name = "DgvAl";
             this.DgvAl.ReadOnly = true;
@@ -1343,27 +1503,27 @@
             this.DgvAl.CellMouseDown += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DgvAl_CellMouseDown);
             this.DgvAl.DoubleClick += new System.EventHandler(this.DgvAl_DoubleClick);
             // 
-            // Nama_alat1
-            // 
-            this.Nama_alat1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Nama_alat1.DataPropertyName = "nama_alat";
-            this.Nama_alat1.HeaderText = "Nama Alat";
-            this.Nama_alat1.Name = "Nama_alat1";
-            this.Nama_alat1.ReadOnly = true;
-            // 
             // GrpAlat
             // 
             this.GrpAlat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.GrpAlat.Controls.Add(this.NumJumlahPinjam);
             this.GrpAlat.Controls.Add(this.BtnXTbh);
             this.GrpAlat.Controls.Add(this.btnOk);
             this.GrpAlat.Controls.Add(this.TxtCariAl);
             this.GrpAlat.Controls.Add(this.label13);
             this.GrpAlat.Controls.Add(this.dgvNamaAlat);
-            this.GrpAlat.Location = new System.Drawing.Point(618, 184);
+            this.GrpAlat.Location = new System.Drawing.Point(581, 384);
             this.GrpAlat.Name = "GrpAlat";
             this.GrpAlat.Size = new System.Drawing.Size(321, 223);
             this.GrpAlat.TabIndex = 68;
             this.GrpAlat.TabStop = false;
+            // 
+            // NumJumlahPinjam
+            // 
+            this.NumJumlahPinjam.Location = new System.Drawing.Point(120, 37);
+            this.NumJumlahPinjam.Name = "NumJumlahPinjam";
+            this.NumJumlahPinjam.Size = new System.Drawing.Size(120, 20);
+            this.NumJumlahPinjam.TabIndex = 6;
             // 
             // BtnXTbh
             // 
@@ -1378,7 +1538,7 @@
             // 
             // btnOk
             // 
-            this.btnOk.Location = new System.Drawing.Point(177, 29);
+            this.btnOk.Location = new System.Drawing.Point(246, 34);
             this.btnOk.Name = "btnOk";
             this.btnOk.Size = new System.Drawing.Size(45, 23);
             this.btnOk.TabIndex = 4;
@@ -1415,7 +1575,8 @@
             this.dgvNamaAlat.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dgvNamaAlat.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvNamaAlat.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.alat});
+            this.alat,
+            this.jumlah});
             this.dgvNamaAlat.Location = new System.Drawing.Point(14, 58);
             this.dgvNamaAlat.MultiSelect = false;
             this.dgvNamaAlat.Name = "dgvNamaAlat";
@@ -1424,14 +1585,6 @@
             this.dgvNamaAlat.Size = new System.Drawing.Size(301, 159);
             this.dgvNamaAlat.TabIndex = 0;
             this.dgvNamaAlat.Click += new System.EventHandler(this.dgvNamaAlat_Click);
-            // 
-            // alat
-            // 
-            this.alat.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.alat.DataPropertyName = "nama_alat";
-            this.alat.HeaderText = "Nama_alat";
-            this.alat.Name = "alat";
-            this.alat.ReadOnly = true;
             // 
             // label24
             // 
@@ -1589,6 +1742,7 @@
             this.TxtIdAnggota.Name = "TxtIdAnggota";
             this.TxtIdAnggota.Size = new System.Drawing.Size(136, 22);
             this.TxtIdAnggota.TabIndex = 3;
+            this.TxtIdAnggota.TextChanged += new System.EventHandler(this.TxtIdAnggota_TextChanged);
             // 
             // label26
             // 
@@ -1673,33 +1827,13 @@
             this.DgvKNamaAlat.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.IDPinjaman,
             this.K_Nama_Alat,
-            this.status_detail});
+            this.status_detail,
+            this.jumlah_alat});
             this.DgvKNamaAlat.Location = new System.Drawing.Point(293, 289);
             this.DgvKNamaAlat.Name = "DgvKNamaAlat";
             this.DgvKNamaAlat.Size = new System.Drawing.Size(615, 130);
             this.DgvKNamaAlat.TabIndex = 95;
             this.DgvKNamaAlat.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvKNamaAlat_CellDoubleClick);
-            // 
-            // IDPinjaman
-            // 
-            this.IDPinjaman.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.IDPinjaman.DataPropertyName = "id_pinjaman";
-            this.IDPinjaman.HeaderText = "ID Pinjaman";
-            this.IDPinjaman.Name = "IDPinjaman";
-            // 
-            // K_Nama_Alat
-            // 
-            this.K_Nama_Alat.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.K_Nama_Alat.DataPropertyName = "nama_alat";
-            this.K_Nama_Alat.HeaderText = "Nama Alat";
-            this.K_Nama_Alat.Name = "K_Nama_Alat";
-            // 
-            // status_detail
-            // 
-            this.status_detail.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.status_detail.DataPropertyName = "status";
-            this.status_detail.HeaderText = "Status Alat";
-            this.status_detail.Name = "status_detail";
             // 
             // label28
             // 
@@ -1977,14 +2111,14 @@
             this.dgvPengunjung.BackgroundColor = System.Drawing.Color.White;
             this.dgvPengunjung.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvPengunjung.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle57.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle57.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle57.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle57.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle57.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle57.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle57.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPengunjung.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle57;
+            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle24.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle24.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle24.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle24.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle24.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPengunjung.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle24;
             this.dgvPengunjung.ColumnHeadersHeight = 33;
             this.dgvPengunjung.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvPengunjung.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -2146,180 +2280,76 @@
             this.panel14.Size = new System.Drawing.Size(540, 33);
             this.panel14.TabIndex = 7;
             // 
-            // label5
+            // Nama_alat1
             // 
-            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(87, 82);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(793, 58);
-            this.label5.TabIndex = 2;
-            this.label5.Text = "Selamat Datang di Aplikasi Sistem Peminjaman Alat\r\n                              " +
-                "    Teknik Kendaraan Ringan SMK Komputama Jeruklegi";
+            this.Nama_alat1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Nama_alat1.DataPropertyName = "nama_alat";
+            this.Nama_alat1.HeaderText = "Nama Alat";
+            this.Nama_alat1.Name = "Nama_alat1";
+            this.Nama_alat1.ReadOnly = true;
             // 
-            // Pdaftar_anggota
+            // Jumlah_tot
             // 
-            this.Pdaftar_anggota.Image = ((System.Drawing.Image)(resources.GetObject("Pdaftar_anggota.Image")));
-            this.Pdaftar_anggota.Location = new System.Drawing.Point(142, 33);
-            this.Pdaftar_anggota.Name = "Pdaftar_anggota";
-            this.Pdaftar_anggota.Size = new System.Drawing.Size(66, 68);
-            this.Pdaftar_anggota.TabIndex = 3;
-            this.Pdaftar_anggota.TabStop = false;
-            this.Pdaftar_anggota.Click += new System.EventHandler(this.pictureBox2_Click);
+            this.Jumlah_tot.DataPropertyName = "jumlah_tot";
+            this.Jumlah_tot.HeaderText = "Jumlah Alat";
+            this.Jumlah_tot.Name = "Jumlah_tot";
+            this.Jumlah_tot.ReadOnly = true;
             // 
-            // Pcari_alat
+            // alat
             // 
-            this.Pcari_alat.Image = ((System.Drawing.Image)(resources.GetObject("Pcari_alat.Image")));
-            this.Pcari_alat.Location = new System.Drawing.Point(286, 33);
-            this.Pcari_alat.Name = "Pcari_alat";
-            this.Pcari_alat.Size = new System.Drawing.Size(67, 68);
-            this.Pcari_alat.TabIndex = 4;
-            this.Pcari_alat.TabStop = false;
-            this.Pcari_alat.Click += new System.EventHandler(this.Pcari_alat_Click);
+            this.alat.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.alat.DataPropertyName = "nama_alat";
+            this.alat.HeaderText = "Nama_alat";
+            this.alat.Name = "alat";
+            this.alat.ReadOnly = true;
             // 
-            // Pdata_kembali
+            // jumlah
             // 
-            this.Pdata_kembali.Image = ((System.Drawing.Image)(resources.GetObject("Pdata_kembali.Image")));
-            this.Pdata_kembali.Location = new System.Drawing.Point(481, 140);
-            this.Pdata_kembali.Name = "Pdata_kembali";
-            this.Pdata_kembali.Size = new System.Drawing.Size(67, 68);
-            this.Pdata_kembali.TabIndex = 5;
-            this.Pdata_kembali.TabStop = false;
-            this.Pdata_kembali.Click += new System.EventHandler(this.Pdata_kembali_Click);
+            this.jumlah.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.jumlah.DataPropertyName = "jumlah_tersedia";
+            this.jumlah.HeaderText = "Jumlah";
+            this.jumlah.Name = "jumlah";
+            this.jumlah.ReadOnly = true;
             // 
-            // Pdata_anggota
+            // IDPinjaman
             // 
-            this.Pdata_anggota.Image = ((System.Drawing.Image)(resources.GetObject("Pdata_anggota.Image")));
-            this.Pdata_anggota.Location = new System.Drawing.Point(201, 138);
-            this.Pdata_anggota.Name = "Pdata_anggota";
-            this.Pdata_anggota.Size = new System.Drawing.Size(66, 68);
-            this.Pdata_anggota.TabIndex = 6;
-            this.Pdata_anggota.TabStop = false;
-            this.Pdata_anggota.Click += new System.EventHandler(this.Pdata_anggota_Click);
+            this.IDPinjaman.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.IDPinjaman.DataPropertyName = "id_pinjaman";
+            this.IDPinjaman.HeaderText = "ID Pinjaman";
+            this.IDPinjaman.Name = "IDPinjaman";
             // 
-            // Pdata_user
+            // K_Nama_Alat
             // 
-            this.Pdata_user.Image = ((System.Drawing.Image)(resources.GetObject("Pdata_user.Image")));
-            this.Pdata_user.Location = new System.Drawing.Point(620, 140);
-            this.Pdata_user.Name = "Pdata_user";
-            this.Pdata_user.Size = new System.Drawing.Size(64, 68);
-            this.Pdata_user.TabIndex = 7;
-            this.Pdata_user.TabStop = false;
-            this.Pdata_user.Click += new System.EventHandler(this.Pdata_user_Click);
+            this.K_Nama_Alat.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.K_Nama_Alat.DataPropertyName = "nama_alat";
+            this.K_Nama_Alat.HeaderText = "Nama Alat";
+            this.K_Nama_Alat.Name = "K_Nama_Alat";
             // 
-            // Pdata_alat
+            // status_detail
             // 
-            this.Pdata_alat.Image = ((System.Drawing.Image)(resources.GetObject("Pdata_alat.Image")));
-            this.Pdata_alat.Location = new System.Drawing.Point(685, 33);
-            this.Pdata_alat.Name = "Pdata_alat";
-            this.Pdata_alat.Size = new System.Drawing.Size(68, 66);
-            this.Pdata_alat.TabIndex = 8;
-            this.Pdata_alat.TabStop = false;
-            this.Pdata_alat.Click += new System.EventHandler(this.Pdata_alat_Click);
+            this.status_detail.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.status_detail.DataPropertyName = "status";
+            this.status_detail.HeaderText = "Status Alat";
+            this.status_detail.Name = "status_detail";
             // 
-            // Pkembali_alat
+            // jumlah_alat
             // 
-            this.Pkembali_alat.Image = ((System.Drawing.Image)(resources.GetObject("Pkembali_alat.Image")));
-            this.Pkembali_alat.Location = new System.Drawing.Point(559, 33);
-            this.Pkembali_alat.Name = "Pkembali_alat";
-            this.Pkembali_alat.Size = new System.Drawing.Size(66, 66);
-            this.Pkembali_alat.TabIndex = 9;
-            this.Pkembali_alat.TabStop = false;
-            this.Pkembali_alat.Click += new System.EventHandler(this.Pkembali_alat_Click);
-            // 
-            // Ppinjam_alat
-            // 
-            this.Ppinjam_alat.Image = ((System.Drawing.Image)(resources.GetObject("Ppinjam_alat.Image")));
-            this.Ppinjam_alat.Location = new System.Drawing.Point(422, 33);
-            this.Ppinjam_alat.Name = "Ppinjam_alat";
-            this.Ppinjam_alat.Size = new System.Drawing.Size(67, 66);
-            this.Ppinjam_alat.TabIndex = 10;
-            this.Ppinjam_alat.TabStop = false;
-            this.Ppinjam_alat.Click += new System.EventHandler(this.Ppinjam_alat_Click);
-            // 
-            // pdata_peminjam
-            // 
-            this.pdata_peminjam.Image = ((System.Drawing.Image)(resources.GetObject("pdata_peminjam.Image")));
-            this.pdata_peminjam.Location = new System.Drawing.Point(346, 140);
-            this.pdata_peminjam.Name = "pdata_peminjam";
-            this.pdata_peminjam.Size = new System.Drawing.Size(66, 66);
-            this.pdata_peminjam.TabIndex = 11;
-            this.pdata_peminjam.TabStop = false;
-            this.pdata_peminjam.Click += new System.EventHandler(this.pictureBox10_Click);
-            // 
-            // panel3
-            // 
-            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel3.Controls.Add(this.panel6);
-            this.panel3.Controls.Add(this.panel5);
-            this.panel3.Controls.Add(this.Pdaftar_anggota);
-            this.panel3.Controls.Add(this.Pcari_alat);
-            this.panel3.Controls.Add(this.Pdata_user);
-            this.panel3.Controls.Add(this.pdata_peminjam);
-            this.panel3.Controls.Add(this.Pdata_kembali);
-            this.panel3.Controls.Add(this.Ppinjam_alat);
-            this.panel3.Controls.Add(this.Pdata_alat);
-            this.panel3.Controls.Add(this.Pdata_anggota);
-            this.panel3.Controls.Add(this.Pkembali_alat);
-            this.panel3.Location = new System.Drawing.Point(92, 163);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(817, 249);
-            this.panel3.TabIndex = 12;
-            // 
-            // label8
-            // 
-            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.label8.AutoSize = true;
-            this.label8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label8.Location = new System.Drawing.Point(289, 2);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(97, 13);
-            this.label8.TabIndex = 0;
-            this.label8.Text = "CONTROL PANEL";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.Gray;
-            this.panel5.Controls.Add(this.label8);
-            this.panel5.Location = new System.Drawing.Point(120, 6);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(668, 19);
-            this.panel5.TabIndex = 12;
-            // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.Gray;
-            this.panel6.Location = new System.Drawing.Point(121, 219);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(667, 19);
-            this.panel6.TabIndex = 13;
-            // 
-            // panel7
-            // 
-            this.panel7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel7.BackColor = System.Drawing.Color.DimGray;
-            this.panel7.Location = new System.Drawing.Point(-4, 73);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(928, 8);
-            this.panel7.TabIndex = 13;
+            this.jumlah_alat.DataPropertyName = "jumlah_tot";
+            this.jumlah_alat.HeaderText = "Jumlah Alat";
+            this.jumlah_alat.Name = "jumlah_alat";
             // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1169, 477);
+            this.ClientSize = new System.Drawing.Size(1169, 602);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel11);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel14);
             this.Name = "Menu";
             this.Text = "Menu";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Menu_FormClosing);
             this.Load += new System.EventHandler(this.Menu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvKembali)).EndInit();
             this.panel1.ResumeLayout(false);
@@ -2330,6 +2360,18 @@
             this.tabMain.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Pdaftar_anggota)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Pcari_alat)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Pdata_user)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pdata_peminjam)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Pdata_kembali)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Ppinjam_alat)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Pdata_alat)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Pdata_anggota)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Pkembali_alat)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.panelanggota.ResumeLayout(false);
             this.panelanggota.PerformLayout();
@@ -2346,6 +2388,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.DgvAl)).EndInit();
             this.GrpAlat.ResumeLayout(false);
             this.GrpAlat.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.NumJumlahPinjam)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNamaAlat)).EndInit();
             this.tabPage5.ResumeLayout(false);
             this.panel9.ResumeLayout(false);
@@ -2358,18 +2401,6 @@
             this.panelhome.ResumeLayout(false);
             this.panelhome.PerformLayout();
             this.panel14.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.Pdaftar_anggota)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Pcari_alat)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Pdata_kembali)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Pdata_anggota)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Pdata_user)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Pdata_alat)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Pkembali_alat)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Ppinjam_alat)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pdata_peminjam)).EndInit();
-            this.panel3.ResumeLayout(false);
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -2497,18 +2528,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn nama_anggota;
         private System.Windows.Forms.TextBox txtanggota;
         private System.Windows.Forms.DataGridView DgvKNamaAlat;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nama_alat1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn alat;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn id_kembali;
-        private System.Windows.Forms.DataGridViewTextBoxColumn id_anggotaKembali;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nama_kembali;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Jmlh;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Tanggal_Pinjam;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Status;
-        private System.Windows.Forms.DataGridViewTextBoxColumn IDPinjaman;
-        private System.Windows.Forms.DataGridViewTextBoxColumn K_Nama_Alat;
-        private System.Windows.Forms.DataGridViewTextBoxColumn status_detail;
         private System.Windows.Forms.Label labelname;
         private System.Windows.Forms.Button btnmonitor;
         private System.Windows.Forms.DataGridViewTextBoxColumn kode_alat;
@@ -2533,6 +2553,20 @@
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id_kembali;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id_anggotaKembali;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nama_kembali;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Jmlh;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Tanggal_Pinjam;
+        private System.Windows.Forms.NumericUpDown NumJumlahPinjam;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nama_alat1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Jumlah_tot;
+        private System.Windows.Forms.DataGridViewTextBoxColumn alat;
+        private System.Windows.Forms.DataGridViewTextBoxColumn jumlah;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IDPinjaman;
+        private System.Windows.Forms.DataGridViewTextBoxColumn K_Nama_Alat;
+        private System.Windows.Forms.DataGridViewTextBoxColumn status_detail;
+        private System.Windows.Forms.DataGridViewTextBoxColumn jumlah_alat;
 
 
     }

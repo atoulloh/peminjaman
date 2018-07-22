@@ -14,6 +14,7 @@ namespace peminjaman.Model
         private String _kode_alat;
         private String _nama_alat;
         private int _jumlah;
+        private int _jumlah_tot;
         private String _tanggal_pinjam;
         private String _tanggal_kembali;
 
@@ -26,6 +27,7 @@ namespace peminjaman.Model
             _kode_alat = "";
             _nama_alat = "";
             _jumlah = 0;
+            _jumlah_tot = 0;
             _tanggal_pinjam = "";
             _tanggal_kembali = "";
         }
@@ -70,6 +72,12 @@ namespace peminjaman.Model
         {
             set { _jumlah = value; }
             get { return _jumlah; }
+        }
+
+        public int Jumlah_Tot
+        {
+            set { _jumlah_tot = value; }
+            get { return _jumlah_tot; }
         }
 
         public String TanggalPinjam
