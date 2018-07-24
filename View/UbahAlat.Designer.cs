@@ -46,6 +46,8 @@
             this.label6 = new System.Windows.Forms.Label();
             this.BtnSimpan = new System.Windows.Forms.Button();
             this.BtnBack = new System.Windows.Forms.Button();
+            this.TxtJumlah = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label10
@@ -132,7 +134,7 @@
             this.TxtKondisi.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TxtKondisi.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtKondisi.ForeColor = System.Drawing.Color.White;
-            this.TxtKondisi.Location = new System.Drawing.Point(216, 373);
+            this.TxtKondisi.Location = new System.Drawing.Point(216, 385);
             this.TxtKondisi.Name = "TxtKondisi";
             this.TxtKondisi.Size = new System.Drawing.Size(122, 22);
             this.TxtKondisi.TabIndex = 123;
@@ -208,7 +210,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(92, 373);
+            this.label6.Location = new System.Drawing.Point(92, 387);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(71, 21);
             this.label6.TabIndex = 130;
@@ -249,12 +251,36 @@
             this.BtnBack.UseVisualStyleBackColor = false;
             this.BtnBack.Click += new System.EventHandler(this.BtnBack_Click);
             // 
+            // TxtJumlah
+            // 
+            this.TxtJumlah.BackColor = System.Drawing.Color.DimGray;
+            this.TxtJumlah.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TxtJumlah.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtJumlah.ForeColor = System.Drawing.Color.White;
+            this.TxtJumlah.Location = new System.Drawing.Point(217, 349);
+            this.TxtJumlah.Name = "TxtJumlah";
+            this.TxtJumlah.Size = new System.Drawing.Size(98, 22);
+            this.TxtJumlah.TabIndex = 133;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.Black;
+            this.label7.Location = new System.Drawing.Point(107, 351);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(69, 21);
+            this.label7.TabIndex = 134;
+            this.label7.Text = "Jumlah";
+            // 
             // UbahAlat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SkyBlue;
             this.ClientSize = new System.Drawing.Size(497, 516);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.TxtJumlah);
             this.Controls.Add(this.BtnBack);
             this.Controls.Add(this.BtnSimpan);
             this.Controls.Add(this.label6);
@@ -299,5 +325,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button BtnSimpan;
         private System.Windows.Forms.Button BtnBack;
+        public System.Windows.Forms.TextBox TxtJumlah;
+        private System.Windows.Forms.Label label7;
     }
 }

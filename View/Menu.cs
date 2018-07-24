@@ -29,10 +29,12 @@ namespace peminjaman.View
             dgvNamaAlat.AutoGenerateColumns = false;
             dgvanggota.AutoGenerateColumns = false;
             DgvKNamaAlat.AutoGenerateColumns = false;
+            DgvKNamaAlatHilang.AutoGenerateColumns = false;
 
             tabMain.Location = new Point(233, -22);
             grpAnggota.Visible = false;
             WindowState = FormWindowState.Maximized;
+            grphilang.Visible = false;
         }
 
         private void AmbilForm(Form form)
@@ -511,18 +513,6 @@ namespace peminjaman.View
         {
             PinjamServ pjm = new PinjamServ();
             dgvKembali.DataSource =pjm.CekP(TxtCariKodePinjam.Text);
-            
-           // PinjamServ pjm = new PinjamServ();
-            //string sts = pjm.CekStatus(id_pinjaman).Rows[1][1].ToString();
-            //if (sts == "belum")
-            //{
-                
-            //}
-
-            //else
-            //{
-            //    BtnSimpanKembali.Visible = false;
-            //}
         }
         //ikut kembali
         private void dgvKembali_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -686,17 +676,12 @@ namespace peminjaman.View
         private void BtnAbout_Click(object sender, EventArgs e)
         {
             tabMain.SelectedTab = (tabPage6);
+            AmbilForm(new Hilang());
         }
 
         private void TxtJumlahKembali_TextChanged(object sender, EventArgs e)
         {
-             int sum = 0;
-             for (int i = 0; i < DgvKNamaAlat.Rows.Count; ++i)
-            {
-                sum += Convert.ToInt32(DgvKNamaAlat.Rows[i].Cells[1].Value);
-            }
-
-            txtjumlah.Text = sum.ToString();
+            
         }
 
         private void Menu_Load(object sender, EventArgs e)
@@ -743,28 +728,27 @@ namespace peminjaman.View
 
         private void panel9_Paint(object sender, PaintEventArgs e)
         {
-            int sum = 0;
-            for (int i = 0; i < DgvKNamaAlat.Rows.Count; ++i)
-            {
-                sum += Convert.ToInt32(DgvKNamaAlat.Rows[i].Cells[1].Value);
-            }
+           // int sum = 0;
+            //for (int i = 0; i < DgvKNamaAlat.Rows.Count; ++i)
+            //{
+              //  sum += Convert.ToInt32(DgvKNamaAlat.Rows[i].Cells[1].Value);
+            //}
 
-            TxtJumlahKembali.Text = sum.ToString();
+            //TxtJumlahKembali.Text = sum.ToString();
            
         }
 
         private void DgvKNamaAlat_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-           // int numRows = DgvKNamaAlat.Rows.Count;
-            //TxtJumlahKembali.Text = numRows.ToString();
+           
             foreach (DataGridViewCell oneCell in DgvKNamaAlat.SelectedCells)
             {
                 if (oneCell.Selected)
                     DgvKNamaAlat.Rows.RemoveAt(oneCell.RowIndex);
             }
-
-           // int numRows = DgvKNamaAlat.Rows.Count;
-            //TxtJumlahKembali.Text = numRows.ToString();
+            int sum = 0;
+            
+           
         }
 
         private void btnmonitor_Click(object sender, EventArgs e)
@@ -854,6 +838,114 @@ namespace peminjaman.View
                 BtnPinjam.Enabled = true;
             }
 
+        }
+
+        private void dgvKembali_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = this.dgvKembali.Rows[e.RowIndex];
+
+                TxtIDPHilang.Text = row.Cells[0].Value.ToString();
+                TxtIdAnggotaHilang.Text = row.Cells[1].Value.ToString();
+                TxtNamaHilang.Text = row.Cells[2].Value.ToString();
+
+               // TxtJumlahHilang.Text = row.Cells[3].Value.ToString();
+                //DTPPJalat.Text = row.Cells[4].Value.ToString();
+                //grpAnggota.Visible = false;
+            }
+            grphilang.Visible = true;
+        }
+
+        private void TxtIDPHilang_TextChanged(object sender, EventArgs e)
+        {
+            PinjamServ pjm = new PinjamServ();
+            DgvKNamaAlatHilang.DataSource = pjm.CekStatus(TxtIdP.Text);
+        }
+
+        private void BtnBack_Click(object sender, EventArgs e)
+        {
+            grphilang.Visible = false;
+        }
+
+        private void BtnSimpanHilang_Click(object sender, EventArgs e)
+        {
+            KembaliServ km = new KembaliServ();
+            bool simpan = false;
+            try
+            {
+                if (string.IsNullOrEmpty( TxtIDPHilang.Text) ||
+                    string.IsNullOrEmpty(TxtIdAnggotaHilang.Text) ||
+                    string.IsNullOrEmpty(TxtNamaHilang.Text) ||
+                    string.IsNullOrEmpty(TxtJumlahHilang.Text))
+                {
+                    MessageBox.Show("Mohon Data di isi semua \nTidak boleh ada yang kosong ",
+                         "Informasi", MessageBoxButtons.OK,
+                      MessageBoxIcon.Information);
+                }
+
+                else
+                {
+                    km.IdPeminjaman = TxtIDPHilang.Text.Trim();
+                    km.IdAnggota = TxtIdAnggotaHilang.Text.Trim();
+                    km.Nama = TxtNamaHilang.Text.Trim();
+                    km.Jumlah = int.Parse(TxtJumlahHilang.Text.Trim());
+                    simpan = true;
+
+                    if (DgvKNamaAlat.Rows.Count > 0)
+                    {
+                        foreach (DataGridViewRow row in DgvKNamaAlat.Rows)
+                        {
+                            string id_pinjam = row.Cells[0].Value.ToString();
+                            string nama_alat = row.Cells[1].Value.ToString();
+                            km.IdPinjaman = id_pinjam;
+                            km.NamaAlat = nama_alat;
+                            km.Simpan_Hilang();
+                            km.jumlahhilang();
+                  
+                        }
+                        if (simpan)
+                        {
+                            //BersihKembali();
+                            MessageBox.Show("Data Berhasil di Simpan. ",
+                                " Informasi", MessageBoxButtons.OK,
+                                MessageBoxIcon.Information);
+                            grphilang.Visible = false;
+                        }
+                        else
+                        {
+                            MessageBox.Show("Data gagal di simpan. ",
+                           "informasi", MessageBoxButtons.OK,
+                           MessageBoxIcon.Information);
+                        }
+                        
+                    }
+
+                    else
+                    {
+                        MessageBox.Show("belum menambahkan kembalian");
+                    }
+                }
+            }
+
+            catch
+            {
+                MessageBox.Show("Data gagal di simpan. ",
+                    "informasi", MessageBoxButtons.OK,
+                    MessageBoxIcon.Information);
+            }
+        
+        }
+
+        private void panel9_Paint_load(object sender, PaintEventArgs e)
+        {
+            int sum = 0;
+             for (int i = 0; i < DgvKNamaAlat.Rows.Count; ++i)
+            {
+                sum += Convert.ToInt32(DgvKNamaAlat.Rows[i].Cells[3].Value);
+            }
+
+            TxtJumlahKembali.Text = sum.ToString();
         }
 
     }

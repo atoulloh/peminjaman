@@ -261,6 +261,7 @@
             this.BtnCetakAg.Text = "Cetak [F7]";
             this.BtnCetakAg.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.BtnCetakAg.UseVisualStyleBackColor = false;
+            this.BtnCetakAg.Click += new System.EventHandler(this.BtnCetakAg_Click);
             // 
             // BtnHapusAg
             // 

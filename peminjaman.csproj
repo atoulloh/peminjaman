@@ -48,6 +48,8 @@
     <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
       <Private>True</Private>
     </Reference>
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
     <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
     <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="MySql.Data, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
@@ -55,6 +57,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -82,11 +85,17 @@
       <DependentUpon>Anggota.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Reports\Reports.cs">
+    <Compile Include="Reports\CrpPeminjaman.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrpPeminjaman.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\FrmLaporan.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Reports\Reports.Designer.cs">
-      <DependentUpon>Reports.cs</DependentUpon>
+    <Compile Include="Reports\FrmLaporan.Designer.cs">
+      <DependentUpon>FrmLaporan.cs</DependentUpon>
     </Compile>
     <Compile Include="Service\AlatServ.cs" />
     <Compile Include="Service\AnggotaServ.cs" />
@@ -104,6 +113,12 @@
     </Compile>
     <Compile Include="View\Anggota.Designer.cs">
       <DependentUpon>Anggota.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Hilang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Hilang.Designer.cs">
+      <DependentUpon>Hilang.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Kembali.cs">
       <SubType>Form</SubType>
@@ -179,8 +194,12 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>Anggota.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reports\Reports.resx">
-      <DependentUpon>Reports.cs</DependentUpon>
+    <EmbeddedResource Include="Reports\CrpPeminjaman.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrpPeminjaman.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\FrmLaporan.resx">
+      <DependentUpon>FrmLaporan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Alat.resx">
       <DependentUpon>Alat.cs</DependentUpon>
@@ -193,6 +212,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\EditAnggota.resx">
       <DependentUpon>EditAnggota.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Hilang.resx">
+      <DependentUpon>Hilang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Kembali.resx">
       <DependentUpon>Kembali.cs</DependentUpon>

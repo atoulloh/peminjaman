@@ -11,9 +11,9 @@ using CrystalDecisions.CrystalReports.Engine;
 
 namespace peminjaman.Reports
 {
-    public partial class Reports : Form
+    public partial class FrmLaporan : Form
     {
-        public Reports()
+        public FrmLaporan()
         {
             InitializeComponent();
         }
@@ -21,8 +21,18 @@ namespace peminjaman.Reports
         private void Reports_Load(object sender, EventArgs e)
         {
 
-            this.reportViewer1.RefreshReport();
+           // this.reportViewer1.RefreshReport();
            // this.reportViewer2.RefreshReport();
+        }
+
+        private void crystalReportViewer1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CrpPeminjam1_InitReport(object sender, EventArgs e)
+        {
+
         }
     }
 }

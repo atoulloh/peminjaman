@@ -7,14 +7,12 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using peminjaman.Service;
+using peminjaman.Reports;
 
 namespace peminjaman.View
 {
     public partial class Anggota : Form
     {
-
-       
-        
 
         public Anggota()
         {
@@ -175,6 +173,13 @@ namespace peminjaman.View
             LoadData();
             int numRows = DgvAnggota.Rows.Count;
             labeljumlahag.Text = " Jumlah Anggota : " + numRows.ToString();
+        }
+
+        private void BtnCetakAg_Click(object sender, EventArgs e)
+        {
+            Anggota ag = new Anggota();
+            FrmLaporan rp = new FrmLaporan();
+            rp.Show();
         }
 
 

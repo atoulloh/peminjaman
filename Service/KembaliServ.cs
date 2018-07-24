@@ -21,6 +21,15 @@ namespace peminjaman.Service
             dtTbl = new DataTable();
         }
 
+        public void jumlahhilang()
+        {
+            query = "update pinjaman set jumlah_tot = jumlah_tot -'"+Jumlah+"' where id_pinjaman = '"+IdPinjaman+ "'";
+            if (!(dbConn.ExecNonQuery(query) > 0))
+            {
+                throw new Exception("Gagal Memperbarui jumlah");
+            }
+        }
+
         public void perbaruijumlahkembali()
         {
             query = "update alat set jumlah_tersedia = jumlah_tersedia + " + Jumlah_Tot + " where nama_alat ='" + NamaAlat + "'";
@@ -30,6 +39,14 @@ namespace peminjaman.Service
             }
         }
 
+        public void Simpan_Hilang()
+        {
+            query = "INSERT INTO alat_hilang (id_peminjaman,id_anggota,nama,jumlah,id_pinjaman,nama_alat) VALUES ('" + IdPeminjaman + "','" + IdAnggota + "','" + Nama + "','" + Jumlah +"','" + IdPinjaman + "',' " +NamaAlat+ "')";
+            if (!(dbConn.ExecNonQuery(query) > 0))
+            {
+                throw new Exception("Gagal Menyimpan");
+            }
+        }
         public void Simpan_Kembali()
         {
             query = "INSERT INTO kembali (id_peminjaman,id_anggota,nama,jumlah,tanggal_pinjam,tanggal_kembali) VALUES ('" + IdPeminjaman + "','" + IdAnggota + "','" + Nama + "','" + Jumlah + "','" + TanggalPinjam + "','" + TanggalKembali + "')";
@@ -86,6 +103,12 @@ namespace peminjaman.Service
             return dtTbl;
         }
 
+        public DataTable Hilang()
+        {
+            query = "SELECT * FROM alat_hilang";
+            dtTbl = dbConn.ExecQuery(query);
+            return dtTbl;
+        }
         public bool isExist(String IdPeminjaman)
         {
             bool cek = false;

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using peminjaman.Service;
+using peminjaman.Reports;
 
 namespace peminjaman.View
 {
@@ -232,6 +233,13 @@ namespace peminjaman.View
         private void button1_Click(object sender, EventArgs e)
         {
             grpdetail.Visible = false;
+        }
+
+        private void BtnCetak_Click(object sender, EventArgs e)
+        {
+              Peminjam pm = new Peminjam();
+            FrmLaporan rp = new FrmLaporan();
+            rp.Show();
         }
 
     }

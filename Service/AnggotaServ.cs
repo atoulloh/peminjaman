@@ -24,7 +24,7 @@ namespace peminjaman.Service
 
         public void Simpan_Anggota()
         {
-            query = "INSERT INTO anggota VALUES ('" + ID_Anggota + "','" + Nis + "','" + Nama + "','" + Jenis_Kelamin + "','" + Kelas + "','" + Jurusan + "','" + No_Hp + "','" + Alamat + "')";
+            query = "INSERT INTO anggota VALUES ('" + ID_Anggota + "','" + Nis + "','" + Nama + "','" + Jenis_Kelamin + "','" + Kelas + "','" + Jurusan + "','" + No_Hp + "','" + Alamat + "','" + Status+"')";
             if (!(dbConn.ExecNonQuery(query) > 0))
             {
                 throw new Exception("Gagal Menyimpan");

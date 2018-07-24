@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using peminjaman.Service;
-//using peminjaman.Report;
+using peminjaman.Reports;
 
 namespace peminjaman.View
 {
@@ -16,6 +16,13 @@ namespace peminjaman.View
         public Alat()
         {
             InitializeComponent();
+
+            grpAlat.Visible = false;
+            grpAlat.Left = 400;
+            grpAlat.Top = 100;
+            grpbuton.Visible = false;
+           // grpAlat.Width = 500;
+           // grpAlat.Height = 200;
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -111,9 +118,10 @@ namespace peminjaman.View
                 ua.TxtNama_alat.Text = this.dgvAlat.CurrentRow.Cells[1].Value.ToString();
                 ua.TxtJenis_Alat.Text = this.dgvAlat.CurrentRow.Cells[2].Value.ToString();
                 ua.TxtLetak.Text = this.dgvAlat.CurrentRow.Cells[3].Value.ToString();
-                ua.TxtHarga.Text = this.dgvAlat.CurrentRow.Cells[4].Value.ToString();
-                ua.TxtTahunPembelian.Text = this.dgvAlat.CurrentRow.Cells[5].Value.ToString();
-                ua.TxtKondisi.Text = this.dgvAlat.CurrentRow.Cells[6].Value.ToString();
+                ua.TxtJumlah.Text = this.dgvAlat.CurrentRow.Cells[4].Value.ToString();
+                ua.TxtHarga.Text = this.dgvAlat.CurrentRow.Cells[6].Value.ToString();
+                ua.TxtTahunPembelian.Text = this.dgvAlat.CurrentRow.Cells[7].Value.ToString();
+                ua.TxtKondisi.Text = this.dgvAlat.CurrentRow.Cells[8].Value.ToString();
 
                 ua.ShowDialog();
             }
@@ -147,8 +155,9 @@ namespace peminjaman.View
         //menampilkan form Tambah alat
         private void BtnTambah_Click_1(object sender, EventArgs e)
         {
-            TambahAlat TA = new TambahAlat();
-            TA.ShowDialog();
+            //TambahAlat TA = new TambahAlat();
+            //TA.ShowDialog();
+            grpbuton.Visible = true;
         }
 
         private void BtnUbah_Click_1(object sender, EventArgs e)
@@ -222,6 +231,84 @@ namespace peminjaman.View
         private void dgvAlat_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void BtnCetakAL_Click_1(object sender, EventArgs e)
+        {
+            Alat al = new Alat();
+            FrmLaporan rp = new FrmLaporan();
+            rp.Show();
+        }
+        //ikut tambah alat
+        private void dgvAlat_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = this.dgvAlat.Rows[e.RowIndex];
+                TxtKode.Text = row.Cells[0].Value.ToString();
+                textnama.Text = row.Cells[1].Value.ToString();
+                textjenis.Text = row.Cells[2].Value.ToString();
+                textletak.Text = row.Cells[3].Value.ToString();
+                textharga.Text = row.Cells[6].Value.ToString();
+                texttahun.Text = row.Cells[7].Value.ToString();
+                //textjumlah.Text = row.Cells[6].Value.ToString();
+                textBox7.Text = row.Cells[8].Value.ToString();
+            }
+
+        }
+
+        private void BtnBack_Click(object sender, EventArgs e)
+        {
+            grpAlat.Visible = false;
+        }
+
+        private void BtnSimpan_Click(object sender, EventArgs e)
+        {
+            AlatServ al = new AlatServ();
+
+            if (string.IsNullOrEmpty(TxtKode.Text) || string.IsNullOrEmpty
+               (textnama.Text) || string.IsNullOrEmpty
+               (textjenis.Text) || string.IsNullOrEmpty
+               (textletak.Text) || string.IsNullOrEmpty
+               (textharga.Text) || string.IsNullOrEmpty
+               (texttahun.Text) || string.IsNullOrEmpty
+               (textjumlah.Text) || string.IsNullOrEmpty
+               (textBox7.Text))
+            {
+                MessageBox.Show("mohon data di isi semua \nTidak boleh ada yang kosong ",
+                    "Infromation", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //Bersihkan();
+            }
+
+            else
+            {
+                al.Kode_Alat = TxtKode.Text.Trim();
+                al.Jumlah = int.Parse(textjumlah.Text.Trim());
+                al.Jumlah_Tersedia = int.Parse(textjumlah.Text.Trim());
+                al.updatealat();
+                grpAlat.Visible = true;
+                {
+
+                    MessageBox.Show("Data berhasil di simpan, ",
+                        "Information", MessageBoxButtons.OK,
+                        MessageBoxIcon.Information);
+                }
+                grpAlat.Visible = false;
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            grpbuton.Visible = false;
+            TambahAlat TA = new TambahAlat();
+            TA.ShowDialog();
+            
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            grpAlat.Visible = true;
+            grpbuton.Visible = false;
         }
 
        // private void Alat_Load

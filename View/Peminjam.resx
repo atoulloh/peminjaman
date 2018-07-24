@@ -162,7 +162,7 @@
   <data name="BtnDetailPinjam.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAA3NCSVQICAjb4U/gAAAAAXNSR0IArs4c
-        6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAB+QAAAfkAZ1KUdMAAAAZdEVYdFNvZnR3YXJlAHd3dy5p
+        6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAB+MAAAfjAc8O96wAAAAZdEVYdFNvZnR3YXJlAHd3dy5p
         bmtzY2FwZS5vcmeb7jwaAAADlklEQVRYR+2X3U/SYRTHW11Ua6v+gm66bOumiwKtvOh9y/WyumnrbXWR
         1Wq9rFq12daqi9Zyq7W6cStDxJaSBhj8EMwfiCIvgaYOJC1FnLyEgZK4b8/zNIiXHxpOam2xfWA/znnO
         +T7Pc84ZLADAWKeWrRBrJA/FmmonIU7APBITa6RmkUZya6dCsTiRk8LexJx0NXH6nLGoIBRpqu3rFVXL
@@ -181,15 +181,6 @@
         ckQg32QfWZYl4E9AE1MBVEizx7NE0KnQyMyBFfWOkKGhK1D8A0Y7NgQnUe2iAAAAAElFTkSuQmCC
 </value>
   </data>
-  <metadata name="ID_Pinjaman.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Nama_Alat.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Status.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <metadata name="ID_Pinjaman.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>

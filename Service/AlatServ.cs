@@ -30,6 +30,14 @@ namespace peminjaman.Service
             return dtTbl;
         }
 
+        public void updatealat()
+        {
+            query =" update alat set jumlah = jumlah +'"+ Jumlah +"', jumlah_tersedia = jumlah_tersedia +'" + Jumlah +"' where kode_alat = '"+ Kode_Alat +"'";
+             if (!(dbConn.ExecNonQuery(query) > 0))
+            {
+                throw new Exception("Gagal Memperbarui jumlah");
+            }
+        }
 
         public DataTable tampilcari()
         {
