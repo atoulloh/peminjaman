@@ -56,6 +56,16 @@ namespace peminjaman.Service
             return dtTbl;
         }
 
+        public void SimpanRusak()
+        {
+            query = "INSERT INTO alat_rusak VALUES ('" + Kode_Alat + "','" + Nama_Alat + "','" + Jenis_Alat + "','" + Letak + "','" + Jumlah + "','" + Jumlah_Tersedia + "','"
+                + Harga_Pembelian + "','" + Tahun_Pembelian + "','" + Kondisi + "')";
+
+            if (!(dbConn.ExecNonQuery(query) > 0))
+            {
+                throw new Exception(" Gagal Menyimpan");
+            }
+        }
         public void SimpanAlat()
         {
            query = "INSERT INTO alat VALUES ('" + Kode_Alat + "','" + Nama_Alat + "','" + Jenis_Alat + "','" + Letak + "','"+ Jumlah + "','" + Jumlah_Tersedia + "','"

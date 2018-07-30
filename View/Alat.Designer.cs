@@ -48,28 +48,28 @@
             this.BtnCetakAL = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.grpAlat = new System.Windows.Forms.GroupBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.BtnSimpan = new System.Windows.Forms.Button();
-            this.BtnBack = new System.Windows.Forms.Button();
-            this.TxtKode = new System.Windows.Forms.TextBox();
-            this.textnama = new System.Windows.Forms.TextBox();
-            this.textjenis = new System.Windows.Forms.TextBox();
-            this.textletak = new System.Windows.Forms.TextBox();
-            this.textharga = new System.Windows.Forms.TextBox();
-            this.texttahun = new System.Windows.Forms.TextBox();
-            this.textjumlah = new System.Windows.Forms.TextBox();
             this.textBox7 = new System.Windows.Forms.TextBox();
+            this.textjumlah = new System.Windows.Forms.TextBox();
+            this.texttahun = new System.Windows.Forms.TextBox();
+            this.textharga = new System.Windows.Forms.TextBox();
+            this.textletak = new System.Windows.Forms.TextBox();
+            this.textjenis = new System.Windows.Forms.TextBox();
+            this.textnama = new System.Windows.Forms.TextBox();
+            this.TxtKode = new System.Windows.Forms.TextBox();
+            this.BtnBack = new System.Windows.Forms.Button();
+            this.BtnSimpan = new System.Windows.Forms.Button();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.grpbuton = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAlat)).BeginInit();
             this.grpAlat.SuspendLayout();
             this.grpbuton.SuspendLayout();
@@ -79,22 +79,22 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label2.Font = new System.Drawing.Font("Modern No. 20", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(12, 9);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(206, 34);
+            this.label2.Size = new System.Drawing.Size(204, 37);
             this.label2.TabIndex = 57;
             this.label2.Text = "DATA ALAT";
             // 
             // labeljumlaha
             // 
             this.labeljumlaha.AutoSize = true;
-            this.labeljumlaha.Font = new System.Drawing.Font("Modern No. 20", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labeljumlaha.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labeljumlaha.ForeColor = System.Drawing.Color.Black;
             this.labeljumlaha.Location = new System.Drawing.Point(15, 68);
             this.labeljumlaha.Name = "labeljumlaha";
-            this.labeljumlaha.Size = new System.Drawing.Size(81, 15);
+            this.labeljumlaha.Size = new System.Drawing.Size(83, 16);
             this.labeljumlaha.TabIndex = 63;
             this.labeljumlaha.Text = "Jumlah Alat :";
             this.labeljumlaha.Click += new System.EventHandler(this.labeljumlaha_Click);
@@ -299,11 +299,11 @@
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label1.Font = new System.Drawing.Font("Modern No. 20", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(426, 49);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(166, 29);
+            this.label1.Size = new System.Drawing.Size(164, 31);
             this.label1.TabIndex = 75;
             this.label1.Text = "CARI ALAT";
             // 
@@ -328,100 +328,77 @@
             this.grpAlat.Controls.Add(this.label5);
             this.grpAlat.Controls.Add(this.label4);
             this.grpAlat.Controls.Add(this.label3);
-            this.grpAlat.Location = new System.Drawing.Point(123, 30);
+            this.grpAlat.Location = new System.Drawing.Point(150, 14);
             this.grpAlat.Name = "grpAlat";
             this.grpAlat.Size = new System.Drawing.Size(330, 386);
             this.grpAlat.TabIndex = 76;
             this.grpAlat.TabStop = false;
             // 
-            // label3
+            // textBox7
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(128, 24);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(67, 13);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Tambah Alat";
+            this.textBox7.Location = new System.Drawing.Point(158, 277);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(122, 20);
+            this.textBox7.TabIndex = 31;
             // 
-            // label4
+            // textjumlah
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(30, 56);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(71, 18);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "Kode Alat";
+            this.textjumlah.Location = new System.Drawing.Point(158, 248);
+            this.textjumlah.Name = "textjumlah";
+            this.textjumlah.Size = new System.Drawing.Size(122, 20);
+            this.textjumlah.TabIndex = 30;
             // 
-            // label5
+            // texttahun
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(30, 87);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(76, 18);
-            this.label5.TabIndex = 3;
-            this.label5.Text = "Nama Alat";
+            this.texttahun.Location = new System.Drawing.Point(158, 212);
+            this.texttahun.Name = "texttahun";
+            this.texttahun.Size = new System.Drawing.Size(122, 20);
+            this.texttahun.TabIndex = 29;
             // 
-            // label6
+            // textharga
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(30, 117);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(71, 18);
-            this.label6.TabIndex = 4;
-            this.label6.Text = "Jenis Alat";
+            this.textharga.Location = new System.Drawing.Point(158, 185);
+            this.textharga.Name = "textharga";
+            this.textharga.Size = new System.Drawing.Size(122, 20);
+            this.textharga.TabIndex = 28;
             // 
-            // label7
+            // textletak
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(30, 151);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(44, 18);
-            this.label7.TabIndex = 5;
-            this.label7.Text = "Letak";
+            this.textletak.Location = new System.Drawing.Point(158, 152);
+            this.textletak.Name = "textletak";
+            this.textletak.Size = new System.Drawing.Size(122, 20);
+            this.textletak.TabIndex = 27;
             // 
-            // label8
+            // textjenis
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(30, 184);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(121, 18);
-            this.label8.TabIndex = 6;
-            this.label8.Text = "Harga Pembelian";
+            this.textjenis.Location = new System.Drawing.Point(158, 118);
+            this.textjenis.Name = "textjenis";
+            this.textjenis.Size = new System.Drawing.Size(122, 20);
+            this.textjenis.TabIndex = 26;
             // 
-            // label9
+            // textnama
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(30, 214);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(122, 18);
-            this.label9.TabIndex = 7;
-            this.label9.Text = "Tahun Pembelian";
+            this.textnama.Location = new System.Drawing.Point(158, 88);
+            this.textnama.Name = "textnama";
+            this.textnama.Size = new System.Drawing.Size(122, 20);
+            this.textnama.TabIndex = 25;
             // 
-            // label10
+            // TxtKode
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(30, 247);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(56, 18);
-            this.label10.TabIndex = 20;
-            this.label10.Text = "Jumlah";
+            this.TxtKode.Location = new System.Drawing.Point(158, 56);
+            this.TxtKode.Name = "TxtKode";
+            this.TxtKode.Size = new System.Drawing.Size(122, 20);
+            this.TxtKode.TabIndex = 24;
             // 
-            // label11
+            // BtnBack
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(30, 276);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(57, 18);
-            this.label11.TabIndex = 21;
-            this.label11.Text = "Kondisi";
+            this.BtnBack.Image = ((System.Drawing.Image)(resources.GetObject("BtnBack.Image")));
+            this.BtnBack.Location = new System.Drawing.Point(286, 13);
+            this.BtnBack.Name = "BtnBack";
+            this.BtnBack.Size = new System.Drawing.Size(38, 35);
+            this.BtnBack.TabIndex = 23;
+            this.BtnBack.UseVisualStyleBackColor = true;
+            this.BtnBack.Click += new System.EventHandler(this.BtnBack_Click);
             // 
             // BtnSimpan
             // 
@@ -437,71 +414,94 @@
             this.BtnSimpan.UseVisualStyleBackColor = false;
             this.BtnSimpan.Click += new System.EventHandler(this.BtnSimpan_Click);
             // 
-            // BtnBack
+            // label11
             // 
-            this.BtnBack.Image = ((System.Drawing.Image)(resources.GetObject("BtnBack.Image")));
-            this.BtnBack.Location = new System.Drawing.Point(286, 13);
-            this.BtnBack.Name = "BtnBack";
-            this.BtnBack.Size = new System.Drawing.Size(38, 35);
-            this.BtnBack.TabIndex = 23;
-            this.BtnBack.UseVisualStyleBackColor = true;
-            this.BtnBack.Click += new System.EventHandler(this.BtnBack_Click);
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(30, 276);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(57, 18);
+            this.label11.TabIndex = 21;
+            this.label11.Text = "Kondisi";
             // 
-            // TxtKode
+            // label10
             // 
-            this.TxtKode.Location = new System.Drawing.Point(158, 56);
-            this.TxtKode.Name = "TxtKode";
-            this.TxtKode.Size = new System.Drawing.Size(122, 20);
-            this.TxtKode.TabIndex = 24;
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(30, 247);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(56, 18);
+            this.label10.TabIndex = 20;
+            this.label10.Text = "Jumlah";
             // 
-            // textnama
+            // label9
             // 
-            this.textnama.Location = new System.Drawing.Point(158, 88);
-            this.textnama.Name = "textnama";
-            this.textnama.Size = new System.Drawing.Size(122, 20);
-            this.textnama.TabIndex = 25;
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(30, 214);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(122, 18);
+            this.label9.TabIndex = 7;
+            this.label9.Text = "Tahun Pembelian";
             // 
-            // textjenis
+            // label8
             // 
-            this.textjenis.Location = new System.Drawing.Point(158, 118);
-            this.textjenis.Name = "textjenis";
-            this.textjenis.Size = new System.Drawing.Size(122, 20);
-            this.textjenis.TabIndex = 26;
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(30, 184);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(121, 18);
+            this.label8.TabIndex = 6;
+            this.label8.Text = "Harga Pembelian";
             // 
-            // textletak
+            // label7
             // 
-            this.textletak.Location = new System.Drawing.Point(158, 152);
-            this.textletak.Name = "textletak";
-            this.textletak.Size = new System.Drawing.Size(122, 20);
-            this.textletak.TabIndex = 27;
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(30, 151);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(44, 18);
+            this.label7.TabIndex = 5;
+            this.label7.Text = "Letak";
             // 
-            // textharga
+            // label6
             // 
-            this.textharga.Location = new System.Drawing.Point(158, 185);
-            this.textharga.Name = "textharga";
-            this.textharga.Size = new System.Drawing.Size(122, 20);
-            this.textharga.TabIndex = 28;
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(30, 117);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(71, 18);
+            this.label6.TabIndex = 4;
+            this.label6.Text = "Jenis Alat";
             // 
-            // texttahun
+            // label5
             // 
-            this.texttahun.Location = new System.Drawing.Point(158, 212);
-            this.texttahun.Name = "texttahun";
-            this.texttahun.Size = new System.Drawing.Size(122, 20);
-            this.texttahun.TabIndex = 29;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(30, 87);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(76, 18);
+            this.label5.TabIndex = 3;
+            this.label5.Text = "Nama Alat";
             // 
-            // textjumlah
+            // label4
             // 
-            this.textjumlah.Location = new System.Drawing.Point(158, 248);
-            this.textjumlah.Name = "textjumlah";
-            this.textjumlah.Size = new System.Drawing.Size(122, 20);
-            this.textjumlah.TabIndex = 30;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(30, 56);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(71, 18);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "Kode Alat";
             // 
-            // textBox7
+            // label3
             // 
-            this.textBox7.Location = new System.Drawing.Point(158, 277);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(122, 20);
-            this.textBox7.TabIndex = 31;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(128, 24);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(67, 13);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Tambah Alat";
             // 
             // grpbuton
             // 
@@ -514,26 +514,6 @@
             this.grpbuton.TabIndex = 77;
             this.grpbuton.TabStop = false;
             this.grpbuton.Text = "groupBox1";
-            // 
-            // button1
-            // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.BackColor = System.Drawing.Color.SkyBlue;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button1.Location = new System.Drawing.Point(6, 19);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(101, 57);
-            this.button1.TabIndex = 71;
-            this.button1.Text = "Tambah Ada";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -554,6 +534,26 @@
             this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.BackColor = System.Drawing.Color.SkyBlue;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.Black;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button1.Location = new System.Drawing.Point(6, 19);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(101, 57);
+            this.button1.TabIndex = 71;
+            this.button1.Text = "Tambah Ada";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Alat
             // 

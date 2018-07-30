@@ -85,6 +85,18 @@
       <DependentUpon>Anggota.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Reports\CrpHilang.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrpHilang.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\CrpKembali.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrpKembali.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Reports\CrpPeminjaman.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -96,6 +108,30 @@
     </Compile>
     <Compile Include="Reports\FrmLaporan.Designer.cs">
       <DependentUpon>FrmLaporan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\FrmLaporanAlat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\FrmLaporanAlat.Designer.cs">
+      <DependentUpon>FrmLaporanAlat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\FrmLaporanAnggota.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\FrmLaporanAnggota.Designer.cs">
+      <DependentUpon>FrmLaporanAnggota.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\FrmLaporanHilang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\FrmLaporanHilang.Designer.cs">
+      <DependentUpon>FrmLaporanHilang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\FrmLaporanKembali.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\FrmLaporanKembali.Designer.cs">
+      <DependentUpon>FrmLaporanKembali.cs</DependentUpon>
     </Compile>
     <Compile Include="Service\AlatServ.cs" />
     <Compile Include="Service\AnggotaServ.cs" />
@@ -168,11 +204,23 @@
     <Compile Include="View\Peminjam.Designer.cs">
       <DependentUpon>Peminjam.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\Rusak.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Rusak.Designer.cs">
+      <DependentUpon>Rusak.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\TambahAlat.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\TambahAlat.Designer.cs">
       <DependentUpon>TambahAlat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\TambahHilang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\TambahHilang.Designer.cs">
+      <DependentUpon>TambahHilang.cs</DependentUpon>
     </Compile>
     <Compile Include="View\UbahAlat.cs">
       <SubType>Form</SubType>
@@ -194,12 +242,32 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>Anggota.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\CrpHilang.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrpHilang.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\CrpKembali.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrpKembali.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\CrpPeminjaman.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CrpPeminjaman.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\FrmLaporan.resx">
       <DependentUpon>FrmLaporan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\FrmLaporanAlat.resx">
+      <DependentUpon>FrmLaporanAlat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\FrmLaporanAnggota.resx">
+      <DependentUpon>FrmLaporanAnggota.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\FrmLaporanHilang.resx">
+      <DependentUpon>FrmLaporanHilang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\FrmLaporanKembali.resx">
+      <DependentUpon>FrmLaporanKembali.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Alat.resx">
       <DependentUpon>Alat.cs</DependentUpon>
@@ -241,8 +309,14 @@
     <EmbeddedResource Include="View\Peminjam.resx">
       <DependentUpon>Peminjam.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\Rusak.resx">
+      <DependentUpon>Rusak.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\TambahAlat.resx">
       <DependentUpon>TambahAlat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\TambahHilang.resx">
+      <DependentUpon>TambahHilang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\UbahAlat.resx">
       <DependentUpon>UbahAlat.cs</DependentUpon>

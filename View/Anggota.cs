@@ -178,7 +178,7 @@ namespace peminjaman.View
         private void BtnCetakAg_Click(object sender, EventArgs e)
         {
             Anggota ag = new Anggota();
-            FrmLaporan rp = new FrmLaporan();
+            FrmLaporanAnggota rp = new FrmLaporanAnggota();
             rp.Show();
         }
 

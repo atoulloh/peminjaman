@@ -8,6 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using peminjaman.Service;
 using peminjaman.Services;
+using peminjaman.Reports;
 
 namespace peminjaman.View
 {
@@ -84,6 +85,13 @@ namespace peminjaman.View
         private void button1_Click(object sender, EventArgs e)
         {
             grpdetailkembali.Visible = false;
+        }
+
+        private void BtnCetak_Click(object sender, EventArgs e)
+        {
+            Kembali al = new Kembali();
+            FrmLaporanKembali rp = new FrmLaporanKembali();
+            rp.Show();
         }
     }
 }

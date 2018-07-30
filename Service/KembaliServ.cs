@@ -23,10 +23,16 @@ namespace peminjaman.Service
 
         public void jumlahhilang()
         {
-            query = "update pinjaman set jumlah_tot = jumlah_tot -'"+Jumlah+"' where id_pinjaman = '"+IdPinjaman+ "'";
-            if (!(dbConn.ExecNonQuery(query) > 0))
+            string[] qs = {
+               // "update pinjaman set jumlah_tot = jumlah_tot -'" + Jumlah + "' where id_pinjaman = '"+IdPinjaman+ "'",
+                "update alat set jumlah = jumlah - '" + AlatHilang +"' where nama_alat = '" + NamaAlat +"'",
+            };
+            foreach (string q in qs)
             {
-                throw new Exception("Gagal Memperbarui jumlah");
+                if (!(dbConn.ExecNonQuery(q) > 0))
+                {
+                    throw new Exception("Gagal Memperbarui jumlah");
+                }
             }
         }
 
@@ -135,6 +141,14 @@ namespace peminjaman.Service
         public DataTable HitungKembali()
         {
             query = " Select count(*) from kembali";
+            dtTbl = dbConn.ExecQuery(query);
+
+            return dtTbl;
+        }
+
+        public DataTable HitungHilang()
+        {
+            query = "Select count(*) from alat_hilang";
             dtTbl = dbConn.ExecQuery(query);
 
             return dtTbl;

@@ -28,39 +28,50 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Hilang));
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvhilang = new System.Windows.Forms.DataGridView();
             this.id_peminjaman = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.id_anggota = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nama = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nama_alat = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.jumlah = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.BtnCetak = new System.Windows.Forms.Button();
+            this.BtnRefresh = new System.Windows.Forms.Button();
+            this.labelhilang = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvhilang)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(390, 9);
+            this.label1.Location = new System.Drawing.Point(390, -1);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(132, 24);
             this.label1.TabIndex = 101;
             this.label1.Text = "ALAT HILANG";
             // 
-            // dataGridView1
+            // dgvhilang
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvhilang.AllowUserToAddRows = false;
+            this.dgvhilang.AllowUserToDeleteRows = false;
+            this.dgvhilang.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvhilang.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.dgvhilang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvhilang.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id_peminjaman,
             this.id_anggota,
             this.nama,
             this.Nama_alat,
             this.jumlah});
-            this.dataGridView1.Location = new System.Drawing.Point(12, 93);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(872, 295);
-            this.dataGridView1.TabIndex = 102;
+            this.dgvhilang.Location = new System.Drawing.Point(12, 36);
+            this.dgvhilang.Name = "dgvhilang";
+            this.dgvhilang.ReadOnly = true;
+            this.dgvhilang.Size = new System.Drawing.Size(872, 310);
+            this.dgvhilang.TabIndex = 102;
             // 
             // id_peminjaman
             // 
@@ -68,6 +79,7 @@
             this.id_peminjaman.DataPropertyName = "id_peminjaman";
             this.id_peminjaman.HeaderText = "ID_Peminjaman";
             this.id_peminjaman.Name = "id_peminjaman";
+            this.id_peminjaman.ReadOnly = true;
             // 
             // id_anggota
             // 
@@ -75,6 +87,7 @@
             this.id_anggota.DataPropertyName = "id_anggota";
             this.id_anggota.HeaderText = "Id Anggota";
             this.id_anggota.Name = "id_anggota";
+            this.id_anggota.ReadOnly = true;
             // 
             // nama
             // 
@@ -82,6 +95,7 @@
             this.nama.DataPropertyName = "nama";
             this.nama.HeaderText = "Nama Anggota";
             this.nama.Name = "nama";
+            this.nama.ReadOnly = true;
             // 
             // Nama_alat
             // 
@@ -89,6 +103,7 @@
             this.Nama_alat.DataPropertyName = "nama_alat";
             this.Nama_alat.HeaderText = "Nama Alat";
             this.Nama_alat.Name = "Nama_alat";
+            this.Nama_alat.ReadOnly = true;
             // 
             // jumlah
             // 
@@ -96,18 +111,73 @@
             this.jumlah.DataPropertyName = "jumlah";
             this.jumlah.HeaderText = "Jumlah";
             this.jumlah.Name = "jumlah";
+            this.jumlah.ReadOnly = true;
+            // 
+            // BtnCetak
+            // 
+            this.BtnCetak.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnCetak.BackColor = System.Drawing.Color.SkyBlue;
+            this.BtnCetak.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnCetak.FlatAppearance.BorderSize = 0;
+            this.BtnCetak.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnCetak.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnCetak.ForeColor = System.Drawing.Color.Black;
+            this.BtnCetak.Image = ((System.Drawing.Image)(resources.GetObject("BtnCetak.Image")));
+            this.BtnCetak.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.BtnCetak.Location = new System.Drawing.Point(784, 352);
+            this.BtnCetak.Name = "BtnCetak";
+            this.BtnCetak.Size = new System.Drawing.Size(86, 65);
+            this.BtnCetak.TabIndex = 103;
+            this.BtnCetak.Text = "Cetak [F7]";
+            this.BtnCetak.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.BtnCetak.UseVisualStyleBackColor = false;
+            this.BtnCetak.Click += new System.EventHandler(this.BtnCetak_Click);
+            // 
+            // BtnRefresh
+            // 
+            this.BtnRefresh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnRefresh.BackColor = System.Drawing.Color.SkyBlue;
+            this.BtnRefresh.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnRefresh.FlatAppearance.BorderSize = 0;
+            this.BtnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnRefresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnRefresh.ForeColor = System.Drawing.Color.Black;
+            this.BtnRefresh.Image = ((System.Drawing.Image)(resources.GetObject("BtnRefresh.Image")));
+            this.BtnRefresh.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.BtnRefresh.Location = new System.Drawing.Point(670, 352);
+            this.BtnRefresh.Name = "BtnRefresh";
+            this.BtnRefresh.Size = new System.Drawing.Size(97, 65);
+            this.BtnRefresh.TabIndex = 104;
+            this.BtnRefresh.Text = "Refresh [F5]";
+            this.BtnRefresh.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.BtnRefresh.UseVisualStyleBackColor = false;
+            this.BtnRefresh.Click += new System.EventHandler(this.BtnRefresh_Click);
+            // 
+            // labelhilang
+            // 
+            this.labelhilang.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.labelhilang.AutoSize = true;
+            this.labelhilang.Location = new System.Drawing.Point(12, 352);
+            this.labelhilang.Name = "labelhilang";
+            this.labelhilang.Size = new System.Drawing.Size(94, 13);
+            this.labelhilang.TabIndex = 105;
+            this.labelhilang.Text = "Jumlah Alat Hilang";
             // 
             // Hilang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.SkyBlue;
             this.ClientSize = new System.Drawing.Size(896, 426);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.labelhilang);
+            this.Controls.Add(this.BtnRefresh);
+            this.Controls.Add(this.BtnCetak);
+            this.Controls.Add(this.dgvhilang);
             this.Controls.Add(this.label1);
             this.Name = "Hilang";
             this.Text = "Hilang";
             this.Load += new System.EventHandler(this.Hilang_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvhilang)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -116,11 +186,14 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvhilang;
         private System.Windows.Forms.DataGridViewTextBoxColumn id_peminjaman;
         private System.Windows.Forms.DataGridViewTextBoxColumn id_anggota;
         private System.Windows.Forms.DataGridViewTextBoxColumn nama;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nama_alat;
         private System.Windows.Forms.DataGridViewTextBoxColumn jumlah;
+        private System.Windows.Forms.Button BtnCetak;
+        private System.Windows.Forms.Button BtnRefresh;
+        private System.Windows.Forms.Label labelhilang;
     }
 }

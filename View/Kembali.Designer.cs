@@ -88,6 +88,7 @@
             this.BtnCetak.Text = "Cetak [F7]";
             this.BtnCetak.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.BtnCetak.UseVisualStyleBackColor = false;
+            this.BtnCetak.Click += new System.EventHandler(this.BtnCetak_Click);
             // 
             // BtnRefresh
             // 

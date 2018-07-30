@@ -113,7 +113,9 @@
             this.ClientSize = new System.Drawing.Size(615, 303);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Welcome";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Welcome";
             this.Load += new System.EventHandler(this.Welcome_Load);
             this.panel2.ResumeLayout(false);

@@ -30,9 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.CariIDAg = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.DTPPJalat = new System.Windows.Forms.DateTimePicker();
@@ -157,6 +157,7 @@
             this.K_Nama_Alat = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.status_detail = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.jumlah_alat = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.alat_hilang = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label28 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -193,21 +194,6 @@
             this.timerjalan = new System.Windows.Forms.Timer(this.components);
             this.panel14 = new System.Windows.Forms.Panel();
             this.timerhome = new System.Windows.Forms.Timer(this.components);
-            this.grphilang = new System.Windows.Forms.GroupBox();
-            this.TxtIDPHilang = new System.Windows.Forms.TextBox();
-            this.BtnSimpanHilang = new System.Windows.Forms.Button();
-            this.TxtNamaHilang = new System.Windows.Forms.TextBox();
-            this.TxtIdAnggotaHilang = new System.Windows.Forms.TextBox();
-            this.DgvKNamaAlatHilang = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label29 = new System.Windows.Forms.Label();
-            this.label34 = new System.Windows.Forms.Label();
-            this.label35 = new System.Windows.Forms.Label();
-            this.label36 = new System.Windows.Forms.Label();
-            this.BtnBack = new System.Windows.Forms.Button();
-            this.TxtJumlahHilang = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKembali)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -248,8 +234,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvPengunjung)).BeginInit();
             this.panelhome.SuspendLayout();
             this.panel14.SuspendLayout();
-            this.grphilang.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DgvKNamaAlatHilang)).BeginInit();
             this.SuspendLayout();
             // 
             // CariIDAg
@@ -289,7 +273,7 @@
             this.DTPPJalat.CalendarForeColor = System.Drawing.Color.White;
             this.DTPPJalat.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(134)))), ((int)(((byte)(213)))));
             this.DTPPJalat.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(134)))), ((int)(((byte)(213)))));
-            this.DTPPJalat.Location = new System.Drawing.Point(772, 11);
+            this.DTPPJalat.Location = new System.Drawing.Point(847, 11);
             this.DTPPJalat.Name = "DTPPJalat";
             this.DTPPJalat.Size = new System.Drawing.Size(136, 20);
             this.DTPPJalat.TabIndex = 4;
@@ -316,7 +300,7 @@
             this.DTPKBbuku.CalendarForeColor = System.Drawing.Color.White;
             this.DTPKBbuku.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(134)))), ((int)(((byte)(213)))));
             this.DTPKBbuku.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(134)))), ((int)(((byte)(213)))));
-            this.DTPKBbuku.Location = new System.Drawing.Point(771, 37);
+            this.DTPKBbuku.Location = new System.Drawing.Point(846, 37);
             this.DTPKBbuku.Name = "DTPKBbuku";
             this.DTPKBbuku.Size = new System.Drawing.Size(136, 20);
             this.DTPKBbuku.TabIndex = 5;
@@ -338,6 +322,7 @@
             this.BtnKembaliBuku.Text = "Kembali";
             this.BtnKembaliBuku.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BtnKembaliBuku.UseVisualStyleBackColor = false;
+            this.BtnKembaliBuku.Click += new System.EventHandler(this.BtnKembaliBuku_Click);
             // 
             // dgvKembali
             // 
@@ -351,14 +336,14 @@
             this.dgvKembali.BackgroundColor = System.Drawing.Color.White;
             this.dgvKembali.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvKembali.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvKembali.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvKembali.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dgvKembali.ColumnHeadersHeight = 33;
             this.dgvKembali.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvKembali.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -373,10 +358,9 @@
             this.dgvKembali.Name = "dgvKembali";
             this.dgvKembali.ReadOnly = true;
             this.dgvKembali.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvKembali.Size = new System.Drawing.Size(900, 296);
+            this.dgvKembali.Size = new System.Drawing.Size(975, 296);
             this.dgvKembali.TabIndex = 60;
             this.dgvKembali.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvKembali_CellClick);
-            this.dgvKembali.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvKembali_CellDoubleClick);
             // 
             // id_kembali
             // 
@@ -457,7 +441,7 @@
             this.panel1.Controls.Add(this.tabMain);
             this.panel1.Location = new System.Drawing.Point(1, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1168, 610);
+            this.panel1.Size = new System.Drawing.Size(1243, 610);
             this.panel1.TabIndex = 5;
             // 
             // panel2
@@ -743,7 +727,7 @@
             this.tabMain.Location = new System.Drawing.Point(240, 6);
             this.tabMain.Name = "tabMain";
             this.tabMain.SelectedIndex = 0;
-            this.tabMain.Size = new System.Drawing.Size(932, 593);
+            this.tabMain.Size = new System.Drawing.Size(1007, 593);
             this.tabMain.TabIndex = 1;
             this.tabMain.TabStop = false;
             // 
@@ -756,7 +740,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(924, 567);
+            this.tabPage1.Size = new System.Drawing.Size(999, 567);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -768,7 +752,7 @@
             this.panel7.BackColor = System.Drawing.Color.DimGray;
             this.panel7.Location = new System.Drawing.Point(-4, 73);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(928, 8);
+            this.panel7.Size = new System.Drawing.Size(879, 8);
             this.panel7.TabIndex = 13;
             // 
             // panel3
@@ -788,7 +772,7 @@
             this.panel3.Controls.Add(this.Pkembali_alat);
             this.panel3.Location = new System.Drawing.Point(92, 163);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(817, 249);
+            this.panel3.Size = new System.Drawing.Size(768, 249);
             this.panel3.TabIndex = 12;
             // 
             // panel6
@@ -940,7 +924,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(924, 567);
+            this.tabPage2.Size = new System.Drawing.Size(999, 567);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -971,7 +955,7 @@
             this.panelanggota.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelanggota.Location = new System.Drawing.Point(3, 3);
             this.panelanggota.Name = "panelanggota";
-            this.panelanggota.Size = new System.Drawing.Size(918, 561);
+            this.panelanggota.Size = new System.Drawing.Size(993, 561);
             this.panelanggota.TabIndex = 2;
             this.panelanggota.Paint += new System.Windows.Forms.PaintEventHandler(this.panelanggota_Paint);
             // 
@@ -987,7 +971,7 @@
             this.BtnBersih.ForeColor = System.Drawing.Color.DimGray;
             this.BtnBersih.Image = ((System.Drawing.Image)(resources.GetObject("BtnBersih.Image")));
             this.BtnBersih.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnBersih.Location = new System.Drawing.Point(293, 478);
+            this.BtnBersih.Location = new System.Drawing.Point(368, 478);
             this.BtnBersih.Name = "BtnBersih";
             this.BtnBersih.Size = new System.Drawing.Size(85, 37);
             this.BtnBersih.TabIndex = 507;
@@ -1004,7 +988,7 @@
             this.TxtHP.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TxtHP.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtHP.ForeColor = System.Drawing.Color.White;
-            this.TxtHP.Location = new System.Drawing.Point(173, 293);
+            this.TxtHP.Location = new System.Drawing.Point(248, 293);
             this.TxtHP.Name = "TxtHP";
             this.TxtHP.Size = new System.Drawing.Size(173, 22);
             this.TxtHP.TabIndex = 64;
@@ -1016,7 +1000,7 @@
             this.label30.AutoSize = true;
             this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label30.ForeColor = System.Drawing.Color.DimGray;
-            this.label30.Location = new System.Drawing.Point(1, 296);
+            this.label30.Location = new System.Drawing.Point(76, 296);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(99, 24);
             this.label30.TabIndex = 63;
@@ -1030,7 +1014,7 @@
             this.CmbJurusan.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.CmbJurusan.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CmbJurusan.ForeColor = System.Drawing.Color.White;
-            this.CmbJurusan.Location = new System.Drawing.Point(170, 252);
+            this.CmbJurusan.Location = new System.Drawing.Point(245, 252);
             this.CmbJurusan.Name = "CmbJurusan";
             this.CmbJurusan.ReadOnly = true;
             this.CmbJurusan.Size = new System.Drawing.Size(214, 22);
@@ -1065,7 +1049,7 @@
             "PBS-3",
             "PBS-4",
             "PBS-5"});
-            this.CmbKelas.Location = new System.Drawing.Point(171, 204);
+            this.CmbKelas.Location = new System.Drawing.Point(246, 204);
             this.CmbKelas.Name = "CmbKelas";
             this.CmbKelas.Size = new System.Drawing.Size(141, 28);
             this.CmbKelas.TabIndex = 57;
@@ -1079,7 +1063,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.DimGray;
-            this.label10.Location = new System.Drawing.Point(60, 11);
+            this.label10.Location = new System.Drawing.Point(135, 11);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(332, 37);
             this.label10.TabIndex = 50;
@@ -1096,7 +1080,7 @@
             this.BtnSimpan.ForeColor = System.Drawing.Color.DimGray;
             this.BtnSimpan.Image = ((System.Drawing.Image)(resources.GetObject("BtnSimpan.Image")));
             this.BtnSimpan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnSimpan.Location = new System.Drawing.Point(109, 478);
+            this.BtnSimpan.Location = new System.Drawing.Point(184, 478);
             this.BtnSimpan.Name = "BtnSimpan";
             this.BtnSimpan.Size = new System.Drawing.Size(150, 37);
             this.BtnSimpan.TabIndex = 8;
@@ -1113,7 +1097,7 @@
             this.TxtId.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TxtId.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtId.ForeColor = System.Drawing.Color.White;
-            this.TxtId.Location = new System.Drawing.Point(171, 66);
+            this.TxtId.Location = new System.Drawing.Point(246, 66);
             this.TxtId.Name = "TxtId";
             this.TxtId.ReadOnly = true;
             this.TxtId.Size = new System.Drawing.Size(121, 22);
@@ -1126,7 +1110,7 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.DimGray;
-            this.label11.Location = new System.Drawing.Point(2, 71);
+            this.label11.Location = new System.Drawing.Point(77, 71);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(103, 24);
             this.label11.TabIndex = 43;
@@ -1140,7 +1124,7 @@
             this.TxtNis.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TxtNis.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtNis.ForeColor = System.Drawing.Color.White;
-            this.TxtNis.Location = new System.Drawing.Point(170, 101);
+            this.TxtNis.Location = new System.Drawing.Point(245, 101);
             this.TxtNis.Name = "TxtNis";
             this.TxtNis.Size = new System.Drawing.Size(178, 22);
             this.TxtNis.TabIndex = 1;
@@ -1152,7 +1136,7 @@
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.DimGray;
-            this.label12.Location = new System.Drawing.Point(4, 137);
+            this.label12.Location = new System.Drawing.Point(79, 137);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(60, 24);
             this.label12.TabIndex = 31;
@@ -1165,7 +1149,7 @@
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.Color.DimGray;
-            this.label16.Location = new System.Drawing.Point(7, 339);
+            this.label16.Location = new System.Drawing.Point(82, 339);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(67, 24);
             this.label16.TabIndex = 37;
@@ -1178,7 +1162,7 @@
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.Color.DimGray;
-            this.label17.Location = new System.Drawing.Point(0, 168);
+            this.label17.Location = new System.Drawing.Point(75, 168);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(127, 24);
             this.label17.TabIndex = 33;
@@ -1191,7 +1175,7 @@
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.ForeColor = System.Drawing.Color.DimGray;
-            this.label18.Location = new System.Drawing.Point(3, 106);
+            this.label18.Location = new System.Drawing.Point(78, 106);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(40, 24);
             this.label18.TabIndex = 34;
@@ -1204,7 +1188,7 @@
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.ForeColor = System.Drawing.Color.DimGray;
-            this.label19.Location = new System.Drawing.Point(2, 253);
+            this.label19.Location = new System.Drawing.Point(77, 253);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(77, 24);
             this.label19.TabIndex = 36;
@@ -1217,7 +1201,7 @@
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.ForeColor = System.Drawing.Color.DimGray;
-            this.label20.Location = new System.Drawing.Point(4, 213);
+            this.label20.Location = new System.Drawing.Point(79, 213);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(56, 24);
             this.label20.TabIndex = 35;
@@ -1230,7 +1214,7 @@
             this.RB_L.AutoSize = true;
             this.RB_L.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RB_L.ForeColor = System.Drawing.Color.DimGray;
-            this.RB_L.Location = new System.Drawing.Point(172, 171);
+            this.RB_L.Location = new System.Drawing.Point(247, 171);
             this.RB_L.Name = "RB_L";
             this.RB_L.Size = new System.Drawing.Size(97, 20);
             this.RB_L.TabIndex = 3;
@@ -1245,7 +1229,7 @@
             this.TxtAlamat.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TxtAlamat.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtAlamat.ForeColor = System.Drawing.Color.White;
-            this.TxtAlamat.Location = new System.Drawing.Point(173, 335);
+            this.TxtAlamat.Location = new System.Drawing.Point(248, 335);
             this.TxtAlamat.Multiline = true;
             this.TxtAlamat.Name = "TxtAlamat";
             this.TxtAlamat.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -1259,7 +1243,7 @@
             this.RB_P.AutoSize = true;
             this.RB_P.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RB_P.ForeColor = System.Drawing.Color.DimGray;
-            this.RB_P.Location = new System.Drawing.Point(284, 172);
+            this.RB_P.Location = new System.Drawing.Point(359, 172);
             this.RB_P.Name = "RB_P";
             this.RB_P.Size = new System.Drawing.Size(105, 20);
             this.RB_P.TabIndex = 4;
@@ -1275,7 +1259,7 @@
             this.TxtNama.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TxtNama.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtNama.ForeColor = System.Drawing.Color.White;
-            this.TxtNama.Location = new System.Drawing.Point(169, 137);
+            this.TxtNama.Location = new System.Drawing.Point(244, 137);
             this.TxtNama.Name = "TxtNama";
             this.TxtNama.Size = new System.Drawing.Size(179, 22);
             this.TxtNama.TabIndex = 2;
@@ -1286,7 +1270,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(924, 567);
+            this.tabPage3.Size = new System.Drawing.Size(999, 567);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "tabPage3";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -1300,7 +1284,7 @@
             this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel8.Location = new System.Drawing.Point(3, 3);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(918, 561);
+            this.panel8.Size = new System.Drawing.Size(993, 561);
             this.panel8.TabIndex = 3;
             this.panel8.Paint += new System.Windows.Forms.PaintEventHandler(this.panel8_Paint);
             // 
@@ -1325,14 +1309,14 @@
             this.dgvAlat.BackgroundColor = System.Drawing.Color.White;
             this.dgvAlat.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvAlat.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Modern No. 20", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvAlat.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvAlat.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.dgvAlat.ColumnHeadersHeight = 33;
             this.dgvAlat.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvAlat.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -1346,7 +1330,7 @@
             this.dgvAlat.GridColor = System.Drawing.Color.White;
             this.dgvAlat.Location = new System.Drawing.Point(15, 159);
             this.dgvAlat.Name = "dgvAlat";
-            this.dgvAlat.Size = new System.Drawing.Size(894, 387);
+            this.dgvAlat.Size = new System.Drawing.Size(969, 387);
             this.dgvAlat.TabIndex = 59;
             // 
             // kode_alat
@@ -1414,7 +1398,7 @@
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(924, 567);
+            this.tabPage4.Size = new System.Drawing.Size(999, 567);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "tabPage4";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -1444,7 +1428,7 @@
             this.panel10.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel10.Location = new System.Drawing.Point(3, 3);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(918, 561);
+            this.panel10.Size = new System.Drawing.Size(993, 561);
             this.panel10.TabIndex = 3;
             this.panel10.Paint += new System.Windows.Forms.PaintEventHandler(this.panel10_Paint);
             // 
@@ -1545,7 +1529,7 @@
             this.GrpAlat.Controls.Add(this.TxtCariAl);
             this.GrpAlat.Controls.Add(this.label13);
             this.GrpAlat.Controls.Add(this.dgvNamaAlat);
-            this.GrpAlat.Location = new System.Drawing.Point(581, 384);
+            this.GrpAlat.Location = new System.Drawing.Point(627, 259);
             this.GrpAlat.Name = "GrpAlat";
             this.GrpAlat.Size = new System.Drawing.Size(321, 223);
             this.GrpAlat.TabIndex = 68;
@@ -1833,7 +1817,7 @@
             this.tabPage5.Location = new System.Drawing.Point(4, 22);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(924, 567);
+            this.tabPage5.Size = new System.Drawing.Size(999, 567);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "tabPage5";
             this.tabPage5.UseVisualStyleBackColor = true;
@@ -1841,7 +1825,6 @@
             // panel9
             // 
             this.panel9.BackColor = System.Drawing.Color.Lavender;
-            this.panel9.Controls.Add(this.grphilang);
             this.panel9.Controls.Add(this.DgvKNamaAlat);
             this.panel9.Controls.Add(this.label28);
             this.panel9.Controls.Add(this.label9);
@@ -1865,7 +1848,7 @@
             this.panel9.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel9.Location = new System.Drawing.Point(3, 3);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(918, 561);
+            this.panel9.Size = new System.Drawing.Size(993, 561);
             this.panel9.TabIndex = 3;
             this.panel9.Paint += new System.Windows.Forms.PaintEventHandler(this.panel9_Paint_load);
             // 
@@ -1878,8 +1861,9 @@
             this.IDPinjaman,
             this.K_Nama_Alat,
             this.status_detail,
-            this.jumlah_alat});
-            this.DgvKNamaAlat.Location = new System.Drawing.Point(293, 414);
+            this.jumlah_alat,
+            this.alat_hilang});
+            this.DgvKNamaAlat.Location = new System.Drawing.Point(368, 414);
             this.DgvKNamaAlat.Name = "DgvKNamaAlat";
             this.DgvKNamaAlat.Size = new System.Drawing.Size(615, 130);
             this.DgvKNamaAlat.TabIndex = 95;
@@ -1912,13 +1896,19 @@
             this.jumlah_alat.HeaderText = "Jumlah Alat";
             this.jumlah_alat.Name = "jumlah_alat";
             // 
+            // alat_hilang
+            // 
+            this.alat_hilang.DataPropertyName = "alat_hilang";
+            this.alat_hilang.HeaderText = "Alat Hilang";
+            this.alat_hilang.Name = "alat_hilang";
+            // 
             // label28
             // 
             this.label28.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label28.AutoSize = true;
             this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label28.ForeColor = System.Drawing.Color.DimGray;
-            this.label28.Location = new System.Drawing.Point(726, 390);
+            this.label28.Location = new System.Drawing.Point(801, 390);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(54, 15);
             this.label28.TabIndex = 92;
@@ -1930,7 +1920,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.DimGray;
-            this.label9.Location = new System.Drawing.Point(290, 386);
+            this.label9.Location = new System.Drawing.Point(365, 386);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(73, 15);
             this.label9.TabIndex = 90;
@@ -1967,7 +1957,7 @@
             this.TxtJumlahKembali.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TxtJumlahKembali.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtJumlahKembali.ForeColor = System.Drawing.Color.White;
-            this.TxtJumlahKembali.Location = new System.Drawing.Point(796, 385);
+            this.TxtJumlahKembali.Location = new System.Drawing.Point(871, 385);
             this.TxtJumlahKembali.Name = "TxtJumlahKembali";
             this.TxtJumlahKembali.ReadOnly = true;
             this.TxtJumlahKembali.Size = new System.Drawing.Size(100, 22);
@@ -2008,10 +1998,11 @@
             this.panel18.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.panel18.Controls.Add(this.BtnSimpanKembali);
             this.panel18.Controls.Add(this.BtnKembaliBuku);
-            this.panel18.Location = new System.Drawing.Point(58, 487);
+            this.panel18.Location = new System.Drawing.Point(95, 487);
             this.panel18.Name = "panel18";
             this.panel18.Size = new System.Drawing.Size(149, 57);
             this.panel18.TabIndex = 80;
+            this.panel18.Paint += new System.Windows.Forms.PaintEventHandler(this.panel18_Paint);
             // 
             // BtnSimpanKembali
             // 
@@ -2039,7 +2030,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.DimGray;
-            this.label4.Location = new System.Drawing.Point(646, 41);
+            this.label4.Location = new System.Drawing.Point(721, 41);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(114, 15);
             this.label4.TabIndex = 67;
@@ -2051,7 +2042,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.DimGray;
-            this.label3.Location = new System.Drawing.Point(651, 11);
+            this.label3.Location = new System.Drawing.Point(726, 11);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(108, 15);
             this.label3.TabIndex = 66;
@@ -2087,7 +2078,7 @@
             this.tabPage6.Location = new System.Drawing.Point(4, 22);
             this.tabPage6.Name = "tabPage6";
             this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage6.Size = new System.Drawing.Size(924, 567);
+            this.tabPage6.Size = new System.Drawing.Size(907, 567);
             this.tabPage6.TabIndex = 5;
             this.tabPage6.Text = "tabPage6";
             this.tabPage6.UseVisualStyleBackColor = true;
@@ -2099,7 +2090,7 @@
             this.panel12.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel12.Location = new System.Drawing.Point(3, 3);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(918, 561);
+            this.panel12.Size = new System.Drawing.Size(901, 561);
             this.panel12.TabIndex = 4;
             // 
             // FormHosts
@@ -2110,7 +2101,7 @@
             this.FormHosts.BackColor = System.Drawing.Color.LightBlue;
             this.FormHosts.Location = new System.Drawing.Point(-3, -3);
             this.FormHosts.Name = "FormHosts";
-            this.FormHosts.Size = new System.Drawing.Size(924, 567);
+            this.FormHosts.Size = new System.Drawing.Size(907, 567);
             this.FormHosts.TabIndex = 12;
             // 
             // BtnSegar
@@ -2139,7 +2130,7 @@
             this.BtnCetakAg.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnCetakAg.FlatAppearance.BorderSize = 0;
             this.BtnCetakAg.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnCetakAg.Font = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnCetakAg.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnCetakAg.ForeColor = System.Drawing.Color.White;
             this.BtnCetakAg.Image = ((System.Drawing.Image)(resources.GetObject("BtnCetakAg.Image")));
             this.BtnCetakAg.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -2188,14 +2179,14 @@
             this.dgvPengunjung.BackgroundColor = System.Drawing.Color.White;
             this.dgvPengunjung.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvPengunjung.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPengunjung.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPengunjung.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.dgvPengunjung.ColumnHeadersHeight = 33;
             this.dgvPengunjung.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvPengunjung.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -2357,199 +2348,11 @@
             this.panel14.Size = new System.Drawing.Size(540, 33);
             this.panel14.TabIndex = 7;
             // 
-            // grphilang
-            // 
-            this.grphilang.Controls.Add(this.TxtJumlahHilang);
-            this.grphilang.Controls.Add(this.BtnBack);
-            this.grphilang.Controls.Add(this.TxtIDPHilang);
-            this.grphilang.Controls.Add(this.BtnSimpanHilang);
-            this.grphilang.Controls.Add(this.TxtNamaHilang);
-            this.grphilang.Controls.Add(this.TxtIdAnggotaHilang);
-            this.grphilang.Controls.Add(this.DgvKNamaAlatHilang);
-            this.grphilang.Controls.Add(this.label23);
-            this.grphilang.Controls.Add(this.label29);
-            this.grphilang.Controls.Add(this.label34);
-            this.grphilang.Controls.Add(this.label35);
-            this.grphilang.Controls.Add(this.label36);
-            this.grphilang.Location = new System.Drawing.Point(145, 0);
-            this.grphilang.Name = "grphilang";
-            this.grphilang.Size = new System.Drawing.Size(471, 379);
-            this.grphilang.TabIndex = 96;
-            this.grphilang.TabStop = false;
-            this.grphilang.Text = "groupBox1";
-            // 
-            // TxtIDPHilang
-            // 
-            this.TxtIDPHilang.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.TxtIDPHilang.BackColor = System.Drawing.Color.SlateGray;
-            this.TxtIDPHilang.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TxtIDPHilang.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtIDPHilang.ForeColor = System.Drawing.Color.White;
-            this.TxtIDPHilang.Location = new System.Drawing.Point(221, 17);
-            this.TxtIDPHilang.Name = "TxtIDPHilang";
-            this.TxtIDPHilang.ReadOnly = true;
-            this.TxtIDPHilang.Size = new System.Drawing.Size(135, 22);
-            this.TxtIDPHilang.TabIndex = 114;
-            this.TxtIDPHilang.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.TxtIDPHilang.TextChanged += new System.EventHandler(this.TxtIDPHilang_TextChanged);
-            // 
-            // BtnSimpanHilang
-            // 
-            this.BtnSimpanHilang.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.BtnSimpanHilang.BackColor = System.Drawing.Color.Lavender;
-            this.BtnSimpanHilang.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnSimpanHilang.FlatAppearance.BorderSize = 0;
-            this.BtnSimpanHilang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnSimpanHilang.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnSimpanHilang.ForeColor = System.Drawing.Color.DimGray;
-            this.BtnSimpanHilang.Image = ((System.Drawing.Image)(resources.GetObject("BtnSimpanHilang.Image")));
-            this.BtnSimpanHilang.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnSimpanHilang.Location = new System.Drawing.Point(221, 318);
-            this.BtnSimpanHilang.Name = "BtnSimpanHilang";
-            this.BtnSimpanHilang.Size = new System.Drawing.Size(124, 44);
-            this.BtnSimpanHilang.TabIndex = 113;
-            this.BtnSimpanHilang.Text = "Simpan";
-            this.BtnSimpanHilang.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BtnSimpanHilang.UseVisualStyleBackColor = false;
-            this.BtnSimpanHilang.Click += new System.EventHandler(this.BtnSimpanHilang_Click);
-            // 
-            // TxtNamaHilang
-            // 
-            this.TxtNamaHilang.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.TxtNamaHilang.BackColor = System.Drawing.Color.SlateGray;
-            this.TxtNamaHilang.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TxtNamaHilang.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtNamaHilang.ForeColor = System.Drawing.Color.White;
-            this.TxtNamaHilang.Location = new System.Drawing.Point(221, 95);
-            this.TxtNamaHilang.Name = "TxtNamaHilang";
-            this.TxtNamaHilang.ReadOnly = true;
-            this.TxtNamaHilang.Size = new System.Drawing.Size(135, 22);
-            this.TxtNamaHilang.TabIndex = 111;
-            this.TxtNamaHilang.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // TxtIdAnggotaHilang
-            // 
-            this.TxtIdAnggotaHilang.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.TxtIdAnggotaHilang.BackColor = System.Drawing.Color.SlateGray;
-            this.TxtIdAnggotaHilang.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TxtIdAnggotaHilang.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtIdAnggotaHilang.ForeColor = System.Drawing.Color.White;
-            this.TxtIdAnggotaHilang.Location = new System.Drawing.Point(221, 53);
-            this.TxtIdAnggotaHilang.Name = "TxtIdAnggotaHilang";
-            this.TxtIdAnggotaHilang.ReadOnly = true;
-            this.TxtIdAnggotaHilang.Size = new System.Drawing.Size(135, 22);
-            this.TxtIdAnggotaHilang.TabIndex = 110;
-            this.TxtIdAnggotaHilang.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // DgvKNamaAlatHilang
-            // 
-            this.DgvKNamaAlatHilang.AllowUserToAddRows = false;
-            this.DgvKNamaAlatHilang.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.DgvKNamaAlatHilang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DgvKNamaAlatHilang.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2});
-            this.DgvKNamaAlatHilang.Location = new System.Drawing.Point(75, 139);
-            this.DgvKNamaAlatHilang.Name = "DgvKNamaAlatHilang";
-            this.DgvKNamaAlatHilang.Size = new System.Drawing.Size(323, 130);
-            this.DgvKNamaAlatHilang.TabIndex = 109;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "id_pinjaman";
-            this.dataGridViewTextBoxColumn1.HeaderText = "ID Pinjaman";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "nama_alat";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Nama Alat";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            // 
-            // label23
-            // 
-            this.label23.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.ForeColor = System.Drawing.Color.DimGray;
-            this.label23.Location = new System.Drawing.Point(72, 284);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(54, 15);
-            this.label23.TabIndex = 108;
-            this.label23.Text = "Jumlah";
-            // 
-            // label29
-            // 
-            this.label29.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.label29.AutoSize = true;
-            this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label29.ForeColor = System.Drawing.Color.DimGray;
-            this.label29.Location = new System.Drawing.Point(72, 121);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(73, 15);
-            this.label29.TabIndex = 107;
-            this.label29.Text = "Nama Alat";
-            // 
-            // label34
-            // 
-            this.label34.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label34.AutoSize = true;
-            this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label34.ForeColor = System.Drawing.Color.DimGray;
-            this.label34.Location = new System.Drawing.Point(72, 95);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(45, 15);
-            this.label34.TabIndex = 106;
-            this.label34.Text = "Nama";
-            // 
-            // label35
-            // 
-            this.label35.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label35.AutoSize = true;
-            this.label35.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label35.ForeColor = System.Drawing.Color.DimGray;
-            this.label35.Location = new System.Drawing.Point(72, 53);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(77, 15);
-            this.label35.TabIndex = 105;
-            this.label35.Text = "ID Anggota";
-            // 
-            // label36
-            // 
-            this.label36.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label36.AutoSize = true;
-            this.label36.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label36.ForeColor = System.Drawing.Color.DimGray;
-            this.label36.Location = new System.Drawing.Point(72, 17);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(106, 15);
-            this.label36.TabIndex = 104;
-            this.label36.Text = "ID Peminjaman";
-            // 
-            // BtnBack
-            // 
-            this.BtnBack.Image = ((System.Drawing.Image)(resources.GetObject("BtnBack.Image")));
-            this.BtnBack.Location = new System.Drawing.Point(414, 17);
-            this.BtnBack.Name = "BtnBack";
-            this.BtnBack.Size = new System.Drawing.Size(38, 35);
-            this.BtnBack.TabIndex = 115;
-            this.BtnBack.UseVisualStyleBackColor = true;
-            this.BtnBack.Click += new System.EventHandler(this.BtnBack_Click);
-            // 
-            // TxtJumlahHilang
-            // 
-            this.TxtJumlahHilang.Location = new System.Drawing.Point(223, 284);
-            this.TxtJumlahHilang.Name = "TxtJumlahHilang";
-            this.TxtJumlahHilang.Size = new System.Drawing.Size(122, 20);
-            this.TxtJumlahHilang.TabIndex = 116;
-            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1169, 602);
+            this.ClientSize = new System.Drawing.Size(1244, 602);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel11);
             this.Controls.Add(this.panel4);
@@ -2608,9 +2411,6 @@
             this.panelhome.ResumeLayout(false);
             this.panelhome.PerformLayout();
             this.panel14.ResumeLayout(false);
-            this.grphilang.ResumeLayout(false);
-            this.grphilang.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DgvKNamaAlatHilang)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2777,21 +2577,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn K_Nama_Alat;
         private System.Windows.Forms.DataGridViewTextBoxColumn status_detail;
         private System.Windows.Forms.DataGridViewTextBoxColumn jumlah_alat;
-        private System.Windows.Forms.GroupBox grphilang;
-        private System.Windows.Forms.TextBox TxtIDPHilang;
-        private System.Windows.Forms.Button BtnSimpanHilang;
-        private System.Windows.Forms.TextBox TxtNamaHilang;
-        private System.Windows.Forms.TextBox TxtIdAnggotaHilang;
-        private System.Windows.Forms.DataGridView DgvKNamaAlatHilang;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.Label label34;
-        private System.Windows.Forms.Label label35;
-        private System.Windows.Forms.Label label36;
-        private System.Windows.Forms.Button BtnBack;
-        private System.Windows.Forms.TextBox TxtJumlahHilang;
+        private System.Windows.Forms.DataGridViewTextBoxColumn alat_hilang;
 
 
     }

@@ -29,12 +29,12 @@ namespace peminjaman.View
             dgvNamaAlat.AutoGenerateColumns = false;
             dgvanggota.AutoGenerateColumns = false;
             DgvKNamaAlat.AutoGenerateColumns = false;
-            DgvKNamaAlatHilang.AutoGenerateColumns = false;
+            //DgvKNamaAlatHilang.AutoGenerateColumns = false;
 
             tabMain.Location = new Point(233, -22);
             grpAnggota.Visible = false;
             WindowState = FormWindowState.Maximized;
-            grphilang.Visible = false;
+           // grphilang.Visible = false;
         }
 
         private void AmbilForm(Form form)
@@ -593,19 +593,31 @@ namespace peminjaman.View
                             string id_pinjam = row.Cells[0].Value.ToString();
                             string nama_alat = row.Cells[1].Value.ToString();
                             string st = row.Cells[2].Value.ToString();
-                            string jumlah_tot = row.Cells[3].Value.ToString(); 
+                            int jumlah_tot = int.Parse(row.Cells[3].Value.ToString());
+                            int alat_hilang = int.Parse(row.Cells[4].Value.ToString());
                             km.IdPinjaman = id_pinjam;
                             km.NamaAlat = nama_alat;
                             km.Status = st;
-                            km.Jumlah_Tot = int.Parse(jumlah_tot);
-                           // km.Simpan_Detail_kembali();
                             km.Status = "Sudah";
+
+                            if (alat_hilang > 0)
+                            {
+                                int kembali = jumlah_tot - alat_hilang;
+                                km.AlatHilang = alat_hilang;
+                                km.HilangAlat = kembali;
+                                km.Jumlah_Tot = kembali;
+                                km.Jumlah = alat_hilang;
+                                km.Simpan_Hilang();
+                                km.jumlahhilang();
+                            }
+                            else
+                            {
+                                km.Jumlah_Tot = jumlah_tot;
+                            }                            
+                           
+                           // km.Simpan_Detail_kembali();                       
                             simpan = km.UbahStatusPijaman();
                             km.perbaruijumlahkembali();
-                    
-                            
-
-
                             
                         }
                         if (simpan)
@@ -840,7 +852,7 @@ namespace peminjaman.View
 
         }
 
-        private void dgvKembali_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+       /* private void dgvKembali_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
             {
@@ -867,7 +879,6 @@ namespace peminjaman.View
         {
             grphilang.Visible = false;
         }
-
         private void BtnSimpanHilang_Click(object sender, EventArgs e)
         {
             KembaliServ km = new KembaliServ();
@@ -935,7 +946,7 @@ namespace peminjaman.View
                     MessageBoxIcon.Information);
             }
         
-        }
+        }*/
 
         private void panel9_Paint_load(object sender, PaintEventArgs e)
         {
@@ -946,6 +957,16 @@ namespace peminjaman.View
             }
 
             TxtJumlahKembali.Text = sum.ToString();
+        }
+
+        private void BtnKembaliBuku_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel18_Paint(object sender, PaintEventArgs e)
+        {
+
         }
 
     }

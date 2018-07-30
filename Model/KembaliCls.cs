@@ -94,5 +94,9 @@ namespace peminjaman.Model
 
         public string Status { get; set; }
 
+        public int AlatHilang { get; set; }
+
+        public int HilangAlat { get; set; }
+
     }
 }

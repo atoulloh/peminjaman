@@ -236,7 +236,7 @@ namespace peminjaman.View
         private void BtnCetakAL_Click_1(object sender, EventArgs e)
         {
             Alat al = new Alat();
-            FrmLaporan rp = new FrmLaporan();
+            FrmLaporanAlat rp = new FrmLaporanAlat();
             rp.Show();
         }
         //ikut tambah alat
