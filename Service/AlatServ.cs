@@ -30,6 +30,15 @@ namespace peminjaman.Service
             return dtTbl;
         }
 
+        public void updaterusak()
+        {
+            query = " update alat set jumlah = jumlah -'" + Jumlah + "', jumlah_tersedia = jumlah_tersedia -'" + Jumlah + "' where kode_alat = '" + Kode_Alat + "'";
+            if (!(dbConn.ExecNonQuery(query) > 0))
+            {
+                throw new Exception("Gagal Memperbarui jumlah");
+            }
+        }
+
         public void updatealat()
         {
             query =" update alat set jumlah = jumlah +'"+ Jumlah +"', jumlah_tersedia = jumlah_tersedia +'" + Jumlah +"' where kode_alat = '"+ Kode_Alat +"'";
@@ -58,8 +67,7 @@ namespace peminjaman.Service
 
         public void SimpanRusak()
         {
-            query = "INSERT INTO alat_rusak VALUES ('" + Kode_Alat + "','" + Nama_Alat + "','" + Jenis_Alat + "','" + Letak + "','" + Jumlah + "','" + Jumlah_Tersedia + "','"
-                + Harga_Pembelian + "','" + Tahun_Pembelian + "','" + Kondisi + "')";
+            query = "INSERT INTO alat_rusak ( kode_alat,nama_alat, jenis_alat,letak,jumlah) VALUES ('" + Kode_Alat + "','" + Nama_Alat + "','" + Jenis_Alat + "','" + Letak + "','" + Jumlah + "')";
 
             if (!(dbConn.ExecNonQuery(query) > 0))
             {
@@ -70,18 +78,6 @@ namespace peminjaman.Service
         {
            query = "INSERT INTO alat VALUES ('" + Kode_Alat + "','" + Nama_Alat + "','" + Jenis_Alat + "','" + Letak + "','"+ Jumlah + "','" + Jumlah_Tersedia + "','"
                 + Harga_Pembelian + "','" + Tahun_Pembelian + "','" + Kondisi + "')";
-
-            //var datas = new Dictionary<string, object>();
-            //datas.Add("kode_alat", Kode_Alat);
-            //datas.Add("nama_alat", Nama_Alat);
-            //datas.Add("jenis_alat", Jenis_Alat);
-            //datas.Add("letak", Letak);
-            //datas.Add("harga_pembelian", Harga_Pembelian);
-            //datas.Add("tahun_pembelian", Tahun_Pembelian);
-            ////datas.Add("jumlah", Jumlah);
-            //datas.Add("kondisi",Kondisi);
-            //return Query.Insert(tabel, datas);
-
 
             if (!(dbConn.ExecNonQuery(query) > 0))
             {
@@ -121,6 +117,13 @@ namespace peminjaman.Service
             }
 
             return cek;
+        }
+
+        public DataTable TampilRusak()
+        {
+            query = "Select * from alat_rusak";
+            dtTbl = dbConn.ExecQuery(query);
+            return dtTbl;
         }
 
         public DataTable TampilSemua()

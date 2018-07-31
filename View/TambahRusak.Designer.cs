@@ -1,6 +1,6 @@
 ﻿namespace peminjaman.View
 {
-    partial class TambahHilang
+    partial class TambahRusak
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TambahHilang));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TambahRusak));
             this.label9 = new System.Windows.Forms.Label();
             this.TxtJumlah = new System.Windows.Forms.TextBox();
             this.BtnBack = new System.Windows.Forms.Button();
@@ -69,6 +69,7 @@
             this.BtnBack.Size = new System.Drawing.Size(38, 35);
             this.BtnBack.TabIndex = 35;
             this.BtnBack.UseVisualStyleBackColor = true;
+            this.BtnBack.Click += new System.EventHandler(this.BtnBack_Click);
             // 
             // BtnSimpan
             // 

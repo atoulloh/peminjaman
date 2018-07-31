@@ -216,11 +216,11 @@
     <Compile Include="View\TambahAlat.Designer.cs">
       <DependentUpon>TambahAlat.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\TambahHilang.cs">
+    <Compile Include="View\TambahRusak.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\TambahHilang.Designer.cs">
-      <DependentUpon>TambahHilang.cs</DependentUpon>
+    <Compile Include="View\TambahRusak.Designer.cs">
+      <DependentUpon>TambahRusak.cs</DependentUpon>
     </Compile>
     <Compile Include="View\UbahAlat.cs">
       <SubType>Form</SubType>
@@ -315,8 +315,8 @@
     <EmbeddedResource Include="View\TambahAlat.resx">
       <DependentUpon>TambahAlat.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\TambahHilang.resx">
-      <DependentUpon>TambahHilang.cs</DependentUpon>
+    <EmbeddedResource Include="View\TambahRusak.resx">
+      <DependentUpon>TambahRusak.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\UbahAlat.resx">
       <DependentUpon>UbahAlat.cs</DependentUpon>

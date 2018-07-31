@@ -36,7 +36,13 @@ namespace peminjaman.View
            // gvdetailpinjam.DataSource = pj.TampilSemuaPeminjam();
         }
 
-        void EditAlat()
+        void TambahRusak()
+        {
+            TambahRusak TA = new TambahRusak();
+            TA.ShowDialog();
+            
+        }
+       void EditAlat()
         {
             UbahAlat ua = new UbahAlat();
 
@@ -74,8 +80,8 @@ namespace peminjaman.View
 
         private void dgvAlat_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-
-            EditAlat();
+            TambahRusak();
+           // EditAlat();
         }
 
         private void dgvAlat_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)

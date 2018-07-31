@@ -10,12 +10,24 @@ using peminjaman.Service;
 
 namespace peminjaman.View
 {
-    public partial class TambahHilang : Form
+    public partial class TambahRusak : Form
     {
-        public TambahHilang()
+        public TambahRusak()
         {
             InitializeComponent();
         }
+
+        void Bersihkan()
+        {
+            AlatServ al = new AlatServ();
+            TxtKodeRusak.Text = "";
+            TxtNama_alat_Rusak.Text = "";
+            TxtJenis_Alat_Rusak.Text = "";
+            TxtLetakRusak.Text = "";
+            TxtJumlah.Text = "";
+
+        }
+
 
         private void BtnSimpan_Click(object sender, EventArgs e)
         {
@@ -38,8 +50,22 @@ namespace peminjaman.View
                 asv.Jenis_Alat = TxtJenis_Alat_Rusak.Text.Trim();
                 asv.Letak = TxtLetakRusak.Text.Trim();
                 asv.Jumlah = int.Parse(TxtJumlah.Text.Trim());
+                asv.SimpanRusak();
+                asv.updaterusak();
+                {
+                    MessageBox.Show("Data berhasil di simpan, ",
+                        "Information", MessageBoxButtons.OK,
+                        MessageBoxIcon.Information);
+                }
+                Bersihkan();
+                Close();
+            }
+        }
 
 
+        private void BtnBack_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

@@ -31,18 +31,18 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Rusak));
             this.label1 = new System.Windows.Forms.Label();
             this.dgvalatrusak = new System.Windows.Forms.DataGridView();
-            this.BtnCetakAL = new System.Windows.Forms.Button();
-            this.BtnHapus = new System.Windows.Forms.Button();
-            this.BtnTambah = new System.Windows.Forms.Button();
-            this.BtnRefresh = new System.Windows.Forms.Button();
-            this.txtdetail = new System.Windows.Forms.TextBox();
             this.kode_alat = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nama_alat = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.jenis_alat = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.letak = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.jumlah = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.status = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label2 = new System.Windows.Forms.Label();
+            this.BtnCetakAL = new System.Windows.Forms.Button();
+            this.BtnHapus = new System.Windows.Forms.Button();
+            this.BtnTambah = new System.Windows.Forms.Button();
+            this.BtnRefresh = new System.Windows.Forms.Button();
+            this.txtdetail = new System.Windows.Forms.TextBox();
+            this.labelrusak = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvalatrusak)).BeginInit();
             this.SuspendLayout();
             // 
@@ -73,6 +73,53 @@
             this.dgvalatrusak.ReadOnly = true;
             this.dgvalatrusak.Size = new System.Drawing.Size(724, 349);
             this.dgvalatrusak.TabIndex = 1;
+            // 
+            // kode_alat
+            // 
+            this.kode_alat.DataPropertyName = "kode_alat";
+            this.kode_alat.HeaderText = "Kode Alat";
+            this.kode_alat.Name = "kode_alat";
+            this.kode_alat.ReadOnly = true;
+            // 
+            // nama_alat
+            // 
+            this.nama_alat.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.nama_alat.DataPropertyName = "nama_alat";
+            this.nama_alat.HeaderText = "Nama Alat";
+            this.nama_alat.Name = "nama_alat";
+            this.nama_alat.ReadOnly = true;
+            // 
+            // jenis_alat
+            // 
+            this.jenis_alat.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.jenis_alat.DataPropertyName = "jenis_alat";
+            this.jenis_alat.HeaderText = "Jenis Alat";
+            this.jenis_alat.Name = "jenis_alat";
+            this.jenis_alat.ReadOnly = true;
+            // 
+            // letak
+            // 
+            this.letak.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.letak.DataPropertyName = "letak";
+            this.letak.HeaderText = "Letak";
+            this.letak.Name = "letak";
+            this.letak.ReadOnly = true;
+            // 
+            // jumlah
+            // 
+            this.jumlah.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.jumlah.DataPropertyName = "jumlah";
+            this.jumlah.HeaderText = "Jumlah";
+            this.jumlah.Name = "jumlah";
+            this.jumlah.ReadOnly = true;
+            // 
+            // status
+            // 
+            this.status.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.status.DataPropertyName = "status";
+            this.status.HeaderText = "Status Alat";
+            this.status.Name = "status";
+            this.status.ReadOnly = true;
             // 
             // BtnCetakAL
             // 
@@ -130,6 +177,7 @@
             this.BtnTambah.Text = "Tambah [F7]";
             this.BtnTambah.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.BtnTambah.UseVisualStyleBackColor = false;
+            this.BtnTambah.Click += new System.EventHandler(this.BtnTambah_Click);
             // 
             // BtnRefresh
             // 
@@ -149,6 +197,7 @@
             this.BtnRefresh.Text = "Refresh [F5]";
             this.BtnRefresh.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.BtnRefresh.UseVisualStyleBackColor = false;
+            this.BtnRefresh.Click += new System.EventHandler(this.BtnRefresh_Click);
             // 
             // txtdetail
             // 
@@ -158,68 +207,21 @@
             this.txtdetail.Size = new System.Drawing.Size(123, 20);
             this.txtdetail.TabIndex = 77;
             // 
-            // kode_alat
+            // labelrusak
             // 
-            this.kode_alat.DataPropertyName = "kode_alat";
-            this.kode_alat.HeaderText = "Kode Alat";
-            this.kode_alat.Name = "kode_alat";
-            this.kode_alat.ReadOnly = true;
-            // 
-            // nama_alat
-            // 
-            this.nama_alat.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.nama_alat.DataPropertyName = "nama_alat";
-            this.nama_alat.HeaderText = "Nama Alat";
-            this.nama_alat.Name = "nama_alat";
-            this.nama_alat.ReadOnly = true;
-            // 
-            // jenis_alat
-            // 
-            this.jenis_alat.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.jenis_alat.DataPropertyName = "jenis_alat";
-            this.jenis_alat.HeaderText = "Jenis Alat";
-            this.jenis_alat.Name = "jenis_alat";
-            this.jenis_alat.ReadOnly = true;
-            // 
-            // letak
-            // 
-            this.letak.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.letak.DataPropertyName = "letak";
-            this.letak.HeaderText = "Letak";
-            this.letak.Name = "letak";
-            this.letak.ReadOnly = true;
-            // 
-            // jumlah
-            // 
-            this.jumlah.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.jumlah.DataPropertyName = "jumlah";
-            this.jumlah.HeaderText = "Jumlah";
-            this.jumlah.Name = "jumlah";
-            this.jumlah.ReadOnly = true;
-            // 
-            // status
-            // 
-            this.status.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.status.DataPropertyName = "status";
-            this.status.HeaderText = "Status Alat";
-            this.status.Name = "status";
-            this.status.ReadOnly = true;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 417);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(95, 13);
-            this.label2.TabIndex = 78;
-            this.label2.Text = "Jumlah Alat Rusak";
+            this.labelrusak.AutoSize = true;
+            this.labelrusak.Location = new System.Drawing.Point(12, 417);
+            this.labelrusak.Name = "labelrusak";
+            this.labelrusak.Size = new System.Drawing.Size(95, 13);
+            this.labelrusak.TabIndex = 78;
+            this.labelrusak.Text = "Jumlah Alat Rusak";
             // 
             // Rusak
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(748, 484);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.labelrusak);
             this.Controls.Add(this.txtdetail);
             this.Controls.Add(this.BtnRefresh);
             this.Controls.Add(this.BtnTambah);
@@ -250,6 +252,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn jumlah;
         private System.Windows.Forms.DataGridViewTextBoxColumn status;
         private System.Windows.Forms.TextBox txtdetail;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label labelrusak;
     }
 }
