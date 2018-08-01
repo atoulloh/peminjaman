@@ -148,7 +148,7 @@ namespace peminjaman.Service
 
         public void SimpanPinjaman()
         {
-            query = "insert into pinjaman (id_peminjaman,id_pinjaman,nama_alat,jumlah_tot) values ('" + IdPeminjaman + "','" + IdPinjaman + "','" + Nama_Alat + "','" + Jumlah_Tot + "')";
+            query = "insert into pinjaman (id_peminjaman,id_pinjaman,nama_alat,jumlah_tot,letak) values ('" + IdPeminjaman + "','" + IdPinjaman + "','" + Nama_Alat + "','" + Jumlah_Tot +"','"  +Letak+ "')";
             if (!(dbConn.ExecNonQuery(query) > 0))
             {
                 throw new Exception("Gagal Menyimpan");

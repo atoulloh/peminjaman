@@ -36,13 +36,11 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.TxtKode = new System.Windows.Forms.TextBox();
             this.TxtNama_alat = new System.Windows.Forms.TextBox();
             this.TxtJenis_Alat = new System.Windows.Forms.TextBox();
             this.TxtLetak = new System.Windows.Forms.TextBox();
             this.TxtHarga = new System.Windows.Forms.TextBox();
-            this.TxtKondisi = new System.Windows.Forms.TextBox();
             this.BtnSimpan = new System.Windows.Forms.Button();
             this.BtnBack = new System.Windows.Forms.Button();
             this.TxtTahunPembelian = new System.Windows.Forms.TextBox();
@@ -121,17 +119,6 @@
             this.label7.TabIndex = 6;
             this.label7.Text = "Tahun Pembelian";
             // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(30, 295);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(57, 18);
-            this.label8.TabIndex = 7;
-            this.label8.Text = "Kondisi";
-            this.label8.Click += new System.EventHandler(this.label8_Click);
-            // 
             // TxtKode
             // 
             this.TxtKode.Location = new System.Drawing.Point(164, 48);
@@ -167,19 +154,12 @@
             this.TxtHarga.Size = new System.Drawing.Size(153, 20);
             this.TxtHarga.TabIndex = 12;
             // 
-            // TxtKondisi
-            // 
-            this.TxtKondisi.Location = new System.Drawing.Point(164, 288);
-            this.TxtKondisi.Name = "TxtKondisi";
-            this.TxtKondisi.Size = new System.Drawing.Size(153, 20);
-            this.TxtKondisi.TabIndex = 14;
-            // 
             // BtnSimpan
             // 
             this.BtnSimpan.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.BtnSimpan.Image = ((System.Drawing.Image)(resources.GetObject("BtnSimpan.Image")));
             this.BtnSimpan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnSimpan.Location = new System.Drawing.Point(164, 332);
+            this.BtnSimpan.Location = new System.Drawing.Point(131, 310);
             this.BtnSimpan.Name = "BtnSimpan";
             this.BtnSimpan.Size = new System.Drawing.Size(90, 40);
             this.BtnSimpan.TabIndex = 15;
@@ -233,13 +213,11 @@
             this.Controls.Add(this.TxtTahunPembelian);
             this.Controls.Add(this.BtnBack);
             this.Controls.Add(this.BtnSimpan);
-            this.Controls.Add(this.TxtKondisi);
             this.Controls.Add(this.TxtHarga);
             this.Controls.Add(this.TxtLetak);
             this.Controls.Add(this.TxtJenis_Alat);
             this.Controls.Add(this.TxtNama_alat);
             this.Controls.Add(this.TxtKode);
-            this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -264,13 +242,11 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox TxtKode;
         private System.Windows.Forms.TextBox TxtNama_alat;
         private System.Windows.Forms.TextBox TxtJenis_Alat;
         private System.Windows.Forms.TextBox TxtLetak;
         private System.Windows.Forms.TextBox TxtHarga;
-        private System.Windows.Forms.TextBox TxtKondisi;
         private System.Windows.Forms.Button BtnSimpan;
         private System.Windows.Forms.Button BtnBack;
         private System.Windows.Forms.TextBox TxtTahunPembelian;

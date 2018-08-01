@@ -63,11 +63,11 @@ namespace peminjaman.View
         {
             AlatServ asv = new AlatServ();
             dgvAlat.DataSource = asv.TampilSemua();
-            //int numRows = dgvAlat.Rows.Count;
+            int numRows = dgvAlat.Rows.Count;
             int sum = 0;
             for (int i = 0; i < dgvAlat.Rows.Count; ++i)
             {
-                sum += Convert.ToInt32(dgvAlat.Rows[i].Cells[4].Value);
+                sum += Convert.ToInt32(dgvAlat.Rows[i].Cells[5].Value);
             }
             labeljumlaha.Text = " Jumlah Alat : " + sum.ToString();
             //labeljumlaha.Text = " Jumlah Alat : "+numRows.ToString();
@@ -242,19 +242,7 @@ namespace peminjaman.View
         //ikut tambah alat
         private void dgvAlat_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0)
-            {
-                DataGridViewRow row = this.dgvAlat.Rows[e.RowIndex];
-                TxtKode.Text = row.Cells[0].Value.ToString();
-                textnama.Text = row.Cells[1].Value.ToString();
-                textjenis.Text = row.Cells[2].Value.ToString();
-                textletak.Text = row.Cells[3].Value.ToString();
-                textharga.Text = row.Cells[6].Value.ToString();
-                texttahun.Text = row.Cells[7].Value.ToString();
-                //textjumlah.Text = row.Cells[6].Value.ToString();
-                textBox7.Text = row.Cells[8].Value.ToString();
-            }
-
+           
         }
 
         private void BtnBack_Click(object sender, EventArgs e)
@@ -272,8 +260,8 @@ namespace peminjaman.View
                (textletak.Text) || string.IsNullOrEmpty
                (textharga.Text) || string.IsNullOrEmpty
                (texttahun.Text) || string.IsNullOrEmpty
-               (textjumlah.Text) || string.IsNullOrEmpty
-               (textBox7.Text))
+               (textjumlah.Text))
+              // (textBox7.Text))
             {
                 MessageBox.Show("mohon data di isi semua \nTidak boleh ada yang kosong ",
                     "Infromation", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -309,6 +297,22 @@ namespace peminjaman.View
         {
             grpAlat.Visible = true;
             grpbuton.Visible = false;
+        }
+
+        private void dgvAlat_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = this.dgvAlat.Rows[e.RowIndex];
+                TxtKode.Text = row.Cells[0].Value.ToString();
+                textnama.Text = row.Cells[1].Value.ToString();
+                textjenis.Text = row.Cells[2].Value.ToString();
+                textletak.Text = row.Cells[3].Value.ToString();
+                textharga.Text = row.Cells[6].Value.ToString();
+                texttahun.Text = row.Cells[7].Value.ToString();
+                //textjumlah.Text = row.Cells[6].Value.ToString();
+                //textBox7.Text = row.Cells[8].Value.ToString();
+            }
         }
 
        // private void Alat_Load

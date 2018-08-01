@@ -124,8 +124,6 @@
             this.id_anggota = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nama_anggota = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DgvAl = new System.Windows.Forms.DataGridView();
-            this.Nama_alat1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Jumlah_tot = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GrpAlat = new System.Windows.Forms.GroupBox();
             this.NumJumlahPinjam = new System.Windows.Forms.NumericUpDown();
             this.BtnXTbh = new System.Windows.Forms.Button();
@@ -133,8 +131,6 @@
             this.TxtCariAl = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.dgvNamaAlat = new System.Windows.Forms.DataGridView();
-            this.alat = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.jumlah = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label24 = new System.Windows.Forms.Label();
             this.CariAlat = new System.Windows.Forms.Button();
             this.txtjumlah = new System.Windows.Forms.TextBox();
@@ -153,11 +149,6 @@
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.panel9 = new System.Windows.Forms.Panel();
             this.DgvKNamaAlat = new System.Windows.Forms.DataGridView();
-            this.IDPinjaman = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.K_Nama_Alat = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.status_detail = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.jumlah_alat = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.alat_hilang = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label28 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -194,6 +185,19 @@
             this.timerjalan = new System.Windows.Forms.Timer(this.components);
             this.panel14 = new System.Windows.Forms.Panel();
             this.timerhome = new System.Windows.Forms.Timer(this.components);
+            this.alat = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Letak_1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.jumlah = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Txtletak = new System.Windows.Forms.TextBox();
+            this.Nama_alat1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Letak_2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Jumlah_tot = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IDPinjaman = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.K_Nama_Alat = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Letak_3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.status_detail = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.jumlah_alat = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.alat_hilang = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKembali)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -1495,6 +1499,7 @@
             this.DgvAl.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DgvAl.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Nama_alat1,
+            this.Letak_2,
             this.Jumlah_tot});
             this.DgvAl.Location = new System.Drawing.Point(219, 257);
             this.DgvAl.Name = "DgvAl";
@@ -1505,24 +1510,10 @@
             this.DgvAl.CellMouseDown += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DgvAl_CellMouseDown);
             this.DgvAl.DoubleClick += new System.EventHandler(this.DgvAl_DoubleClick);
             // 
-            // Nama_alat1
-            // 
-            this.Nama_alat1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Nama_alat1.DataPropertyName = "nama_alat";
-            this.Nama_alat1.HeaderText = "Nama Alat";
-            this.Nama_alat1.Name = "Nama_alat1";
-            this.Nama_alat1.ReadOnly = true;
-            // 
-            // Jumlah_tot
-            // 
-            this.Jumlah_tot.DataPropertyName = "jumlah_tot";
-            this.Jumlah_tot.HeaderText = "Jumlah Alat";
-            this.Jumlah_tot.Name = "Jumlah_tot";
-            this.Jumlah_tot.ReadOnly = true;
-            // 
             // GrpAlat
             // 
             this.GrpAlat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.GrpAlat.Controls.Add(this.Txtletak);
             this.GrpAlat.Controls.Add(this.NumJumlahPinjam);
             this.GrpAlat.Controls.Add(this.BtnXTbh);
             this.GrpAlat.Controls.Add(this.btnOk);
@@ -1531,21 +1522,21 @@
             this.GrpAlat.Controls.Add(this.dgvNamaAlat);
             this.GrpAlat.Location = new System.Drawing.Point(627, 259);
             this.GrpAlat.Name = "GrpAlat";
-            this.GrpAlat.Size = new System.Drawing.Size(321, 223);
+            this.GrpAlat.Size = new System.Drawing.Size(357, 223);
             this.GrpAlat.TabIndex = 68;
             this.GrpAlat.TabStop = false;
             // 
             // NumJumlahPinjam
             // 
-            this.NumJumlahPinjam.Location = new System.Drawing.Point(120, 37);
+            this.NumJumlahPinjam.Location = new System.Drawing.Point(240, 37);
             this.NumJumlahPinjam.Name = "NumJumlahPinjam";
-            this.NumJumlahPinjam.Size = new System.Drawing.Size(120, 20);
+            this.NumJumlahPinjam.Size = new System.Drawing.Size(39, 20);
             this.NumJumlahPinjam.TabIndex = 6;
             // 
             // BtnXTbh
             // 
             this.BtnXTbh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnXTbh.Location = new System.Drawing.Point(287, 10);
+            this.BtnXTbh.Location = new System.Drawing.Point(323, 10);
             this.BtnXTbh.Name = "BtnXTbh";
             this.BtnXTbh.Size = new System.Drawing.Size(28, 23);
             this.BtnXTbh.TabIndex = 5;
@@ -1555,7 +1546,7 @@
             // 
             // btnOk
             // 
-            this.btnOk.Location = new System.Drawing.Point(246, 34);
+            this.btnOk.Location = new System.Drawing.Point(282, 33);
             this.btnOk.Name = "btnOk";
             this.btnOk.Size = new System.Drawing.Size(45, 23);
             this.btnOk.TabIndex = 4;
@@ -1593,31 +1584,16 @@
             this.dgvNamaAlat.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvNamaAlat.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.alat,
+            this.Letak_1,
             this.jumlah});
             this.dgvNamaAlat.Location = new System.Drawing.Point(14, 58);
             this.dgvNamaAlat.MultiSelect = false;
             this.dgvNamaAlat.Name = "dgvNamaAlat";
             this.dgvNamaAlat.ReadOnly = true;
             this.dgvNamaAlat.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvNamaAlat.Size = new System.Drawing.Size(301, 159);
+            this.dgvNamaAlat.Size = new System.Drawing.Size(337, 159);
             this.dgvNamaAlat.TabIndex = 0;
             this.dgvNamaAlat.Click += new System.EventHandler(this.dgvNamaAlat_Click);
-            // 
-            // alat
-            // 
-            this.alat.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.alat.DataPropertyName = "nama_alat";
-            this.alat.HeaderText = "Nama_alat";
-            this.alat.Name = "alat";
-            this.alat.ReadOnly = true;
-            // 
-            // jumlah
-            // 
-            this.jumlah.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.jumlah.DataPropertyName = "jumlah_tersedia";
-            this.jumlah.HeaderText = "Jumlah";
-            this.jumlah.Name = "jumlah";
-            this.jumlah.ReadOnly = true;
             // 
             // label24
             // 
@@ -1860,6 +1836,7 @@
             this.DgvKNamaAlat.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.IDPinjaman,
             this.K_Nama_Alat,
+            this.Letak_3,
             this.status_detail,
             this.jumlah_alat,
             this.alat_hilang});
@@ -1868,39 +1845,6 @@
             this.DgvKNamaAlat.Size = new System.Drawing.Size(615, 130);
             this.DgvKNamaAlat.TabIndex = 95;
             this.DgvKNamaAlat.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvKNamaAlat_CellDoubleClick);
-            // 
-            // IDPinjaman
-            // 
-            this.IDPinjaman.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.IDPinjaman.DataPropertyName = "id_pinjaman";
-            this.IDPinjaman.HeaderText = "ID Pinjaman";
-            this.IDPinjaman.Name = "IDPinjaman";
-            // 
-            // K_Nama_Alat
-            // 
-            this.K_Nama_Alat.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.K_Nama_Alat.DataPropertyName = "nama_alat";
-            this.K_Nama_Alat.HeaderText = "Nama Alat";
-            this.K_Nama_Alat.Name = "K_Nama_Alat";
-            // 
-            // status_detail
-            // 
-            this.status_detail.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.status_detail.DataPropertyName = "status";
-            this.status_detail.HeaderText = "Status Alat";
-            this.status_detail.Name = "status_detail";
-            // 
-            // jumlah_alat
-            // 
-            this.jumlah_alat.DataPropertyName = "jumlah_tot";
-            this.jumlah_alat.HeaderText = "Jumlah Alat";
-            this.jumlah_alat.Name = "jumlah_alat";
-            // 
-            // alat_hilang
-            // 
-            this.alat_hilang.DataPropertyName = "alat_hilang";
-            this.alat_hilang.HeaderText = "Alat Hilang";
-            this.alat_hilang.Name = "alat_hilang";
             // 
             // label28
             // 
@@ -2078,7 +2022,7 @@
             this.tabPage6.Location = new System.Drawing.Point(4, 22);
             this.tabPage6.Name = "tabPage6";
             this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage6.Size = new System.Drawing.Size(907, 567);
+            this.tabPage6.Size = new System.Drawing.Size(999, 567);
             this.tabPage6.TabIndex = 5;
             this.tabPage6.Text = "tabPage6";
             this.tabPage6.UseVisualStyleBackColor = true;
@@ -2090,7 +2034,7 @@
             this.panel12.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel12.Location = new System.Drawing.Point(3, 3);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(901, 561);
+            this.panel12.Size = new System.Drawing.Size(993, 561);
             this.panel12.TabIndex = 4;
             // 
             // FormHosts
@@ -2101,7 +2045,7 @@
             this.FormHosts.BackColor = System.Drawing.Color.LightBlue;
             this.FormHosts.Location = new System.Drawing.Point(-3, -3);
             this.FormHosts.Name = "FormHosts";
-            this.FormHosts.Size = new System.Drawing.Size(907, 567);
+            this.FormHosts.Size = new System.Drawing.Size(999, 567);
             this.FormHosts.TabIndex = 12;
             // 
             // BtnSegar
@@ -2348,6 +2292,100 @@
             this.panel14.Size = new System.Drawing.Size(540, 33);
             this.panel14.TabIndex = 7;
             // 
+            // alat
+            // 
+            this.alat.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.alat.DataPropertyName = "nama_alat";
+            this.alat.HeaderText = "Nama_alat";
+            this.alat.Name = "alat";
+            this.alat.ReadOnly = true;
+            // 
+            // Letak_1
+            // 
+            this.Letak_1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Letak_1.DataPropertyName = "letak";
+            this.Letak_1.HeaderText = "Letak";
+            this.Letak_1.Name = "Letak_1";
+            this.Letak_1.ReadOnly = true;
+            // 
+            // jumlah
+            // 
+            this.jumlah.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.jumlah.DataPropertyName = "jumlah_tersedia";
+            this.jumlah.HeaderText = "Jumlah";
+            this.jumlah.Name = "jumlah";
+            this.jumlah.ReadOnly = true;
+            // 
+            // Txtletak
+            // 
+            this.Txtletak.Location = new System.Drawing.Point(121, 35);
+            this.Txtletak.Name = "Txtletak";
+            this.Txtletak.Size = new System.Drawing.Size(100, 20);
+            this.Txtletak.TabIndex = 7;
+            // 
+            // Nama_alat1
+            // 
+            this.Nama_alat1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Nama_alat1.DataPropertyName = "nama_alat";
+            this.Nama_alat1.HeaderText = "Nama Alat";
+            this.Nama_alat1.Name = "Nama_alat1";
+            this.Nama_alat1.ReadOnly = true;
+            // 
+            // Letak_2
+            // 
+            this.Letak_2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Letak_2.DataPropertyName = "letak";
+            this.Letak_2.HeaderText = "Letak";
+            this.Letak_2.Name = "Letak_2";
+            this.Letak_2.ReadOnly = true;
+            // 
+            // Jumlah_tot
+            // 
+            this.Jumlah_tot.DataPropertyName = "jumlah_tot";
+            this.Jumlah_tot.HeaderText = "Jumlah Alat";
+            this.Jumlah_tot.Name = "Jumlah_tot";
+            this.Jumlah_tot.ReadOnly = true;
+            // 
+            // IDPinjaman
+            // 
+            this.IDPinjaman.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.IDPinjaman.DataPropertyName = "id_pinjaman";
+            this.IDPinjaman.HeaderText = "ID Pinjaman";
+            this.IDPinjaman.Name = "IDPinjaman";
+            // 
+            // K_Nama_Alat
+            // 
+            this.K_Nama_Alat.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.K_Nama_Alat.DataPropertyName = "nama_alat";
+            this.K_Nama_Alat.HeaderText = "Nama Alat";
+            this.K_Nama_Alat.Name = "K_Nama_Alat";
+            // 
+            // Letak_3
+            // 
+            this.Letak_3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Letak_3.DataPropertyName = "letak";
+            this.Letak_3.HeaderText = "Letak";
+            this.Letak_3.Name = "Letak_3";
+            // 
+            // status_detail
+            // 
+            this.status_detail.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.status_detail.DataPropertyName = "status";
+            this.status_detail.HeaderText = "Status Alat";
+            this.status_detail.Name = "status_detail";
+            // 
+            // jumlah_alat
+            // 
+            this.jumlah_alat.DataPropertyName = "jumlah_tot";
+            this.jumlah_alat.HeaderText = "Jumlah Alat";
+            this.jumlah_alat.Name = "jumlah_alat";
+            // 
+            // alat_hilang
+            // 
+            this.alat_hilang.DataPropertyName = "alat_hilang";
+            this.alat_hilang.HeaderText = "Alat Hilang";
+            this.alat_hilang.Name = "alat_hilang";
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2569,12 +2607,16 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Jmlh;
         private System.Windows.Forms.DataGridViewTextBoxColumn Tanggal_Pinjam;
         private System.Windows.Forms.NumericUpDown NumJumlahPinjam;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nama_alat1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Jumlah_tot;
         private System.Windows.Forms.DataGridViewTextBoxColumn alat;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Letak_1;
         private System.Windows.Forms.DataGridViewTextBoxColumn jumlah;
+        private System.Windows.Forms.TextBox Txtletak;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nama_alat1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Letak_2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Jumlah_tot;
         private System.Windows.Forms.DataGridViewTextBoxColumn IDPinjaman;
         private System.Windows.Forms.DataGridViewTextBoxColumn K_Nama_Alat;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Letak_3;
         private System.Windows.Forms.DataGridViewTextBoxColumn status_detail;
         private System.Windows.Forms.DataGridViewTextBoxColumn jumlah_alat;
         private System.Windows.Forms.DataGridViewTextBoxColumn alat_hilang;

@@ -17,6 +17,7 @@ namespace peminjaman.Model
         private int _jumlah_tot;
         private String _jam_pinjam;
         private String _tanggal_pinjam;
+        private String _letak;
 
         public PinjamAlatCls()
         {
@@ -30,6 +31,7 @@ namespace peminjaman.Model
             _jumlah = 0;
             _jam_pinjam = "";
             _tanggal_pinjam = "";
+            _letak = "";
         }
 
         public String IdPeminjaman
@@ -89,6 +91,12 @@ namespace peminjaman.Model
         {
             set { _tanggal_pinjam = value; }
             get { return _tanggal_pinjam; }
+        }
+
+        public String Letak
+        {
+            set { _letak = value; }
+            get { return _letak; }
         }
 
     }

@@ -143,8 +143,8 @@ namespace peminjaman.Service
                                         " OR jenis_alat like '%" + a + "%'" +
                                         " OR letak like '%" + a + "%'" +
                                         " OR harga_pembelian like '%" + a + "%'" +
-                                        " OR tahun_pembelian like '%" + a + "%'" +
-                                        " OR kondisi like '%" + a + "%'";
+                                        " OR tahun_pembelian like '%" + a + "%'";
+                                       // " OR kondisi like '%" + a + "%'";
                                         //" OR status like '%" + a + "%'";
             dtTbl = dbConn.ExecQuery(query); 
 

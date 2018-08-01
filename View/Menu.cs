@@ -108,9 +108,11 @@ namespace peminjaman.View
                         {
                            
                             string nama_alat = row.Cells[0].Value.ToString();
-                            string jumlah_tot = row.Cells[1].Value.ToString();
+                            string letak = row.Cells[1].Value.ToString();
+                            string jumlah_tot = row.Cells[2].Value.ToString();
                             pb.IdPinjaman = p.PinjamOtomatis();
                             pb.Nama_Alat = nama_alat;
+                            pb.Letak = letak;
                             pb.Jumlah_Tot = int.Parse(jumlah_tot);
                             pb.SimpanPinjaman();
                             pb.perbaruijumlah();
@@ -384,9 +386,10 @@ namespace peminjaman.View
             txtjumlah.Text = numRows.ToString();
             
            // TxtP.Text = pb.PinjamOtomatis();
-            if (!string.IsNullOrEmpty(TxtCariAl.Text.Trim()) && NumJumlahPinjam.Value > 0)
+            if (!string.IsNullOrEmpty(TxtCariAl.Text.Trim()) ||
+                string.IsNullOrEmpty(Txtletak.Text.Trim()) && NumJumlahPinjam.Value > 0)
             {
-                DgvAl.Rows.Add(TxtCariAl.Text, NumJumlahPinjam.Value);
+                DgvAl.Rows.Add(TxtCariAl.Text,Txtletak.Text, NumJumlahPinjam.Value);
                 GrpAlat.Visible = false;
                 TxtCariAl.Clear();
                 NumJumlahPinjam.Value = 0;
@@ -403,10 +406,12 @@ namespace peminjaman.View
             if (dgvNamaAlat.SelectedRows.Count > 0)
             {
                 string nama = dgvNamaAlat.SelectedRows[0].Cells[0].Value.ToString();
-                string max = dgvNamaAlat.SelectedRows[0].Cells[1].Value.ToString();
+                string letak = dgvNamaAlat.SelectedRows[0].Cells[1].Value.ToString();
+                string max = dgvNamaAlat.SelectedRows[0].Cells[2].Value.ToString();
               //  string id = dgvNamaAlat.SelectedRows[0].Cells[2].Value.ToString();
                 //TxtP.Text = id;
                 TxtCariAl.Text = nama;
+                Txtletak.Text = letak;
                 NumJumlahPinjam.Maximum = decimal.Parse(max);
                 dgvNamaAlat.ClearSelection();
                 //MessageBox.Show(nama);
@@ -592,11 +597,13 @@ namespace peminjaman.View
                         {
                             string id_pinjam = row.Cells[0].Value.ToString();
                             string nama_alat = row.Cells[1].Value.ToString();
-                            string st = row.Cells[2].Value.ToString();
-                            int jumlah_tot = int.Parse(row.Cells[3].Value.ToString());
-                            int alat_hilang = int.Parse(row.Cells[4].Value.ToString());
+                            string letak = row.Cells[2].Value.ToString();
+                            string st = row.Cells[3].Value.ToString();
+                            int jumlah_tot = int.Parse(row.Cells[4].Value.ToString());
+                            int alat_hilang = int.Parse(row.Cells[5].Value.ToString());
                             km.IdPinjaman = id_pinjam;
                             km.NamaAlat = nama_alat;
+                            km.Letak = letak;
                             km.Status = st;
                             km.Status = "Sudah";
 
@@ -626,13 +633,10 @@ namespace peminjaman.View
                             MessageBox.Show("Data Berhasil di Simpan. ",
                                 " Informasi", MessageBoxButtons.OK,
                                 MessageBoxIcon.Information);
-                           // dgvKembali.Update();
-                            //dgvKembali.Refresh();
-                            //BersihKembali();
                         }
                         else
                         {
-                            MessageBox.Show("Data gagal di simpan. ",
+                            MessageBox.Show(" gagal di simpan. ",
                            "informasi", MessageBoxButtons.OK,
                            MessageBoxIcon.Information);
                         }
@@ -664,7 +668,7 @@ namespace peminjaman.View
             int sum = 0;
             for (int i = 0; i < DgvAl.Rows.Count; ++i)
             {
-                sum += Convert.ToInt32(DgvAl.Rows[i].Cells[1].Value);
+                sum += Convert.ToInt32(DgvAl.Rows[i].Cells[2].Value);
             }
 
             txtjumlah.Text = sum.ToString();
@@ -953,7 +957,7 @@ namespace peminjaman.View
             int sum = 0;
              for (int i = 0; i < DgvKNamaAlat.Rows.Count; ++i)
             {
-                sum += Convert.ToInt32(DgvKNamaAlat.Rows[i].Cells[3].Value);
+                sum += Convert.ToInt32(DgvKNamaAlat.Rows[i].Cells[4].Value);
             }
 
             TxtJumlahKembali.Text = sum.ToString();

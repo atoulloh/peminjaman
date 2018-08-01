@@ -47,11 +47,12 @@
             this.button1 = new System.Windows.Forms.Button();
             this.textkembali = new System.Windows.Forms.TextBox();
             this.dgvdetailkembali = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
             this.id_peminjaman = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.id_peminjam = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nama_alat = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.letak = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvKembali)).BeginInit();
             this.grpdetailkembali.SuspendLayout();
@@ -62,11 +63,11 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label2.Font = new System.Drawing.Font("Modern No. 20", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(6, 9);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(376, 34);
+            this.label2.Size = new System.Drawing.Size(358, 37);
             this.label2.TabIndex = 59;
             this.label2.Text = "DATA KEMBALI ALAT";
             // 
@@ -113,11 +114,11 @@
             // labeljumlah
             // 
             this.labeljumlah.AutoSize = true;
-            this.labeljumlah.Font = new System.Drawing.Font("Modern No. 20", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labeljumlah.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labeljumlah.ForeColor = System.Drawing.Color.Black;
             this.labeljumlah.Location = new System.Drawing.Point(9, 99);
             this.labeljumlah.Name = "labeljumlah";
-            this.labeljumlah.Size = new System.Drawing.Size(83, 15);
+            this.labeljumlah.Size = new System.Drawing.Size(89, 16);
             this.labeljumlah.TabIndex = 71;
             this.labeljumlah.Text = "Jumlah Data :";
             // 
@@ -236,9 +237,9 @@
             this.grpdetailkembali.Controls.Add(this.textkembali);
             this.grpdetailkembali.Controls.Add(this.dgvdetailkembali);
             this.grpdetailkembali.Controls.Add(this.label1);
-            this.grpdetailkembali.Location = new System.Drawing.Point(119, 99);
+            this.grpdetailkembali.Location = new System.Drawing.Point(6, 99);
             this.grpdetailkembali.Name = "grpdetailkembali";
-            this.grpdetailkembali.Size = new System.Drawing.Size(461, 243);
+            this.grpdetailkembali.Size = new System.Drawing.Size(574, 243);
             this.grpdetailkembali.TabIndex = 77;
             this.grpdetailkembali.TabStop = false;
             // 
@@ -254,7 +255,7 @@
             // 
             // textkembali
             // 
-            this.textkembali.Location = new System.Drawing.Point(338, 35);
+            this.textkembali.Location = new System.Drawing.Point(461, 35);
             this.textkembali.Name = "textkembali";
             this.textkembali.Size = new System.Drawing.Size(100, 20);
             this.textkembali.TabIndex = 2;
@@ -272,11 +273,22 @@
             this.id_peminjaman,
             this.id_peminjam,
             this.nama_alat,
+            this.letak,
             this.Status});
             this.dgvdetailkembali.Location = new System.Drawing.Point(15, 61);
             this.dgvdetailkembali.Name = "dgvdetailkembali";
-            this.dgvdetailkembali.Size = new System.Drawing.Size(433, 168);
+            this.dgvdetailkembali.Size = new System.Drawing.Size(546, 168);
             this.dgvdetailkembali.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(173, 16);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(110, 20);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Detail Kembali";
             // 
             // id_peminjaman
             // 
@@ -299,21 +311,17 @@
             this.nama_alat.HeaderText = "Nama Alat";
             this.nama_alat.Name = "nama_alat";
             // 
+            // letak
+            // 
+            this.letak.DataPropertyName = "letak";
+            this.letak.HeaderText = "Letak";
+            this.letak.Name = "letak";
+            // 
             // Status
             // 
             this.Status.DataPropertyName = "status";
             this.Status.HeaderText = "Status Alat";
             this.Status.Name = "Status";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(173, 16);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(108, 18);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Detail Kembali";
             // 
             // Kembali
             // 
@@ -366,6 +374,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn id_peminjaman;
         private System.Windows.Forms.DataGridViewTextBoxColumn id_peminjam;
         private System.Windows.Forms.DataGridViewTextBoxColumn nama_alat;
+        private System.Windows.Forms.DataGridViewTextBoxColumn letak;
         private System.Windows.Forms.DataGridViewTextBoxColumn Status;
     }
 }

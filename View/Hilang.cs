@@ -34,7 +34,7 @@ namespace peminjaman.View
             int sum = 0;
             for (int i = 0; i < dgvhilang.Rows.Count; ++i)
             {
-                sum += Convert.ToInt32(dgvhilang.Rows[i].Cells[6].Value);
+                sum += Convert.ToInt32(dgvhilang.Rows[i].Cells[7].Value);
             }
             labelhilang.Text = " Jumlah Alat Hilang : " + sum.ToString();
 

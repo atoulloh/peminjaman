@@ -17,6 +17,7 @@ namespace peminjaman.Model
         private int _jumlah_tot;
         private String _tanggal_pinjam;
         private String _tanggal_kembali;
+        private String _letak;
 
         public KembaliCls()
         {
@@ -30,6 +31,7 @@ namespace peminjaman.Model
             _jumlah_tot = 0;
             _tanggal_pinjam = "";
             _tanggal_kembali = "";
+            _letak = "";
         }
 
         public String IdPeminjaman
@@ -98,5 +100,10 @@ namespace peminjaman.Model
 
         public int HilangAlat { get; set; }
 
+        public String Letak
+        {
+            set { _letak = value; }
+            get { return _letak; }
+        }
     }
 }

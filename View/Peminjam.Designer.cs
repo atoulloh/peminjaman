@@ -42,9 +42,6 @@
             this.grpdetail = new System.Windows.Forms.GroupBox();
             this.button1 = new System.Windows.Forms.Button();
             this.dgvdetail = new System.Windows.Forms.DataGridView();
-            this.ID_Pinjaman = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nama_Alat = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtdetail = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvPeminjam = new System.Windows.Forms.DataGridView();
@@ -52,6 +49,10 @@
             this.Id_anggota = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nama = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Tanggal_pinjam = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ID_Pinjaman = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nama_Alat = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.letak = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.grpdetail.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvdetail)).BeginInit();
@@ -62,22 +63,22 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label2.Font = new System.Drawing.Font("Modern No. 20", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(12, 9);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(293, 34);
+            this.label2.Size = new System.Drawing.Size(290, 37);
             this.label2.TabIndex = 58;
             this.label2.Text = "DATA PEMINJAM";
             // 
             // labeljumlah
             // 
             this.labeljumlah.AutoSize = true;
-            this.labeljumlah.Font = new System.Drawing.Font("Modern No. 20", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labeljumlah.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labeljumlah.ForeColor = System.Drawing.Color.Black;
             this.labeljumlah.Location = new System.Drawing.Point(12, 91);
             this.labeljumlah.Name = "labeljumlah";
-            this.labeljumlah.Size = new System.Drawing.Size(112, 15);
+            this.labeljumlah.Size = new System.Drawing.Size(120, 16);
             this.labeljumlah.TabIndex = 63;
             this.labeljumlah.Text = "Jumlah Peminjam :";
             // 
@@ -227,36 +228,13 @@
             this.dgvdetail.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID_Pinjaman,
             this.Nama_Alat,
+            this.letak,
             this.Status});
             this.dgvdetail.Location = new System.Drawing.Point(6, 55);
             this.dgvdetail.Name = "dgvdetail";
             this.dgvdetail.ReadOnly = true;
             this.dgvdetail.Size = new System.Drawing.Size(423, 144);
             this.dgvdetail.TabIndex = 2;
-            // 
-            // ID_Pinjaman
-            // 
-            this.ID_Pinjaman.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ID_Pinjaman.DataPropertyName = "id_pinjaman";
-            this.ID_Pinjaman.HeaderText = "ID Pinjaman";
-            this.ID_Pinjaman.Name = "ID_Pinjaman";
-            this.ID_Pinjaman.ReadOnly = true;
-            // 
-            // Nama_Alat
-            // 
-            this.Nama_Alat.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Nama_Alat.DataPropertyName = "nama_alat";
-            this.Nama_Alat.HeaderText = "Nama Alat";
-            this.Nama_Alat.Name = "Nama_Alat";
-            this.Nama_Alat.ReadOnly = true;
-            // 
-            // Status
-            // 
-            this.Status.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Status.DataPropertyName = "status";
-            this.Status.HeaderText = "Status";
-            this.Status.Name = "Status";
-            this.Status.ReadOnly = true;
             // 
             // txtdetail
             // 
@@ -343,6 +321,38 @@
             this.Tanggal_pinjam.Name = "Tanggal_pinjam";
             this.Tanggal_pinjam.ReadOnly = true;
             // 
+            // ID_Pinjaman
+            // 
+            this.ID_Pinjaman.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ID_Pinjaman.DataPropertyName = "id_pinjaman";
+            this.ID_Pinjaman.HeaderText = "ID Pinjaman";
+            this.ID_Pinjaman.Name = "ID_Pinjaman";
+            this.ID_Pinjaman.ReadOnly = true;
+            // 
+            // Nama_Alat
+            // 
+            this.Nama_Alat.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Nama_Alat.DataPropertyName = "nama_alat";
+            this.Nama_Alat.HeaderText = "Nama Alat";
+            this.Nama_Alat.Name = "Nama_Alat";
+            this.Nama_Alat.ReadOnly = true;
+            // 
+            // letak
+            // 
+            this.letak.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.letak.DataPropertyName = "letak";
+            this.letak.HeaderText = "Letak";
+            this.letak.Name = "letak";
+            this.letak.ReadOnly = true;
+            // 
+            // Status
+            // 
+            this.Status.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Status.DataPropertyName = "status";
+            this.Status.HeaderText = "Status";
+            this.Status.Name = "Status";
+            this.Status.ReadOnly = true;
+            // 
             // Peminjam
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -394,6 +404,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Tanggal_pinjam;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID_Pinjaman;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nama_Alat;
+        private System.Windows.Forms.DataGridViewTextBoxColumn letak;
         private System.Windows.Forms.DataGridViewTextBoxColumn Status;
     }
 }

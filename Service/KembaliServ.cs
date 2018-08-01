@@ -47,7 +47,7 @@ namespace peminjaman.Service
 
         public void Simpan_Hilang()
         {
-            query = "INSERT INTO alat_hilang (id_peminjaman,id_anggota,nama,jumlah,id_pinjaman,nama_alat) VALUES ('" + IdPeminjaman + "','" + IdAnggota + "','" + Nama + "','" + Jumlah +"','" + IdPinjaman + "',' " +NamaAlat+ "')";
+            query = "INSERT INTO alat_hilang (id_peminjaman,id_anggota,nama,jumlah,id_pinjaman,nama_alat,letak) VALUES ('" + IdPeminjaman + "','" + IdAnggota + "','" + Nama + "','" + Jumlah +"','" + IdPinjaman + "',' " +NamaAlat+"','" +Letak+ "')";
             if (!(dbConn.ExecNonQuery(query) > 0))
             {
                 throw new Exception("Gagal Menyimpan");

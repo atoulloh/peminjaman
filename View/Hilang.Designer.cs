@@ -31,14 +31,15 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Hilang));
             this.label1 = new System.Windows.Forms.Label();
             this.dgvhilang = new System.Windows.Forms.DataGridView();
+            this.BtnCetak = new System.Windows.Forms.Button();
+            this.BtnRefresh = new System.Windows.Forms.Button();
+            this.labelhilang = new System.Windows.Forms.Label();
             this.id_peminjaman = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.id_anggota = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nama = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nama_alat = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.letak = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.jumlah = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BtnCetak = new System.Windows.Forms.Button();
-            this.BtnRefresh = new System.Windows.Forms.Button();
-            this.labelhilang = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvhilang)).BeginInit();
             this.SuspendLayout();
             // 
@@ -66,52 +67,13 @@
             this.id_anggota,
             this.nama,
             this.Nama_alat,
+            this.letak,
             this.jumlah});
             this.dgvhilang.Location = new System.Drawing.Point(12, 36);
             this.dgvhilang.Name = "dgvhilang";
             this.dgvhilang.ReadOnly = true;
             this.dgvhilang.Size = new System.Drawing.Size(872, 310);
             this.dgvhilang.TabIndex = 102;
-            // 
-            // id_peminjaman
-            // 
-            this.id_peminjaman.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.id_peminjaman.DataPropertyName = "id_peminjaman";
-            this.id_peminjaman.HeaderText = "ID_Peminjaman";
-            this.id_peminjaman.Name = "id_peminjaman";
-            this.id_peminjaman.ReadOnly = true;
-            // 
-            // id_anggota
-            // 
-            this.id_anggota.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.id_anggota.DataPropertyName = "id_anggota";
-            this.id_anggota.HeaderText = "Id Anggota";
-            this.id_anggota.Name = "id_anggota";
-            this.id_anggota.ReadOnly = true;
-            // 
-            // nama
-            // 
-            this.nama.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.nama.DataPropertyName = "nama";
-            this.nama.HeaderText = "Nama Anggota";
-            this.nama.Name = "nama";
-            this.nama.ReadOnly = true;
-            // 
-            // Nama_alat
-            // 
-            this.Nama_alat.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Nama_alat.DataPropertyName = "nama_alat";
-            this.Nama_alat.HeaderText = "Nama Alat";
-            this.Nama_alat.Name = "Nama_alat";
-            this.Nama_alat.ReadOnly = true;
-            // 
-            // jumlah
-            // 
-            this.jumlah.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.jumlah.DataPropertyName = "jumlah";
-            this.jumlah.HeaderText = "Jumlah";
-            this.jumlah.Name = "jumlah";
-            this.jumlah.ReadOnly = true;
             // 
             // BtnCetak
             // 
@@ -163,6 +125,54 @@
             this.labelhilang.TabIndex = 105;
             this.labelhilang.Text = "Jumlah Alat Hilang";
             // 
+            // id_peminjaman
+            // 
+            this.id_peminjaman.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.id_peminjaman.DataPropertyName = "id_peminjaman";
+            this.id_peminjaman.HeaderText = "ID_Peminjaman";
+            this.id_peminjaman.Name = "id_peminjaman";
+            this.id_peminjaman.ReadOnly = true;
+            // 
+            // id_anggota
+            // 
+            this.id_anggota.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.id_anggota.DataPropertyName = "id_anggota";
+            this.id_anggota.HeaderText = "Id Anggota";
+            this.id_anggota.Name = "id_anggota";
+            this.id_anggota.ReadOnly = true;
+            // 
+            // nama
+            // 
+            this.nama.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.nama.DataPropertyName = "nama";
+            this.nama.HeaderText = "Nama Anggota";
+            this.nama.Name = "nama";
+            this.nama.ReadOnly = true;
+            // 
+            // Nama_alat
+            // 
+            this.Nama_alat.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Nama_alat.DataPropertyName = "nama_alat";
+            this.Nama_alat.HeaderText = "Nama Alat";
+            this.Nama_alat.Name = "Nama_alat";
+            this.Nama_alat.ReadOnly = true;
+            // 
+            // letak
+            // 
+            this.letak.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.letak.DataPropertyName = "Letak";
+            this.letak.HeaderText = "Letak";
+            this.letak.Name = "letak";
+            this.letak.ReadOnly = true;
+            // 
+            // jumlah
+            // 
+            this.jumlah.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.jumlah.DataPropertyName = "jumlah";
+            this.jumlah.HeaderText = "Jumlah";
+            this.jumlah.Name = "jumlah";
+            this.jumlah.ReadOnly = true;
+            // 
             // Hilang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -187,13 +197,14 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dgvhilang;
+        private System.Windows.Forms.Button BtnCetak;
+        private System.Windows.Forms.Button BtnRefresh;
+        private System.Windows.Forms.Label labelhilang;
         private System.Windows.Forms.DataGridViewTextBoxColumn id_peminjaman;
         private System.Windows.Forms.DataGridViewTextBoxColumn id_anggota;
         private System.Windows.Forms.DataGridViewTextBoxColumn nama;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nama_alat;
+        private System.Windows.Forms.DataGridViewTextBoxColumn letak;
         private System.Windows.Forms.DataGridViewTextBoxColumn jumlah;
-        private System.Windows.Forms.Button BtnCetak;
-        private System.Windows.Forms.Button BtnRefresh;
-        private System.Windows.Forms.Label labelhilang;
     }
 }

@@ -177,53 +177,24 @@
         MOf0wrJa2bsAAAAASUVORK5CYII=
 </value>
   </data>
-  <metadata name="Nama_alat1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="IDPinjaman.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="Jumlah_tot.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="K_Nama_Alat.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="alat.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="Letak_3.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="jumlah.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="status_detail.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="BtnPinjam.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
-        4wAAAOMBD+bfpwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAMpSURBVFhH7ZZL
-        TFNREIb7fqXG0saUQEurYK0JJbJxJbgUjeIzJm4UoShKDFYiSkzUGESgooICDaDI2wfGxMSdSzfqwoXG
-        je6MiUtjeBQoHGeanqaPvwIuXHWSL3D/O+efuffOPbcKIcSKUJiJUeI1oUI5DMUxnU73nf7WoPMIKCZC
-        4VCpVJ/subm/6H8WXCiPUavVo5s9HqHX6xc0Ot0ryjWjvESgKKHQUvGPPl/J777QAAuMG+Uy3EDl/gOi
-        636vyM93zGk0Gm5CiXIlUJRQ3MzJsc48HhkXDx8Nr7qByadToqevX5hMpnm6gGaUK4EiQ2FXKpWRq9du
-        RA3X2gBzqfmKoAbmaY0V5TNQZCguOwsKZqTZvzTA5OXlz9KaJpTPQJGhQfpW4z8VN+LHEGvAi/IZGrwX
-        Bw8dTmqguqaWh/IrymewSK+aUqVavNUeTDKzWm0RGqzrGdaspzsQPlt/LmlNS2sbP4YFOg+HMU2IigqF
-        kxCDdNsTzapOVgutVjtNhgE6v4EwxCjTavVvbDbb/NDwWNKagcEhNmQcsBYUaQB5UW+oP8ls4slzcfxE
-        lTCbzZGYaRQa1uViX8lyV3dPUj7DHrG8QlgLiQxd0c9A48U0QwnvC90PeqMMj06knZc0nL8gG9CjOmmC
-        hJ711N59lcvIdC3sqtjNQ/gD1WCgyFAEXG73NDJdCw6nkwewBdVgoMhQbKSpnqs7Uw+NVwOv5c2MvIpQ
-        DQaKEoqj9CgWg513YYG/0drWIegCuHgr8pZAMREyCdntuWHeiFAhBL96FoslTFf/jhowIl8JFBOh0NM3
-        /vOOsvIFVCyV8clnwuvdGqb94j2tXYc8E4FiKhRFdCdmU3c5REXFnkjsR4kFeaUCRQRF00pvRbDzHg/d
-        EuUWIw8EFBEU22kLXhoZm4TFGX/taWEwGL6g9ZmAIoLCRIiO4J14wVD/YHR7lsdl5TsXqclutD4TUERQ
-        8EdHtLXfjhf0eLaIhkBj/HhbaWmYcuDXMhNQRKAGXC53dLPJNpBtINtAtoH/1YDaaDR+oB8aTVSsjtlU
-        WPi22u/vkMc+n+8l5R1B6zFC8QeEIjdWGR+/aAAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="BtnBatal.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAI
-        2AAACNgBYBXYLgAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAHWSURBVFhHzZc9
-        TsNAEIXdwRHgENyBDtkpEY1NgTgD9CBxAIKQQPwcJh0XwFFCAShFekcuk2Xe2Gut15NkTUyW4lOcmdmZ
-        5/XurB0opZz4CMOdURKGwyR6HMbRgBgP496sANdkIx9iECvlkBCNJunp0X4aRw9UICOUIxnGYKyU00Q0
-        gs+zw900CW8oWW4lb0OOHMgl1QCi8f0k2qPpfBMS/g7KhZxSrYaBgg9o0KSRZHMmyG3Xq/3hO/+b4pqJ
-        PRPVBZ5Tp9O+DKphrolKQLng5EEdg1o1Adgu5Nhktbcl11u0EFDscymQGZ0fq6+rC9En8X19yWMknwY1
-        WQC6FhlWNhkkVIuFmr7ei34TxCDWQXCG2gG3Vzmghk48fbkT/QA+V6EAtbHv0dvFAJuqwHNTBGzrBDag
-        2gFd4GCRAwS40HxOv33D1i9tLYoXDCAAJ5nkXEpV8OmWsQW1YEwC+DiVnCvhwjTlPO10LcWspzf7DwK8
-        PwLfi9D3NvTeiFxaMdqqa2ItFO1b8hsUrdj1MHJIWAHBzocRC/B9HLMIny8kwPsrGfD6Uqohhf5eyzU8
-        E10+Dspl37mmYdDgOZULc/ufZibYLmWf2O7HqQ26Frft4uzo6PNcBT89DEUj6vnsWQAAAABJRU5ErkJg
-        gg==
-</value>
-  </data>
+  <metadata name="jumlah_alat.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="alat_hilang.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="BtnAnggota.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
@@ -976,45 +947,56 @@
   <metadata name="Nama_alat1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <metadata name="Letak_2.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <metadata name="Jumlah_tot.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <metadata name="alat.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <metadata name="Letak_1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <metadata name="jumlah.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="IDPinjaman.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="K_Nama_Alat.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="status_detail.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="jumlah_alat.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="alat_hilang.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="IDPinjaman.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="K_Nama_Alat.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="status_detail.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="jumlah_alat.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="alat_hilang.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
+  <data name="BtnPinjam.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
+        4wAAAOMBD+bfpwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAMpSURBVFhH7ZZL
+        TFNREIb7fqXG0saUQEurYK0JJbJxJbgUjeIzJm4UoShKDFYiSkzUGESgooICDaDI2wfGxMSdSzfqwoXG
+        je6MiUtjeBQoHGeanqaPvwIuXHWSL3D/O+efuffOPbcKIcSKUJiJUeI1oUI5DMUxnU73nf7WoPMIKCZC
+        4VCpVJ/subm/6H8WXCiPUavVo5s9HqHX6xc0Ot0ryjWjvESgKKHQUvGPPl/J777QAAuMG+Uy3EDl/gOi
+        636vyM93zGk0Gm5CiXIlUJRQ3MzJsc48HhkXDx8Nr7qByadToqevX5hMpnm6gGaUK4EiQ2FXKpWRq9du
+        RA3X2gBzqfmKoAbmaY0V5TNQZCguOwsKZqTZvzTA5OXlz9KaJpTPQJGhQfpW4z8VN+LHEGvAi/IZGrwX
+        Bw8dTmqguqaWh/IrymewSK+aUqVavNUeTDKzWm0RGqzrGdaspzsQPlt/LmlNS2sbP4YFOg+HMU2IigqF
+        kxCDdNsTzapOVgutVjtNhgE6v4EwxCjTavVvbDbb/NDwWNKagcEhNmQcsBYUaQB5UW+oP8ls4slzcfxE
+        lTCbzZGYaRQa1uViX8lyV3dPUj7DHrG8QlgLiQxd0c9A48U0QwnvC90PeqMMj06knZc0nL8gG9CjOmmC
+        hJ711N59lcvIdC3sqtjNQ/gD1WCgyFAEXG73NDJdCw6nkwewBdVgoMhQbKSpnqs7Uw+NVwOv5c2MvIpQ
+        DQaKEoqj9CgWg513YYG/0drWIegCuHgr8pZAMREyCdntuWHeiFAhBL96FoslTFf/jhowIl8JFBOh0NM3
+        /vOOsvIFVCyV8clnwuvdGqb94j2tXYc8E4FiKhRFdCdmU3c5REXFnkjsR4kFeaUCRQRF00pvRbDzHg/d
+        EuUWIw8EFBEU22kLXhoZm4TFGX/taWEwGL6g9ZmAIoLCRIiO4J14wVD/YHR7lsdl5TsXqclutD4TUERQ
+        8EdHtLXfjhf0eLaIhkBj/HhbaWmYcuDXMhNQRKAGXC53dLPJNpBtINtAtoH/1YDaaDR+oB8aTVSsjtlU
+        WPi22u/vkMc+n+8l5R1B6zFC8QeEIjdWGR+/aAAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="BtnBatal.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAI
+        2AAACNgBYBXYLgAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAHWSURBVFhHzZc9
+        TsNAEIXdwRHgENyBDtkpEY1NgTgD9CBxAIKQQPwcJh0XwFFCAShFekcuk2Xe2Gut15NkTUyW4lOcmdmZ
+        5/XurB0opZz4CMOdURKGwyR6HMbRgBgP496sANdkIx9iECvlkBCNJunp0X4aRw9UICOUIxnGYKyU00Q0
+        gs+zw900CW8oWW4lb0OOHMgl1QCi8f0k2qPpfBMS/g7KhZxSrYaBgg9o0KSRZHMmyG3Xq/3hO/+b4pqJ
+        PRPVBZ5Tp9O+DKphrolKQLng5EEdg1o1Adgu5Nhktbcl11u0EFDscymQGZ0fq6+rC9En8X19yWMknwY1
+        WQC6FhlWNhkkVIuFmr7ei34TxCDWQXCG2gG3Vzmghk48fbkT/QA+V6EAtbHv0dvFAJuqwHNTBGzrBDag
+        2gFd4GCRAwS40HxOv33D1i9tLYoXDCAAJ5nkXEpV8OmWsQW1YEwC+DiVnCvhwjTlPO10LcWspzf7DwK8
+        PwLfi9D3NvTeiFxaMdqqa2ItFO1b8hsUrdj1MHJIWAHBzocRC/B9HLMIny8kwPsrGfD6Uqohhf5eyzU8
+        E10+Dspl37mmYdDgOZULc/ufZibYLmWf2O7HqQ26Frft4uzo6PNcBT89DEUj6vnsWQAAAABJRU5ErkJg
+        gg==
+</value>
+  </data>
   <data name="BtnSimpanKembali.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
@@ -1126,6 +1108,24 @@
   </metadata>
   <metadata name="timerhome.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>366, 23</value>
+  </metadata>
+  <metadata name="alat.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Letak_1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="jumlah.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Nama_alat1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Letak_2.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Jumlah_tot.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
   </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>33</value>
