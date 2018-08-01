@@ -104,6 +104,15 @@ namespace peminjaman.Service
             }
         }
 
+        public void HapusRusak(String kode_alat)
+        {
+            query = " delete from alat_rusak where kode_alat'" + kode_alat + "'";
+            if (!(dbConn.ExecNonQuery(query) > 0))
+            {
+                throw new Exception("Gagal menghapus");
+            }
+        }
+
         public bool isExistAlat(String kode_alat)
         {
             bool cek = false;
@@ -118,6 +127,21 @@ namespace peminjaman.Service
 
             return cek;
         }
+
+        public bool isExistRusak(String nama_alat)
+        {
+            bool cek = false;
+
+            query = "select * from alat_rusak where kode_alat ='" + nama_alat + "'";
+            dtTbl = dbConn.ExecQuery(query);
+
+            if (dtTbl.Rows.Count > 0)
+            {
+                cek = true;
+            }
+            return cek;
+        }
+
 
         public DataTable TampilRusak()
         {

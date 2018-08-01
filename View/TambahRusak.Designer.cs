@@ -163,10 +163,11 @@
             this.label1.TabIndex = 20;
             this.label1.Text = "Tambah Data Alat Rusak";
             // 
-            // TambahHilang
+            // TambahRusak
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.PaleTurquoise;
             this.ClientSize = new System.Drawing.Size(357, 331);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.TxtJumlah);
@@ -181,7 +182,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "TambahHilang";
+            this.Name = "TambahRusak";
             this.Text = "TambahHilang";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -191,17 +192,17 @@
         #endregion
 
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox TxtJumlah;
         private System.Windows.Forms.Button BtnBack;
         private System.Windows.Forms.Button BtnSimpan;
-        private System.Windows.Forms.TextBox TxtLetakRusak;
-        private System.Windows.Forms.TextBox TxtJenis_Alat_Rusak;
-        private System.Windows.Forms.TextBox TxtNama_alat_Rusak;
-        private System.Windows.Forms.TextBox TxtKodeRusak;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        public System.Windows.Forms.TextBox TxtKodeRusak;
+        public System.Windows.Forms.TextBox TxtJumlah;
+        public System.Windows.Forms.TextBox TxtLetakRusak;
+        public System.Windows.Forms.TextBox TxtJenis_Alat_Rusak;
+        public System.Windows.Forms.TextBox TxtNama_alat_Rusak;
     }
 }

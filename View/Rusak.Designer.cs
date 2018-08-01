@@ -49,10 +49,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(295, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(155, 24);
+            this.label1.Size = new System.Drawing.Size(182, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Data Alat Rusak";
             // 
@@ -60,6 +60,10 @@
             // 
             this.dgvalatrusak.AllowUserToAddRows = false;
             this.dgvalatrusak.AllowUserToDeleteRows = false;
+            this.dgvalatrusak.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvalatrusak.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dgvalatrusak.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvalatrusak.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.kode_alat,
@@ -158,6 +162,7 @@
             this.BtnHapus.Text = "Hapus [F8]";
             this.BtnHapus.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.BtnHapus.UseVisualStyleBackColor = false;
+            this.BtnHapus.Click += new System.EventHandler(this.BtnHapus_Click);
             // 
             // BtnTambah
             // 
@@ -209,10 +214,12 @@
             // 
             // labelrusak
             // 
+            this.labelrusak.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.labelrusak.AutoSize = true;
+            this.labelrusak.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelrusak.Location = new System.Drawing.Point(12, 417);
             this.labelrusak.Name = "labelrusak";
-            this.labelrusak.Size = new System.Drawing.Size(95, 13);
+            this.labelrusak.Size = new System.Drawing.Size(148, 18);
             this.labelrusak.TabIndex = 78;
             this.labelrusak.Text = "Jumlah Alat Rusak";
             // 
@@ -220,6 +227,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.SkyBlue;
             this.ClientSize = new System.Drawing.Size(748, 484);
             this.Controls.Add(this.labelrusak);
             this.Controls.Add(this.txtdetail);
@@ -231,6 +239,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Rusak";
             this.Text = "Rusak";
+            this.Load += new System.EventHandler(this.Rusak_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvalatrusak)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

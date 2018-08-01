@@ -39,13 +39,6 @@ namespace peminjaman.View
         void TambahRusak()
         {
             TambahRusak TA = new TambahRusak();
-            TA.ShowDialog();
-            
-        }
-       void EditAlat()
-        {
-            UbahAlat ua = new UbahAlat();
-
             if (dgvAlat.Rows.Count == 0)
             {
                 MessageBox.Show("Data belum ada yang dipilih. ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -53,17 +46,41 @@ namespace peminjaman.View
             }
             else
             {
-                ua.TxtKode.Text = this.dgvAlat.CurrentRow.Cells[0].Value.ToString();
-                ua.TxtNama_alat.Text = this.dgvAlat.CurrentRow.Cells[1].Value.ToString();
-                ua.TxtJenis_Alat.Text = this.dgvAlat.CurrentRow.Cells[2].Value.ToString();
-                ua.TxtLetak.Text = this.dgvAlat.CurrentRow.Cells[3].Value.ToString();
-                ua.TxtHarga.Text = this.dgvAlat.CurrentRow.Cells[4].Value.ToString();
-                ua.TxtTahunPembelian.Text = this.dgvAlat.CurrentRow.Cells[5].Value.ToString();
-                ua.TxtKondisi.Text = this.dgvAlat.CurrentRow.Cells[6].Value.ToString();
+                TA.TxtKodeRusak.Text = this.dgvAlat.CurrentRow.Cells[1].Value.ToString();
+                TA.TxtNama_alat_Rusak.Text = this.dgvAlat.CurrentRow.Cells[2].Value.ToString();
+                TA.TxtJenis_Alat_Rusak.Text = this.dgvAlat.CurrentRow.Cells[3].Value.ToString();
+                TA.TxtLetakRusak.Text = this.dgvAlat.CurrentRow.Cells[4].Value.ToString();
+                TA.ShowDialog();
+                dgvAlat.Refresh();
 
-                ua.ShowDialog();
+
+               
             }
+            
+            
         }
+       //void EditAlat()
+       // {
+       //     UbahAlat ua = new UbahAlat();
+
+       //     if (dgvAlat.Rows.Count == 0)
+       //     {
+       //         MessageBox.Show("Data belum ada yang dipilih. ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+       //         return;
+       //     }
+       //     else
+       //     {
+       //         ua.TxtKode.Text = this.dgvAlat.CurrentRow.Cells[0].Value.ToString();
+       //         ua.TxtNama_alat.Text = this.dgvAlat.CurrentRow.Cells[1].Value.ToString();
+       //         ua.TxtJenis_Alat.Text = this.dgvAlat.CurrentRow.Cells[2].Value.ToString();
+       //         ua.TxtLetak.Text = this.dgvAlat.CurrentRow.Cells[3].Value.ToString();
+       //         ua.TxtHarga.Text = this.dgvAlat.CurrentRow.Cells[4].Value.ToString();
+       //         ua.TxtTahunPembelian.Text = this.dgvAlat.CurrentRow.Cells[5].Value.ToString();
+       //         ua.TxtKondisi.Text = this.dgvAlat.CurrentRow.Cells[6].Value.ToString();
+
+       //         ua.ShowDialog();
+       //     }
+       // }
 
         private void dgvAlat_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {

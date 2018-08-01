@@ -58,6 +58,7 @@ namespace peminjaman.View
                         MessageBoxIcon.Information);
                 }
                 Bersihkan();
+                
                 Close();
             }
         }

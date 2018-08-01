@@ -973,5 +973,11 @@ namespace peminjaman.View
 
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            tabMain.SelectedTab = (tabPage6);
+            AmbilForm(new Rusak());
+        }
+
     }
 }

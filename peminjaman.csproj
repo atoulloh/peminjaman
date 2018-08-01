@@ -97,6 +97,12 @@
       <DependentUpon>CrpKembali.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Reports\CrpLaporanRusak.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrpLaporanRusak.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Reports\CrpPeminjaman.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -132,6 +138,12 @@
     </Compile>
     <Compile Include="Reports\FrmLaporanKembali.Designer.cs">
       <DependentUpon>FrmLaporanKembali.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\FrmLaporanRusak.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\FrmLaporanRusak.Designer.cs">
+      <DependentUpon>FrmLaporanRusak.cs</DependentUpon>
     </Compile>
     <Compile Include="Service\AlatServ.cs" />
     <Compile Include="Service\AnggotaServ.cs" />
@@ -250,6 +262,10 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CrpKembali.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\CrpLaporanRusak.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrpLaporanRusak.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\CrpPeminjaman.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CrpPeminjaman.cs</LastGenOutput>
@@ -268,6 +284,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\FrmLaporanKembali.resx">
       <DependentUpon>FrmLaporanKembali.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\FrmLaporanRusak.resx">
+      <DependentUpon>FrmLaporanRusak.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Alat.resx">
       <DependentUpon>Alat.cs</DependentUpon>

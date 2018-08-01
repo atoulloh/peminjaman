@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             this.dgvdetailpinjam = new System.Windows.Forms.DataGridView();
-            this.dgvAlat = new System.Windows.Forms.DataGridView();
-            this.txtdetail = new System.Windows.Forms.TextBox();
             this.Id_Pinjam = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.id_anggota = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nama = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -38,6 +36,8 @@
             this.Tanggal_Pinjam = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Tanggal_Kembali = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvAlat = new System.Windows.Forms.DataGridView();
+            this.txtdetail = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.kode_alat = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -56,6 +56,7 @@
             this.dgvdetailpinjam.AllowUserToAddRows = false;
             this.dgvdetailpinjam.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvdetailpinjam.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dgvdetailpinjam.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvdetailpinjam.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Id_Pinjam,
@@ -70,39 +71,6 @@
             this.dgvdetailpinjam.Size = new System.Drawing.Size(983, 241);
             this.dgvdetailpinjam.TabIndex = 0;
             this.dgvdetailpinjam.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // dgvAlat
-            // 
-            this.dgvAlat.AllowUserToAddRows = false;
-            this.dgvAlat.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvAlat.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAlat.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.kode_alat,
-            this.NamaAlat,
-            this.Jenis_Alat,
-            this.Letak,
-            this.harga_pembelian,
-            this.tahun_pembelian,
-            this.Kondisi});
-            this.dgvAlat.Location = new System.Drawing.Point(12, 334);
-            this.dgvAlat.Name = "dgvAlat";
-            this.dgvAlat.ReadOnly = true;
-            this.dgvAlat.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvAlat.Size = new System.Drawing.Size(983, 232);
-            this.dgvAlat.TabIndex = 1;
-            this.dgvAlat.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAlat_CellContentDoubleClick);
-            this.dgvAlat.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAlat_CellDoubleClick);
-            this.dgvAlat.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvAlat_CellFormatting);
-            this.dgvAlat.CellLeave += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAlat_CellLeave);
-            // 
-            // txtdetail
-            // 
-            this.txtdetail.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtdetail.Location = new System.Drawing.Point(844, 36);
-            this.txtdetail.Name = "txtdetail";
-            this.txtdetail.Size = new System.Drawing.Size(123, 20);
-            this.txtdetail.TabIndex = 2;
             // 
             // Id_Pinjam
             // 
@@ -152,6 +120,41 @@
             this.Status.DataPropertyName = "status";
             this.Status.HeaderText = "Status Alat";
             this.Status.Name = "Status";
+            // 
+            // dgvAlat
+            // 
+            this.dgvAlat.AllowUserToAddRows = false;
+            this.dgvAlat.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvAlat.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.dgvAlat.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAlat.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.kode_alat,
+            this.NamaAlat,
+            this.Jenis_Alat,
+            this.Letak,
+            this.harga_pembelian,
+            this.tahun_pembelian,
+            this.Kondisi});
+            this.dgvAlat.Location = new System.Drawing.Point(12, 334);
+            this.dgvAlat.Name = "dgvAlat";
+            this.dgvAlat.ReadOnly = true;
+            this.dgvAlat.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvAlat.Size = new System.Drawing.Size(983, 232);
+            this.dgvAlat.TabIndex = 1;
+            this.dgvAlat.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAlat_CellContentDoubleClick);
+            this.dgvAlat.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAlat_CellDoubleClick);
+            this.dgvAlat.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvAlat_CellFormatting);
+            this.dgvAlat.CellLeave += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAlat_CellLeave);
+            // 
+            // txtdetail
+            // 
+            this.txtdetail.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtdetail.Location = new System.Drawing.Point(844, 36);
+            this.txtdetail.Name = "txtdetail";
+            this.txtdetail.Size = new System.Drawing.Size(123, 20);
+            this.txtdetail.TabIndex = 2;
             // 
             // label1
             // 
@@ -215,6 +218,7 @@
             // 
             // tahun_pembelian
             // 
+            this.tahun_pembelian.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.tahun_pembelian.DataPropertyName = "tahun_pembelian";
             this.tahun_pembelian.HeaderText = "Tahun Pembelian";
             this.tahun_pembelian.Name = "tahun_pembelian";

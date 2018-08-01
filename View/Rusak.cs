@@ -41,5 +41,38 @@ namespace peminjaman.View
         {
             LoadData();
         }
+
+        private void Rusak_Load(object sender, EventArgs e)
+        {
+            LoadData();
+        }
+
+        private void BtnHapus_Click(object sender, EventArgs e)
+        {
+            AlatServ asv = new AlatServ();
+            try
+            {
+                if (asv.isExistRusak(dgvalatrusak.Rows[dgvalatrusak.CurrentCell.RowIndex].Cells[0].Value.ToString()))
+                {
+                    if (MessageBox.Show("Apakah data tersebut akan dihapus?", "Hapus Data", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        asv.HapusRusak(dgvalatrusak.Rows[dgvalatrusak.CurrentCell.RowIndex].Cells[0].Value.ToString());
+                        MessageBox.Show("Data Berhasil di hapus.  ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        LoadData();
+                    }
+                }
+
+                else if (!asv.isExistRusak(dgvalatrusak.Rows[dgvalatrusak.CurrentCell.RowIndex].Cells[0].Value.ToString()))
+                {
+                    MessageBox.Show("Belum ada data yang dipilih. ", " Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Terjadi kesalahan tidak dapat menghapus data !", "Pesan", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+
+            }
+        }
     }
 }
