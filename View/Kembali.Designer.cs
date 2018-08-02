@@ -47,12 +47,13 @@
             this.button1 = new System.Windows.Forms.Button();
             this.textkembali = new System.Windows.Forms.TextBox();
             this.dgvdetailkembali = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
             this.id_peminjaman = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.id_peminjam = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nama_alat = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.letak = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btncari = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvKembali)).BeginInit();
             this.grpdetailkembali.SuspendLayout();
@@ -127,7 +128,7 @@
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.Controls.Add(this.CmbCariPeminjam);
             this.panel1.Controls.Add(this.TxtCariDtKembali);
-            this.panel1.Location = new System.Drawing.Point(492, 80);
+            this.panel1.Location = new System.Drawing.Point(488, 21);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(371, 34);
             this.panel1.TabIndex = 73;
@@ -161,6 +162,7 @@
             this.TxtCariDtKembali.Name = "TxtCariDtKembali";
             this.TxtCariDtKembali.Size = new System.Drawing.Size(172, 28);
             this.TxtCariDtKembali.TabIndex = 1;
+            this.TxtCariDtKembali.TextChanged += new System.EventHandler(this.TxtCariDtKembali_TextChanged);
             // 
             // DgvKembali
             // 
@@ -177,10 +179,10 @@
             this.Jumlah,
             this.tanggalpinjam,
             this.tanggalkembali});
-            this.DgvKembali.Location = new System.Drawing.Point(12, 117);
+            this.DgvKembali.Location = new System.Drawing.Point(12, 89);
             this.DgvKembali.Name = "DgvKembali";
             this.DgvKembali.ReadOnly = true;
-            this.DgvKembali.Size = new System.Drawing.Size(847, 238);
+            this.DgvKembali.Size = new System.Drawing.Size(847, 266);
             this.DgvKembali.TabIndex = 75;
             this.DgvKembali.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvKembali_CellDoubleClick);
             // 
@@ -280,16 +282,6 @@
             this.dgvdetailkembali.Size = new System.Drawing.Size(546, 168);
             this.dgvdetailkembali.TabIndex = 1;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(173, 16);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(110, 20);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Detail Kembali";
-            // 
             // id_peminjaman
             // 
             this.id_peminjaman.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
@@ -323,6 +315,27 @@
             this.Status.HeaderText = "Status Alat";
             this.Status.Name = "Status";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(173, 16);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(110, 20);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Detail Kembali";
+            // 
+            // btncari
+            // 
+            this.btncari.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btncari.Location = new System.Drawing.Point(574, 52);
+            this.btncari.Name = "btncari";
+            this.btncari.Size = new System.Drawing.Size(75, 23);
+            this.btncari.TabIndex = 78;
+            this.btncari.Text = "button2";
+            this.btncari.UseVisualStyleBackColor = true;
+            this.btncari.Click += new System.EventHandler(this.btncari_Click);
+            // 
             // Kembali
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -336,6 +349,7 @@
             this.Controls.Add(this.BtnRefresh);
             this.Controls.Add(this.BtnCetak);
             this.Controls.Add(this.label2);
+            this.Controls.Add(this.btncari);
             this.Name = "Kembali";
             this.Text = "DataKembali";
             this.Load += new System.EventHandler(this.Kembali_Load);
@@ -376,5 +390,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn nama_alat;
         private System.Windows.Forms.DataGridViewTextBoxColumn letak;
         private System.Windows.Forms.DataGridViewTextBoxColumn Status;
+        private System.Windows.Forms.Button btncari;
     }
 }

@@ -128,11 +128,11 @@ namespace peminjaman.Service
             return cek;
         }
 
-        public bool isExistRusak(String nama_alat)
+        public bool isExistRusak(String Kode_Alat)
         {
             bool cek = false;
 
-            query = "select * from alat_rusak where kode_alat ='" + nama_alat + "'";
+            query = "SELECT * FROM alat_rusak WHERE kode_alat ='" + Kode_Alat + "'";
             dtTbl = dbConn.ExecQuery(query);
 
             if (dtTbl.Rows.Count > 0)

@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using peminjaman.Service;
+using peminjaman.Services;
+using peminjaman.Reports;
 
 namespace peminjaman.View
 {
@@ -49,20 +51,20 @@ namespace peminjaman.View
 
         private void BtnHapus_Click(object sender, EventArgs e)
         {
-            AlatServ asv = new AlatServ();
+            AlatServ asr = new AlatServ();
             try
             {
-                if (asv.isExistRusak(dgvalatrusak.Rows[dgvalatrusak.CurrentCell.RowIndex].Cells[0].Value.ToString()))
+                if (asr.isExistRusak(dgvalatrusak.Rows[dgvalatrusak.CurrentCell.RowIndex].Cells[0].Value.ToString()))
                 {
                     if (MessageBox.Show("Apakah data tersebut akan dihapus?", "Hapus Data", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
-                        asv.HapusRusak(dgvalatrusak.Rows[dgvalatrusak.CurrentCell.RowIndex].Cells[0].Value.ToString());
+                        asr.HapusRusak(dgvalatrusak.Rows[dgvalatrusak.CurrentCell.RowIndex].Cells[0].Value.ToString());
                         MessageBox.Show("Data Berhasil di hapus.  ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         LoadData();
                     }
                 }
 
-                else if (!asv.isExistRusak(dgvalatrusak.Rows[dgvalatrusak.CurrentCell.RowIndex].Cells[0].Value.ToString()))
+                else if (!asr.isExistRusak(dgvalatrusak.Rows[dgvalatrusak.CurrentCell.RowIndex].Cells[0].Value.ToString()))
                 {
                     MessageBox.Show("Belum ada data yang dipilih. ", " Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
@@ -73,6 +75,13 @@ namespace peminjaman.View
 
 
             }
+        }
+
+        private void BtnCetakAL_Click(object sender, EventArgs e)
+        {
+              Rusak RS = new Rusak();
+            FrmLaporanRusak rk = new FrmLaporanRusak();
+            rk.Show();
         }
     }
 }

@@ -56,11 +56,11 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label2.Font = new System.Drawing.Font("Modern No. 20", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(12, 9);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(283, 34);
+            this.label2.Size = new System.Drawing.Size(298, 37);
             this.label2.TabIndex = 56;
             this.label2.Text = "DATA ANGGOTA ";
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -194,11 +194,11 @@
             // labeljumlahag
             // 
             this.labeljumlahag.AutoSize = true;
-            this.labeljumlahag.Font = new System.Drawing.Font("Modern No. 20", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labeljumlahag.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labeljumlahag.ForeColor = System.Drawing.Color.Black;
             this.labeljumlahag.Location = new System.Drawing.Point(15, 80);
             this.labeljumlahag.Name = "labeljumlahag";
-            this.labeljumlahag.Size = new System.Drawing.Size(102, 15);
+            this.labeljumlahag.Size = new System.Drawing.Size(111, 16);
             this.labeljumlahag.TabIndex = 68;
             this.labeljumlahag.Text = "Jumlah Anggota :";
             this.labeljumlahag.Click += new System.EventHandler(this.labeljumlahag_Click);
@@ -250,7 +250,7 @@
             this.BtnCetakAg.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnCetakAg.FlatAppearance.BorderSize = 0;
             this.BtnCetakAg.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnCetakAg.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnCetakAg.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnCetakAg.ForeColor = System.Drawing.Color.Black;
             this.BtnCetakAg.Image = ((System.Drawing.Image)(resources.GetObject("BtnCetakAg.Image")));
             this.BtnCetakAg.ImageAlign = System.Drawing.ContentAlignment.TopCenter;

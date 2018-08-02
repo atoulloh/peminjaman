@@ -143,6 +143,7 @@
             this.BtnCetakAL.Text = "Cetak [F9]";
             this.BtnCetakAL.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.BtnCetakAL.UseVisualStyleBackColor = false;
+            this.BtnCetakAL.Click += new System.EventHandler(this.BtnCetakAL_Click);
             // 
             // BtnHapus
             // 

@@ -82,5 +82,10 @@ namespace peminjaman.View
             }
 
         }
+
+        private void BtnClose_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

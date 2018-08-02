@@ -93,5 +93,17 @@ namespace peminjaman.View
             FrmLaporanKembali rp = new FrmLaporanKembali();
             rp.Show();
         }
+
+        private void TxtCariDtKembali_TextChanged(object sender, EventArgs e)
+        {
+           // btncari.PerformClick();
+            KembaliServ kembali = new KembaliServ();
+            DgvKembali.DataSource = kembali.CariKembali(TxtCariDtKembali.Text, "").DefaultView;
+        }
+
+        private void btncari_Click(object sender, EventArgs e)
+        {
+          
+        }
     }
 }

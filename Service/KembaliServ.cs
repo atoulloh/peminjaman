@@ -15,6 +15,7 @@ namespace peminjaman.Service
         private String query = "";
         private string tabelPinj = "pinjaman";
         private string tabelPeminjaman = " peminjam";
+        private string tabel = "kembali";
         public KembaliServ()
         {
             dbConn = new Koneksi();
@@ -132,10 +133,10 @@ namespace peminjaman.Service
 
         public DataTable CariKembali(String a, String b)
         {
-            query = " SELECT * FROM kembali WHERE  " + b + " like '" + a + "%'";
-            dtTbl = dbConn.ExecQuery(query);
-
-            return dtTbl;
+           // query = " SELECT * FROM kembali WHERE  " + b + " like '" + a + "%'";
+           // dtTbl = dbConn.ExecQuery(query);
+           // return dtTbl;
+            return Query.Select(tabel, a);
         }
 
         public DataTable HitungKembali()
