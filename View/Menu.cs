@@ -696,35 +696,47 @@ namespace peminjaman.View
 
         private void Menu_Load(object sender, EventArgs e)
         {
-           /* LoginServ login = new LoginServ();
+            LoginServ login = new LoginServ();
             string lvl = login.CekLevel(username).Rows[0][0].ToString();
 
             if (lvl == "Admin")
             {
-                BtnManagerLogin.Visible = true;
-                Pdata_user.Visible = true;
+                BtnLihatAlat.Visible = false;
+                BtnLihatAnggota.Visible = false;
+                BtnDaftarKembali.Visible = false;
+                BtnDaftarPeminjam.Visible = false;
+                btnmonitor.Visible = false;
+                BtnKembaliAlat.Visible = false;
+                BtnPinjamAlat.Visible = false;
+                BtnAnggota.Visible = false;
+                BtnAlat.Visible = false;
+                BtnAbout.Visible = false;
+                btnRusak.Visible = false;
+                Pdaftar_anggota.Enabled = true;
+                Pdata_alat.Enabled = true;
+                Pcari_alat.Enabled = true;
             }
 
-            else if (lvl == " Kepala jurusan")
+            else if (lvl ==  "Kepala jurusan")
             {
-                BtnLihatAlat.Visible = true;
-                BtnLihatAnggota.Visible = true;
-                BtnDaftarKembali.Visible = true;
-                BtnDaftarPeminjam.Visible = true;
-                btnmonitor.Visible = true;
+                BtnLihatAlat.Visible = false;
+                BtnLihatAnggota.Visible = false;
+                BtnDaftarKembali.Visible = false;
+                BtnDaftarPeminjam.Visible = false;
+                btnmonitor.Visible = false;
                 
             }
-            else if (lvl == " Petugas" )
+            else if (lvl == "Petugas" )
             {
-                BtnKembaliAlat.Visible = true;
-                BtnPinjamAlat.Visible = true;
-                BtnAnggota.Visible = true;
-                BtnAlat.Visible = true;
-                Pdaftar_anggota.Visible = true;
-                Pdata_alat.Visible = true;
-                Pcari_alat.Visible = true;
+                BtnKembaliAlat.Visible = false;
+                BtnPinjamAlat.Visible = false;
+                BtnAnggota.Visible = false;
+                BtnAlat.Visible = false;
+                Pdaftar_anggota.Visible = false;
+                Pdata_alat.Visible = false;
+                Pcari_alat.Visible = false;
 
-            }*/
+            }
 
 
             labelname.Text = "Selamat Datang\n" + " " + " " + " " + username;

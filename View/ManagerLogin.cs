@@ -122,7 +122,7 @@ namespace peminjaman
         {
             TxtUser.Text = "";
             TxtPass.Text = "";
-            CmbLevel.Text = "---Pilih---";
+            CmbLevel.Text = "";
         }
 
 
