@@ -41,13 +41,13 @@
             this.alamat = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.TxtCariAg = new System.Windows.Forms.TextBox();
-            this.CmbCariAnggota = new System.Windows.Forms.ComboBox();
             this.labeljumlahag = new System.Windows.Forms.Label();
             this.BtnRefAg = new System.Windows.Forms.Button();
             this.BtnEditAg = new System.Windows.Forms.Button();
             this.BtnCetakAg = new System.Windows.Forms.Button();
             this.BtnHapusAg = new System.Windows.Forms.Button();
             this.BtnCari = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.DgvAnggota)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -148,8 +148,8 @@
             // panel1
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.TxtCariAg);
-            this.panel1.Controls.Add(this.CmbCariAnggota);
             this.panel1.Location = new System.Drawing.Point(478, 59);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(374, 36);
@@ -162,43 +162,20 @@
             this.TxtCariAg.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TxtCariAg.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtCariAg.ForeColor = System.Drawing.Color.White;
-            this.TxtCariAg.Location = new System.Drawing.Point(3, 5);
+            this.TxtCariAg.Location = new System.Drawing.Point(195, 5);
             this.TxtCariAg.Name = "TxtCariAg";
             this.TxtCariAg.Size = new System.Drawing.Size(172, 28);
             this.TxtCariAg.TabIndex = 1;
             this.TxtCariAg.TextChanged += new System.EventHandler(this.TxtCariAg_TextChanged);
             // 
-            // CmbCariAnggota
-            // 
-            this.CmbCariAnggota.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.CmbCariAnggota.BackColor = System.Drawing.Color.DimGray;
-            this.CmbCariAnggota.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CmbCariAnggota.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CmbCariAnggota.ForeColor = System.Drawing.Color.White;
-            this.CmbCariAnggota.FormattingEnabled = true;
-            this.CmbCariAnggota.Items.AddRange(new object[] {
-            "ID Anggota",
-            "Nis",
-            "Nama",
-            "Jenis Kelamin",
-            "Kelas",
-            "Jurusan",
-            "Alamat"});
-            this.CmbCariAnggota.Location = new System.Drawing.Point(187, 5);
-            this.CmbCariAnggota.Name = "CmbCariAnggota";
-            this.CmbCariAnggota.Size = new System.Drawing.Size(172, 28);
-            this.CmbCariAnggota.TabIndex = 63;
-            this.CmbCariAnggota.Text = "---Cari Data---";
-            this.CmbCariAnggota.SelectedIndexChanged += new System.EventHandler(this.CmbCariAnggota_SelectedIndexChanged);
-            // 
             // labeljumlahag
             // 
             this.labeljumlahag.AutoSize = true;
-            this.labeljumlahag.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labeljumlahag.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labeljumlahag.ForeColor = System.Drawing.Color.Black;
             this.labeljumlahag.Location = new System.Drawing.Point(15, 80);
             this.labeljumlahag.Name = "labeljumlahag";
-            this.labeljumlahag.Size = new System.Drawing.Size(111, 16);
+            this.labeljumlahag.Size = new System.Drawing.Size(122, 18);
             this.labeljumlahag.TabIndex = 68;
             this.labeljumlahag.Text = "Jumlah Anggota :";
             this.labeljumlahag.Click += new System.EventHandler(this.labeljumlahag_Click);
@@ -293,6 +270,16 @@
             this.BtnCari.UseVisualStyleBackColor = true;
             this.BtnCari.Click += new System.EventHandler(this.BtnCari_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(59, 10);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(105, 18);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Cari Anggota";
+            // 
             // Anggota
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -325,7 +312,6 @@
         private System.Windows.Forms.DataGridView DgvAnggota;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox TxtCariAg;
-        private System.Windows.Forms.ComboBox CmbCariAnggota;
         private System.Windows.Forms.Label labeljumlahag;
         public System.Windows.Forms.Button BtnRefAg;
         private System.Windows.Forms.Button BtnEditAg;
@@ -340,5 +326,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn jurusan;
         private System.Windows.Forms.DataGridViewTextBoxColumn no_hp;
         private System.Windows.Forms.DataGridViewTextBoxColumn alamat;
+        private System.Windows.Forms.Label label1;
     }
 }

@@ -38,7 +38,7 @@ namespace peminjaman.View
             KembaliServ km = new KembaliServ();
             int x = Convert.ToInt32(km.HitungKembali().Rows[0][0].ToString());
 
-            labeljumlah.Text = "Jumlah Peminjam : " + DgvKembali.RowCount.ToString();
+            LabelPengembali.Text = "Jumlah Pengembali : " + DgvKembali.RowCount.ToString();
 
             TxtCariDtKembali.Focus();
         }

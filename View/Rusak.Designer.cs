@@ -41,7 +41,7 @@
             this.BtnHapus = new System.Windows.Forms.Button();
             this.BtnTambah = new System.Windows.Forms.Button();
             this.BtnRefresh = new System.Windows.Forms.Button();
-            this.txtdetail = new System.Windows.Forms.TextBox();
+            this.txtrusak = new System.Windows.Forms.TextBox();
             this.labelrusak = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvalatrusak)).BeginInit();
             this.SuspendLayout();
@@ -205,13 +205,14 @@
             this.BtnRefresh.UseVisualStyleBackColor = false;
             this.BtnRefresh.Click += new System.EventHandler(this.BtnRefresh_Click);
             // 
-            // txtdetail
+            // txtrusak
             // 
-            this.txtdetail.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtdetail.Location = new System.Drawing.Point(613, 36);
-            this.txtdetail.Name = "txtdetail";
-            this.txtdetail.Size = new System.Drawing.Size(123, 20);
-            this.txtdetail.TabIndex = 77;
+            this.txtrusak.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtrusak.Location = new System.Drawing.Point(613, 36);
+            this.txtrusak.Name = "txtrusak";
+            this.txtrusak.Size = new System.Drawing.Size(123, 20);
+            this.txtrusak.TabIndex = 77;
+            this.txtrusak.TextChanged += new System.EventHandler(this.txtdetail_TextChanged);
             // 
             // labelrusak
             // 
@@ -231,7 +232,7 @@
             this.BackColor = System.Drawing.Color.SkyBlue;
             this.ClientSize = new System.Drawing.Size(748, 484);
             this.Controls.Add(this.labelrusak);
-            this.Controls.Add(this.txtdetail);
+            this.Controls.Add(this.txtrusak);
             this.Controls.Add(this.BtnRefresh);
             this.Controls.Add(this.BtnTambah);
             this.Controls.Add(this.BtnHapus);
@@ -261,7 +262,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn letak;
         private System.Windows.Forms.DataGridViewTextBoxColumn jumlah;
         private System.Windows.Forms.DataGridViewTextBoxColumn status;
-        private System.Windows.Forms.TextBox txtdetail;
+        private System.Windows.Forms.TextBox txtrusak;
         private System.Windows.Forms.Label labelrusak;
     }
 }

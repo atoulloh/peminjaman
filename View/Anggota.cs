@@ -88,42 +88,42 @@ namespace peminjaman.View
         private void BtnCari_Click(object sender, EventArgs e)
         {
             AnggotaServ ag = new AnggotaServ();
-            DgvAnggota.DataSource = ag.CariAnggota(TxtCariAg.Text, Kategori);
+            DgvAnggota.DataSource = ag.CariAnggota(TxtCariAg.Text);
         }
 
         //kategori pencarian anggota
-        String Kategori;
-        private void CmbCariAnggota_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            string x = CmbCariAnggota.Text;
+        //String Kategori;
+        //private void CmbCariAnggota_SelectedIndexChanged(object sender, EventArgs e)
+        //{
+        //    string x = CmbCariAnggota.Text;
 
-            switch (x)
-            {
-                case "ID Anggota":
-                 Kategori ="id_anggota";
-                    break;
-                case "Nis":
-                    Kategori ="nis";
-                    break;
-                case "Nama":
-                    Kategori = "nama";
-                    break;
-                case "Jenis Kelamin":
-                    Kategori = "jenis_kelamin";
-                    break;
-                case "Kelas":
-                    Kategori = "kelas";
-                    break;
-                case "Jurusan":
-                    Kategori = "jurusan";
-                    break;
-                case "Alamat":
-                    Kategori = "alamat";
-                    break;
+        //    switch (x)
+        //    {
+        //        case "ID Anggota":
+        //         Kategori ="id_anggota";
+        //            break;
+        //        case "Nis":
+        //            Kategori ="nis";
+        //            break;
+        //        case "Nama":
+        //            Kategori = "nama";
+        //            break;
+        //        case "Jenis Kelamin":
+        //            Kategori = "jenis_kelamin";
+        //            break;
+        //        case "Kelas":
+        //            Kategori = "kelas";
+        //            break;
+        //        case "Jurusan":
+        //            Kategori = "jurusan";
+        //            break;
+        //        case "Alamat":
+        //            Kategori = "alamat";
+        //            break;
 
-            }
+        //    }
 
-        }
+        //}
 
         private void TxtCariAg_TextChanged(object sender, EventArgs e)
         {

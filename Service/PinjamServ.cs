@@ -73,6 +73,7 @@ namespace peminjaman.Service
             dtTbl = dbConn.ExecQuery(query);
 
             return dtTbl;
+            //return Query.Select(tabel, a);
         }
 
         public DataTable CariPeminjam(String a, String b)

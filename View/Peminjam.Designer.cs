@@ -33,7 +33,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.labeljumlah = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.CmbCariPeminjam = new System.Windows.Forms.ComboBox();
             this.TxtCariDtPinjam = new System.Windows.Forms.TextBox();
             this.btncariPinjam = new System.Windows.Forms.Button();
             this.BtnCetak = new System.Windows.Forms.Button();
@@ -42,6 +41,10 @@
             this.grpdetail = new System.Windows.Forms.GroupBox();
             this.button1 = new System.Windows.Forms.Button();
             this.dgvdetail = new System.Windows.Forms.DataGridView();
+            this.ID_Pinjaman = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nama_Alat = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.letak = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtdetail = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvPeminjam = new System.Windows.Forms.DataGridView();
@@ -49,10 +52,7 @@
             this.Id_anggota = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nama = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Tanggal_pinjam = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ID_Pinjaman = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nama_Alat = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.letak = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.grpdetail.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvdetail)).BeginInit();
@@ -74,44 +74,24 @@
             // labeljumlah
             // 
             this.labeljumlah.AutoSize = true;
-            this.labeljumlah.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labeljumlah.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labeljumlah.ForeColor = System.Drawing.Color.Black;
             this.labeljumlah.Location = new System.Drawing.Point(12, 91);
             this.labeljumlah.Name = "labeljumlah";
-            this.labeljumlah.Size = new System.Drawing.Size(120, 16);
+            this.labeljumlah.Size = new System.Drawing.Size(151, 18);
             this.labeljumlah.TabIndex = 63;
             this.labeljumlah.Text = "Jumlah Peminjam :";
             // 
             // panel1
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.Controls.Add(this.CmbCariPeminjam);
+            this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.TxtCariDtPinjam);
             this.panel1.Controls.Add(this.btncariPinjam);
             this.panel1.Location = new System.Drawing.Point(468, 72);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(349, 34);
             this.panel1.TabIndex = 72;
-            // 
-            // CmbCariPeminjam
-            // 
-            this.CmbCariPeminjam.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.CmbCariPeminjam.BackColor = System.Drawing.Color.Gray;
-            this.CmbCariPeminjam.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CmbCariPeminjam.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CmbCariPeminjam.ForeColor = System.Drawing.Color.White;
-            this.CmbCariPeminjam.FormattingEnabled = true;
-            this.CmbCariPeminjam.Items.AddRange(new object[] {
-            "Id Peminjam",
-            "Id Anggota",
-            "Nama Anggota",
-            "Tanggal Pinjam"});
-            this.CmbCariPeminjam.Location = new System.Drawing.Point(177, 0);
-            this.CmbCariPeminjam.Name = "CmbCariPeminjam";
-            this.CmbCariPeminjam.Size = new System.Drawing.Size(172, 28);
-            this.CmbCariPeminjam.TabIndex = 70;
-            this.CmbCariPeminjam.Text = "---Cari Data---";
-            this.CmbCariPeminjam.SelectedIndexChanged += new System.EventHandler(this.CmbCariPeminjam_SelectedIndexChanged);
             // 
             // TxtCariDtPinjam
             // 
@@ -120,7 +100,7 @@
             this.TxtCariDtPinjam.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TxtCariDtPinjam.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtCariDtPinjam.ForeColor = System.Drawing.Color.White;
-            this.TxtCariDtPinjam.Location = new System.Drawing.Point(3, 0);
+            this.TxtCariDtPinjam.Location = new System.Drawing.Point(174, 2);
             this.TxtCariDtPinjam.Name = "TxtCariDtPinjam";
             this.TxtCariDtPinjam.Size = new System.Drawing.Size(172, 28);
             this.TxtCariDtPinjam.TabIndex = 1;
@@ -128,7 +108,7 @@
             // 
             // btncariPinjam
             // 
-            this.btncariPinjam.Location = new System.Drawing.Point(83, 0);
+            this.btncariPinjam.Location = new System.Drawing.Point(256, 0);
             this.btncariPinjam.Name = "btncariPinjam";
             this.btncariPinjam.Size = new System.Drawing.Size(75, 23);
             this.btncariPinjam.TabIndex = 79;
@@ -236,6 +216,38 @@
             this.dgvdetail.Size = new System.Drawing.Size(423, 144);
             this.dgvdetail.TabIndex = 2;
             // 
+            // ID_Pinjaman
+            // 
+            this.ID_Pinjaman.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ID_Pinjaman.DataPropertyName = "id_pinjaman";
+            this.ID_Pinjaman.HeaderText = "ID Pinjaman";
+            this.ID_Pinjaman.Name = "ID_Pinjaman";
+            this.ID_Pinjaman.ReadOnly = true;
+            // 
+            // Nama_Alat
+            // 
+            this.Nama_Alat.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Nama_Alat.DataPropertyName = "nama_alat";
+            this.Nama_Alat.HeaderText = "Nama Alat";
+            this.Nama_Alat.Name = "Nama_Alat";
+            this.Nama_Alat.ReadOnly = true;
+            // 
+            // letak
+            // 
+            this.letak.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.letak.DataPropertyName = "letak";
+            this.letak.HeaderText = "Letak";
+            this.letak.Name = "letak";
+            this.letak.ReadOnly = true;
+            // 
+            // Status
+            // 
+            this.Status.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Status.DataPropertyName = "status";
+            this.Status.HeaderText = "Status";
+            this.Status.Name = "Status";
+            this.Status.ReadOnly = true;
+            // 
             // txtdetail
             // 
             this.txtdetail.Location = new System.Drawing.Point(314, 29);
@@ -321,37 +333,16 @@
             this.Tanggal_pinjam.Name = "Tanggal_pinjam";
             this.Tanggal_pinjam.ReadOnly = true;
             // 
-            // ID_Pinjaman
+            // label3
             // 
-            this.ID_Pinjaman.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ID_Pinjaman.DataPropertyName = "id_pinjaman";
-            this.ID_Pinjaman.HeaderText = "ID Pinjaman";
-            this.ID_Pinjaman.Name = "ID_Pinjaman";
-            this.ID_Pinjaman.ReadOnly = true;
-            // 
-            // Nama_Alat
-            // 
-            this.Nama_Alat.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Nama_Alat.DataPropertyName = "nama_alat";
-            this.Nama_Alat.HeaderText = "Nama Alat";
-            this.Nama_Alat.Name = "Nama_Alat";
-            this.Nama_Alat.ReadOnly = true;
-            // 
-            // letak
-            // 
-            this.letak.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.letak.DataPropertyName = "letak";
-            this.letak.HeaderText = "Letak";
-            this.letak.Name = "letak";
-            this.letak.ReadOnly = true;
-            // 
-            // Status
-            // 
-            this.Status.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Status.DataPropertyName = "status";
-            this.Status.HeaderText = "Status";
-            this.Status.Name = "Status";
-            this.Status.ReadOnly = true;
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(46, 6);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(123, 20);
+            this.label3.TabIndex = 80;
+            this.label3.Text = "Cari Peminjam";
             // 
             // Peminjam
             // 
@@ -386,7 +377,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label labeljumlah;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.ComboBox CmbCariPeminjam;
         private System.Windows.Forms.TextBox TxtCariDtPinjam;
         private System.Windows.Forms.Button BtnCetak;
         private System.Windows.Forms.Button BtnRefresh;
@@ -406,5 +396,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Nama_Alat;
         private System.Windows.Forms.DataGridViewTextBoxColumn letak;
         private System.Windows.Forms.DataGridViewTextBoxColumn Status;
+        private System.Windows.Forms.Label label3;
     }
 }

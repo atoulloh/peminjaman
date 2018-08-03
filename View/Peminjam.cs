@@ -64,7 +64,7 @@ namespace peminjaman.View
             Close();
         }
 
-        String kategori;
+       /* String kategori;
         private void CmbCariPeminjam_SelectedIndexChanged(object sender, EventArgs e)
         {
             string x = CmbCariPeminjam.Text;
@@ -84,13 +84,13 @@ namespace peminjaman.View
                     kategori = " tanggal_pijam";
                     break;
             }
-        }
+        }*/
 
         private void btncariPinjam_Click(object sender, EventArgs e)
         {
             //btncariPinjam.PerformClick();
             PinjamServ pinjam = new PinjamServ();
-            dgvPeminjam.DataSource = pinjam.CariPeminjam(TxtCariDtPinjam.Text,kategori);
+            dgvPeminjam.DataSource = pinjam.CariPeminjam(TxtCariDtPinjam.Text, "").DefaultView;
         
         }
 

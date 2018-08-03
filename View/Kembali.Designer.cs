@@ -34,7 +34,6 @@
             this.BtnRefresh = new System.Windows.Forms.Button();
             this.labeljumlah = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.CmbCariPeminjam = new System.Windows.Forms.ComboBox();
             this.TxtCariDtKembali = new System.Windows.Forms.TextBox();
             this.DgvKembali = new System.Windows.Forms.DataGridView();
             this.idpeminjaman = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -54,6 +53,8 @@
             this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.btncari = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.LabelPengembali = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvKembali)).BeginInit();
             this.grpdetailkembali.SuspendLayout();
@@ -126,30 +127,12 @@
             // panel1
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.Controls.Add(this.CmbCariPeminjam);
+            this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.TxtCariDtKembali);
-            this.panel1.Location = new System.Drawing.Point(488, 21);
+            this.panel1.Location = new System.Drawing.Point(488, 49);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(371, 34);
             this.panel1.TabIndex = 73;
-            // 
-            // CmbCariPeminjam
-            // 
-            this.CmbCariPeminjam.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.CmbCariPeminjam.BackColor = System.Drawing.Color.DimGray;
-            this.CmbCariPeminjam.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CmbCariPeminjam.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CmbCariPeminjam.ForeColor = System.Drawing.Color.White;
-            this.CmbCariPeminjam.FormattingEnabled = true;
-            this.CmbCariPeminjam.Items.AddRange(new object[] {
-            "Kode Pinjam",
-            "Tanggal Pinjam",
-            "Denda"});
-            this.CmbCariPeminjam.Location = new System.Drawing.Point(195, 3);
-            this.CmbCariPeminjam.Name = "CmbCariPeminjam";
-            this.CmbCariPeminjam.Size = new System.Drawing.Size(172, 28);
-            this.CmbCariPeminjam.TabIndex = 71;
-            this.CmbCariPeminjam.Text = "---Cari Data---";
             // 
             // TxtCariDtKembali
             // 
@@ -158,7 +141,7 @@
             this.TxtCariDtKembali.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TxtCariDtKembali.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtCariDtKembali.ForeColor = System.Drawing.Color.White;
-            this.TxtCariDtKembali.Location = new System.Drawing.Point(17, 3);
+            this.TxtCariDtKembali.Location = new System.Drawing.Point(194, 0);
             this.TxtCariDtKembali.Name = "TxtCariDtKembali";
             this.TxtCariDtKembali.Size = new System.Drawing.Size(172, 28);
             this.TxtCariDtKembali.TabIndex = 1;
@@ -336,12 +319,33 @@
             this.btncari.UseVisualStyleBackColor = true;
             this.btncari.Click += new System.EventHandler(this.btncari_Click);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(35, 6);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(139, 20);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Cari Pengembali";
+            // 
+            // LabelPengembali
+            // 
+            this.LabelPengembali.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.LabelPengembali.AutoSize = true;
+            this.LabelPengembali.Location = new System.Drawing.Point(18, 368);
+            this.LabelPengembali.Name = "LabelPengembali";
+            this.LabelPengembali.Size = new System.Drawing.Size(104, 13);
+            this.LabelPengembali.TabIndex = 79;
+            this.LabelPengembali.Text = "Jumlah Pengembali :";
+            // 
             // Kembali
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SkyBlue;
             this.ClientSize = new System.Drawing.Size(866, 436);
+            this.Controls.Add(this.LabelPengembali);
             this.Controls.Add(this.grpdetailkembali);
             this.Controls.Add(this.DgvKembali);
             this.Controls.Add(this.panel1);
@@ -371,7 +375,6 @@
         private System.Windows.Forms.Button BtnRefresh;
         private System.Windows.Forms.Label labeljumlah;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.ComboBox CmbCariPeminjam;
         private System.Windows.Forms.TextBox TxtCariDtKembali;
         private System.Windows.Forms.DataGridView DgvKembali;
         private System.Windows.Forms.GroupBox grpdetailkembali;
@@ -391,5 +394,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn letak;
         private System.Windows.Forms.DataGridViewTextBoxColumn Status;
         private System.Windows.Forms.Button btncari;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label LabelPengembali;
     }
 }

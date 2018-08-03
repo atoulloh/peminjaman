@@ -83,5 +83,11 @@ namespace peminjaman.View
             FrmLaporanRusak rk = new FrmLaporanRusak();
             rk.Show();
         }
+
+        private void txtdetail_TextChanged(object sender, EventArgs e)
+        {
+            AlatServ alr = new AlatServ();
+            dgvalatrusak.DataSource = alr.CariRusak(txtrusak.Text).DefaultView;
+        }
     }
 }

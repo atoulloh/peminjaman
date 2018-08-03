@@ -45,6 +45,11 @@ namespace peminjaman.View
             }
         }
 
+        private void Bersihkan()
+        {
+            TxtID.Text = "";
+            TxtPassword.Text = "";
+        }
          //Login cek
         LoginServ login = new LoginServ();
         Menu menu = new  Menu ();
@@ -85,8 +90,9 @@ namespace peminjaman.View
         //Batal Login dan keluar
         private void BtnKeluar_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Apakah anda akan keluar ?", "konfirmasi", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
-                Application.Exit();
+            //if (MessageBox.Show("Apakah anda akan keluar ?", "konfirmasi", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            //    Application.Exit();
+            Bersihkan();
         }
 
         private void BtnCloseLogin_Click(object sender, EventArgs e)

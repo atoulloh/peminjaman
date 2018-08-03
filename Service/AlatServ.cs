@@ -14,6 +14,7 @@ namespace peminjaman.Service
         private DataTable dtTbl;
         private String query = "";
         private string tabel = "alat";
+        private string tabelrusak = "alat_rusak";
 
         public AlatServ()
         {
@@ -184,6 +185,11 @@ namespace peminjaman.Service
 
 
             return dtTbl;
+        }
+
+        public DataTable CariRusak(String a)
+        {
+            return Query.Select(tabelrusak, a);
         }
 
         public DataTable HitungAlat()

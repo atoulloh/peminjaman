@@ -61,6 +61,7 @@
             this.BtnManagerLogin = new System.Windows.Forms.Button();
             this.BtnAbout = new System.Windows.Forms.Button();
             this.btnmonitor = new System.Windows.Forms.Button();
+            this.btnRusak = new System.Windows.Forms.Button();
             this.btnKeluarAplikasi = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -114,7 +115,6 @@
             this.Letak = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.harga_pembelian = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tahun_pembelian = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.kondisi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label15 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.panel10 = new System.Windows.Forms.Panel();
@@ -198,7 +198,6 @@
             this.timerjalan = new System.Windows.Forms.Timer(this.components);
             this.panel14 = new System.Windows.Forms.Panel();
             this.timerhome = new System.Windows.Forms.Timer(this.components);
-            this.btnRusak = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKembali)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -675,6 +674,22 @@
             this.btnmonitor.Text = "Monitor Data";
             this.btnmonitor.UseVisualStyleBackColor = false;
             this.btnmonitor.Click += new System.EventHandler(this.btnmonitor_Click);
+            // 
+            // btnRusak
+            // 
+            this.btnRusak.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnRusak.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRusak.FlatAppearance.BorderSize = 0;
+            this.btnRusak.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRusak.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRusak.ForeColor = System.Drawing.Color.White;
+            this.btnRusak.Location = new System.Drawing.Point(3, 616);
+            this.btnRusak.Name = "btnRusak";
+            this.btnRusak.Size = new System.Drawing.Size(199, 41);
+            this.btnRusak.TabIndex = 11;
+            this.btnRusak.Text = "Data Alat Rusak";
+            this.btnRusak.UseVisualStyleBackColor = false;
+            this.btnRusak.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnKeluarAplikasi
             // 
@@ -1331,8 +1346,7 @@
             this.jenis_alat,
             this.Letak,
             this.harga_pembelian,
-            this.tahun_pembelian,
-            this.kondisi});
+            this.tahun_pembelian});
             this.dgvAlat.GridColor = System.Drawing.Color.White;
             this.dgvAlat.Location = new System.Drawing.Point(15, 159);
             this.dgvAlat.Name = "dgvAlat";
@@ -1379,13 +1393,6 @@
             this.tahun_pembelian.DataPropertyName = "tahun_pembelian";
             this.tahun_pembelian.HeaderText = "Tahun Pembelian";
             this.tahun_pembelian.Name = "tahun_pembelian";
-            // 
-            // kondisi
-            // 
-            this.kondisi.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.kondisi.DataPropertyName = "kondisi";
-            this.kondisi.HeaderText = "Kondisi Alat";
-            this.kondisi.Name = "kondisi";
             // 
             // label15
             // 
@@ -2095,9 +2102,9 @@
             this.label31.ForeColor = System.Drawing.Color.DimGray;
             this.label31.Location = new System.Drawing.Point(17, 56);
             this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(89, 15);
+            this.label31.Size = new System.Drawing.Size(94, 15);
             this.label31.TabIndex = 46;
-            this.label31.Text = "Kode Pinjam";
+            this.label31.Text = "Nama Pinjam";
             // 
             // TxtCariKodePinjam
             // 
@@ -2388,22 +2395,6 @@
             this.panel14.Size = new System.Drawing.Size(540, 33);
             this.panel14.TabIndex = 7;
             // 
-            // btnRusak
-            // 
-            this.btnRusak.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnRusak.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRusak.FlatAppearance.BorderSize = 0;
-            this.btnRusak.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRusak.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRusak.ForeColor = System.Drawing.Color.White;
-            this.btnRusak.Location = new System.Drawing.Point(3, 616);
-            this.btnRusak.Name = "btnRusak";
-            this.btnRusak.Size = new System.Drawing.Size(199, 41);
-            this.btnRusak.TabIndex = 11;
-            this.btnRusak.Text = "Data Alat Rusak";
-            this.btnRusak.UseVisualStyleBackColor = false;
-            this.btnRusak.Click += new System.EventHandler(this.button1_Click);
-            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2597,13 +2588,6 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
         private System.Windows.Forms.Label labelname;
         private System.Windows.Forms.Button btnmonitor;
-        private System.Windows.Forms.DataGridViewTextBoxColumn kode_alat;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nama_alat;
-        private System.Windows.Forms.DataGridViewTextBoxColumn jenis_alat;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Letak;
-        private System.Windows.Forms.DataGridViewTextBoxColumn harga_pembelian;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tahun_pembelian;
-        private System.Windows.Forms.DataGridViewTextBoxColumn kondisi;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox Pdaftar_anggota;
@@ -2639,6 +2623,12 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn jumlah_alat;
         private System.Windows.Forms.DataGridViewTextBoxColumn alat_hilang;
         private System.Windows.Forms.Button btnRusak;
+        private System.Windows.Forms.DataGridViewTextBoxColumn kode_alat;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nama_alat;
+        private System.Windows.Forms.DataGridViewTextBoxColumn jenis_alat;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Letak;
+        private System.Windows.Forms.DataGridViewTextBoxColumn harga_pembelian;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tahun_pembelian;
 
 
     }

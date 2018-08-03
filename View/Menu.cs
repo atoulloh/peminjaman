@@ -629,10 +629,11 @@ namespace peminjaman.View
                         }
                         if (simpan)
                         {
-                            BersihKembali();
                             MessageBox.Show("Data Berhasil di Simpan. ",
                                 " Informasi", MessageBoxButtons.OK,
                                 MessageBoxIcon.Information);
+                            BersihKembali();
+                            LoadKembali();
                         }
                         else
                         {
@@ -672,14 +673,7 @@ namespace peminjaman.View
             }
 
             txtjumlah.Text = sum.ToString();
-            //int numRows = DgvAl.Rows.Count;
-            //txtjumlah.Text = numRows.ToString();
-            // int sum = 0;
-            //for (int i = 0; i < DgvAl.Rows.Count; ++i)
-            //{
-            //  sum += Convert.ToInt32(DgvAl.Rows[i].Cells[1].Value);
-            //}
-            //TxtJumlah.Text = sum.ToString();
+          
 
         }
 
@@ -952,8 +946,15 @@ namespace peminjaman.View
         
         }*/
 
+        void LoadKembali()
+        {
+            PinjamServ pjm = new PinjamServ();
+            dgvKembali.DataSource = pjm.TampilSemuaPeminjam();
+        }
+
         private void panel9_Paint_load(object sender, PaintEventArgs e)
         {
+           
             int sum = 0;
              for (int i = 0; i < DgvKNamaAlat.Rows.Count; ++i)
             {
@@ -961,6 +962,7 @@ namespace peminjaman.View
             }
 
             TxtJumlahKembali.Text = sum.ToString();
+         
         }
 
         private void BtnKembaliBuku_Click(object sender, EventArgs e)

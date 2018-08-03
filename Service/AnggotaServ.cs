@@ -14,6 +14,7 @@ namespace peminjaman.Service
         private DataTable dtTbl;
         private String query = "";
         private string tabelanggota = "anggota";
+        
 
         public AnggotaServ()
         {
@@ -88,12 +89,13 @@ namespace peminjaman.Service
             }
         }
 
-        public DataTable CariAnggota(String a, String b)
+        public DataTable CariAnggota(String a)
         {
-            query = " SELECT * FROM anggota WHERE  " + b + " like '" + a + "%'";
-            dtTbl = dbConn.ExecQuery(query);
+           // query = " SELECT * FROM anggota WHERE  " + b + " like '" + a + "%'";
+           // dtTbl = dbConn.ExecQuery(query);
 
-            return dtTbl;
+           // return dtTbl;
+            return Query.Select(tabelanggota, a);
         }
 
         public DataTable HitungAnggota()
