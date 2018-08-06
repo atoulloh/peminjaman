@@ -111,6 +111,30 @@ namespace peminjaman.Service
             return dtTbl;
         }
 
+        public void HapusKelas(String kelas)
+        {
+            query = "delete from kelas where kelas = '" + kelas + "'";
+            if (!(dbConn.ExecNonQuery(query) > 0))
+            {
+                throw new Exception("Gagal Menghapus");
+            }
+        }
+
+        public bool IsKelas(String Kelas)
+        {
+            bool cek = false;
+
+            query = "SELECT * FROM kelas WHERE kelas = '" + Kelas + "'";
+            dtTbl = dbConn.ExecQuery(query);
+
+            if (dtTbl.Rows.Count > 0)
+            {
+                cek = true;
+            }
+
+            return cek;
+        }
+
         public void UbahAlat(String kode_alat)
         {
             query = "UPDATE alat SET nama_alat='" + Nama_Alat + "', jenis_alat='" + Jenis_Alat + "', letak='" + Letak + "', harga_pembelian='" + Harga_Pembelian + "', tahun_pembelian='" + Tahun_Pembelian + "' WHERE kode_alat='" + kode_alat + "'";

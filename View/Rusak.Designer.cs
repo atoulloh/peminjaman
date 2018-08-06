@@ -242,6 +242,8 @@
             this.Name = "Rusak";
             this.Text = "Rusak";
             this.Load += new System.EventHandler(this.Rusak_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Rusak_KeyDown);
+          //  this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Rusak_KeyPress);
             ((System.ComponentModel.ISupportInitialize)(this.dgvalatrusak)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

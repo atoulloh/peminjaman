@@ -316,7 +316,7 @@
             this.grpAlat.Controls.Add(this.label5);
             this.grpAlat.Controls.Add(this.label4);
             this.grpAlat.Controls.Add(this.label3);
-            this.grpAlat.Location = new System.Drawing.Point(171, 49);
+            this.grpAlat.Location = new System.Drawing.Point(235, 30);
             this.grpAlat.Name = "grpAlat";
             this.grpAlat.Size = new System.Drawing.Size(330, 386);
             this.grpAlat.TabIndex = 76;

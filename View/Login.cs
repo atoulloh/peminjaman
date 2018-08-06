@@ -110,7 +110,18 @@ namespace peminjaman.View
 
         }
 
-       
+        private void Login_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                BtnMasuk_Click(null, null);
+            }
+
+            else if (e.KeyCode == Keys.Escape)
+            {
+                BtnCloseLogin.PerformClick();
+            }
+        }
 
     }
 }

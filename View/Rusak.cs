@@ -89,5 +89,21 @@ namespace peminjaman.View
             AlatServ alr = new AlatServ();
             dgvalatrusak.DataSource = alr.CariRusak(txtrusak.Text).DefaultView;
         }
+
+        private void Rusak_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.F9)
+            {
+                BtnCetakAL_Click(null,null);
+            }
+        }
+
+       // private void Rusak_KeyPress(object sender, KeyPressEventArgs e)
+       // {
+         //   if (e.KeyChar = KeyPress== keycode F9 )
+           // {
+             //   BtnCetakAL_Click(null, null);
+            //}
+        //}
     }
 }

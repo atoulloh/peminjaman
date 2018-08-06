@@ -67,11 +67,11 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Modern No. 20", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
             this.label4.Location = new System.Drawing.Point(33, 73);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(459, 15);
+            this.label4.Size = new System.Drawing.Size(460, 16);
             this.label4.TabIndex = 510;
             this.label4.Text = "---------------------------------------------------------------------------------" +
                 "--------------------------------";
@@ -223,6 +223,7 @@
             this.Name = "Login";
             this.Text = "Login";
             this.Load += new System.EventHandler(this.Login_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Login_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);

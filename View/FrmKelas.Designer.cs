@@ -83,6 +83,7 @@
             this.btnhapus.TabIndex = 4;
             this.btnhapus.Text = "HAPUS";
             this.btnhapus.UseVisualStyleBackColor = true;
+            this.btnhapus.Click += new System.EventHandler(this.btnhapus_Click);
             // 
             // btnsimpan
             // 
@@ -98,7 +99,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(108, 8);
+            this.label3.Location = new System.Drawing.Point(162, 8);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(330, 20);
             this.label3.TabIndex = 6;
@@ -113,7 +114,7 @@
             this.jurusan});
             this.DGVKelas.Location = new System.Drawing.Point(243, 39);
             this.DGVKelas.Name = "DGVKelas";
-            this.DGVKelas.Size = new System.Drawing.Size(293, 150);
+            this.DGVKelas.Size = new System.Drawing.Size(358, 150);
             this.DGVKelas.TabIndex = 7;
             // 
             // kelas
@@ -134,7 +135,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(560, 225);
+            this.BackColor = System.Drawing.Color.SkyBlue;
+            this.ClientSize = new System.Drawing.Size(650, 225);
             this.Controls.Add(this.DGVKelas);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btnsimpan);

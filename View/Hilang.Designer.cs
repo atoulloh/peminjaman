@@ -31,25 +31,25 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Hilang));
             this.label1 = new System.Windows.Forms.Label();
             this.dgvhilang = new System.Windows.Forms.DataGridView();
-            this.BtnCetak = new System.Windows.Forms.Button();
-            this.BtnRefresh = new System.Windows.Forms.Button();
-            this.labelhilang = new System.Windows.Forms.Label();
             this.id_peminjaman = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.id_anggota = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nama = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nama_alat = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.letak = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.jumlah = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BtnCetak = new System.Windows.Forms.Button();
+            this.BtnRefresh = new System.Windows.Forms.Button();
+            this.labelhilang = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvhilang)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(390, -1);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(369, 10);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(132, 24);
+            this.label1.Size = new System.Drawing.Size(143, 24);
             this.label1.TabIndex = 101;
             this.label1.Text = "ALAT HILANG";
             // 
@@ -69,61 +69,11 @@
             this.Nama_alat,
             this.letak,
             this.jumlah});
-            this.dgvhilang.Location = new System.Drawing.Point(12, 36);
+            this.dgvhilang.Location = new System.Drawing.Point(12, 59);
             this.dgvhilang.Name = "dgvhilang";
             this.dgvhilang.ReadOnly = true;
-            this.dgvhilang.Size = new System.Drawing.Size(872, 310);
+            this.dgvhilang.Size = new System.Drawing.Size(872, 287);
             this.dgvhilang.TabIndex = 102;
-            // 
-            // BtnCetak
-            // 
-            this.BtnCetak.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnCetak.BackColor = System.Drawing.Color.SkyBlue;
-            this.BtnCetak.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnCetak.FlatAppearance.BorderSize = 0;
-            this.BtnCetak.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnCetak.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnCetak.ForeColor = System.Drawing.Color.Black;
-            this.BtnCetak.Image = ((System.Drawing.Image)(resources.GetObject("BtnCetak.Image")));
-            this.BtnCetak.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.BtnCetak.Location = new System.Drawing.Point(784, 352);
-            this.BtnCetak.Name = "BtnCetak";
-            this.BtnCetak.Size = new System.Drawing.Size(86, 65);
-            this.BtnCetak.TabIndex = 103;
-            this.BtnCetak.Text = "Cetak [F7]";
-            this.BtnCetak.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.BtnCetak.UseVisualStyleBackColor = false;
-            this.BtnCetak.Click += new System.EventHandler(this.BtnCetak_Click);
-            // 
-            // BtnRefresh
-            // 
-            this.BtnRefresh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnRefresh.BackColor = System.Drawing.Color.SkyBlue;
-            this.BtnRefresh.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnRefresh.FlatAppearance.BorderSize = 0;
-            this.BtnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnRefresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnRefresh.ForeColor = System.Drawing.Color.Black;
-            this.BtnRefresh.Image = ((System.Drawing.Image)(resources.GetObject("BtnRefresh.Image")));
-            this.BtnRefresh.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.BtnRefresh.Location = new System.Drawing.Point(670, 352);
-            this.BtnRefresh.Name = "BtnRefresh";
-            this.BtnRefresh.Size = new System.Drawing.Size(97, 65);
-            this.BtnRefresh.TabIndex = 104;
-            this.BtnRefresh.Text = "Refresh [F5]";
-            this.BtnRefresh.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.BtnRefresh.UseVisualStyleBackColor = false;
-            this.BtnRefresh.Click += new System.EventHandler(this.BtnRefresh_Click);
-            // 
-            // labelhilang
-            // 
-            this.labelhilang.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.labelhilang.AutoSize = true;
-            this.labelhilang.Location = new System.Drawing.Point(12, 352);
-            this.labelhilang.Name = "labelhilang";
-            this.labelhilang.Size = new System.Drawing.Size(94, 13);
-            this.labelhilang.TabIndex = 105;
-            this.labelhilang.Text = "Jumlah Alat Hilang";
             // 
             // id_peminjaman
             // 
@@ -172,6 +122,57 @@
             this.jumlah.HeaderText = "Jumlah";
             this.jumlah.Name = "jumlah";
             this.jumlah.ReadOnly = true;
+            // 
+            // BtnCetak
+            // 
+            this.BtnCetak.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnCetak.BackColor = System.Drawing.Color.SkyBlue;
+            this.BtnCetak.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnCetak.FlatAppearance.BorderSize = 0;
+            this.BtnCetak.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnCetak.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnCetak.ForeColor = System.Drawing.Color.Black;
+            this.BtnCetak.Image = ((System.Drawing.Image)(resources.GetObject("BtnCetak.Image")));
+            this.BtnCetak.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.BtnCetak.Location = new System.Drawing.Point(784, 352);
+            this.BtnCetak.Name = "BtnCetak";
+            this.BtnCetak.Size = new System.Drawing.Size(86, 65);
+            this.BtnCetak.TabIndex = 103;
+            this.BtnCetak.Text = "Cetak [F7]";
+            this.BtnCetak.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.BtnCetak.UseVisualStyleBackColor = false;
+            this.BtnCetak.Click += new System.EventHandler(this.BtnCetak_Click);
+            // 
+            // BtnRefresh
+            // 
+            this.BtnRefresh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnRefresh.BackColor = System.Drawing.Color.SkyBlue;
+            this.BtnRefresh.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnRefresh.FlatAppearance.BorderSize = 0;
+            this.BtnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnRefresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnRefresh.ForeColor = System.Drawing.Color.Black;
+            this.BtnRefresh.Image = ((System.Drawing.Image)(resources.GetObject("BtnRefresh.Image")));
+            this.BtnRefresh.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.BtnRefresh.Location = new System.Drawing.Point(670, 352);
+            this.BtnRefresh.Name = "BtnRefresh";
+            this.BtnRefresh.Size = new System.Drawing.Size(97, 65);
+            this.BtnRefresh.TabIndex = 104;
+            this.BtnRefresh.Text = "Refresh [F5]";
+            this.BtnRefresh.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.BtnRefresh.UseVisualStyleBackColor = false;
+            this.BtnRefresh.Click += new System.EventHandler(this.BtnRefresh_Click);
+            // 
+            // labelhilang
+            // 
+            this.labelhilang.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.labelhilang.AutoSize = true;
+            this.labelhilang.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelhilang.Location = new System.Drawing.Point(12, 352);
+            this.labelhilang.Name = "labelhilang";
+            this.labelhilang.Size = new System.Drawing.Size(129, 18);
+            this.labelhilang.TabIndex = 105;
+            this.labelhilang.Text = "Jumlah Alat Hilang";
             // 
             // Hilang
             // 
