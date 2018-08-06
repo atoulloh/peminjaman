@@ -717,16 +717,24 @@ namespace peminjaman.View
                 Pdaftar_anggota.Enabled = false;
                 Pdata_alat.Enabled = false;
                 Pcari_alat.Enabled = false;
+                Ppinjam_alat.Enabled = false;
+                Pkembali_alat.Enabled = false;
+                Pdata_anggota.Enabled = false;
+                pdata_peminjam.Enabled = false;
+                Pdata_kembali.Enabled = false;
             }
 
             else if (lvl ==  "Kepala jurusan")
             {
-
+                Alat al = new Alat();
+                al.BtnHapus.Visible = false;
+                al.BtnTambah.Visible = false;
                 BtnAlat.Visible = false;
                 BtnAnggota.Visible = false;
                 BtnKembaliAlat.Visible = false;
                 BtnPinjamAlat.Visible = false;
                 BtnManagerLogin.Visible = false;
+               
 
                 Pdaftar_anggota.Enabled = false;
                 Pcari_alat.Enabled = false;
@@ -737,13 +745,8 @@ namespace peminjaman.View
             }
             else if (lvl == "Petugas" )
             {
-                BtnKembaliAlat.Visible = false;
-                BtnPinjamAlat.Visible = false;
-                BtnAnggota.Visible = false;
-                BtnAlat.Visible = false;
-                Pdaftar_anggota.Visible = false;
-                Pdata_alat.Visible = false;
-                Pcari_alat.Visible = false;
+                BtnManagerLogin.Visible = false;
+                Pdata_user.Enabled = false;
 
             }
 
