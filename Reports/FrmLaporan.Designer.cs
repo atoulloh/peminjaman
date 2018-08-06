@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.crystalReportViewer1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
             this.Anggota1 = new peminjaman.Reports.Anggota();
             this.Alat1 = new peminjaman.Reports.Alat();
+            this.crystalReportViewer1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
             this.CrpPeminjaman1 = new peminjaman.Reports.CrpPeminjaman();
             this.SuspendLayout();
             // 
@@ -49,11 +49,6 @@
             this.crystalReportViewer1.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None;
             this.crystalReportViewer1.Load += new System.EventHandler(this.crystalReportViewer1_Load);
             // 
-            // Alat1
-            // 
-            this.Alat1.FileName = "rassdk://C:\\Users\\Ucup\\AppData\\Local\\Temp\\temp_708ac406-4581-481a-aa91-80b160b44f" +
-                "54.rpt";
-            // 
             // FrmLaporan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -61,7 +56,9 @@
             this.ClientSize = new System.Drawing.Size(912, 465);
             this.Controls.Add(this.crystalReportViewer1);
             this.Name = "FrmLaporan";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Reports";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Reports_Load);
             this.ResumeLayout(false);
 
@@ -69,10 +66,10 @@
 
         #endregion
 
-        private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer1;
         private Alat Alat1;
         private Anggota Anggota1;
-        private CrpPeminjaman CrpPeminjaman1;
+        public CrpPeminjaman CrpPeminjaman1;
+        public CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer1;
        // private CrpPeminjaman CrpPeminjaman1;
 
     }

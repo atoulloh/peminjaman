@@ -702,6 +702,7 @@ namespace peminjaman.View
             if (lvl == "Admin")
             {
                 BtnLihatAlat.Visible = false;
+                BtnAnggota.Visible = false;
                 BtnLihatAnggota.Visible = false;
                 BtnDaftarKembali.Visible = false;
                 BtnDaftarPeminjam.Visible = false;
@@ -712,19 +713,27 @@ namespace peminjaman.View
                 BtnAlat.Visible = false;
                 BtnAbout.Visible = false;
                 btnRusak.Visible = false;
-                Pdaftar_anggota.Enabled = true;
-                Pdata_alat.Enabled = true;
-                Pcari_alat.Enabled = true;
+
+                Pdaftar_anggota.Enabled = false;
+                Pdata_alat.Enabled = false;
+                Pcari_alat.Enabled = false;
             }
 
             else if (lvl ==  "Kepala jurusan")
             {
-                BtnLihatAlat.Visible = false;
-                BtnLihatAnggota.Visible = false;
-                BtnDaftarKembali.Visible = false;
-                BtnDaftarPeminjam.Visible = false;
-                btnmonitor.Visible = false;
-                
+
+                BtnAlat.Visible = false;
+                BtnAnggota.Visible = false;
+                BtnKembaliAlat.Visible = false;
+                BtnPinjamAlat.Visible = false;
+                BtnManagerLogin.Visible = false;
+
+                Pdaftar_anggota.Enabled = false;
+                Pcari_alat.Enabled = false;
+                Ppinjam_alat.Enabled = false;
+                Pkembali_alat.Enabled = false;
+                Pdata_user.Enabled = false;
+
             }
             else if (lvl == "Petugas" )
             {

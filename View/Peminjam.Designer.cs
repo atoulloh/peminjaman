@@ -33,6 +33,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.labeljumlah = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
             this.TxtCariDtPinjam = new System.Windows.Forms.TextBox();
             this.btncariPinjam = new System.Windows.Forms.Button();
             this.BtnCetak = new System.Windows.Forms.Button();
@@ -52,11 +53,19 @@
             this.Id_anggota = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nama = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Tanggal_pinjam = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label3 = new System.Windows.Forms.Label();
+            this.PLaporan = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.btnbatal = new System.Windows.Forms.Button();
+            this.btnsimpan = new System.Windows.Forms.Button();
+            this.CrpTahun = new System.Windows.Forms.TextBox();
+            this.CrpBulan = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.grpdetail.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvdetail)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPeminjam)).BeginInit();
+            this.PLaporan.SuspendLayout();
             this.SuspendLayout();
             // 
             // label2
@@ -93,6 +102,17 @@
             this.panel1.Size = new System.Drawing.Size(349, 34);
             this.panel1.TabIndex = 72;
             // 
+            // label3
+            // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(46, 6);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(123, 20);
+            this.label3.TabIndex = 80;
+            this.label3.Text = "Cari Peminjam";
+            // 
             // TxtCariDtPinjam
             // 
             this.TxtCariDtPinjam.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -128,11 +148,11 @@
             this.BtnCetak.ForeColor = System.Drawing.Color.Black;
             this.BtnCetak.Image = ((System.Drawing.Image)(resources.GetObject("BtnCetak.Image")));
             this.BtnCetak.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.BtnCetak.Location = new System.Drawing.Point(632, 370);
+            this.BtnCetak.Location = new System.Drawing.Point(616, 370);
             this.BtnCetak.Name = "BtnCetak";
-            this.BtnCetak.Size = new System.Drawing.Size(86, 55);
+            this.BtnCetak.Size = new System.Drawing.Size(107, 55);
             this.BtnCetak.TabIndex = 75;
-            this.BtnCetak.Text = "Cetak [F7]";
+            this.BtnCetak.Text = " Laporan [F7]";
             this.BtnCetak.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.BtnCetak.UseVisualStyleBackColor = false;
             this.BtnCetak.Click += new System.EventHandler(this.BtnCetak_Click);
@@ -148,7 +168,7 @@
             this.BtnRefresh.ForeColor = System.Drawing.Color.Black;
             this.BtnRefresh.Image = ((System.Drawing.Image)(resources.GetObject("BtnRefresh.Image")));
             this.BtnRefresh.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.BtnRefresh.Location = new System.Drawing.Point(523, 370);
+            this.BtnRefresh.Location = new System.Drawing.Point(507, 370);
             this.BtnRefresh.Name = "BtnRefresh";
             this.BtnRefresh.Size = new System.Drawing.Size(103, 55);
             this.BtnRefresh.TabIndex = 76;
@@ -333,16 +353,88 @@
             this.Tanggal_pinjam.Name = "Tanggal_pinjam";
             this.Tanggal_pinjam.ReadOnly = true;
             // 
-            // label3
+            // PLaporan
             // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(46, 6);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(123, 20);
-            this.label3.TabIndex = 80;
-            this.label3.Text = "Cari Peminjam";
+            this.PLaporan.Controls.Add(this.label6);
+            this.PLaporan.Controls.Add(this.label5);
+            this.PLaporan.Controls.Add(this.label4);
+            this.PLaporan.Controls.Add(this.btnbatal);
+            this.PLaporan.Controls.Add(this.btnsimpan);
+            this.PLaporan.Controls.Add(this.CrpTahun);
+            this.PLaporan.Controls.Add(this.CrpBulan);
+            this.PLaporan.Location = new System.Drawing.Point(270, 21);
+            this.PLaporan.Name = "PLaporan";
+            this.PLaporan.Size = new System.Drawing.Size(290, 203);
+            this.PLaporan.TabIndex = 81;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(78, 20);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(132, 16);
+            this.label6.TabIndex = 8;
+            this.label6.Text = "CETAK LAPORAN";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(155, 73);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(61, 16);
+            this.label5.TabIndex = 7;
+            this.label5.Text = "TAHUN";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(30, 71);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(58, 16);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "BULAN";
+            // 
+            // btnbatal
+            // 
+            this.btnbatal.Location = new System.Drawing.Point(246, 7);
+            this.btnbatal.Name = "btnbatal";
+            this.btnbatal.Size = new System.Drawing.Size(30, 23);
+            this.btnbatal.TabIndex = 5;
+            this.btnbatal.Text = "X";
+            this.btnbatal.UseVisualStyleBackColor = true;
+            this.btnbatal.Click += new System.EventHandler(this.btnbatal_Click);
+            // 
+            // btnsimpan
+            // 
+            this.btnsimpan.Image = ((System.Drawing.Image)(resources.GetObject("btnsimpan.Image")));
+            this.btnsimpan.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnsimpan.Location = new System.Drawing.Point(96, 154);
+            this.btnsimpan.Name = "btnsimpan";
+            this.btnsimpan.Size = new System.Drawing.Size(78, 30);
+            this.btnsimpan.TabIndex = 4;
+            this.btnsimpan.Text = "CETAK";
+            this.btnsimpan.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnsimpan.UseVisualStyleBackColor = true;
+            this.btnsimpan.Click += new System.EventHandler(this.btnsimpan_Click);
+            // 
+            // CrpTahun
+            // 
+            this.CrpTahun.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CrpTahun.Location = new System.Drawing.Point(152, 98);
+            this.CrpTahun.Name = "CrpTahun";
+            this.CrpTahun.Size = new System.Drawing.Size(109, 22);
+            this.CrpTahun.TabIndex = 3;
+            // 
+            // CrpBulan
+            // 
+            this.CrpBulan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CrpBulan.Location = new System.Drawing.Point(31, 97);
+            this.CrpBulan.Name = "CrpBulan";
+            this.CrpBulan.Size = new System.Drawing.Size(100, 22);
+            this.CrpBulan.TabIndex = 2;
             // 
             // Peminjam
             // 
@@ -350,6 +442,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SkyBlue;
             this.ClientSize = new System.Drawing.Size(829, 437);
+            this.Controls.Add(this.PLaporan);
             this.Controls.Add(this.grpdetail);
             this.Controls.Add(this.dgvPeminjam);
             this.Controls.Add(this.BtnDetailPinjam);
@@ -367,6 +460,8 @@
             this.grpdetail.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvdetail)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPeminjam)).EndInit();
+            this.PLaporan.ResumeLayout(false);
+            this.PLaporan.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -397,5 +492,13 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn letak;
         private System.Windows.Forms.DataGridViewTextBoxColumn Status;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Panel PLaporan;
+        private System.Windows.Forms.Button btnsimpan;
+        private System.Windows.Forms.TextBox CrpTahun;
+        private System.Windows.Forms.TextBox CrpBulan;
+        private System.Windows.Forms.Button btnbatal;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label6;
     }
 }

@@ -64,7 +64,7 @@ namespace peminjaman.View
                     }
                 }
 
-                else if (!asr.isExistRusak(dgvalatrusak.Rows[dgvalatrusak.CurrentCell.RowIndex].Cells[0].Value.ToString()))
+                else if (asr.isExistRusak(dgvalatrusak.Rows[dgvalatrusak.CurrentCell.RowIndex].Cells[0].Value.ToString()))
                 {
                     MessageBox.Show("Belum ada data yang dipilih. ", " Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }

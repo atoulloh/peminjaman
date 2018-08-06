@@ -204,6 +204,7 @@ namespace peminjaman.View
 
         private void Peminjam_Load_1(object sender, EventArgs e)
         {
+            PLaporan.Visible = false;
             PinjamServ pbs = new PinjamServ();
             dgvPeminjam.DataSource = pbs.TampilSemuaPeminjam();
             int numRows = dgvPeminjam.Rows.Count;
@@ -237,9 +238,31 @@ namespace peminjaman.View
 
         private void BtnCetak_Click(object sender, EventArgs e)
         {
-              Peminjam pm = new Peminjam();
+            PLaporan.Visible = true;
+ 
+        }
+
+        private void btnbatal_Click(object sender, EventArgs e)
+        {
+            PLaporan.Visible = false;
+        }
+
+        private void btnsimpan_Click(object sender, EventArgs e)
+        {
+            
+
+            Peminjam pm = new Peminjam();
             FrmLaporan rp = new FrmLaporan();
+
+            string bulan = CrpBulan.Text.Trim();
+            string tahun = CrpTahun.Text.Trim();
+
+            rp.crystalReportViewer1.ReportSource = rp.CrpPeminjaman1;
+            rp.CrpPeminjaman1.SetParameterValue("bulan", bulan);
+            rp.CrpPeminjaman1.SetParameterValue("tahun", tahun);
             rp.Show();
+
+            PLaporan.Visible = false; 
         }
 
     }
