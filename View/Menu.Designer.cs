@@ -30,9 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.CariIDAg = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.DTPPJalat = new System.Windows.Forms.DateTimePicker();
@@ -67,8 +67,10 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabMain = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.pkelas = new System.Windows.Forms.PictureBox();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
@@ -85,6 +87,13 @@
             this.labelname = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.panelanggota = new System.Windows.Forms.Panel();
+            this.grpkelas = new System.Windows.Forms.GroupBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.dgvkelas = new System.Windows.Forms.DataGridView();
+            this.kelas = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Jurusan1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtkelas = new System.Windows.Forms.TextBox();
+            this.btnkelas = new System.Windows.Forms.Button();
             this.BtnBersih = new System.Windows.Forms.Button();
             this.TxtHP = new System.Windows.Forms.TextBox();
             this.label30 = new System.Windows.Forms.Label();
@@ -119,6 +128,7 @@
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.panel10 = new System.Windows.Forms.Panel();
             this.grpAnggota = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.txtanggota = new System.Windows.Forms.TextBox();
             this.dgvanggota = new System.Windows.Forms.DataGridView();
             this.id_anggota = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -198,7 +208,6 @@
             this.timerjalan = new System.Windows.Forms.Timer(this.components);
             this.panel14 = new System.Windows.Forms.Panel();
             this.timerhome = new System.Windows.Forms.Timer(this.components);
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKembali)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -206,7 +215,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabMain.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pkelas)).BeginInit();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Pdaftar_anggota)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Pcari_alat)).BeginInit();
@@ -219,6 +230,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.Pkembali_alat)).BeginInit();
             this.tabPage2.SuspendLayout();
             this.panelanggota.SuspendLayout();
+            this.grpkelas.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvkelas)).BeginInit();
             this.tabPage3.SuspendLayout();
             this.panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAlat)).BeginInit();
@@ -239,7 +252,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvPengunjung)).BeginInit();
             this.panelhome.SuspendLayout();
             this.panel14.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // CariIDAg
@@ -342,14 +354,14 @@
             this.dgvKembali.BackgroundColor = System.Drawing.Color.White;
             this.dgvKembali.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvKembali.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvKembali.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvKembali.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dgvKembali.ColumnHeadersHeight = 33;
             this.dgvKembali.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvKembali.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -775,6 +787,15 @@
             this.tabPage1.Text = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(19, 9);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(64, 59);
+            this.pictureBox2.TabIndex = 14;
+            this.pictureBox2.TabStop = false;
+            // 
             // panel7
             // 
             this.panel7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
@@ -789,6 +810,7 @@
             // 
             this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel3.Controls.Add(this.pkelas);
             this.panel3.Controls.Add(this.panel6);
             this.panel3.Controls.Add(this.panel5);
             this.panel3.Controls.Add(this.Pdaftar_anggota);
@@ -804,6 +826,16 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(768, 249);
             this.panel3.TabIndex = 12;
+            // 
+            // pkelas
+            // 
+            this.pkelas.Image = ((System.Drawing.Image)(resources.GetObject("pkelas.Image")));
+            this.pkelas.Location = new System.Drawing.Point(694, 156);
+            this.pkelas.Name = "pkelas";
+            this.pkelas.Size = new System.Drawing.Size(41, 50);
+            this.pkelas.TabIndex = 14;
+            this.pkelas.TabStop = false;
+            this.pkelas.Click += new System.EventHandler(this.pkelas_Click);
             // 
             // panel6
             // 
@@ -858,7 +890,7 @@
             // Pdata_user
             // 
             this.Pdata_user.Image = ((System.Drawing.Image)(resources.GetObject("Pdata_user.Image")));
-            this.Pdata_user.Location = new System.Drawing.Point(620, 140);
+            this.Pdata_user.Location = new System.Drawing.Point(563, 140);
             this.Pdata_user.Name = "Pdata_user";
             this.Pdata_user.Size = new System.Drawing.Size(64, 68);
             this.Pdata_user.TabIndex = 7;
@@ -868,7 +900,7 @@
             // pdata_peminjam
             // 
             this.pdata_peminjam.Image = ((System.Drawing.Image)(resources.GetObject("pdata_peminjam.Image")));
-            this.pdata_peminjam.Location = new System.Drawing.Point(346, 140);
+            this.pdata_peminjam.Location = new System.Drawing.Point(285, 140);
             this.pdata_peminjam.Name = "pdata_peminjam";
             this.pdata_peminjam.Size = new System.Drawing.Size(66, 66);
             this.pdata_peminjam.TabIndex = 11;
@@ -878,7 +910,7 @@
             // Pdata_kembali
             // 
             this.Pdata_kembali.Image = ((System.Drawing.Image)(resources.GetObject("Pdata_kembali.Image")));
-            this.Pdata_kembali.Location = new System.Drawing.Point(481, 140);
+            this.Pdata_kembali.Location = new System.Drawing.Point(423, 140);
             this.Pdata_kembali.Name = "Pdata_kembali";
             this.Pdata_kembali.Size = new System.Drawing.Size(67, 68);
             this.Pdata_kembali.TabIndex = 5;
@@ -908,7 +940,7 @@
             // Pdata_anggota
             // 
             this.Pdata_anggota.Image = ((System.Drawing.Image)(resources.GetObject("Pdata_anggota.Image")));
-            this.Pdata_anggota.Location = new System.Drawing.Point(201, 138);
+            this.Pdata_anggota.Location = new System.Drawing.Point(145, 138);
             this.Pdata_anggota.Name = "Pdata_anggota";
             this.Pdata_anggota.Size = new System.Drawing.Size(66, 68);
             this.Pdata_anggota.TabIndex = 6;
@@ -963,6 +995,8 @@
             // panelanggota
             // 
             this.panelanggota.BackColor = System.Drawing.Color.Lavender;
+            this.panelanggota.Controls.Add(this.grpkelas);
+            this.panelanggota.Controls.Add(this.btnkelas);
             this.panelanggota.Controls.Add(this.BtnBersih);
             this.panelanggota.Controls.Add(this.TxtHP);
             this.panelanggota.Controls.Add(this.label30);
@@ -989,6 +1023,82 @@
             this.panelanggota.Size = new System.Drawing.Size(993, 561);
             this.panelanggota.TabIndex = 2;
             this.panelanggota.Paint += new System.Windows.Forms.PaintEventHandler(this.panelanggota_Paint);
+            // 
+            // grpkelas
+            // 
+            this.grpkelas.Controls.Add(this.button2);
+            this.grpkelas.Controls.Add(this.dgvkelas);
+            this.grpkelas.Controls.Add(this.txtkelas);
+            this.grpkelas.Location = new System.Drawing.Point(579, 162);
+            this.grpkelas.Name = "grpkelas";
+            this.grpkelas.Size = new System.Drawing.Size(353, 167);
+            this.grpkelas.TabIndex = 509;
+            this.grpkelas.TabStop = false;
+            this.grpkelas.Text = "KELAS";
+            this.grpkelas.Enter += new System.EventHandler(this.grpkelas_Enter);
+            // 
+            // button2
+            // 
+            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button2.Location = new System.Drawing.Point(306, 19);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(28, 23);
+            this.button2.TabIndex = 73;
+            this.button2.Text = "X";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // dgvkelas
+            // 
+            this.dgvkelas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvkelas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.kelas,
+            this.Jurusan1});
+            this.dgvkelas.Location = new System.Drawing.Point(16, 51);
+            this.dgvkelas.Name = "dgvkelas";
+            this.dgvkelas.Size = new System.Drawing.Size(331, 110);
+            this.dgvkelas.TabIndex = 1;
+            this.dgvkelas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvkelas_CellClick);
+            // 
+            // kelas
+            // 
+            this.kelas.DataPropertyName = "kelas";
+            this.kelas.HeaderText = "kelas";
+            this.kelas.Name = "kelas";
+            // 
+            // Jurusan1
+            // 
+            this.Jurusan1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Jurusan1.DataPropertyName = "jurusan";
+            this.Jurusan1.HeaderText = "Jurusan";
+            this.Jurusan1.Name = "Jurusan1";
+            // 
+            // txtkelas
+            // 
+            this.txtkelas.Location = new System.Drawing.Point(24, 19);
+            this.txtkelas.Name = "txtkelas";
+            this.txtkelas.Size = new System.Drawing.Size(118, 20);
+            this.txtkelas.TabIndex = 0;
+            this.txtkelas.TextChanged += new System.EventHandler(this.txtkelas_TextChanged);
+            // 
+            // btnkelas
+            // 
+            this.btnkelas.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnkelas.BackColor = System.Drawing.Color.SlateGray;
+            this.btnkelas.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnkelas.FlatAppearance.BorderSize = 0;
+            this.btnkelas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnkelas.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnkelas.ForeColor = System.Drawing.Color.White;
+            this.btnkelas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnkelas.Location = new System.Drawing.Point(418, 204);
+            this.btnkelas.Name = "btnkelas";
+            this.btnkelas.Size = new System.Drawing.Size(41, 33);
+            this.btnkelas.TabIndex = 508;
+            this.btnkelas.Text = "...";
+            this.btnkelas.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnkelas.UseVisualStyleBackColor = false;
+            this.btnkelas.Click += new System.EventHandler(this.btnkelas_Click);
             // 
             // BtnBersih
             // 
@@ -1021,7 +1131,7 @@
             this.TxtHP.ForeColor = System.Drawing.Color.White;
             this.TxtHP.Location = new System.Drawing.Point(248, 293);
             this.TxtHP.Name = "TxtHP";
-            this.TxtHP.Size = new System.Drawing.Size(173, 22);
+            this.TxtHP.Size = new System.Drawing.Size(232, 22);
             this.TxtHP.TabIndex = 64;
             // 
             // label30
@@ -1043,12 +1153,12 @@
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.CmbJurusan.BackColor = System.Drawing.Color.SlateGray;
             this.CmbJurusan.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.CmbJurusan.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CmbJurusan.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CmbJurusan.ForeColor = System.Drawing.Color.White;
             this.CmbJurusan.Location = new System.Drawing.Point(245, 252);
             this.CmbJurusan.Name = "CmbJurusan";
             this.CmbJurusan.ReadOnly = true;
-            this.CmbJurusan.Size = new System.Drawing.Size(214, 22);
+            this.CmbJurusan.Size = new System.Drawing.Size(235, 22);
             this.CmbJurusan.TabIndex = 58;
             // 
             // CmbKelas
@@ -1059,33 +1169,11 @@
             this.CmbKelas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CmbKelas.ForeColor = System.Drawing.Color.White;
             this.CmbKelas.FormattingEnabled = true;
-            this.CmbKelas.Items.AddRange(new object[] {
-            "TKR-1",
-            "TKR-2",
-            "TKR-3",
-            "TKR-4",
-            "TKR-5",
-            "TKJ-1",
-            "TKJ-2",
-            "TKJ-3",
-            "TKJ-4",
-            "TKJ-5",
-            "AK-1",
-            "AK-2",
-            "AK-3",
-            "AK-4",
-            "AK-5",
-            "PBS-1",
-            "PBS-2",
-            "PBS-3",
-            "PBS-4",
-            "PBS-5"});
             this.CmbKelas.Location = new System.Drawing.Point(246, 204);
             this.CmbKelas.Name = "CmbKelas";
             this.CmbKelas.Size = new System.Drawing.Size(141, 28);
             this.CmbKelas.TabIndex = 57;
             this.CmbKelas.Text = "---Pilihan---";
-            this.CmbKelas.SelectedIndexChanged += new System.EventHandler(this.CmbKelas_SelectedIndexChanged);
             // 
             // label10
             // 
@@ -1264,7 +1352,7 @@
             this.TxtAlamat.Multiline = true;
             this.TxtAlamat.Name = "TxtAlamat";
             this.TxtAlamat.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.TxtAlamat.Size = new System.Drawing.Size(219, 65);
+            this.TxtAlamat.Size = new System.Drawing.Size(232, 65);
             this.TxtAlamat.TabIndex = 7;
             // 
             // RB_P
@@ -1340,14 +1428,14 @@
             this.dgvAlat.BackgroundColor = System.Drawing.Color.White;
             this.dgvAlat.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvAlat.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvAlat.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvAlat.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.dgvAlat.ColumnHeadersHeight = 33;
             this.dgvAlat.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvAlat.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -1457,13 +1545,25 @@
             // 
             // grpAnggota
             // 
+            this.grpAnggota.Controls.Add(this.button1);
             this.grpAnggota.Controls.Add(this.txtanggota);
             this.grpAnggota.Controls.Add(this.dgvanggota);
             this.grpAnggota.Location = new System.Drawing.Point(563, 83);
             this.grpAnggota.Name = "grpAnggota";
-            this.grpAnggota.Size = new System.Drawing.Size(286, 170);
+            this.grpAnggota.Size = new System.Drawing.Size(343, 170);
             this.grpAnggota.TabIndex = 71;
             this.grpAnggota.TabStop = false;
+            // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.Location = new System.Drawing.Point(299, 11);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(28, 23);
+            this.button1.TabIndex = 72;
+            this.button1.Text = "X";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // txtanggota
             // 
@@ -1488,7 +1588,7 @@
             this.dgvanggota.Name = "dgvanggota";
             this.dgvanggota.ReadOnly = true;
             this.dgvanggota.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvanggota.Size = new System.Drawing.Size(240, 125);
+            this.dgvanggota.Size = new System.Drawing.Size(309, 125);
             this.dgvanggota.TabIndex = 70;
             this.dgvanggota.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvanggota_CellClick);
             this.dgvanggota.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvanggota_CellContentClick);
@@ -2236,14 +2336,14 @@
             this.dgvPengunjung.BackgroundColor = System.Drawing.Color.White;
             this.dgvPengunjung.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvPengunjung.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPengunjung.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPengunjung.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.dgvPengunjung.ColumnHeadersHeight = 33;
             this.dgvPengunjung.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvPengunjung.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -2405,15 +2505,6 @@
             this.panel14.Size = new System.Drawing.Size(540, 33);
             this.panel14.TabIndex = 7;
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(19, 9);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(64, 59);
-            this.pictureBox2.TabIndex = 14;
-            this.pictureBox2.TabStop = false;
-            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2436,7 +2527,9 @@
             this.tabMain.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pkelas)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Pdaftar_anggota)).EndInit();
@@ -2451,6 +2544,9 @@
             this.tabPage2.ResumeLayout(false);
             this.panelanggota.ResumeLayout(false);
             this.panelanggota.PerformLayout();
+            this.grpkelas.ResumeLayout(false);
+            this.grpkelas.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvkelas)).EndInit();
             this.tabPage3.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
@@ -2477,7 +2573,6 @@
             this.panelhome.ResumeLayout(false);
             this.panelhome.PerformLayout();
             this.panel14.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2650,6 +2745,15 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn harga_pembelian;
         private System.Windows.Forms.DataGridViewTextBoxColumn tahun_pembelian;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pkelas;
+        private System.Windows.Forms.Button btnkelas;
+        private System.Windows.Forms.GroupBox grpkelas;
+        private System.Windows.Forms.DataGridView dgvkelas;
+        private System.Windows.Forms.DataGridViewTextBoxColumn kelas;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Jurusan1;
+        private System.Windows.Forms.TextBox txtkelas;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
 
 
     }

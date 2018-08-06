@@ -162,6 +162,12 @@
     <Compile Include="View\Anggota.Designer.cs">
       <DependentUpon>Anggota.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\FrmKelas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FrmKelas.Designer.cs">
+      <DependentUpon>FrmKelas.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Hilang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -299,6 +305,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\EditAnggota.resx">
       <DependentUpon>EditAnggota.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FrmKelas.resx">
+      <DependentUpon>FrmKelas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Hilang.resx">
       <DependentUpon>Hilang.cs</DependentUpon>

@@ -35,7 +35,7 @@ namespace peminjaman.View
             TxtHarga.Text = "";
             TxtTahunPembelian.Text = "";
            // TxtJumlah.Text = "";
-            TxtKondisi.Text = "";
+            //TxtKondisi.Text = "";
         }
         //ubah data
         private void BtnSimpan_Click(object sender, EventArgs e)
@@ -45,9 +45,9 @@ namespace peminjaman.View
                (TxtJenis_Alat.Text) || string.IsNullOrEmpty
                (TxtLetak.Text) || string.IsNullOrEmpty
                (TxtHarga.Text) || string.IsNullOrEmpty
-               (TxtTahunPembelian.Text) || string.IsNullOrEmpty
+               (TxtTahunPembelian.Text)) //|| string.IsNullOrEmpty
               // (TxtJumlah.Text) || string.IsNullOrEmpty
-               (TxtKondisi.Text))
+             //  (TxtKondisi.Text))
             {
                 MessageBox.Show("mohon data di isi semua \nTidak boleh ada yang kosong ",
                     "Infromation", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -62,7 +62,7 @@ namespace peminjaman.View
                 asv.Harga_Pembelian = int.Parse(TxtHarga.Text.Trim());
                 asv.Tahun_Pembelian = int.Parse(TxtTahunPembelian.Text.Trim());
                 //asv.Jumlah = int.Parse(TxtJumlah.Text.Trim());
-                asv.Kondisi = TxtKondisi.Text.Trim();
+               // asv.Kondisi = TxtKondisi.Text.Trim();
                 asv.UbahAlat(TxtKode.Text.Trim());
 
                 MessageBox.Show("Data Berhasil di Ubah. ",

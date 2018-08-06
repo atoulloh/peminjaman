@@ -121,7 +121,7 @@ namespace peminjaman.View
                 ua.TxtJumlah.Text = this.dgvAlat.CurrentRow.Cells[4].Value.ToString();
                 ua.TxtHarga.Text = this.dgvAlat.CurrentRow.Cells[6].Value.ToString();
                 ua.TxtTahunPembelian.Text = this.dgvAlat.CurrentRow.Cells[7].Value.ToString();
-                ua.TxtKondisi.Text = this.dgvAlat.CurrentRow.Cells[8].Value.ToString();
+              //  ua.TxtKondisi.Text = this.dgvAlat.CurrentRow.Cells[8].Value.ToString();
 
                 ua.ShowDialog();
             }

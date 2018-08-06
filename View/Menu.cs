@@ -21,7 +21,7 @@ namespace peminjaman.View
         {
             InitializeComponent();
             GrpAlat.Visible = false;
-            GrpAlat.Left = 400;
+            GrpAlat.Left = 300;
             GrpAlat.Top = 100;
             GrpAlat.Width = 500;
             GrpAlat.Height = 200;
@@ -33,6 +33,7 @@ namespace peminjaman.View
 
             tabMain.Location = new Point(233, -22);
             grpAnggota.Visible = false;
+            grpkelas.Visible = false;
             WindowState = FormWindowState.Maximized;
            // grphilang.Visible = false;
         }
@@ -235,7 +236,7 @@ namespace peminjaman.View
        
         }
         //bagian anggota
-        private void CmbKelas_SelectedIndexChanged(object sender, EventArgs e)
+       /* private void CmbKelas_SelectedIndexChanged(object sender, EventArgs e)
         {
             string jur = CmbKelas.SelectedItem.ToString();
             if (CmbKelas.SelectedItem == "TKR-1" || CmbKelas.SelectedItem == "TKR-2" || CmbKelas.SelectedItem == "TKR-3" || CmbKelas.SelectedItem == "TKR-4" || CmbKelas.SelectedItem == "TKR-5")
@@ -257,7 +258,7 @@ namespace peminjaman.View
             {
                 CmbJurusan.Text = "Perbankan Syariah";
             }
-        }
+        }*/
 
         private void panelanggota_Paint(object sender, PaintEventArgs e)
         {
@@ -1003,6 +1004,57 @@ namespace peminjaman.View
         {
             tabMain.SelectedTab = (tabPage6);
             AmbilForm(new Rusak());
+        }
+
+        private void pkelas_Click(object sender, EventArgs e)
+        {
+            FrmKelas kl = new FrmKelas();
+            kl.ShowDialog();
+          
+        }
+
+        private void grpkelas_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnkelas_Click(object sender, EventArgs e)
+        {
+            grpkelas.Visible = true;
+            AlatServ al = new AlatServ();
+            dgvkelas.DataSource = al.Cekkelas(txtkelas.Text);
+        }
+
+        private void dgvkelas_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = this.dgvkelas.Rows[e.RowIndex];
+
+                CmbKelas.Text = row.Cells[0].Value.ToString();
+                CmbJurusan.Text = row.Cells[1].Value.ToString();
+
+                grpkelas.Visible = false;
+            }
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            grpAnggota.Visible = false;
+            txtanggota.Clear();
+          
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            grpkelas.Visible = false;
+                txtkelas.Clear();
+        }
+
+        private void txtkelas_TextChanged(object sender, EventArgs e)
+        {
+            AlatServ al = new AlatServ();
+            dgvkelas.DataSource = al.Cekkelas(txtkelas.Text);
         }
 
     }

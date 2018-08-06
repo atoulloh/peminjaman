@@ -86,9 +86,34 @@ namespace peminjaman.Service
             }
         }
 
+        public void SimpanKelas()
+        {
+            query = "insert into kelas values ('" + Kelas + "','" + Jurusan + "')";
+            if (!(dbConn.ExecNonQuery(query) > 0))
+            {
+                throw new Exception("gagal menyimpan");
+            }
+        }
+
+        public DataTable TampilKelas()
+        {
+            query = "select * from kelas";
+            dtTbl = dbConn.ExecQuery(query);
+
+            return dtTbl;
+        }
+
+        public DataTable Cekkelas(String a)
+        {
+            query = "SELECT * FROM kelas WHERE kelas like '%" + a + "%'";
+            dtTbl = dbConn.ExecQuery(query);
+
+            return dtTbl;
+        }
+
         public void UbahAlat(String kode_alat)
         {
-            query = "UPDATE alat SET nama_alat='" + Nama_Alat + "', jenis_alat='" + Jenis_Alat + "', letak='" + Letak + "', harga_pembelian='" + Harga_Pembelian + "', tahun_pembelian='" + Tahun_Pembelian + "', kondisi='" + Kondisi + "' WHERE kode_alat='" + kode_alat + "'";
+            query = "UPDATE alat SET nama_alat='" + Nama_Alat + "', jenis_alat='" + Jenis_Alat + "', letak='" + Letak + "', harga_pembelian='" + Harga_Pembelian + "', tahun_pembelian='" + Tahun_Pembelian + "' WHERE kode_alat='" + kode_alat + "'";
 
             if (!(dbConn.ExecNonQuery(query) > 0))
             {
