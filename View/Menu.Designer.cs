@@ -30,9 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.CariIDAg = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.DTPPJalat = new System.Windows.Forms.DateTimePicker();
@@ -354,14 +354,14 @@
             this.dgvKembali.BackgroundColor = System.Drawing.Color.White;
             this.dgvKembali.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvKembali.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvKembali.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvKembali.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvKembali.ColumnHeadersHeight = 33;
             this.dgvKembali.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvKembali.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -829,10 +829,11 @@
             // 
             // pkelas
             // 
+            this.pkelas.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pkelas.Image = ((System.Drawing.Image)(resources.GetObject("pkelas.Image")));
-            this.pkelas.Location = new System.Drawing.Point(694, 156);
+            this.pkelas.Location = new System.Drawing.Point(685, 140);
             this.pkelas.Name = "pkelas";
-            this.pkelas.Size = new System.Drawing.Size(41, 50);
+            this.pkelas.Size = new System.Drawing.Size(68, 66);
             this.pkelas.TabIndex = 14;
             this.pkelas.TabStop = false;
             this.pkelas.Click += new System.EventHandler(this.pkelas_Click);
@@ -869,6 +870,7 @@
             // 
             // Pdaftar_anggota
             // 
+            this.Pdaftar_anggota.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Pdaftar_anggota.Image = ((System.Drawing.Image)(resources.GetObject("Pdaftar_anggota.Image")));
             this.Pdaftar_anggota.Location = new System.Drawing.Point(142, 33);
             this.Pdaftar_anggota.Name = "Pdaftar_anggota";
@@ -879,6 +881,7 @@
             // 
             // Pcari_alat
             // 
+            this.Pcari_alat.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Pcari_alat.Image = ((System.Drawing.Image)(resources.GetObject("Pcari_alat.Image")));
             this.Pcari_alat.Location = new System.Drawing.Point(286, 33);
             this.Pcari_alat.Name = "Pcari_alat";
@@ -889,6 +892,7 @@
             // 
             // Pdata_user
             // 
+            this.Pdata_user.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Pdata_user.Image = ((System.Drawing.Image)(resources.GetObject("Pdata_user.Image")));
             this.Pdata_user.Location = new System.Drawing.Point(563, 140);
             this.Pdata_user.Name = "Pdata_user";
@@ -899,6 +903,7 @@
             // 
             // pdata_peminjam
             // 
+            this.pdata_peminjam.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pdata_peminjam.Image = ((System.Drawing.Image)(resources.GetObject("pdata_peminjam.Image")));
             this.pdata_peminjam.Location = new System.Drawing.Point(285, 140);
             this.pdata_peminjam.Name = "pdata_peminjam";
@@ -909,6 +914,7 @@
             // 
             // Pdata_kembali
             // 
+            this.Pdata_kembali.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Pdata_kembali.Image = ((System.Drawing.Image)(resources.GetObject("Pdata_kembali.Image")));
             this.Pdata_kembali.Location = new System.Drawing.Point(423, 140);
             this.Pdata_kembali.Name = "Pdata_kembali";
@@ -919,6 +925,7 @@
             // 
             // Ppinjam_alat
             // 
+            this.Ppinjam_alat.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Ppinjam_alat.Image = ((System.Drawing.Image)(resources.GetObject("Ppinjam_alat.Image")));
             this.Ppinjam_alat.Location = new System.Drawing.Point(422, 33);
             this.Ppinjam_alat.Name = "Ppinjam_alat";
@@ -929,6 +936,7 @@
             // 
             // Pdata_alat
             // 
+            this.Pdata_alat.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Pdata_alat.Image = ((System.Drawing.Image)(resources.GetObject("Pdata_alat.Image")));
             this.Pdata_alat.Location = new System.Drawing.Point(685, 33);
             this.Pdata_alat.Name = "Pdata_alat";
@@ -939,6 +947,7 @@
             // 
             // Pdata_anggota
             // 
+            this.Pdata_anggota.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Pdata_anggota.Image = ((System.Drawing.Image)(resources.GetObject("Pdata_anggota.Image")));
             this.Pdata_anggota.Location = new System.Drawing.Point(145, 138);
             this.Pdata_anggota.Name = "Pdata_anggota";
@@ -949,6 +958,7 @@
             // 
             // Pkembali_alat
             // 
+            this.Pkembali_alat.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Pkembali_alat.Image = ((System.Drawing.Image)(resources.GetObject("Pkembali_alat.Image")));
             this.Pkembali_alat.Location = new System.Drawing.Point(559, 33);
             this.Pkembali_alat.Name = "Pkembali_alat";
@@ -1428,14 +1438,14 @@
             this.dgvAlat.BackgroundColor = System.Drawing.Color.White;
             this.dgvAlat.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvAlat.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvAlat.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvAlat.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvAlat.ColumnHeadersHeight = 33;
             this.dgvAlat.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvAlat.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -2336,14 +2346,14 @@
             this.dgvPengunjung.BackgroundColor = System.Drawing.Color.White;
             this.dgvPengunjung.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvPengunjung.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPengunjung.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPengunjung.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvPengunjung.ColumnHeadersHeight = 33;
             this.dgvPengunjung.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvPengunjung.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {

@@ -723,6 +723,7 @@ namespace peminjaman.View
                 Pdata_anggota.Enabled = false;
                 pdata_peminjam.Enabled = false;
                 Pdata_kembali.Enabled = false;
+                pkelas.Enabled = false;
             }
 
             else if (lvl ==  "Kepala jurusan")
@@ -742,7 +743,7 @@ namespace peminjaman.View
                 Ppinjam_alat.Enabled = false;
                 Pkembali_alat.Enabled = false;
                 Pdata_user.Enabled = false;
-
+                pkelas.Enabled = false;
             }
             else if (lvl == "Petugas" )
             {

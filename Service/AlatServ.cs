@@ -78,7 +78,7 @@ namespace peminjaman.Service
         public void SimpanAlat()
         {
            query = "INSERT INTO alat VALUES ('" + Kode_Alat + "','" + Nama_Alat + "','" + Jenis_Alat + "','" + Letak + "','"+ Jumlah + "','" + Jumlah_Tersedia + "','"
-                + Harga_Pembelian + "','" + Tahun_Pembelian + "','" + Kondisi + "')";
+                + Harga_Pembelian + "','" + Tahun_Pembelian +  "')";
 
             if (!(dbConn.ExecNonQuery(query) > 0))
             {
@@ -156,7 +156,7 @@ namespace peminjaman.Service
 
         public void HapusRusak(String kode_alat)
         {
-            query = " delete from alat_rusak where kode_alat'" + kode_alat + "'";
+            query = " delete from alat_rusak where kode_alat='" + kode_alat + "'";
             if (!(dbConn.ExecNonQuery(query) > 0))
             {
                 throw new Exception("Gagal menghapus");
