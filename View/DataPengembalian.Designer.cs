@@ -29,13 +29,6 @@
         private void InitializeComponent()
         {
             this.dgvdetailpinjam = new System.Windows.Forms.DataGridView();
-            this.Id_Pinjam = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.id_anggota = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nama = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nama_Alat = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Tanggal_Pinjam = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Tanggal_Kembali = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvAlat = new System.Windows.Forms.DataGridView();
             this.txtdetail = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -46,7 +39,12 @@
             this.Letak = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.harga_pembelian = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tahun_pembelian = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Kondisi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Id_Pinjam = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.id_anggota = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nama = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nama_Alat = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Tanggal_Pinjam = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvdetailpinjam)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAlat)).BeginInit();
             this.SuspendLayout();
@@ -64,62 +62,12 @@
             this.nama,
             this.Nama_Alat,
             this.Tanggal_Pinjam,
-            this.Tanggal_Kembali,
             this.Status});
             this.dgvdetailpinjam.Location = new System.Drawing.Point(12, 62);
             this.dgvdetailpinjam.Name = "dgvdetailpinjam";
             this.dgvdetailpinjam.Size = new System.Drawing.Size(983, 241);
             this.dgvdetailpinjam.TabIndex = 0;
             this.dgvdetailpinjam.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // Id_Pinjam
-            // 
-            this.Id_Pinjam.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Id_Pinjam.DataPropertyName = "id_pinjaman";
-            this.Id_Pinjam.HeaderText = "ID Pinjam";
-            this.Id_Pinjam.Name = "Id_Pinjam";
-            // 
-            // id_anggota
-            // 
-            this.id_anggota.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.id_anggota.DataPropertyName = "id_anggota";
-            this.id_anggota.HeaderText = "ID Anggota";
-            this.id_anggota.Name = "id_anggota";
-            // 
-            // nama
-            // 
-            this.nama.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.nama.DataPropertyName = "nama";
-            this.nama.HeaderText = "Nama Peminjam";
-            this.nama.Name = "nama";
-            // 
-            // Nama_Alat
-            // 
-            this.Nama_Alat.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Nama_Alat.DataPropertyName = "nama_alat";
-            this.Nama_Alat.HeaderText = "Nama Alat";
-            this.Nama_Alat.Name = "Nama_Alat";
-            // 
-            // Tanggal_Pinjam
-            // 
-            this.Tanggal_Pinjam.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Tanggal_Pinjam.DataPropertyName = "tanggal_pinjam";
-            this.Tanggal_Pinjam.HeaderText = "Tanggal Pinjam";
-            this.Tanggal_Pinjam.Name = "Tanggal_Pinjam";
-            // 
-            // Tanggal_Kembali
-            // 
-            this.Tanggal_Kembali.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Tanggal_Kembali.DataPropertyName = "tanggal_kembali";
-            this.Tanggal_Kembali.HeaderText = "Tanggal Kembali";
-            this.Tanggal_Kembali.Name = "Tanggal_Kembali";
-            // 
-            // Status
-            // 
-            this.Status.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Status.DataPropertyName = "status";
-            this.Status.HeaderText = "Status Alat";
-            this.Status.Name = "Status";
             // 
             // dgvAlat
             // 
@@ -135,8 +83,7 @@
             this.Jenis_Alat,
             this.Letak,
             this.harga_pembelian,
-            this.tahun_pembelian,
-            this.Kondisi});
+            this.tahun_pembelian});
             this.dgvAlat.Location = new System.Drawing.Point(12, 334);
             this.dgvAlat.Name = "dgvAlat";
             this.dgvAlat.ReadOnly = true;
@@ -224,13 +171,47 @@
             this.tahun_pembelian.Name = "tahun_pembelian";
             this.tahun_pembelian.ReadOnly = true;
             // 
-            // Kondisi
+            // Id_Pinjam
             // 
-            this.Kondisi.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Kondisi.DataPropertyName = "kondisi";
-            this.Kondisi.HeaderText = "Kondisi Alat";
-            this.Kondisi.Name = "Kondisi";
-            this.Kondisi.ReadOnly = true;
+            this.Id_Pinjam.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Id_Pinjam.DataPropertyName = "id_pinjaman";
+            this.Id_Pinjam.HeaderText = "ID Pinjam";
+            this.Id_Pinjam.Name = "Id_Pinjam";
+            // 
+            // id_anggota
+            // 
+            this.id_anggota.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.id_anggota.DataPropertyName = "id_anggota";
+            this.id_anggota.HeaderText = "ID Anggota";
+            this.id_anggota.Name = "id_anggota";
+            // 
+            // nama
+            // 
+            this.nama.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.nama.DataPropertyName = "nama";
+            this.nama.HeaderText = "Nama Peminjam";
+            this.nama.Name = "nama";
+            // 
+            // Nama_Alat
+            // 
+            this.Nama_Alat.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Nama_Alat.DataPropertyName = "nama_alat";
+            this.Nama_Alat.HeaderText = "Nama Alat";
+            this.Nama_Alat.Name = "Nama_Alat";
+            // 
+            // Tanggal_Pinjam
+            // 
+            this.Tanggal_Pinjam.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Tanggal_Pinjam.DataPropertyName = "tanggal_pinjam";
+            this.Tanggal_Pinjam.HeaderText = "Tanggal Pinjam";
+            this.Tanggal_Pinjam.Name = "Tanggal_Pinjam";
+            // 
+            // Status
+            // 
+            this.Status.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Status.DataPropertyName = "status";
+            this.Status.HeaderText = "Status Alat";
+            this.Status.Name = "Status";
             // 
             // MonitorData
             // 
@@ -258,13 +239,6 @@
         private System.Windows.Forms.DataGridView dgvdetailpinjam;
         private System.Windows.Forms.DataGridView dgvAlat;
         private System.Windows.Forms.TextBox txtdetail;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Id_Pinjam;
-        private System.Windows.Forms.DataGridViewTextBoxColumn id_anggota;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nama;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nama_Alat;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Tanggal_Pinjam;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Tanggal_Kembali;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Status;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridViewTextBoxColumn kode_alat;
@@ -273,6 +247,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Letak;
         private System.Windows.Forms.DataGridViewTextBoxColumn harga_pembelian;
         private System.Windows.Forms.DataGridViewTextBoxColumn tahun_pembelian;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Kondisi;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id_Pinjam;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id_anggota;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nama;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nama_Alat;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Tanggal_Pinjam;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Status;
     }
 }

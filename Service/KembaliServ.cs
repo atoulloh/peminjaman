@@ -72,6 +72,25 @@ namespace peminjaman.Service
             }
         }
 
+        public void SimpanRusak()
+        {
+            query = "INSERT INTO alat_rusak ( id_peminjaman,id_anggota,nama,jumlah,id_pinjaman,nama_alat,letak) VALUES ('" + IdPeminjaman + "','" + IdAnggota + "','" + Nama + "','" + Jumlah + "','" + IdPinjaman + "','" + NamaAlat + "','" + Letak + "')";
+
+            if (!(dbConn.ExecNonQuery(query) > 0))
+            {
+                throw new Exception(" Gagal Menyimpan");
+            }
+        }
+
+        public void updaterusak()
+        {
+            query = " update alat set jumlah = jumlah -'" + Alat_Rusak + "', jumlah_tersedia = jumlah_tersedia -'" + Alat_Rusak + "' where nama_alat = '" + NamaAlat + "'";
+            if (!(dbConn.ExecNonQuery(query) > 0))
+            {
+                throw new Exception("Gagal Memperbarui jumlah");
+            }
+        }
+
         public void Hapus_Kembali(String id_peminjaman)
         {
             query = "DELETE from kembali WHERE id_peminjaman = '" + id_peminjaman + "'";

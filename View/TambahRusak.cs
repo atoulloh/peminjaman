@@ -50,8 +50,8 @@ namespace peminjaman.View
                 asv.Jenis_Alat = TxtJenis_Alat_Rusak.Text.Trim();
                 asv.Letak = TxtLetakRusak.Text.Trim();
                 asv.Jumlah = int.Parse(TxtJumlah.Text.Trim());
-                asv.SimpanRusak();
-                asv.updaterusak();
+              //  asv.SimpanRusak();
+             //   asv.updaterusak();
                 {
                     MessageBox.Show("Data berhasil di simpan, ",
                         "Information", MessageBoxButtons.OK,

@@ -196,6 +196,7 @@ namespace peminjaman.View
                 ag.Jurusan = CmbJurusan.Text.Trim();
                 ag.No_Hp =  TxtHP.Text.Trim();
                 ag.Alamat = TxtAlamat.Text.Trim();
+                //ag.Status = Status();
                 ag.Simpan_Anggota();
                 MessageBox.Show("Data berhasil di simpan.",
                     "Informasi", MessageBoxButtons.OK,
@@ -602,6 +603,7 @@ namespace peminjaman.View
                             string st = row.Cells[3].Value.ToString();
                             int jumlah_tot = int.Parse(row.Cells[4].Value.ToString());
                             int alat_hilang = int.Parse(row.Cells[5].Value.ToString());
+                            int alat_rusak = int.Parse(row.Cells[6].Value.ToString());
                             km.IdPinjaman = id_pinjam;
                             km.NamaAlat = nama_alat;
                             km.Letak = letak;
@@ -621,7 +623,22 @@ namespace peminjaman.View
                             else
                             {
                                 km.Jumlah_Tot = jumlah_tot;
-                            }                            
+                            }
+
+                            if (alat_rusak > 0)
+                            {
+                                //AlatServ al = new AlatServ();
+                                int rusak = jumlah_tot;
+                                km.Alat_Rusak = alat_rusak;
+                                km.Jumlah_Tot = rusak;
+                                km.Jumlah = alat_rusak;
+                                km.SimpanRusak();
+                                km.updaterusak();
+                            }
+                            else
+                            {
+                                km.Jumlah_Tot = jumlah_tot;
+                            }
                            
                            // km.Simpan_Detail_kembali();                       
                             simpan = km.UbahStatusPijaman();

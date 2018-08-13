@@ -187,7 +187,7 @@ namespace peminjaman.Service
         }
         public DataTable monitor()
         {
-            query = "select p.id_pinjaman, p.nama_alat,p.tanggal_pinjam,p.tanggal_kembali,p.status,dp.id_anggota,dp.nama from  pinjaman p,peminjam dp where dp.id_peminjaman = p.id_peminjaman ";
+            query = "select p.id_pinjaman, p.nama_alat,p.tanggal_pinjam,p.tanggal_kembali,p.status,dp.id_anggota,dp.nama from  pinjaman p,peminjam dp where dp.id_peminjaman = p.id_peminjaman and p.status ='Belum'";
             dtTbl = dbConn.ExecQuery(query);
 
             return dtTbl;

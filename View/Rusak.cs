@@ -17,6 +17,7 @@ namespace peminjaman.View
         public Rusak()
         {
             InitializeComponent();
+            dgvalatrusak.AutoGenerateColumns = false;
         }
 
         private void BtnTambah_Click(object sender, EventArgs e)
@@ -33,7 +34,7 @@ namespace peminjaman.View
             int sum = 0;
             for (int i = 0; i < dgvalatrusak.Rows.Count; ++i)
             {
-                sum += Convert.ToInt32(dgvalatrusak.Rows[i].Cells[4].Value);
+               sum += Convert.ToInt32(dgvalatrusak.Rows[i].Cells[5].Value);
             }
             labelrusak.Text = " Jumlah Alat : " + sum.ToString();
         }
@@ -98,12 +99,6 @@ namespace peminjaman.View
             }
         }
 
-       // private void Rusak_KeyPress(object sender, KeyPressEventArgs e)
-       // {
-         //   if (e.KeyChar = KeyPress== keycode F9 )
-           // {
-             //   BtnCetakAL_Click(null, null);
-            //}
-        //}
+      
     }
 }

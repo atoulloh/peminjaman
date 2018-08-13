@@ -31,6 +31,15 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Anggota));
             this.label2 = new System.Windows.Forms.Label();
             this.DgvAnggota = new System.Windows.Forms.DataGridView();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.TxtCariAg = new System.Windows.Forms.TextBox();
+            this.labeljumlahag = new System.Windows.Forms.Label();
+            this.BtnRefAg = new System.Windows.Forms.Button();
+            this.BtnEditAg = new System.Windows.Forms.Button();
+            this.BtnCetakAg = new System.Windows.Forms.Button();
+            this.BtnHapusAg = new System.Windows.Forms.Button();
+            this.BtnCari = new System.Windows.Forms.Button();
             this.id_anggota = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nis = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nama = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -39,15 +48,7 @@
             this.jurusan = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.no_hp = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.alamat = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.TxtCariAg = new System.Windows.Forms.TextBox();
-            this.labeljumlahag = new System.Windows.Forms.Label();
-            this.BtnRefAg = new System.Windows.Forms.Button();
-            this.BtnEditAg = new System.Windows.Forms.Button();
-            this.BtnCetakAg = new System.Windows.Forms.Button();
-            this.BtnHapusAg = new System.Windows.Forms.Button();
-            this.BtnCari = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.DgvAnggota)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -81,69 +82,13 @@
             this.kelas,
             this.jurusan,
             this.no_hp,
-            this.alamat});
+            this.alamat,
+            this.Status});
             this.DgvAnggota.Location = new System.Drawing.Point(12, 101);
             this.DgvAnggota.Name = "DgvAnggota";
             this.DgvAnggota.ReadOnly = true;
             this.DgvAnggota.Size = new System.Drawing.Size(840, 267);
             this.DgvAnggota.TabIndex = 57;
-            // 
-            // id_anggota
-            // 
-            this.id_anggota.DataPropertyName = "id_anggota";
-            this.id_anggota.HeaderText = "ID Anggota";
-            this.id_anggota.Name = "id_anggota";
-            this.id_anggota.ReadOnly = true;
-            // 
-            // nis
-            // 
-            this.nis.DataPropertyName = "nis";
-            this.nis.HeaderText = "NIS";
-            this.nis.Name = "nis";
-            this.nis.ReadOnly = true;
-            // 
-            // nama
-            // 
-            this.nama.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.nama.DataPropertyName = "nama";
-            this.nama.HeaderText = "Nama Anggota";
-            this.nama.Name = "nama";
-            this.nama.ReadOnly = true;
-            // 
-            // jenis_kelamin
-            // 
-            this.jenis_kelamin.DataPropertyName = "jenis_kelamin";
-            this.jenis_kelamin.HeaderText = "Jenis Kelamin";
-            this.jenis_kelamin.Name = "jenis_kelamin";
-            this.jenis_kelamin.ReadOnly = true;
-            // 
-            // kelas
-            // 
-            this.kelas.DataPropertyName = "kelas";
-            this.kelas.HeaderText = "Kelas";
-            this.kelas.Name = "kelas";
-            this.kelas.ReadOnly = true;
-            // 
-            // jurusan
-            // 
-            this.jurusan.DataPropertyName = "jurusan";
-            this.jurusan.HeaderText = "Jurusan";
-            this.jurusan.Name = "jurusan";
-            this.jurusan.ReadOnly = true;
-            // 
-            // no_hp
-            // 
-            this.no_hp.DataPropertyName = "no_hp";
-            this.no_hp.HeaderText = "No HP";
-            this.no_hp.Name = "no_hp";
-            this.no_hp.ReadOnly = true;
-            // 
-            // alamat
-            // 
-            this.alamat.DataPropertyName = "alamat";
-            this.alamat.HeaderText = "Alamat";
-            this.alamat.Name = "alamat";
-            this.alamat.ReadOnly = true;
             // 
             // panel1
             // 
@@ -154,6 +99,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(374, 36);
             this.panel1.TabIndex = 67;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(59, 10);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(105, 18);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Cari Anggota";
             // 
             // TxtCariAg
             // 
@@ -270,15 +225,77 @@
             this.BtnCari.UseVisualStyleBackColor = true;
             this.BtnCari.Click += new System.EventHandler(this.BtnCari_Click);
             // 
-            // label1
+            // id_anggota
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(59, 10);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(105, 18);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Cari Anggota";
+            this.id_anggota.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.id_anggota.DataPropertyName = "id_anggota";
+            this.id_anggota.HeaderText = "ID Anggota";
+            this.id_anggota.Name = "id_anggota";
+            this.id_anggota.ReadOnly = true;
+            // 
+            // nis
+            // 
+            this.nis.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.nis.DataPropertyName = "nis";
+            this.nis.HeaderText = "NIS";
+            this.nis.Name = "nis";
+            this.nis.ReadOnly = true;
+            // 
+            // nama
+            // 
+            this.nama.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.nama.DataPropertyName = "nama";
+            this.nama.HeaderText = "Nama Anggota";
+            this.nama.Name = "nama";
+            this.nama.ReadOnly = true;
+            // 
+            // jenis_kelamin
+            // 
+            this.jenis_kelamin.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.jenis_kelamin.DataPropertyName = "jenis_kelamin";
+            this.jenis_kelamin.HeaderText = "Jenis Kelamin";
+            this.jenis_kelamin.Name = "jenis_kelamin";
+            this.jenis_kelamin.ReadOnly = true;
+            // 
+            // kelas
+            // 
+            this.kelas.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.kelas.DataPropertyName = "kelas";
+            this.kelas.HeaderText = "Kelas";
+            this.kelas.Name = "kelas";
+            this.kelas.ReadOnly = true;
+            // 
+            // jurusan
+            // 
+            this.jurusan.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.jurusan.DataPropertyName = "jurusan";
+            this.jurusan.HeaderText = "Jurusan";
+            this.jurusan.Name = "jurusan";
+            this.jurusan.ReadOnly = true;
+            // 
+            // no_hp
+            // 
+            this.no_hp.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.no_hp.DataPropertyName = "no_hp";
+            this.no_hp.HeaderText = "No HP";
+            this.no_hp.Name = "no_hp";
+            this.no_hp.ReadOnly = true;
+            // 
+            // alamat
+            // 
+            this.alamat.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.alamat.DataPropertyName = "alamat";
+            this.alamat.HeaderText = "Alamat";
+            this.alamat.Name = "alamat";
+            this.alamat.ReadOnly = true;
+            // 
+            // Status
+            // 
+            this.Status.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Status.DataPropertyName = "status";
+            this.Status.HeaderText = "Status";
+            this.Status.Name = "Status";
+            this.Status.ReadOnly = true;
             // 
             // Anggota
             // 
@@ -318,6 +335,7 @@
         private System.Windows.Forms.Button BtnCetakAg;
         private System.Windows.Forms.Button BtnHapusAg;
         private System.Windows.Forms.Button BtnCari;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridViewTextBoxColumn id_anggota;
         private System.Windows.Forms.DataGridViewTextBoxColumn nis;
         private System.Windows.Forms.DataGridViewTextBoxColumn nama;
@@ -326,6 +344,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn jurusan;
         private System.Windows.Forms.DataGridViewTextBoxColumn no_hp;
         private System.Windows.Forms.DataGridViewTextBoxColumn alamat;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Status;
     }
 }

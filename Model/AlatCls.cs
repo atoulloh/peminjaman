@@ -18,6 +18,7 @@ namespace peminjaman.Model
         private String _kondisi;
         private String _kelas;
         private String _jurusan;
+        
 
 
         public AlatCls()
@@ -33,6 +34,7 @@ namespace peminjaman.Model
             _kondisi = "";
             _kelas = "";
             _jurusan = "";
+           
         }
 
 
@@ -98,6 +100,8 @@ namespace peminjaman.Model
             set { _jurusan = value; }
             get { return _jurusan; }
         }
+
+       
 
     }
 }

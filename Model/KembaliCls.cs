@@ -18,6 +18,7 @@ namespace peminjaman.Model
         private String _tanggal_pinjam;
         private String _tanggal_kembali;
         private String _letak;
+        private int _alat_rusak;
 
         public KembaliCls()
         {
@@ -32,6 +33,7 @@ namespace peminjaman.Model
             _tanggal_pinjam = "";
             _tanggal_kembali = "";
             _letak = "";
+            _alat_rusak = 0;
         }
 
         public String IdPeminjaman
@@ -105,5 +107,12 @@ namespace peminjaman.Model
             set { _letak = value; }
             get { return _letak; }
         }
+
+        public int Alat_Rusak
+        {
+            set { _alat_rusak = value; }
+            get { return _alat_rusak; }
+        }
+
     }
 }

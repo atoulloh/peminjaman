@@ -17,6 +17,7 @@ namespace peminjaman.View
         public MonitorData()
         {
             InitializeComponent();
+            dgvdetailpinjam.AutoGenerateColumns = false;
 
         }
 

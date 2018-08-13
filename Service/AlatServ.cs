@@ -31,14 +31,7 @@ namespace peminjaman.Service
             return dtTbl;
         }
 
-        public void updaterusak()
-        {
-            query = " update alat set jumlah = jumlah -'" + Jumlah + "', jumlah_tersedia = jumlah_tersedia -'" + Jumlah + "' where kode_alat = '" + Kode_Alat + "'";
-            if (!(dbConn.ExecNonQuery(query) > 0))
-            {
-                throw new Exception("Gagal Memperbarui jumlah");
-            }
-        }
+       
 
         public void updatealat()
         {
@@ -66,15 +59,7 @@ namespace peminjaman.Service
             return dtTbl;
         }
 
-        public void SimpanRusak()
-        {
-            query = "INSERT INTO alat_rusak ( kode_alat,nama_alat, jenis_alat,letak,jumlah) VALUES ('" + Kode_Alat + "','" + Nama_Alat + "','" + Jenis_Alat + "','" + Letak + "','" + Jumlah + "')";
-
-            if (!(dbConn.ExecNonQuery(query) > 0))
-            {
-                throw new Exception(" Gagal Menyimpan");
-            }
-        }
+       
         public void SimpanAlat()
         {
            query = "INSERT INTO alat VALUES ('" + Kode_Alat + "','" + Nama_Alat + "','" + Jenis_Alat + "','" + Letak + "','"+ Jumlah + "','" + Jumlah_Tersedia + "','"
@@ -154,9 +139,9 @@ namespace peminjaman.Service
             }
         }
 
-        public void HapusRusak(String kode_alat)
+        public void HapusRusak(String nama_alat)
         {
-            query = " delete from alat_rusak where kode_alat='" + kode_alat + "'";
+            query = " delete from alat_rusak where nama_alat='" + nama_alat + "'";
             if (!(dbConn.ExecNonQuery(query) > 0))
             {
                 throw new Exception("Gagal menghapus");
@@ -178,11 +163,11 @@ namespace peminjaman.Service
             return cek;
         }
 
-        public bool isExistRusak(String Kode_Alat)
+        public bool isExistRusak(String nama_alat)
         {
             bool cek = false;
 
-            query = "SELECT * FROM alat_rusak WHERE kode_alat ='" + Kode_Alat + "'";
+            query = "SELECT * FROM alat_rusak WHERE nama_alat ='" + nama_alat + "'";
             dtTbl = dbConn.ExecQuery(query);
 
             if (dtTbl.Rows.Count > 0)
