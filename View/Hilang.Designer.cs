@@ -179,7 +179,7 @@
             // status
             // 
             this.status.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.status.DataPropertyName = "status";
+            this.status.DataPropertyName = "status_alat";
             this.status.HeaderText = "Status";
             this.status.Name = "status";
             this.status.ReadOnly = true;

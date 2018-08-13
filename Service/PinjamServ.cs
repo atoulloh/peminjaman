@@ -195,7 +195,7 @@ namespace peminjaman.Service
 
         public DataTable CekStatus(String id_peminjaman)
         {
-            query = "select *, 0 as alat_hilang from pinjaman where id_peminjaman = '" + id_peminjaman + "' and status ='Belum'";
+            query = "select *, 0 as alat_hilang, 0 as alat_rusak from pinjaman where id_peminjaman = '" + id_peminjaman + "' and status ='Belum'";
             dtTbl = dbConn.ExecQuery(query);
 
             return dtTbl;
